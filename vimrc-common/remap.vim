@@ -87,9 +87,6 @@ endif
 "}}}
 
 " 各種ショートカット {{{
-nnoremap [util] <Nop>
-nmap <Space> [util]
-
 nnoremap [util]n :tabnew<CR>
 " 編集中のファイルをカレントディレクトリに設定
 nnoremap [util]c :cd %:h<CR>

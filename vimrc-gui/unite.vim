@@ -19,12 +19,6 @@ if has('win32')
 "   let g:unite_data_directory = '/mnt/ramdisk/.unite'
 endif
 
-"unite prefix key.
-nnoremap [unite] <Nop>
-nmap s [unite]
-nnoremap [unite-ex] <Nop>
-nmap sx [unite-ex]
-
 "unite general settings {{{
 "インサートモードで開始
 let g:unite_enable_start_insert = 1

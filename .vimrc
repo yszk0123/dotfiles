@@ -21,6 +21,7 @@ call neobundle#rc(expand($VIM . '/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " GUI,非GUIで共用のプラグイン
+runtime define-prefix.vim
 runtime! vimrc-common/*.vim
 
 " GUI限定のプラグイン

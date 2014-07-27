@@ -49,9 +49,7 @@ let g:vimshell_interactive_encodings['node'] = 'utf-8'
 let g:vimshell_interactive_encodings['mongo'] = 'utf-8'
 nnoremap [util]vs :<C-u>VimShell<CR>
 nnoremap [util]vS :<C-u>VimShellInteractive<Space>
-" nnoremap [vimshell] <Nop>
-" nmap sh [vimshell]
-" 
+
 " nnoremap [vimshell]h :<C-u>VimShell<CR>
 " nnoremap [vimshell]p :<C-u>VimShellPop<CR>
 " nnoremap [vimshell]n :<C-u>VimShellInteractive node<CR>
