@@ -1,7 +1,6 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'w0ng/vim-hybrid'
-" NeoBundle 'vim-jp/vital.vim'
 " Aligntaと似たようなプラグイン
 " NeoBundle 'godlygeek/tabular'
 " Perlスタイルの正規表現
@@ -36,9 +35,9 @@ let g:clever_f_chars_match_any_signs = ';'
 "}}}
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
-" NeoBundle 'AndrewRadev/splitjoin.vim'
-" nnoremap [util]j :<C-u>SplitjoinJoin<CR>
-" nnoremap [util]J :<C-u>SplitjoinSplit<CR>
+NeoBundle 'AndrewRadev/splitjoin.vim'
+nnoremap [util]j :<C-u>SplitjoinJoin<CR>
+nnoremap [util]J :<C-u>SplitjoinSplit<CR>
 " }}}
 
 " switch: 似たような表現を切り替える(true <=> false, if <=> elseif など) {{{
