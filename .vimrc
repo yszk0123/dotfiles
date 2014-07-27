@@ -20,9 +20,16 @@ call neobundle#rc(expand($VIM . '/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" GUI,非GUIで共用のプラグイン
+" キーマップ用のプレフィックス定義
 runtime define-prefix.vim
-runtime! vimrc-common/*.vim
+
+" GUI,非GUIで共用のプラグイン
+" runtime vimrc-common/commands.vim
+runtime vimrc-common/abbreviations.vim
+runtime vimrc-common/filetype.vim
+runtime vimrc-common/plugins.vim
+runtime vimrc-common/remap.vim
+runtime vimrc-common/settings.vim
 
 " GUI限定のプラグイン
 if has('gui')
