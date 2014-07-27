@@ -37,52 +37,6 @@ au VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
 au VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 "}}}
 
-" ctrlp {{{
-" -----
-NeoBundleLazy 'kien/ctrlp.vim', { "autoload": { "commands": ["CtrlP", "CtrlPDir", "CtrlPRoot", "CtrlPMRUFiles"] } }
-
-nnoremap [ctrlp] <Nop>
-nmap ss [ctrlp]
-
-nnoremap [ctrlp]a :<C-u>CtrlP<Space>
-nnoremap [ctrlp]b :<C-u>CtrlPBuffer<CR>
-nnoremap [ctrlp]d :<C-u>CtrlPDir<CR>
-nnoremap [ctrlp]f :<C-u>CtrlP<CR>
-nnoremap [ctrlp]r :<C-u>CtrlPRoot<CR>
-nnoremap [ctrlp]c :<C-u>CtrlPCurWD<CR>
-nnoremap [ctrlp]w :<C-u>CtrlPCurWD<CR>
-" nnoremap [ctrlp]u :<C-u>CtrlPUndo<CR>
-" nnoremap [ctrlp]R :<C-u>CtrlPRTS<CR>
-" nnoremap [ctrlp]c :<C-u>CtrlPChange<CR>
-" nnoremap [ctrlp]l :<C-u>CtrlPLine<CR>
-" nnoremap [ctrlp]m :<C-u>CtrlPMRUFiles<CR>
-" nnoremap [ctrlp]q :<C-u>CtrlPQuickfix<CR>
-" nnoremap [ctrlp]s :<C-u>CtrlPMixed<CR>
-" nnoremap [ctrlp]t :<C-u>CtrlPTag<CR>
-
-" 更新(キャッシュクリア)はCtrlP表示中に"F5"でOK
-" nnoremap [ctrlp]0 :<C-u>CtrlPClearCache<CR>
-
-let g:ctrlp_cache_dir = $HOME . '/vimfiles/.cache/ctrlp'
-let g:ctrlp_use_migemo = 0
-let g:ctrlp_map = ''
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_root_markers = ['package.json', 'bower.json', 'gulpfile.js', 'myke.config.json', 'myke.config.yml']
-let g:ctrlp_open_new_file = 'r'
-let g:ctrlp_extensions = ['dir']
-" let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:18'
-let g:ctrlp_max_files = 1500
-let g:ctrlp_mruf_max = 0
-let g:ctrlp_mruf_save_on_update = 0
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_lazy_update = 180
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|bower_components|components|node_modules|lib|dist|dest|build|backup|preprocess)$',
-  \ 'file': '\v\.(exe|so|dll|png|jpg|jpeg|bmp|gif|ttc|lib)$',
-  \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-  \ }
-"}}}
-
 " VimShell {{{
 NeoBundleLazy 'Shougo/vimshell.vim', { "autoload": { "commands": ["VimShell", "VimShellInteractive", "VimShellPop"] } }
 
