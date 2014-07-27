@@ -1,0 +1,49 @@
+option prompt "$e[31;40;1m$w2> $e[37;1m"
+# cd ~
+
+folder a   D:/work/AutoHotkey
+folder c   D:/work/ChromeExtensions
+folder f   D:/app/Filtered
+folder fc  D:/app/Filtered/client
+folder fs  D:/app/Filtered/server
+folder j   D:/work/JavaScript
+folder jm  D:/work/JavaScript/myke
+folder jr  D:/work/JavaScript/relay
+folder s   D:/app/share
+folder ss  D:/app/share/server
+folder ssn D:/app/share/server/node_modules
+folder tn  C:/Users/yuji/tools/nodist
+folder tnn C:/Users/yuji/tools/nodist/bin/node_modules
+folder tv  C:/Users/yuji/tools/vim
+folder y   D:/app/ysk
+folder yc  D:/app/ysk/common
+folder yca D:/app/ysk/common-angular
+
+alias c coffee
+alias ga "git add"
+alias gc "git commit"
+alias gd "git diff"
+alias gl "git log"
+alias gs "git status"
+alias mb "myke.js build"
+alias mc "myke.js component"
+alias mongob "mongo bookmark"
+alias mongot "mongo textviewer"
+alias n node
+alias nh "node --harmony"
+alias po popd
+alias pu pushd
+alias r runner.js
+alias so source
+alias vi vim
+alias ycm "gvim --cmd set g:use_ycm=1"
+
+alias py python
+alias py34 C:/Python34/python.exe
+# For keyhac (keyhac uses python332)
+alias py33 C:/Python332/python.exe
+
+# Easy run
+set path+=D:/work/JavaScript/bin
+suffix js node
+suffix coffee coffee

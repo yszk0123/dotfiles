@@ -49,3 +49,16 @@ set tabstop=2
 " 自動改行を行わない
 set textwidth=0
 set winheight=10
+
+" Wildmenu
+" ref:
+"   title: Vim filename completion - Arabesque
+"   url: http://blog.sanctum.geek.nz/vim-filename-completion/
+if has("wildmenu")
+    set wildignore+=*.a,*.o
+    set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+    set wildignore+=.DS_Store,.git,.hg,.svn
+    set wildignore+=*~,*.swp,*.tmp
+    set wildmenu
+    set wildmode=longest,list
+endif
