@@ -7,8 +7,7 @@ au FileType coffee,cson,jade,stylus,yaml setlocal foldmethod=indent sw=2 sts=2 t
 " au FileType coffee,cson,jade,stylus,yaml normal zR
 " au FileType coffee,cson,yaml setlocal foldignore=
 " au FileType coffee,cson,yaml setlocal nowrap
-au FileType vim setlocal foldmethod=marker
-au FileType vim setlocal foldlevel=0
+au FileType vim setlocal foldmethod=marker foldlevel=0
 au FileType python setlocal foldlevel=0 sw=4 sts=4 ts=4 et
 " テキストファイルで自動整形を行わない
 au FileType text setlocal textwidth=0
