@@ -13,14 +13,17 @@ nnoremap <silent> <Space><Space> :noh<CR>
 inoremap <C-f> <C-x><C-f>
 
 nnoremap vv <C-v>
-inoremap <C-v> <Esc>p
-
-nnoremap H ^
-nnoremap L $
 nnoremap Y y$
+
+" 特定の条件下でWindows互換のテキスト操作
+vnoremap <C-x> d
+vnoremap <C-c> y
+inoremap <C-v> <Esc>p
 
 " カーソル移動 {{{
 " 表示行単位のカーソル移動
+nnoremap H ^
+nnoremap L $
 nnoremap j gj
 onoremap j gj
 xnoremap j gj
