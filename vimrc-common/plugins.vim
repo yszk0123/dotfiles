@@ -36,9 +36,9 @@ let g:clever_f_chars_match_any_signs = ';'
 "}}}
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
-NeoBundle 'AndrewRadev/splitjoin.vim'
-nnoremap [util]j :<C-u>SplitjoinJoin<CR>
-nnoremap [util]J :<C-u>SplitjoinSplit<CR>
+" NeoBundle 'AndrewRadev/splitjoin.vim'
+" nnoremap [util]j :<C-u>SplitjoinJoin<CR>
+" nnoremap [util]J :<C-u>SplitjoinSplit<CR>
 " }}}
 
 " switch: 似たような表現を切り替える(true <=> false, if <=> elseif など) {{{
@@ -65,7 +65,7 @@ map S  <Plug>(operator-sort)
 NeoBundle 'airblade/vim-rooter'
 map <silent> <Space>C <Plug>RooterChangeToRootDirectory
 let g:rooter_manual_only = 1
-let g:rooter_patterns = ['.git/', 'node_modules/', 'bower_components/', 'package.json']
+let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
 "}}}
 
 " vim-smartinput: 囲み系補完 {{{

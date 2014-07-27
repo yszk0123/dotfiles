@@ -3,9 +3,8 @@
 nnoremap <silent> <C-s> :<C-u>update<CR>
 inoremap <silent> <C-s> <Esc>:<C-u>update<CR>
 
-" qでウインドウを閉じて Qでマクロ
-nnoremap q :<C-u>q<CR>
-" nnoremap Q q
+" Qでウインドウを閉じる
+nnoremap Q :<C-u>q<CR>
 
 nnoremap <CR> o
 inoremap <C-c> <Esc>

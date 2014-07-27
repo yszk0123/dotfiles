@@ -186,8 +186,8 @@ function! s:unite_my_settings()"{{{
   " 1. Unite操作を継続するものは入力モード+キー
   " 2. Unite操作を完了するもの(actionなど)はCtrl+キー
 
-  "qまたはESCでuniteを終了
-  nmap <buffer> q      <Plug>(unite_all_exit)
+  "QまたはESCでuniteを終了
+  nmap <buffer> Q      <Plug>(unite_all_exit)
   nmap <buffer> <ESC>  <Plug>(unite_exit)
   " "入力モードのとき↓でノーマルモードに移動
   imap <buffer> <Up>   <Plug>(unite_insert_leave)
