@@ -47,8 +47,8 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 " 自動改行を行わない
-set textwidth=0
-set winheight=10
+" set textwidth=0
+set winheight=6
 
 " Wildmenu
 " ref:
