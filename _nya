@@ -3,9 +3,14 @@ option prompt "$e[31;40;1m$w2> $e[37;1m"
 
 folder a   D:/work/AutoHotkey
 folder c   D:/work/ChromeExtensions
+folder d   D:/data/dotfiles
 folder f   D:/app/Filtered
-folder fc  D:/app/Filtered/client
-folder fs  D:/app/Filtered/server
+folder fa  D:/app/Filtered/app
+folder faa D:/app/Filtered/app/assets
+folder fp  D:/app/Filtered/public
+folder m   D:/app/mini-apps
+folder ma  D:/app/mini-apps/app
+folder map D:/app/mini-apps/app/projects
 folder j   D:/work/JavaScript
 folder jm  D:/work/JavaScript/myke
 folder jr  D:/work/JavaScript/relay
@@ -15,6 +20,7 @@ folder ssn D:/app/share/server/node_modules
 folder tn  C:/Users/yuji/tools/nodist
 folder tnn C:/Users/yuji/tools/nodist/bin/node_modules
 folder tv  C:/Users/yuji/tools/vim
+folder v   D:/data/vimfiles
 folder y   D:/app/ysk
 folder yc  D:/app/ysk/common
 folder yca D:/app/ysk/common-angular
