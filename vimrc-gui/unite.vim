@@ -212,8 +212,8 @@ function! s:unite_my_settings()"{{{
   nnoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
   inoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
   "ctrl+vでその場所に開く
-  nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
-  inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
+  " nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
+  " inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
   "ctrl+cでcd
   nnoremap <silent> <buffer> <expr> <C-c> unite#do_action('cd')
   inoremap <silent> <buffer> <expr> <C-c> unite#do_action('cd')
