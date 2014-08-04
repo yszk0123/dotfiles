@@ -100,19 +100,4 @@ nnoremap [util]eg :<C-u>edit $MYGVIMRC<CR>
 nnoremap [util]ev :<C-u>edit $MYVIMRC<CR>
 nnoremap [util]sg :<C-u>source $MYGVIMRC<CR>
 nnoremap [util]sv :<C-u>source $MYVIMRC<CR>
-
-nnoremap [util]ga :<C-u>cd D:/app<CR>
-nnoremap [util]gd :<C-u>cd D:/Downloads<CR>
-nnoremap [util]gd :<C-u>cd D:/data<CR>
-nnoremap [util]gf :<C-u>cd D:/app/Filtered<CR>
-nnoremap [util]gj :<C-u>cd D:/work/JavaScript<CR>
-nnoremap [util]gr :<C-u>cd D:/tmp/relay-text<CR>
-nnoremap [util]gs :<C-u>cd D:/app/share/server<CR>
-nnoremap [util]gt :<C-u>cd D:/tmp<CR>
-nnoremap [util]gv :<C-u>cd D:/data/vimfiles<CR>
-nnoremap [util]gw :<C-u>cd D:/work<CR>
-nnoremap [util]gcd :<C-u>cd C:/users/yuji/Desktop<CR>
-nnoremap [util]gcn :<C-u>cd C:/users/yuji/tools/nodist<CR>
-nnoremap [util]gct :<C-u>cd C:/users/yuji/tools<CR>
-nnoremap [util]gcv :<C-u>cd C:/users/yuji/tools/vim<CR>
 "}}}

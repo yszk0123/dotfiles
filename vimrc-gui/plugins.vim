@@ -57,3 +57,16 @@ nnoremap [util]vS :<C-u>VimShellInteractive<Space>
 " nnoremap [vimshell]j :<C-u>VimShellInteractive jade<CR>
 " nnoremap [vimshell]e :<C-u>VimShellSendString<CR>
 " }}}
+
+" vim-fugitive {{{
+NeoBundle 'tpope/vim-fugitive'
+nnoremap [util]gC :<C-u>Gcd<Space>
+nnoremap [util]gL :<C-u>Glcd<Space>
+nnoremap [util]ga :<C-u>Gadd<Space>
+nnoremap [util]gb :<C-u>Gblame<Space>
+nnoremap [util]gc :<C-u>Gcommit<Space>
+nnoremap [util]gd :<C-u>Gdiff<Space>
+nnoremap [util]ge :<C-u>Gedit<Space>
+nnoremap [util]gl :<C-u>Glog<Space>
+nnoremap [util]gs :<C-u>Gstatus<CR>
+" }}}
