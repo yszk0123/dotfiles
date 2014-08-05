@@ -69,4 +69,5 @@ nnoremap [util]gd :<C-u>Gdiff<Space>
 nnoremap [util]ge :<C-u>Gedit<Space>
 nnoremap [util]gl :<C-u>Glog<Space>
 nnoremap [util]gs :<C-u>Gstatus<CR>
+nnoremap [util]gw :<C-u>Gwrite<Space>
 " }}}
