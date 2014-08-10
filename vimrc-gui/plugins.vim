@@ -1,11 +1,21 @@
-NeoBundle 'itchyny/lightline.vim'
-
 " 通常読み込み(頻繁に使うもの)
 " NeoBundle 'moll/vim-node'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'wavded/vim-stylus'
+
+" lightline {{{
+NeoBundle 'itchyny/lightline.vim'
+
+if !exists('g:lightline')
+  let g:lightline = { 'active': {}, 'inactive': {} }
+endif
+let g:lightline.active.left = [
+  \ [ 'mode', 'paste' ],
+  \ [ 'readonly', 'relativepath', 'modified' ] ]
+let g:lightline.inactive.left = [ [ 'relativepath' ] ]
+" }}}
 
 " 遅延読み込み {{{
 " " NeoBundleLazy 'digitaltoad/vim-jade', { "autoload": { "filetypes": ["jade"] } }
