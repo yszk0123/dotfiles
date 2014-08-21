@@ -20,6 +20,9 @@ vnoremap <C-x> d
 vnoremap <C-c> y
 inoremap <C-v> <Esc>p
 
+" 折り畳みモードをインデントに設定
+nnoremap [util]i :<C-u>setlocal foldmethod=indent<CR>
+
 " カーソル移動 {{{
 " 表示行単位のカーソル移動
 nnoremap H ^
