@@ -90,13 +90,16 @@ endif
 "}}}
 
 " 各種ショートカット {{{
-nnoremap [util]n :tabnew<CR>
-" 編集中のファイルをカレントディレクトリに設定
-nnoremap [util]c :cd %:h<CR>
-" 編集中のファイルをカレントディレクトリに設定
-nnoremap [util]l :lcd %:h<CR>
+" 新しいタブを開く
+nnoremap [util]n :<C-u>tabnew<CR>
+" 新しいタブを一番右に開く
+nnoremap [util]N :<C-u>tabnew<bar>tabmove<CR>
+" 編集中のファイルのあるディレクトリをカレントディレクトリに設定
+nnoremap [util]c :<C-u>cd %:h<CR>
+" 編集中のファイルのあるディレクトリをカレントディレクトリに設定
+nnoremap [util]l :<C-u>lcd %:h<CR>
 " 編集中のファイル名を表示
-nnoremap [util]f :echo expand('%:p')<CR>
+nnoremap [util]f :<C-u>echo expand('%:p')<CR>
 
 nnoremap [util]et :<C-u>edit D:/app/share/data/tmp.txt<CR>
 nnoremap [util]eg :<C-u>edit $MYGVIMRC<CR>
