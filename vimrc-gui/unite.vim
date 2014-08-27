@@ -113,6 +113,8 @@ nnoremap <silent> [unite]m :<C-u>Unite -buffer-name=files neomru/file<CR>
 "最近使用したディレクトリ
 nnoremap <silent> [unite]d :<C-u>Unite -buffer-name=files neomru/directory<CR>
 nnoremap <silent> [unite]D :<C-u>Unite -buffer-name=files -default-action=lcd neomru/directory<CR>
+"タブページ一覧
+nnoremap <silent> [unite]t :<C-u>Unite tab<CR>
 
 "ブックマーク一覧
 nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
@@ -200,8 +202,8 @@ function! s:unite_my_settings()"{{{
   nmap <buffer> M      <Plug>(unite_toggle_mark_current_candidate_up)
 
   "ctrl+tで新しいタブに開く
-  nnoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabnew_lcd')
-  inoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabnew_lcd')
+  nnoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
+  inoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
   "ctrl+sで縦に分割して開く
   nnoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
   inoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
@@ -211,13 +213,13 @@ function! s:unite_my_settings()"{{{
   "ctrl+oでその場所に開く
   nnoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
   inoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
-  "ctrl+vでその場所に開く
-  " nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
-  " inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
   "ctrl+cでcd
   nnoremap <silent> <buffer> <expr> <C-c> unite#do_action('cd')
   inoremap <silent> <buffer> <expr> <C-c> unite#do_action('cd')
   "ctrl+lでlcd
   nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('lcd')
   inoremap <silent> <buffer> <expr> <C-l> unite#do_action('lcd')
+  "ctrl+vでその場所に開く
+  " nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
+  " inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
 endfunction"}}}
