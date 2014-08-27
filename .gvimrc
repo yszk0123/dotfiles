@@ -48,5 +48,5 @@ set guioptions+=h
 "   タブページを使わないならこのオプションは外して構わない
 set guioptions+=l
 " タブページを常に表示
-set showtabline=0
+set showtabline=1
 " }}}
