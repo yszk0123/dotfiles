@@ -2,6 +2,11 @@
 colorscheme hybrid
 " }}}
 
+" 80行を超える場合ハイライト {{{
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.*/
+" }}}
+
 " 日本語用 {{{
 if has('multi_byte_ime')
   "highlight Cursor guifg=NONE guibg=Green
