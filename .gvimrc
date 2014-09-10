@@ -26,7 +26,7 @@ hi EasyMotionShadeLine  ctermfg=gray guifg=gray
 " Font {{{
 if has('win32')
   set guifont=MS_Gothic:h9:cSHIFTJIS
-  set linespace=1
+  set linespace=0
   if has('kaoriya')
     set ambiwidth=auto
   endif
