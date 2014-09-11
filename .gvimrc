@@ -3,8 +3,8 @@ colorscheme hybrid
 " }}}
 
 " 80行を超える場合ハイライト {{{
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.*/
+au VimEnter,Colorscheme * :hi OverLength ctermbg=red ctermfg=white guibg=#592929
+au VimEnter,Colorscheme * :match OverLength /\%81v.*/
 " }}}
 
 " 日本語用 {{{
