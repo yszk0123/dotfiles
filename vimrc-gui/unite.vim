@@ -30,11 +30,11 @@ let g:unite_enable_smart_case = 1
 let g:unite_split_rule = 'botright'
 "
 let g:unite_cursor_line_time = '0.15'
-let g:unite_update_time = 740
+let g:unite_update_time = 780
 
 "最近開いたファイル履歴の保存数
-let g:neomru#file_mru_limit = 1000
-let g:neomru#directory_mru_limit = 1000
+let g:neomru#file_mru_limit = 750
+let g:neomru#directory_mru_limit = 750
 "file_mruの表示フォーマットを指定。空にすると表示スピードが高速化される
 let g:neomru#filename_format = ''
 let g:neomru#time_format = ''
