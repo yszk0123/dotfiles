@@ -142,8 +142,8 @@ nnoremap <silent> [unite]p :<C-u>Unite -buffer-name=project file_rec/async
   \ -no-quit -vertical -winwidth=26 -wrap -long-source-names -resume<CR>
 " nnoremap <silent> [unite]F :<C-u>Unite -buffer-name=files file<CR>
 "サブディレクトリを含むプロジェクトディレクトリの全ファイル一覧
-nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=files file_rec/async:!<CR>
-nnoremap <silent> [unite]R :<C-u>Unite -buffer-name=files file_rec:!<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=files file_rec/async<CR>
+nnoremap <silent> [unite]R :<C-u>UniteResume files<CR>
 
 " 色々
 nnoremap <silent> [unite]a :<C-u>UniteWithCurrentDir
