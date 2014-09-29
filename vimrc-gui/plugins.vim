@@ -5,6 +5,11 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'wavded/vim-stylus'
 
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'taichouchou2/vim-javascript'
+
 " lightline {{{
 NeoBundle 'itchyny/lightline.vim'
 
