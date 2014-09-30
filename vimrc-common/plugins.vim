@@ -31,13 +31,21 @@ NeoBundle 'rhysd/clever-f.vim'
 let g:clever_f_smart_case = 1
 let g:clever_f_use_migemo = 0
 let g:clever_f_fix_key_direction = 0
-let g:clever_f_chars_match_any_signs = ';'
+let g:clever_f_chars_match_any_signs = ''
 "}}}
 
 " vim-easymotion {{{
 NeoBundle 'Lokaltog/vim-easymotion'
 " map <Leader> <Plug>(easymotion-prefix)
 map <Space> <Plug>(easymotion-prefix)
+map <Space>S <Plug>(easymotion-sn)
+map <Space>/ <Plug>(easymotion-sn)
+map <Space>n <Plug>(easymotion-bd-n)
+map <Space>. <Plug>(easymotion-repeat)
+map <Space>; <Plug>(easymotion-jumptoanywhere)
+" let g:EasyMotion_keys = 'nvmhgjfkdls;aurieowp'
+let g:EasyMotion_keys = 'nmvhjkl;gfdsaiopew'
+let g:EasyMotion_re_anywhere = '[<>()\[\]{}]\v|<(class|function|var|require)>'
 " }}}
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
