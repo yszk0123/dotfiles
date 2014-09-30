@@ -34,6 +34,12 @@ let g:clever_f_fix_key_direction = 0
 let g:clever_f_chars_match_any_signs = ';'
 "}}}
 
+" vim-easymotion {{{
+NeoBundle 'Lokaltog/vim-easymotion'
+" map <Leader> <Plug>(easymotion-prefix)
+map <Space> <Plug>(easymotion-prefix)
+" }}}
+
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
 NeoBundle 'AndrewRadev/splitjoin.vim'
 nnoremap [util]j :<C-u>SplitjoinJoin<CR>
