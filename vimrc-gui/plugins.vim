@@ -52,6 +52,13 @@ au VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
 au VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 "}}}
 
+" VimFiler {{{
+NeoBundle 'Shougo/vimfiler'
+let g:vimfiler_safe_mode_by_default = 0
+nnoremap [util]vf :<C-u>VimFilerBufferDir<CR>
+nnoremap [util]vF :<C-u>VimFilerCurrentDir<CR>
+" }}}
+
 " VimShell {{{
 NeoBundleLazy 'Shougo/vimshell.vim', { "autoload": { "commands": ["VimShell", "VimShellInteractive", "VimShellPop"] } }
 
