@@ -67,6 +67,8 @@ let g:quickrun_config.coffee = {
   \ }
 nnoremap [util]qr :QuickRun<CR>
 nnoremap [util]qR :QuickRun -cmdopt<Space>
+vnoremap [util]qr :QuickRun<CR>
+vnoremap [util]qR :QuickRun -cmdopt<Space>
 " }}}
 
 " VimFiler {{{

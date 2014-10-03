@@ -2,8 +2,10 @@
 
 " For utility
 nnoremap [util] <Nop>
+vnoremap [util] <Nop>
 " nmap <Space> [util]
 nmap , [util]
+vmap , [util]
 
 " For unite
 nnoremap [unite] <Nop>
