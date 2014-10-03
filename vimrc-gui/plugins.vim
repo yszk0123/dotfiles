@@ -27,7 +27,6 @@ let g:lightline.inactive.left = [ [ 'relativepath' ] ]
 " NeoBundleLazy 'digitaltoad/vim-jade'
 " au FileType jade NeoBundleSource vim-jade
 " NeoBundleLazy 'kchmck/vim-coffee-script', { "autoload": { "filetypes": ["coffee"] } }
-NeoBundleLazy 'thinca/vim-quickrun', { "autoload": { "commands": ["QuickRun"] } }
 " NeoBundleLazy 'wavded/vim-stylus', { "autoload": { "filetypes": ["stylus"] } }
 " }}}
 
@@ -51,6 +50,24 @@ let g:indent_guides_space_guides=1
 au VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
 au VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 "}}}
+
+" vim-quickrun {{{
+NeoBundle 'thinca/vim-quickrun', { "autoload": { "commands": ["QuickRun"] } }
+if !exists('g:quickrun_config')
+  let g:quickrun_config = {}
+endif
+let g:quickrun_config.javascript = {
+  \   'type': 'javascript',
+  \   'exec': 'node %o %a %S',
+  \   'cmdopt': '--harmony'
+  \ }
+let g:quickrun_config.coffee = {
+  \   'type': 'coffee',
+  \   'exec': 'coffee %o %a %S'
+  \ }
+nnoremap [util]qr :QuickRun<CR>
+nnoremap [util]qR :QuickRun -cmdopt<Space>
+" }}}
 
 " VimFiler {{{
 NeoBundle 'Shougo/vimfiler'
