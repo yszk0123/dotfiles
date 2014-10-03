@@ -2,17 +2,20 @@ option prompt "$e[31;40;1m$w2> $e[37;1m"
 # cd ~
 
 folder c    D:/common
+folder cb   D:/common/bower_components
 folder cn   D:/common/node_modules
 folder d    D:/data/dotfiles
 folder dv   D:/data/vimfiles
 folder n    C:/Users/yuji/AppData/Roaming/npm
 folder tn   C:/Users/yuji/tools/nodist
+folder tt   D:/tmp/tmp
 folder tv   C:/Users/yuji/tools/vim
 folder wa   D:/work/AutoHotkey
 folder wc   D:/work/ChromeExtensions
 folder wf   D:/work/filtered
 folder wfp  D:/work/filtered/public
 folder wfs  D:/work/filtered/src
+folder wfsb D:/work/filtered/src/bower_components
 folder wfsn D:/work/filtered/src/node_modules
 folder wj   D:/work/JavaScript
 folder wjm  D:/work/JavaScript/myke
