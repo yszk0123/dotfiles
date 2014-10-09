@@ -10,7 +10,7 @@ nnoremap <CR> o
 inoremap <C-c> <Esc>
 nnoremap <silent> <Leader><Leader><Leader> :noh<CR>
 nnoremap <silent> <Space><Space> :noh<CR>
-inoremap <C-f> <C-x><C-f>
+" inoremap <C-f> <C-x><C-f>
 
 nnoremap vv <C-v>
 nnoremap Y y$
@@ -25,6 +25,7 @@ nnoremap [util]i :<C-u>setlocal foldmethod=indent<CR>
 
 " カーソル移動 {{{
 " 表示行単位のカーソル移動
+" Ctrl+*のタイプはnyaosやtcshのキーバインドになるべく合わせている
 nnoremap H ^
 nnoremap L $
 nnoremap j gj
@@ -35,6 +36,14 @@ onoremap k gk
 xnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
+inoremap <C-B> <Left>
+inoremap <C-F> <Right>
+inoremap <C-J> <Down>
+inoremap <C-K> <Up>
+inoremap <C-A> <Home>
+inoremap <C-E> <End>
+inoremap <C-D> <Esc>
+
 " nnoremap <C-Space> <PageDown>
 " nnoremap <C-Enter> <PageUp>
 
