@@ -8,7 +8,9 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'taichouchou2/vim-javascript'
+" javascriptの主要なライブラリの構文定義
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+" NeoBundle 'jelera/vim-javascript-syntax'
 
 " lightline {{{
 NeoBundle 'itchyny/lightline.vim'
@@ -50,6 +52,13 @@ let g:indent_guides_space_guides=1
 au VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
 au VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 "}}}
+
+" vim-javascript {{{
+" NeoBundle 'taichouchou2/vim-javascript'
+NeoBundle 'pangloss/vim-javascript'
+let javascript_ignore_javaScriptdoc = 1
+" let g:javascript_conceal = 1
+" }}}
 
 " vim-quickrun {{{
 NeoBundle 'thinca/vim-quickrun', { "autoload": { "commands": ["QuickRun"] } }
