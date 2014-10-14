@@ -48,7 +48,7 @@ call unite#custom#source('neomru', 'max_candidates', 50)
 " unite grep に ag(The Silver Searcher) を使う {{{
 if executable('ag')
   " file_rec設定
-  let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".hg" --ignore ".svn" --ignore ".git" --ignore "bower_components" --ignore "components" --ignore "backup" --ignore "preprocess" --ignore "dist" --ignore "dest" --ignore "build" --ignore "lib" --ignore ".bzr" --hidden -g ""'
+  let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".hg" --ignore ".svn" --ignore ".git" --ignore "bower_components" --ignore "backup" --ignore "preprocess" --ignore "dist" --ignore "dest" --ignore "build" --ignore "lib" --ignore ".bzr" --hidden -g ""'
   " call unite#custom_source('file_rec', 'ignore_pattern', (unite#sources#file_rec#define()[0]['ignore_pattern']) . '\|\<target\>')
 
   " grep設定
