@@ -32,9 +32,9 @@ set autoindent
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 set expandtab
-set foldmethod=manual
-" 折りたたみを開いた状態で編集開始
-set foldlevelstart=99
+" 折りたたみを手動操作, 開いた状態で編集開始
+" set foldmethod=manual
+" set foldlevelstart=99
 " 日本語の行の連結時には空白を入力しない。
 set formatoptions+=mM
 " 自動整形を避ける
