@@ -24,7 +24,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 runtime define-prefix.vim
 
 " GUI,非GUIで共用のプラグイン
-" runtime vimrc-common/commands.vim
+runtime vimrc-common/commands.vim
 runtime vimrc-common/abbreviations.vim
 runtime vimrc-common/filetype.vim
 runtime vimrc-common/plugins.vim
