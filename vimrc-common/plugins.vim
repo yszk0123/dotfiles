@@ -2,7 +2,6 @@
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'thinca/vim-qfreplace'
 " Aligntaと似たようなプラグイン
 " NeoBundle 'godlygeek/tabular'
 " Perlスタイルの正規表現
@@ -75,6 +74,11 @@ NeoBundle 'kana/vim-operator-replace'
 map R  <Plug>(operator-replace)
 map S  <Plug>(operator-sort)
 "}}}
+
+" vim-qfreplace {{{
+NeoBundle 'thinca/vim-qfreplace'
+nnoremap [util]q :<C-u>Qfreplace<CR>
+" }}}
 
 " vim-rooter: change working directory to project root {{{
 NeoBundle 'airblade/vim-rooter'

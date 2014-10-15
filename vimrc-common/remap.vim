@@ -21,7 +21,9 @@ vnoremap <C-c> y
 inoremap <C-v> <Esc>p
 
 " 折り畳みモードをインデントに設定
-nnoremap [util]i :<C-u>setlocal foldmethod=indent<CR>
+nnoremap [util]fi :<C-u>setlocal foldmethod=indent<CR>
+nnoremap [util]fm :<C-u>setlocal foldmethod=marker<CR>
+nnoremap [util]fs :<C-u>setlocal foldmethod=syntax<CR>
 
 " カーソル移動 {{{
 " 表示行単位のカーソル移動
@@ -107,8 +109,8 @@ nnoremap [util]N :<C-u>tabnew<bar>tabmove<CR>
 nnoremap [util]c :<C-u>cd %:h<CR>
 " 編集中のファイルのあるディレクトリをカレントディレクトリに設定
 nnoremap [util]l :<C-u>lcd %:h<CR>
-" 編集中のファイル名を表示
-nnoremap [util]f :<C-u>echo expand('%:p')<CR>
+" 編集中のファイル名を表示 (:fileの方が便利)
+" nnoremap [util]f :<C-u>echo expand('%:p')<CR>
 
 nnoremap [util]et :<C-u>edit D:/app/share/data/tmp.txt<CR>
 nnoremap [util]eg :<C-u>edit $MYGVIMRC<CR>
