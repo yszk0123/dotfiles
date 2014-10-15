@@ -1,6 +1,8 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'thinca/vim-qfreplace'
 " Aligntaと似たようなプラグイン
 " NeoBundle 'godlygeek/tabular'
 " Perlスタイルの正規表現
