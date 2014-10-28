@@ -121,7 +121,7 @@ nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
 "ブックマーク一覧(選択モードでスタート)
 nnoremap <silent> [unite]C :<C-u>Unite -no-start-insert bookmark<CR>
 "ブックマークに追加
-" nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
+nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
 
 " grep検索
 nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
@@ -146,13 +146,13 @@ nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=files file_rec/async<CR>
 nnoremap <silent> [unite]R :<C-u>UniteResume files<CR>
 
 " 色々
-nnoremap <silent> [unite]a :<C-u>UniteWithCurrentDir
-        \ -buffer-name=files buffer bookmark file<CR>
+" nnoremap <silent> [unite]a :<C-u>UniteWithCurrentDir
+"         \ -buffer-name=files buffer bookmark file<CR>
 " 色々ジャンプ 
-nnoremap <silent> [unite]j :<C-u>Unite
-        \ -buffer-name=files -no-split
-        \ jump_point file_point buffer_tab
-        \ file_rec:! file file/new<CR>
+" nnoremap <silent> [unite]j :<C-u>Unite
+"         \ -buffer-name=files -no-split
+"         \ jump_point file_point buffer_tab
+"         \ file_rec:! file file/new<CR>
 
 "ソース一覧
 nnoremap <silent> [unite-ex]so :<C-u>Unite source<CR>
