@@ -38,13 +38,13 @@ onoremap k gk
 xnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
-inoremap <C-B> <Left>
-inoremap <C-F> <Right>
-inoremap <C-J> <Down>
-inoremap <C-K> <Up>
-inoremap <C-A> <Home>
-inoremap <C-E> <End>
-inoremap <C-D> <Esc>
+" inoremap <C-B> <Left>
+" inoremap <C-F> <Right>
+" inoremap <C-J> <Down>
+" inoremap <C-K> <Up>
+" inoremap <C-A> <Home>
+" inoremap <C-E> <End>
+" inoremap <C-D> <Esc>
 
 " nnoremap <C-Space> <PageDown>
 " nnoremap <C-Enter> <PageUp>
