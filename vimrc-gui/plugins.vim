@@ -8,9 +8,27 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
+
+" NeoBundle 'jelera/vim-javascript-syntax'
+
+" javascript-libraries-syntax {{{
 " javascriptの主要なライブラリの構文定義
 NeoBundle 'othree/javascript-libraries-syntax.vim'
-" NeoBundle 'jelera/vim-javascript-syntax'
+
+" comma separated list
+"   Support libs id:
+"   * jQuery: jquery
+"   * underscore.js: underscore
+"   * Lo-Dash: underscore
+"   * Backbone.js: backbone
+"   * prelude.ls: prelude
+"   * AngularJS: angularjs
+"   * AngularUI: angularui
+"   * RequireJS: requirejs
+"   * Sugar.js: sugar
+"   * Jasmine: jasmine
+let g:used_javascript_libs = 'underscore'
+" }}}
 
 " lightline {{{
 NeoBundle 'itchyny/lightline.vim'
