@@ -80,6 +80,10 @@ let javascript_ignore_javaScriptdoc = 1
 " let g:javascript_conceal = 1
 " }}}
 
+" vim-jsx {{{
+NeoBundle 'mxw/vim-jsx'
+" }}}
+
 " vim-quickrun {{{
 NeoBundle 'thinca/vim-quickrun', { "autoload": { "commands": ["QuickRun"] } }
 if !exists('g:quickrun_config')
