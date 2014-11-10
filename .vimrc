@@ -43,7 +43,7 @@ if has('gui')
     \ }
   runtime vimrc-gui/plugins.vim
   runtime vimrc-gui/unite.vim
-  runtime vimrc-gui/neocomplete.vim
+  " runtime vimrc-gui/neocomplete.vim
   if exists('g:use_ycm')
     runtime vimrc-gui/you-complete-me.vim
   endif
