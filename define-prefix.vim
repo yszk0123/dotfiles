@@ -13,6 +13,10 @@ nmap s [unite]
 nnoremap [unite-ex] <Nop>
 nmap sx [unite-ex]
 
+" For typescript
+nnoremap [tsc] <Nop>
+nmap ,t [tsc]
+
 " For VimShell
 " nnoremap [vimshell] <Nop>
 " nmap sh [vimshell]
