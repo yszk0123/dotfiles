@@ -23,6 +23,7 @@ cnoreabbr wfsn, D:/work/filtered/src/node_modules
 cnoreabbr wj,   D:/work/JavaScript
 cnoreabbr wjm,  D:/work/JavaScript/myke
 cnoreabbr wjr,  D:/work/JavaScript/relay
+cnoreabbr wjs,  D:/work/JavaScript/script
 cnoreabbr wp,   D:/work/prototype
 
 cnoreabbr a.    AutoHotkey
