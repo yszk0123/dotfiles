@@ -48,6 +48,13 @@ endfunction
 " javascriptの主要なライブラリの構文定義
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 
+" jshint {{{
+NeoBundle 'Shutnik/jshint2.vim'
+let jshint2_read=0
+let jshint2_save=1
+let jshint2_close=1
+" }}}
+
 " comma separated list
 "   Support libs id:
 "   * jQuery: jquery

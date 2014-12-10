@@ -47,7 +47,7 @@ set nocursorline
 set noincsearch
 set number
 set scrolloff=3
-set shellslash
+" set shellslash
 set shiftwidth=2
 set softtabstop=2
 " ウィンドウ分割時に右または下に開く(デフォルトでは左または上)
