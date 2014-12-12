@@ -42,6 +42,7 @@ if has('gui')
     \    },
     \ }
   runtime vimrc-gui/plugins.vim
+  runtime vimrc-gui/javascript.vim
   runtime vimrc-gui/unite.vim
   " runtime vimrc-gui/neocomplete.vim
   " runtime vimrc-gui/typescript.vim
