@@ -9,6 +9,14 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
 
+" 遅延読み込み {{{
+" " NeoBundleLazy 'digitaltoad/vim-jade', { "autoload": { "filetypes": ["jade"] } }
+" NeoBundleLazy 'digitaltoad/vim-jade'
+" au FileType jade NeoBundleSource vim-jade
+" NeoBundleLazy 'kchmck/vim-coffee-script', { "autoload": { "filetypes": ["coffee"] } }
+" NeoBundleLazy 'wavded/vim-stylus', { "autoload": { "filetypes": ["stylus"] } }
+" }}}
+
 " lightline {{{
 NeoBundle 'itchyny/lightline.vim'
 
@@ -19,14 +27,6 @@ let g:lightline.active.left = [
   \ [ 'mode', 'paste' ],
   \ [ 'readonly', 'relativepath', 'modified' ] ]
 let g:lightline.inactive.left = [ [ 'relativepath' ] ]
-" }}}
-
-" 遅延読み込み {{{
-" " NeoBundleLazy 'digitaltoad/vim-jade', { "autoload": { "filetypes": ["jade"] } }
-" NeoBundleLazy 'digitaltoad/vim-jade'
-" au FileType jade NeoBundleSource vim-jade
-" NeoBundleLazy 'kchmck/vim-coffee-script', { "autoload": { "filetypes": ["coffee"] } }
-" NeoBundleLazy 'wavded/vim-stylus', { "autoload": { "filetypes": ["stylus"] } }
 " }}}
 
 " indent_guides {{{
