@@ -5,6 +5,10 @@ let javascript_ignore_javaScriptdoc = 1
 " let g:javascript_conceal = 1
 " }}}
 
+" tern_for_vim {{{
+" NeoBundle 'marijnh/tern_for_vim'
+" }}}
+
 " vim-jsx {{{
 NeoBundle 'mxw/vim-jsx'
 " }}}
