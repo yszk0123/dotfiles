@@ -126,5 +126,5 @@ nnoremap [util]gw :<C-u>Gwrite<Space>
 " }}}
 
 " vim-multiple-cursors {{{
-NeoBundle 'terryma/vim-multiple-cursors'
+" NeoBundle 'terryma/vim-multiple-cursors'
 " }}}
