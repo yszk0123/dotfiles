@@ -67,8 +67,12 @@ nnoremap [util]bt :tabs<CR>:tabnext<Space>
 
 nnoremap [util]m <C-w>_
 
-noremap gh gT
-noremap gl gt
+" noremap gh gT
+" noremap gl gt
+
+" gfを置き換えて, 分割ウィンドウで編集するようにする
+" (gf: カーソルの下か後ろの名前のファイルを編集する)
+noremap gf :sp <cfile><CR>
 
 " ref: Revert,Double,ScreenModeなどの解説
 "   title: scrnmode.vim : スクリーンのサイズを簡単切替え — 名無しのvim使い
