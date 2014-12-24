@@ -1,7 +1,7 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'altercation/vim-colors-solarized'
+" NeoBundle 'altercation/vim-colors-solarized'
 " Aligntaと似たようなプラグイン
 " NeoBundle 'godlygeek/tabular'
 " Perlスタイルの正規表現
@@ -9,22 +9,22 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 " Alignta {{{
 " TODO: ソート+整列
-NeoBundleLazy 'h1mesuke/vim-alignta.git', { "autoload": { "commands": ["Align"] } }
-" let g:unite_source_alignta_preset_arguments = [
-"       \ ["Align at '='", '=>\='],
-"       \ ["Align at ':'", '01 :\zs/1'],
-"       \ ["Align at ','", '01 ,\zs'],
-"       \]
-" nnoremap [unite]a :<C-u>Unite alignta:options<CR>
-" xnoremap [unite]a :<C-u>Unite alignta:arguments<CR>
-" nnoremap gc `[v`]
-" nnoremap [align] <Nop>
-" nmap <Space>a [align]
-" nnoremap [align]a :Alignta 0:1 :\zs/1<CR>
-" xnoremap [align]a :Alignta 0:1 :\zs/1<CR>
-vnoremap <silent> = :Align 1 =<CR>
-vnoremap <silent> * :Align 01 :\zs/1<CR>
-vnoremap <silent> , :Align 01 ,\zs<CR>
+" NeoBundleLazy 'h1mesuke/vim-alignta.git', { "autoload": { "commands": ["Align"] } }
+" " let g:unite_source_alignta_preset_arguments = [
+" "       \ ["Align at '='", '=>\='],
+" "       \ ["Align at ':'", '01 :\zs/1'],
+" "       \ ["Align at ','", '01 ,\zs'],
+" "       \]
+" " nnoremap [unite]a :<C-u>Unite alignta:options<CR>
+" " xnoremap [unite]a :<C-u>Unite alignta:arguments<CR>
+" " nnoremap gc `[v`]
+" " nnoremap [align] <Nop>
+" " nmap <Space>a [align]
+" " nnoremap [align]a :Alignta 0:1 :\zs/1<CR>
+" " xnoremap [align]a :Alignta 0:1 :\zs/1<CR>
+" vnoremap <silent> = :Align 1 =<CR>
+" vnoremap <silent> * :Align 01 :\zs/1<CR>
+" vnoremap <silent> , :Align 01 ,\zs<CR>
 "}}}
 
 " clever-f {{{
