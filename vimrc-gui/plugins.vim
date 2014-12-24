@@ -124,3 +124,7 @@ nnoremap [util]gl :<C-u>Glog<Space>
 nnoremap [util]gs :<C-u>Gstatus<CR>
 nnoremap [util]gw :<C-u>Gwrite<Space>
 " }}}
+
+" vim-multiple-cursors {{{
+NeoBundle 'terryma/vim-multiple-cursors'
+" }}}
