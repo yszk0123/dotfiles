@@ -55,9 +55,24 @@ endfunction
 command! MyJSHintToggleSave call <SID>jshint_toggle('save')
 command! MyJSHintToggleRead call <SID>jshint_toggle('read')
 
-nnoremap [util]hh :<C-u>JSHint<CR>
-nnoremap [util]hs :<C-u>MyJSHintToggleSave<CR>
-nnoremap [util]hr :<C-u>MyJSHintToggleRead<CR>
+nnoremap <silent> [jshint]h :JSHint<CR>
+vnoremap <silent> [jshint]h :JSHint<CR>
+nnoremap <silent> [jshint]s :<C-u>MyJSHintToggleSave<CR>
+nnoremap <silent> [jshint]r :<C-u>MyJSHintToggleRead<CR>
+
+nnoremap <silent> <F4> :JSHint<CR>
+inoremap <silent> <F4> <C-O>:JSHint<CR>
+vnoremap <silent> <F4> :JSHint<CR>
+
+" show next jshint error
+nnoremap <silent> <F2> :lnext<CR>
+inoremap <silent> <F2> <C-O>:lnext<CR>
+vnoremap <silent> <F2> :lnext<CR>
+
+" show previous jshint error
+nnoremap <silent> <F3> :lprevious<CR>
+inoremap <silent> <F3> <C-O>:lprevious<CR>
+vnoremap <silent> <F3> :lprevious<CR>
 " }}}
 
 " vim-jsbeautify {{{

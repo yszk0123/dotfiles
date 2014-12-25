@@ -17,6 +17,10 @@ nmap sx [unite-ex]
 nnoremap [tsc] <Nop>
 nmap ,t [tsc]
 
+" For jshint
+nnoremap [jshint] <Nop>
+nmap ,h [jshint]
+
 " For VimShell
 " nnoremap [vimshell] <Nop>
 " nmap sh [vimshell]
