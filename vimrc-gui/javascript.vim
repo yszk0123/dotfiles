@@ -36,23 +36,28 @@ let g:used_javascript_libs = 'underscore'
 
 " jshint {{{
 NeoBundle 'Shutnik/jshint2.vim'
-let jshint2_read=0
-let jshint2_save=1
-let jshint2_close=1
+let g:jshint2_read=0
+let g:jshint2_save=1
+let g:jshint2_close=1
 function! s:jshint_toggle(type)
   if a:type is 'read'
     let g:jshint2_read=!g:jshint2_read
-    echo 'jshint read is ' . jshint2_read
+    echo 'jshint read is ' . g:jshint2_read
   else
     let g:jshint2_save=!g:jshint2_save
     echo 'jshint save is ' . g:jshint2_save
   endif
 endfunction
-command! JSHintToggleSave call <SID>jshint_toggle('save')
-command! JSHintToggleRead call <SID>jshint_toggle('read')
+
+" jshint2.vim checks existence of a JSHint command by calling exists(':JSHint')
+" so if we define a new command starts with JSHint, this plugin wouldn't be
+" loaded.
+command! MyJSHintToggleSave call <SID>jshint_toggle('save')
+command! MyJSHintToggleRead call <SID>jshint_toggle('read')
+
 nnoremap [util]hh :<C-u>JSHint<CR>
-nnoremap [util]hs :<C-u>JSHintToggleSave<CR>
-nnoremap [util]hr :<C-u>JSHintToggleRead<CR>
+nnoremap [util]hs :<C-u>MyJSHintToggleSave<CR>
+nnoremap [util]hr :<C-u>MyJSHintToggleRead<CR>
 " }}}
 
 " vim-jsbeautify {{{
