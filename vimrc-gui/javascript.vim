@@ -36,6 +36,9 @@ let g:used_javascript_libs = 'underscore'
 
 " jshint {{{
 NeoBundle 'Shutnik/jshint2.vim'
+" if has('win32')
+"   let g:jshint2_command='D:\common\node_modules\.bin\jshint.cmd'
+" endif
 let g:jshint2_read=0
 let g:jshint2_save=1
 let g:jshint2_close=1
