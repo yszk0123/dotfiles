@@ -45,15 +45,19 @@ map <Space>n <Plug>(easymotion-bd-n)
 map <Space>. <Plug>(easymotion-repeat)
 " map <Space>; <Plug>(easymotion-jumptoanywhere)
 map <Space><Space> <Plug>(easymotion-prefix)s
-map <Space>{ <Plug>(easymotion-prefix)s{
-map <Space>} <Plug>(easymotion-prefix)s}
-map <Space>( <Plug>(easymotion-prefix)s(
-map <Space>) <Plug>(easymotion-prefix)s)
 map <Space>, <Plug>(easymotion-prefix)s,
-map <Space>; <Plug>(easymotion-prefix)s;
 map <Space>c <Plug>(easymotion-prefix)s'
+map ; <Plug>(easymotion-prefix)s;
+map ,, <Plug>(easymotion-prefix)s,
+map ( <Plug>(easymotion-prefix)s(
+map ) <Plug>(easymotion-prefix)s)
+map { <Plug>(easymotion-prefix)s{
+map } <Plug>(easymotion-prefix)s}
+map [[ <Plug>(easymotion-prefix)s[
+map ]] <Plug>(easymotion-prefix)s]
 " let g:EasyMotion_keys = 'nvmhgjfkdls;aurieowp'
-let g:EasyMotion_keys = 'nmvhjkl;gfdsaiopew'
+" let g:EasyMotion_keys = 'nmbhjkl;gfdsaiopew'
+let g:EasyMotion_keys = 'nhjio;lkmp@[]:gtrewasdfv'
 let g:EasyMotion_re_anywhere = '[<>()\[\]{}]\v|<(class|function|var|require)>'
 " }}}
 
