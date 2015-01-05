@@ -4,6 +4,7 @@
 " <...>,/ のように入力すれば良い具合に展開される
 cnoreabbrev ,    %:p:h
 
+cnoreabbr a/    D:/app
 cnoreabbr c/    D:/common
 cnoreabbr cb/   D:/common/bower_components
 cnoreabbr cn/   D:/common/node_modules

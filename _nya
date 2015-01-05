@@ -1,6 +1,7 @@
 option prompt "$e[31;40;1m$w2> $e[37;1m"
 # cd ~
 
+folder a    D:/app
 folder c    D:/common
 folder cb   D:/common/bower_components
 folder cn   D:/common/node_modules
