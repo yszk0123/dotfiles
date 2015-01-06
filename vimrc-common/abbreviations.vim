@@ -14,6 +14,10 @@ cnoreabbr n/    C:/Users/yuji/AppData/Roaming/npm
 cnoreabbr tn/   C:/Users/yuji/tools/nodist
 cnoreabbr tt/   D:/tmp/tmp
 cnoreabbr tv/   C:/Users/yuji/tools/vim
+cnoreabbr W     D:/web
+cnoreabbr Wd    D:/web/doc
+cnoreabbr Wg    D:/web/github
+cnoreabbr Wo    D:/web/offline-backup
 cnoreabbr wa/   D:/work/AutoHotkey
 cnoreabbr wc/   D:/work/ChromeExtensions
 cnoreabbr wf/   D:/work/filtered
