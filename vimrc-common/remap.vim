@@ -9,7 +9,7 @@ nnoremap Q :<C-u>q<CR>
 nnoremap <CR> o
 inoremap <C-c> <Esc>
 nnoremap <silent> <Leader><Leader><Leader> :noh<CR>
-nnoremap <silent> <Space>l :noh<CR>
+nnoremap <silent> <Space><Space> :noh<CR>
 " inoremap <C-f> <C-x><C-f>
 
 nnoremap vv <C-v>
