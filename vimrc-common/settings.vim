@@ -39,6 +39,8 @@ set expandtab
 set formatoptions+=mM
 " 自動整形を避ける
 set formatoptions-=tca
+" better peformance
+set lazyredraw
 set list
 set listchars=tab:>~,trail:~,nbsp:~,extends:>,precedes:<,
 " set listchars=tab:^\ ,trail:~,eol:$
