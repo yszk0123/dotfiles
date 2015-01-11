@@ -38,27 +38,23 @@ let g:clever_f_chars_match_any_signs = ''
 " vim-easymotion {{{
 NeoBundle 'Lokaltog/vim-easymotion'
 " map <Leader> <Plug>(easymotion-prefix)
-map <Space> <Plug>(easymotion-prefix)
-map <Space>S <Plug>(easymotion-sn)
-map <Space>/ <Plug>(easymotion-sn)
-map <Space>n <Plug>(easymotion-bd-n)
-map <Space>. <Plug>(easymotion-repeat)
+map <Space> <Plug>(easymotion-prefix)s
+map <Space>. <Plug>(easymotion-prefix)s.
+" map <Space>S <Plug>(easymotion-sn)
+" map <Space>/ <Plug>(easymotion-sn)
+" map <Space>n <Plug>(easymotion-bd-n)
+" map <Space>. <Plug>(easymotion-repeat)
 " map <Space>; <Plug>(easymotion-jumptoanywhere)
-map <Space><Space> <Plug>(easymotion-prefix)s
-map <Space>, <Plug>(easymotion-prefix)s,
-map <Space>c <Plug>(easymotion-prefix)s'
-map ; <Plug>(easymotion-prefix)s;
+map ; <Plug>(easymotion-jumptoanywhere)
 map ,, <Plug>(easymotion-prefix)s,
 map ( <Plug>(easymotion-prefix)s(
 map ) <Plug>(easymotion-prefix)s)
 map { <Plug>(easymotion-prefix)s{
 map } <Plug>(easymotion-prefix)s}
-map [[ <Plug>(easymotion-prefix)s[
-map ]] <Plug>(easymotion-prefix)s]
 " let g:EasyMotion_keys = 'nvmhgjfkdls;aurieowp'
 " let g:EasyMotion_keys = 'nmbhjkl;gfdsaiopew'
 let g:EasyMotion_keys = 'nhjio;lkmp@[]:gtrewasdfv'
-let g:EasyMotion_re_anywhere = '[<>()\[\]{}]\v|<(class|function|var|require)>'
+let g:EasyMotion_re_anywhere = '\v<(class|function|var|require|import|export|return|if)>\s*\zs|\)\s*\{\zs'
 " }}}
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
@@ -94,7 +90,7 @@ nnoremap [util]q :<C-u>Qfreplace<CR>
 
 " vim-rooter: change working directory to project root {{{
 NeoBundle 'airblade/vim-rooter'
-map <silent> <Space>C <Plug>RooterChangeToRootDirectory
+map <silent> [util]C <Plug>RooterChangeToRootDirectory
 let g:rooter_manual_only = 1
 let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
 "}}}
