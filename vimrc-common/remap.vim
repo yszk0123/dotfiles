@@ -104,6 +104,24 @@ if has('folding')
 endif
 "}}}
 
+" {{{
+" ref:
+"   title: The ultimate Vim configuration - vimrc
+"   url: http://amix.dk/vim/vimrc.html
+" move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+" CAUTION: a register 'z' is used
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+" }}}
+
 " 各種ショートカット {{{
 " 新しいタブを開く
 nnoremap [util]n :<C-u>tabnew<CR>
@@ -115,10 +133,4 @@ nnoremap [util]c :<C-u>cd %:h<CR>
 nnoremap [util]l :<C-u>lcd %:h<CR>
 " 編集中のファイル名を表示 (:fileの方が便利)
 " nnoremap [util]f :<C-u>echo expand('%:p')<CR>
-
-nnoremap [util]et :<C-u>edit D:/app/share/data/tmp.txt<CR>
-nnoremap [util]eg :<C-u>edit $MYGVIMRC<CR>
-nnoremap [util]ev :<C-u>edit $MYVIMRC<CR>
-nnoremap [util]sg :<C-u>source $MYGVIMRC<CR>
-nnoremap [util]sv :<C-u>source $MYVIMRC<CR>
 "}}}
