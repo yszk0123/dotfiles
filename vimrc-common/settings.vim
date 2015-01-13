@@ -51,6 +51,7 @@ set number
 set scrolloff=3
 " set shellslash
 set shiftwidth=2
+set showmatch=0
 set softtabstop=2
 " ウィンドウ分割時に右または下に開く(デフォルトでは左または上)
 set splitbelow
