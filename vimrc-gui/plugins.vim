@@ -125,6 +125,13 @@ nnoremap [util]gs :<C-u>Gstatus<CR>
 nnoremap [util]gw :<C-u>Gwrite<Space>
 " }}}
 
+" vim-gitgutter {{{
+NeoBundle 'airblade/vim-gitgutter'
+let g:gitgutter_enabled = 0
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+" }}}
+
 " vim-multiple-cursors {{{
 " NeoBundle 'terryma/vim-multiple-cursors'
 " }}}
