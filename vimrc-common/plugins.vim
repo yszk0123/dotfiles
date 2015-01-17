@@ -38,14 +38,15 @@ let g:clever_f_chars_match_any_signs = ''
 " vim-easymotion {{{
 NeoBundle 'Lokaltog/vim-easymotion'
 " map <Leader> <Plug>(easymotion-prefix)
+map <Space><Space> <Plug>(easymotion-prefix)
+map <Space><Space>S <Plug>(easymotion-sn)
+map <Space><Space>; <Plug>(easymotion-jumptoanywhere)
 map <Space> <Plug>(easymotion-prefix)s
 map <Space>. <Plug>(easymotion-prefix)s.
-" map <Space>S <Plug>(easymotion-sn)
 " map <Space>/ <Plug>(easymotion-sn)
 " map <Space>n <Plug>(easymotion-bd-n)
 " map <Space>. <Plug>(easymotion-repeat)
-" map <Space>; <Plug>(easymotion-jumptoanywhere)
-map ; <Plug>(easymotion-jumptoanywhere)
+map ; <Plug>(easymotion-prefix)s;
 map ,, <Plug>(easymotion-prefix)s,
 map ( <Plug>(easymotion-prefix)s(
 map ) <Plug>(easymotion-prefix)s)
