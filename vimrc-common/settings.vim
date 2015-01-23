@@ -46,7 +46,7 @@ set listchars=tab:>~,trail:~,nbsp:~,extends:>,precedes:<,
 " set listchars=tab:^\ ,trail:~,eol:$
 " 描画高速化
 set nocursorline
-set noincsearch
+set incsearch
 set number
 set scrolloff=3
 " set shellslash
