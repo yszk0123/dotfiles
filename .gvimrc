@@ -1,5 +1,8 @@
 " hybrid {{{
 colorscheme hybrid
+" hi Search ctermfg=0 ctermbg=14 guifg=#0d100f guibg=#908033
+hi Search ctermfg=0 ctermfg=14 gui=bold guifg=#7fbf00 guibg=NONE
+hi IncSearch cterm=bold ctermfg=10 gui=bold guifg=#7fbf00
 " }}}
 
 " 80行を超える場合ハイライト {{{
