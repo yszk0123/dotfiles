@@ -1,3 +1,4 @@
+" basic plugin {{{
 " vim-javascript {{{
 " NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'pangloss/vim-javascript'
@@ -5,15 +6,13 @@ let javascript_ignore_javaScriptdoc = 1
 " let g:javascript_conceal = 1
 " }}}
 
+" NeoBundle 'jelera/vim-javascript-syntax'
+" }}}
+
+" integration with command line tools {{{
 " tern_for_vim {{{
 " NeoBundle 'marijnh/tern_for_vim'
 " }}}
-
-" vim-jsx {{{
-NeoBundle 'mxw/vim-jsx'
-" }}}
-
-" NeoBundle 'jelera/vim-javascript-syntax'
 
 " javascript-libraries-syntax {{{
 " javascriptの主要なライブラリの構文定義
@@ -79,9 +78,16 @@ vnoremap <silent> <F3> :lprevious<CR>
 " }}}
 
 " vim-jsbeautify {{{
-NeoBundle 'maksimr/vim-jsbeautify'
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-autocmd FileType css,stylus noremap <buffer> <c-f> :call CSSBeautify()<cr>
+" NeoBundle 'maksimr/vim-jsbeautify'
+" autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" autocmd FileType css,stylus noremap <buffer> <c-f> :call CSSBeautify()<cr>
+" }}}
+" }}}
+
+" framework specific plugins {{{
+" vim-jsx {{{
+NeoBundle 'mxw/vim-jsx'
+" }}}
 " }}}
 
