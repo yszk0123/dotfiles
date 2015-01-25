@@ -95,6 +95,12 @@ NeoBundle 'thinca/vim-qfreplace'
 nnoremap [util]q :<C-u>Qfreplace<CR>
 " }}}
 
+" YankRing {{{
+NeoBundle 'vim-scripts/YankRing.vim'
+nnoremap [util]y :<C-u>YRShow<CR>
+let g:yankring_max_history = 10
+" }}}
+
 " vim-rooter: change working directory to project root {{{
 NeoBundle 'airblade/vim-rooter'
 map <silent> [util]C <Plug>RooterChangeToRootDirectory
