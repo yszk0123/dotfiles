@@ -86,6 +86,10 @@ map R  <Plug>(operator-replace)
 map S  <Plug>(operator-sort)
 "}}}
 
+" supertab {{{
+NeoBundle 'ervandew/supertab'
+" }}}
+
 " vim-qfreplace {{{
 NeoBundle 'thinca/vim-qfreplace'
 nnoremap [util]q :<C-u>Qfreplace<CR>
