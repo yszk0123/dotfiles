@@ -7,6 +7,13 @@ NeoBundle 'w0ng/vim-hybrid'
 " Perlスタイルの正規表現
 " NeoBundle 'othree/eregex.vim'
 
+" acp (vim-autocomplpop, AutoComplPop) {{{
+NeoBundle 'D:/common/lib/vim-autocomplpop'
+" let g:acp_behaviorKeywordIgnores = ['D:/', 'C:/']
+" au WinEnter *[unite]* AcpLock
+" au WinLeave *[unite]* AcpUnlock
+" }}}
+
 " Alignta {{{
 " TODO: ソート+整列
 " NeoBundleLazy 'h1mesuke/vim-alignta.git', { "autoload": { "commands": ["Align"] } }
