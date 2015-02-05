@@ -8,8 +8,8 @@ NeoBundle 'w0ng/vim-hybrid'
 " NeoBundle 'othree/eregex.vim'
 
 " acp (vim-autocomplpop, AutoComplPop) {{{
-NeoBundle 'D:/common/lib/vim-autocomplpop'
-" let g:acp_behaviorKeywordIgnores = ['D:/', 'C:/']
+" NeoBundle 'D:/common/lib/vim-autocomplpop'
+" let g:acp_behaviorKeywordIgnores = ['D:', 'C:', '\\', '/', '.', ':']
 " au WinEnter *[unite]* AcpLock
 " au WinLeave *[unite]* AcpUnlock
 " }}}
