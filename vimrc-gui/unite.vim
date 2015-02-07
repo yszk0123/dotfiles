@@ -48,6 +48,7 @@ call unite#custom#source('neomru', 'max_candidates', 50)
 " unite grep に ag(The Silver Searcher) を使う {{{
 if executable('ag')
   " file_rec設定
+  " CAUTION: maybe wrong
   let g:unite_source_rec_async_command='ag --nocolor --nogroup --hidden -g "" --ignore ".hg" --ignore ".svn" --ignore ".git" --ignore "bower_components" --ignore "backup" --ignore "dist" --ignore "dest" --ignore "build" --ignore "lib" --ignore ".bzr"'
   " call unite#custom_source('file_rec', 'ignore_pattern', (unite#sources#file_rec#define()[0]['ignore_pattern']) . '\|\<target\>')
 
@@ -136,13 +137,13 @@ nnoremap <silent> [unite]u :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent> [unite]l :<C-u>Unite line -buffer-name=search-buffer<CR>
 
 "プロジェクト
-nnoremap <silent> [unite]P :<C-u>Unite -buffer-name=project file_rec/async
+nnoremap <silent> [unite]p :<C-u>Unite -buffer-name=project file_rec
   \ -no-quit -vertical -winwidth=26 -wrap -long-source-names<CR>
-nnoremap <silent> [unite]p :<C-u>Unite -buffer-name=project file_rec/async
+nnoremap <silent> [unite]P :<C-u>Unite -buffer-name=project file_rec
   \ -no-quit -vertical -winwidth=26 -wrap -long-source-names -resume<CR>
 " nnoremap <silent> [unite]F :<C-u>Unite -buffer-name=files file<CR>
 "サブディレクトリを含むプロジェクトディレクトリの全ファイル一覧
-nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=files file_rec/async<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=files file_rec<CR>
 nnoremap <silent> [unite]R :<C-u>UniteResume files<CR>
 
 " 色々
