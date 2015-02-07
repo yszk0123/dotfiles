@@ -8,6 +8,7 @@ cnoreabbr a/    D:/app
 cnoreabbr c/    D:/common
 cnoreabbr cb/   D:/common/bower_components
 cnoreabbr cn/   D:/common/node_modules
+cnoreabbr ct/   D:/common/templates
 cnoreabbr d/    D:/data/dotfiles
 cnoreabbr dv/   D:/data/vimfiles
 cnoreabbr n/    C:/Users/yuji/AppData/Roaming/npm

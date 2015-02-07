@@ -5,6 +5,7 @@ folder a    D:/app
 folder c    D:/common
 folder cb   D:/common/bower_components
 folder cn   D:/common/node_modules
+folder ct   D:/common/templates
 folder d    D:/data/dotfiles
 folder dv   D:/data/vimfiles
 folder n    C:/Users/yuji/AppData/Roaming/npm
