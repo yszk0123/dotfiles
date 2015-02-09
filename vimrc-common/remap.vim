@@ -133,6 +133,10 @@ nnoremap [util]c :<C-u>cd %:h<CR>
 nnoremap [util]l :<C-u>lcd %:h<CR>
 " 編集中のファイル名を表示 (:fileの方が便利)
 " nnoremap [util]f :<C-u>echo expand('%:p')<CR>
+" nnoremap [util]e :<C-u>edit<Space>
+" nnoremap [util]p :<C-u>pedit<Space>
+" preview windowでテンプレートファイルを開く
+nnoremap [util]t :<C-u>pedit D:/common/templates/
 "}}}
 
 " toggle slash (for Windows) {{{
