@@ -13,6 +13,7 @@ cnoreabbr d/    D:/data/dotfiles
 cnoreabbr dv/   D:/data/vimfiles
 cnoreabbr n/    C:/Users/yuji/AppData/Roaming/npm
 cnoreabbr tn/   C:/Users/yuji/tools/nodist
+cnoreabbr t/    D:/tmp
 cnoreabbr tt/   D:/tmp/tmp
 cnoreabbr tv/   C:/Users/yuji/tools/vim
 cnoreabbr W     D:/web
