@@ -49,7 +49,7 @@ call unite#custom#source('neomru', 'max_candidates', 50)
 if executable('ag')
   " file_rec設定
   " CAUTION: maybe wrong
-  let g:unite_source_rec_async_command='ag --nocolor --nogroup --hidden -g "" --ignore ".hg" --ignore ".svn" --ignore ".git" --ignore "bower_components" --ignore "backup" --ignore "dist" --ignore "dest" --ignore "build" --ignore "lib" --ignore ".bzr"'
+  " let g:unite_source_rec_async_command='ag --nocolor --nogroup --hidden -g "" --ignore ".hg" --ignore ".svn" --ignore ".git" --ignore "bower_components" --ignore "backup" --ignore "dist" --ignore "dest" --ignore "build" --ignore "lib" --ignore ".bzr"'
   " call unite#custom_source('file_rec', 'ignore_pattern', (unite#sources#file_rec#define()[0]['ignore_pattern']) . '\|\<target\>')
 
   " grep設定
@@ -183,14 +183,17 @@ function! s:unite_my_settings()"{{{
   " 1. Unite操作を継続するものは入力モード+キー
   " 2. Unite操作を完了するもの(actionなど)はCtrl+キー
 
-  "QまたはESCでuniteを終了
+  " QまたはESCでuniteを終了
   nmap <buffer> Q      <Plug>(unite_all_exit)
   nmap <buffer> <ESC>  <Plug>(unite_exit)
-  " "入力モードのとき↓でノーマルモードに移動
+  " 入力モードのとき↓でノーマルモードに移動
   imap <buffer> <Up>   <Plug>(unite_insert_leave)
   imap <buffer> <Down> <Plug>(unite_insert_leave)
   imap <buffer> jj     <Plug>(unite_insert_leave)
-  "入力モードのときctrl+wでバックスラッシュも削除
+  imap <buffer> kk     <Plug>(unite_insert_leave)
+  " TABで次の行を選択
+  imap <buffer> <TAB>  <Plug>(unite_select_next_line)
+  " 入力モードのときctrl+wでバックスラッシュも削除
   imap <buffer> <C-w>  <Plug>(unite_delete_backward_path)
   nmap <buffer> <Left> <Plug>(unite_delete_backward_path)
   nmap <buffer> h      <Plug>(unite_delete_backward_path)
@@ -202,25 +205,35 @@ function! s:unite_my_settings()"{{{
   nmap <buffer> m      <Plug>(unite_toggle_mark_current_candidate)
   nmap <buffer> M      <Plug>(unite_toggle_mark_current_candidate_up)
 
-  "ctrl+tで新しいタブに開く
+  " replace/rename
+  let unite = unite#get_current_unite()
+  if unite.profile_name ==# 'search'
+    nnoremap <silent><buffer><expr> r     unite#do_action('replace')
+  else
+    nnoremap <silent><buffer><expr> r     unite#do_action('rename')
+  endif
+
+  " open commands
+
+  " ctrl+tで新しいタブに開く
   nnoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
   inoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
-  "ctrl+sで縦に分割して開く
+  " ctrl+sで縦に分割して開く
   nnoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
   inoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
-  "ctrl+vで横に分割して開く
+  " ctrl+vで横に分割して開く
   nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
   inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
-  "ctrl+oでその場所に開く
+  " ctrl+oでその場所に開く
   nnoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
   inoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
-  "ctrl+cでcd
+  " ctrl+cでcd
   nnoremap <silent> <buffer> <expr> <C-c> unite#do_action('cd')
   inoremap <silent> <buffer> <expr> <C-c> unite#do_action('cd')
-  "ctrl+lでlcd
+  " ctrl+lでlcd
   nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('lcd')
   inoremap <silent> <buffer> <expr> <C-l> unite#do_action('lcd')
-  "ctrl+vでその場所に開く
+  " ctrl+vでその場所に開く
   " nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
   " inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vimfiler')
 endfunction"}}}
