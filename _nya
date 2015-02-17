@@ -30,21 +30,19 @@ folder wjr  D:/work/JavaScript/relay
 folder wjs  D:/work/JavaScript/script
 folder wp   D:/work/prototype
 
-alias c coffee
-alias ga "git add"
-alias gc "git commit"
-alias gd "git diff"
-alias gl "git log"
-alias gs "git status"
-alias mb "myke.js build"
-alias mc "myke.js component"
+alias c   coffee
+alias ga  "git add"
+alias gc  "git commit"
+alias gco "git checkout"
+alias gd  "git diff"
+alias gl  "git log"
+alias gs  "git status"
 alias mongob "mongo bookmark"
 alias mongot "mongo textviewer"
-alias n node
-alias nh "node --harmony"
+alias n  node
 alias po popd
 alias pu pushd
-alias r runner.js
+alias r  runner.js
 alias so source
 alias vi vim
 alias ycm "gvim --cmd set g:use_ycm=1"
