@@ -7,7 +7,8 @@ NeoBundle 'wavded/vim-stylus'
 
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'othree/html5.vim'
+" NeoBundle 'taichouchou2/html5.vim'
 
 " 遅延読み込み {{{
 " " NeoBundleLazy 'digitaltoad/vim-jade', { "autoload": { "filetypes": ["jade"] } }
@@ -126,10 +127,10 @@ nnoremap [util]gw :<C-u>Gwrite<Space>
 " }}}
 
 " vim-gitgutter {{{
-NeoBundle 'airblade/vim-gitgutter'
-let g:gitgutter_enabled = 0
-let g:gitgutter_realtime = 0
-let g:gitgutter_eager = 0
+" NeoBundle 'airblade/vim-gitgutter'
+" let g:gitgutter_enabled = 0
+" let g:gitgutter_realtime = 0
+" let g:gitgutter_eager = 0
 " }}}
 
 " vim-multiple-cursors {{{
