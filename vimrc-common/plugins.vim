@@ -124,7 +124,7 @@ NeoBundle 'Raimondi/delimitMate'
 " ref:
 "   title: Vim の textobj プラグインをまとめた - C++でゲームプログラミング
 "   url: http://d.hatena.ne.jp/osyo-manga/20130717/1374069987
-NeoBundle 'kana/vim-textobj-user'
+" NeoBundle 'kana/vim-textobj-user'
 
 " between:  f
 " comment:  c
@@ -141,8 +141,8 @@ NeoBundle 'kana/vim-textobj-user'
 " NeoBundle 'mattn/vim-textobj-url'
 " NeoBundle 'thinca/vim-textobj-between'
 " NeoBundle 'h1mesuke/textobj-wiw'
-NeoBundle 'kana/vim-textobj-fold'
-NeoBundle 'kana/vim-textobj-indent'
-NeoBundle 'kana/vim-textobj-lastpat'
-NeoBundle 'thinca/vim-textobj-comment'
+" NeoBundle 'kana/vim-textobj-fold'
+" NeoBundle 'kana/vim-textobj-indent'
+" NeoBundle 'kana/vim-textobj-lastpat'
+" NeoBundle 'thinca/vim-textobj-comment'
 "}}}
