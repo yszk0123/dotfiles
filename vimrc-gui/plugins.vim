@@ -85,7 +85,7 @@ vnoremap [util]qR :QuickRun -cmdopt<Space>
 " }}}
 
 " VimFiler {{{
-NeoBundle 'Shougo/vimfiler'
+NeoBundleLazy 'Shougo/vimfiler', { "autoload": { "commands": ["VimFilerBufferDir", "VimFilerCurrentDir"] } }
 let g:vimfiler_safe_mode_by_default = 0
 nnoremap [util]vf :<C-u>VimFilerBufferDir<CR>
 nnoremap [util]vF :<C-u>VimFilerCurrentDir<CR>
