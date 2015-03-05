@@ -43,28 +43,28 @@ let g:clever_f_chars_match_any_signs = ''
 "}}}
 
 " vim-easymotion {{{
-NeoBundle 'Lokaltog/vim-easymotion'
-" map <Leader> <Plug>(easymotion-prefix)
-map <Space><Space> <Plug>(easymotion-prefix)
-map <Space><Space>S <Plug>(easymotion-sn)
-map <Space><Space>; <Plug>(easymotion-jumptoanywhere)
-map <Space><Space>s <Plug>(easymotion-bd-n)
-map <Space> <Plug>(easymotion-prefix)s
-map <Space>. <Plug>(easymotion-prefix)s.
-" map <Space>/ <Plug>(easymotion-sn)
-" map <Space>n <Plug>(easymotion-bd-n)
-" map <Space>. <Plug>(easymotion-repeat)
-map ; <Plug>(easymotion-prefix)s;
-map ,, <Plug>(easymotion-prefix)s,
-map ( <Plug>(easymotion-prefix)s(
-map ) <Plug>(easymotion-prefix)s)
-" map { <Plug>(easymotion-prefix)s{
-" map } <Plug>(easymotion-prefix)s}
-" let g:EasyMotion_keys = 'nvmhgjfkdls;aurieowp'
-" let g:EasyMotion_keys = 'nmbhjkl;gfdsaiopew'
-let g:EasyMotion_keys = 'nhjio;lkmp@[]:gtrewasdfv'
-" let g:EasyMotion_re_anywhere = '\v<(class|function|var|require|import|export|return|if)>\s*\zs|\)\s*\{\zs'
-let g:EasyMotion_re_anywhere = '\v^$'
+" NeoBundle 'Lokaltog/vim-easymotion'
+" " map <Leader> <Plug>(easymotion-prefix)
+" map <Space><Space> <Plug>(easymotion-prefix)
+" map <Space><Space>S <Plug>(easymotion-sn)
+" map <Space><Space>; <Plug>(easymotion-jumptoanywhere)
+" map <Space><Space>s <Plug>(easymotion-bd-n)
+" map <Space> <Plug>(easymotion-prefix)s
+" map <Space>. <Plug>(easymotion-prefix)s.
+" " map <Space>/ <Plug>(easymotion-sn)
+" " map <Space>n <Plug>(easymotion-bd-n)
+" " map <Space>. <Plug>(easymotion-repeat)
+" map ; <Plug>(easymotion-prefix)s;
+" map ,, <Plug>(easymotion-prefix)s,
+" map ( <Plug>(easymotion-prefix)s(
+" map ) <Plug>(easymotion-prefix)s)
+" " map { <Plug>(easymotion-prefix)s{
+" " map } <Plug>(easymotion-prefix)s}
+" " let g:EasyMotion_keys = 'nvmhgjfkdls;aurieowp'
+" " let g:EasyMotion_keys = 'nmbhjkl;gfdsaiopew'
+" let g:EasyMotion_keys = 'nhjio;lkmp@[]:gtrewasdfv'
+" " let g:EasyMotion_re_anywhere = '\v<(class|function|var|require|import|export|return|if)>\s*\zs|\)\s*\{\zs'
+" let g:EasyMotion_re_anywhere = '\v^$'
 " }}}
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
