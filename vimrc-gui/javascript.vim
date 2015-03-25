@@ -5,6 +5,9 @@ NeoBundle 'pangloss/vim-javascript'
 let javascript_ignore_javaScriptdoc = 1
 " let g:javascript_conceal = 1
 " }}}
+" vim-js-indent {{{
+" NeoBundle 'jason0x43/vim-js-indent'
+" }}}
 
 " NeoBundle 'jelera/vim-javascript-syntax'
 " }}}

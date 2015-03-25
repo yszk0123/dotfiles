@@ -40,7 +40,7 @@ let g:neomru#filename_format = ''
 let g:neomru#time_format = ''
 " 履歴アイテムのリンク切れを行う
 let g:neomru#do_validate = 1
-call unite#custom#source('neomru', 'max_candidates', 50)
+" call unite#custom#source('neomru', 'max_candidates', 50)
 "}}}
 
 " call unite#filters#matcher_default#use(['matcher_fuzzy'])
