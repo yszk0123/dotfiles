@@ -9,15 +9,15 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 
 " data_directory
-if has('win32')
-  let g:unite_data_directory = $HOME . '/vimfiles/.unite'
-  let g:neomru#file_mru_path = $HOME . '/vimfiles/.cache/neomru/file'
-  let g:neomru#directory_mru_path = $HOME . '/vimfiles/.cache/neomru/directory'
+let g:unite_data_directory = $HOME . '/vimfiles/.unite'
+let g:neomru#file_mru_path = $HOME . '/vimfiles/.cache/neomru/file'
+let g:neomru#directory_mru_path = $HOME . '/vimfiles/.cache/neomru/directory'
+" if has('win32') || has('mac')
 " elseif  has('macunix')
 "   let g:unite_data_directory = '/Volumes/RamDisk/.unite'
 " else
 "   let g:unite_data_directory = '/mnt/ramdisk/.unite'
-endif
+" endif
 
 "unite general settings {{{
 "インサートモードで開始
