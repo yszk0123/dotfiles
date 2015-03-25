@@ -17,6 +17,7 @@
 set nobackup
 set nowritebackup
 set swapfile
+set noundofile
 set backupdir=$HOME/vimfiles/tmp
 set directory=$HOME/vimfiles/tmp
 set viminfo+=n$HOME/vimfiles/viminfo.txt
