@@ -14,7 +14,12 @@ hi IncSearch cterm=bold ctermfg=10 gui=bold guifg=#7fbf00
 if has('multi_byte_ime')
   "highlight Cursor guifg=NONE guibg=Green
   highlight CursorIM guifg=NONE guibg=Purple
-endif
+end
+" prevent Google IME from beging automatically disabled
+" ref:
+"   title: MacVim-kaoriya‚Åauto-pairs“±“üŒã‚É“ú–{ŒêIME‚ªŸè‚ÉØ‚è‘Ö‚í‚é‚Ì‘Îˆ–@ - Qiita
+"   url: http://qiita.com/amagawawaw/items/4a46d08f6c3e456e18d0
+set imdisable
 "}}}
 
 " easymotion {{{

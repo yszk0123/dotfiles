@@ -12,11 +12,21 @@ endif
 " NeoBundle準備
 "filetype off
 if has('vim_starting')
-  set nocompatible
-  set runtimepath+=$VIM/bundle/neobundle.vim/
+  if &compatible
+    set nocompatible
+  endif
+  if has('win32') || has('win64')
+    set runtimepath+=$VIM/bundle/neobundle.vim/
+  else
+    set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
+  endif
   set runtimepath+=$HOME/dotfiles/
 endif
-call neobundle#rc(expand($VIM . '/bundle/'))
+if has('win32') || has('win64')
+  call neobundle#begin(expand($VIM . '/bundle/'))
+else
+  call neobundle#begin(expand($HOME . '/.vim/bundle/'))
+endif
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -51,8 +61,13 @@ if has('gui')
   endif
 endif
 
+call neobundle#end()
+
 filetype plugin indent on
 syntax on
 NeoBundleCheck
 
-" cd $HOME
+if !has('vim_starting')
+  " Call on_source hook when reloading .vimrc.
+  call neobundle#call_hook('on_source')
+endif
