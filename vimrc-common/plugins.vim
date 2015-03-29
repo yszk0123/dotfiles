@@ -146,3 +146,7 @@ NeoBundle 'Raimondi/delimitMate'
 " NeoBundle 'kana/vim-textobj-lastpat'
 " NeoBundle 'thinca/vim-textobj-comment'
 "}}}
+
+" vim-wipeout {{{
+NeoBundle 'artnez/vim-wipeout'
+" }}}
