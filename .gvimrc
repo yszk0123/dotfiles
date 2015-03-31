@@ -19,7 +19,9 @@ end
 " ref:
 "   title: MacVim-kaoriya‚Åauto-pairs“±“üŒã‚É“ú–{ŒêIME‚ªŸè‚ÉØ‚è‘Ö‚í‚é‚Ì‘Îˆ–@ - Qiita
 "   url: http://qiita.com/amagawawaw/items/4a46d08f6c3e456e18d0
-set imdisable
+if has('mac')
+  set imdisable
+endif
 "}}}
 
 " easymotion {{{
