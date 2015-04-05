@@ -61,7 +61,9 @@ set guioptions+=h
 "   ウィンドウサイズが変わると再描画が起こるので動作も重くなる
 "   さらにWindowsでウィンドウのスナップを利用している場合は,スナップが解除されてしまう
 "   タブページを使わないならこのオプションは外して構わない
-set guioptions+=l
+if has('win32') || has('win64')
+  set guioptions+=l
+endif
 " タブページを常に表示
 " 0: 非表示, 1: 2個以上タブページがある場合のみ, 2: 常に表示
 set showtabline=2
