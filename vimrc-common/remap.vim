@@ -25,6 +25,10 @@ nnoremap [util]fi :<C-u>setlocal foldmethod=indent<CR>
 nnoremap [util]fm :<C-u>setlocal foldmethod=marker<CR>
 nnoremap [util]fs :<C-u>setlocal foldmethod=syntax<CR>
 
+" 日付挿入
+nnoremap <F6> <Esc>i<C-R>=strftime("%Y-%m-%dT%H:%M")<CR><Esc>
+inoremap <F6> <C-R>=strftime("%Y-%m-%dT%H:%M")<CR>
+
 " カーソル移動 {{{
 " 表示行単位のカーソル移動
 " Ctrl+*のタイプはnyaosやtcshのキーバインドになるべく合わせている
