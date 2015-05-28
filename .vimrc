@@ -54,7 +54,8 @@ if has('gui')
   runtime vimrc-gui/plugins.vim
   runtime vimrc-gui/javascript.vim
   runtime vimrc-gui/unite.vim
-  " runtime vimrc-gui/neocomplete.vim
+  runtime vimrc-gui/neocomplete.vim
+  runtime vimrc-gui/ruby.vim
   runtime vimrc-gui/typescript.vim
   if exists('g:use_ycm')
     runtime vimrc-gui/you-complete-me.vim
