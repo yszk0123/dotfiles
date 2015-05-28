@@ -1,13 +1,19 @@
 " {{{
 " ref: [VimでRSenseを使って快適Rubyプログラミング - NigoroJr](http://nigorojr.com/articles/19)
 " ref: [RSenseを使ってVimをIDEっぽくする（Ruby向け） - WEB SALAD](http://web-salad.hateblo.jp/entry/2014/10/07/102349)
-NeoBundleLazy 'marcus/rsense', {
-  \ 'autoload': {
-  \   'filetypes': 'ruby',
-  \ },
-  \ }
+" Macは別途brewでインストールした方が確実
+if !has('mac')
+  NeoBundleLazy 'marcus/rsense', {
+    \ 'autoload': {
+    \   'filetypes': 'ruby',
+    \ },
+    \ }
+endif
+" NeoBundle 'supermomonga/neocomplete-rsense.vim', {
+"   \ 'depends': ['Shougo/neocomplete.vim', 'marcus/rsense'],
+"   \ }
 NeoBundle 'supermomonga/neocomplete-rsense.vim', {
-  \ 'depends': ['Shougo/neocomplete.vim', 'marcus/rsense'],
+  \ 'depends': ['Shougo/neocomplete.vim'],
   \ }
 
 " オムニ補完有効化
