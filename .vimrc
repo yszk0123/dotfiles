@@ -42,7 +42,7 @@ runtime vimrc-common/remap.vim
 runtime vimrc-common/settings.vim
 
 " GUI限定のプラグイン
-if has('gui')
+if has('gui_running')
   NeoBundle 'Shougo/vimproc.vim', {
     \ 'build' : {
     \     'windows' : 'make -f make_mingw32.mak',
