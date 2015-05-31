@@ -11,10 +11,6 @@ NeoBundle 'othree/html5.vim'
 " NeoBundle 'taichouchou2/html5.vim'
 
 " 遅延読み込み {{{
-" " NeoBundleLazy 'digitaltoad/vim-jade', { "autoload": { "filetypes": ["jade"] } }
-" NeoBundleLazy 'digitaltoad/vim-jade'
-" au FileType jade NeoBundleSource vim-jade
-" NeoBundleLazy 'kchmck/vim-coffee-script', { "autoload": { "filetypes": ["coffee"] } }
 " NeoBundleLazy 'wavded/vim-stylus', { "autoload": { "filetypes": ["stylus"] } }
 " }}}
 
