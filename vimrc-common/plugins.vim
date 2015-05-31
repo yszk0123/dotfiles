@@ -1,6 +1,5 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'w0ng/vim-hybrid'
 " NeoBundle 'altercation/vim-colors-solarized'
 " Aligntaと似たようなプラグイン
 " NeoBundle 'godlygeek/tabular'
@@ -65,6 +64,11 @@ let g:clever_f_chars_match_any_signs = ''
 " let g:EasyMotion_keys = 'nhjio;lkmp@[]:gtrewasdfv'
 " " let g:EasyMotion_re_anywhere = '\v<(class|function|var|require|import|export|return|if)>\s*\zs|\)\s*\{\zs'
 " let g:EasyMotion_re_anywhere = '\v^$'
+" }}}
+
+" vim-hybrid {{{
+NeoBundle 'w0ng/vim-hybrid'
+au VimEnter * :colorscheme hybrid
 " }}}
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
