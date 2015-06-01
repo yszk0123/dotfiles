@@ -1,4 +1,5 @@
 " NeoBundle 'matthewtodd/vim-twilight'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tpope/vim-surround'
 " Perlスタイルの正規表現
 " NeoBundle 'othree/eregex.vim'
