@@ -2,7 +2,6 @@
 " NeoBundle 'moll/vim-node'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'elzr/vim-json'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'wavded/vim-stylus'
 
 NeoBundle 'mattn/emmet-vim'

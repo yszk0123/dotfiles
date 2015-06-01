@@ -40,6 +40,7 @@ runtime vimrc-common/filetype.vim
 runtime vimrc-common/plugins.vim
 runtime vimrc-common/remap.vim
 runtime vimrc-common/settings.vim
+runtime vimrc-common/javascript.vim
 
 " GUI限定のプラグイン
 if has('gui_running')
@@ -52,7 +53,6 @@ if has('gui_running')
     \    },
     \ }
   runtime vimrc-gui/plugins.vim
-  runtime vimrc-gui/javascript.vim
   runtime vimrc-gui/unite.vim
   runtime vimrc-gui/neocomplete.vim
   runtime vimrc-gui/ruby.vim
