@@ -60,6 +60,7 @@ if executable('ag')
     \ '--line-numbers --nocolor --nogroup --hidden ' .
     \ '--ignore ".hg" --ignore ".svn" --ignore ".git" ' .
     \ '--ignore "bower_components" ' .
+    \ '--ignore "vendor" --ignore "tmp" --ignore "bin" ' .
     \ '--ignore "backup" --ignore "dist" --ignore "dest" --ignore "build" --ignore ".bzr"'
   let g:unite_source_grep_recursive_opt = ''
   let g:unite_source_grep_max_candidates = 100
