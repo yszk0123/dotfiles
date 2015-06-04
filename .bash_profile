@@ -1,6 +1,5 @@
 # PATH
 
-PATH=/usr/local/Cellar/ruby/2.2.1/bin:$PATH
 PATH=~/.nvm/versions/io.js/v1.8.1/bin:$PATH
 export PATH
 
