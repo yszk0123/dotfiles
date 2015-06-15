@@ -2,5 +2,7 @@
 NeoBundle 'leafgarland/typescript-vim'
 " }}}
 " Tsuquyomi {{{
-NeoBundle 'Quramy/tsuquyomi'
+if has('gui_running')
+  NeoBundle 'Quramy/tsuquyomi'
+endif
 " }}}

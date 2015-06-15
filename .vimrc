@@ -57,7 +57,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 runtime vimrc-gui/plugins.vim
 runtime vimrc-gui/unite.vim
 runtime vimrc-gui/ruby.vim
-if g:my_local_mode
+if g:my_local_mode && has('gui_running')
   runtime vimrc-gui/neocomplete.vim
   runtime vimrc-gui/typescript.vim
   " runtime vimrc-gui/you-complete-me.vim
