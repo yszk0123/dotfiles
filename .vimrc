@@ -9,20 +9,23 @@ if has('gui_running') && !has('unix')
   scriptencoding cp932
 endif
 
+" 0: 仕事用など, 1: 自分用のPC
+let g:my_local_mode = 1
+
 " NeoBundle準備
 "filetype off
 if has('vim_starting')
   if &compatible
     set nocompatible
   endif
-  if has('win32') || has('win64')
+  if !g:my_local_mode && (has('win32') || has('win64'))
     set runtimepath+=$VIM/bundle/neobundle.vim/
   else
     set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
   endif
   set runtimepath+=$HOME/dotfiles/
 endif
-if has('win32') || has('win64')
+if !g:my_local_mode && (has('win32') || has('win64'))
   call neobundle#begin(expand($VIM . '/bundle/'))
 else
   call neobundle#begin(expand($HOME . '/.vim/bundle/'))
@@ -42,24 +45,22 @@ runtime vimrc-common/remap.vim
 runtime vimrc-common/settings.vim
 runtime vimrc-common/javascript.vim
 
-" GUI限定のプラグイン
-if has('gui')
-  NeoBundle 'Shougo/vimproc.vim', {
-    \ 'build' : {
-    \     'windows' : 'make -f make_mingw32.mak',
-    \     'cygwin' : 'make -f make_cygwin.mak',
-    \     'mac' : 'make -f make_mac.mak',
-    \     'unix' : 'make -f make_unix.mak',
-    \    },
-    \ }
-  runtime vimrc-gui/plugins.vim
-  runtime vimrc-gui/unite.vim
+" 追加のプラグイン
+NeoBundle 'Shougo/vimproc.vim', {
+  \ 'build' : {
+  \     'windows' : 'make -f make_mingw32.mak',
+  \     'cygwin' : 'make -f make_cygwin.mak',
+  \     'mac' : 'make -f make_mac.mak',
+  \     'unix' : 'make -f make_unix.mak',
+  \    },
+  \ }
+runtime vimrc-gui/plugins.vim
+runtime vimrc-gui/unite.vim
+runtime vimrc-gui/ruby.vim
+if g:my_local_mode
   runtime vimrc-gui/neocomplete.vim
-  runtime vimrc-gui/ruby.vim
   runtime vimrc-gui/typescript.vim
-  if exists('g:use_ycm')
-    runtime vimrc-gui/you-complete-me.vim
-  endif
+  " runtime vimrc-gui/you-complete-me.vim
 endif
 
 call neobundle#end()
