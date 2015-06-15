@@ -51,4 +51,5 @@ nvm use iojs
 
 # Ruby + Ruby on Rails
 
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
