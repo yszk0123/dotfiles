@@ -6,7 +6,7 @@
 # ln -sf ~/dotfiles/indent ~/.vim
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.gemrc ~/.bash_profile
+ln -sf ~/dotfiles/.gemrc ~/.gemrc
 ln -sf ~/dotfiles/.gvimrc ~/.gvimrc
 ln -sf ~/dotfiles/.irbrc ~/.irbrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf

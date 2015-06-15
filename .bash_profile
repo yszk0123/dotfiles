@@ -1,5 +1,6 @@
 # PATH
 
+# PATH=~/.rbenv/shims:$PATH
 PATH=~/.nvm/versions/io.js/v1.8.1/bin:$PATH
 export PATH
 
@@ -25,7 +26,7 @@ alias gcom='git checkout master'
 alias gd='git diff'
 alias gda='git diff HEAD'
 alias gi='git init'
-alias gl='git log'
+alias glo='git log'
 alias glg='git log --graph --oneline --decorate --all'
 alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
 alias gm='git merge --no-ff'
@@ -47,3 +48,7 @@ export DOCKER_TLS_VERIFY=1
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 nvm use iojs
+
+# Ruby + Ruby on Rails
+
+eval "$(rbenv init -)"
