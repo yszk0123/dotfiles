@@ -27,6 +27,11 @@ let g:lightline.inactive.left = [ [ 'relativepath' ] ]
 
 " indent_guides {{{
 "--------------
+" Note: vim-indent-guidesの前にcolorschemeを設定しないと
+"   まれに次のようなエラーが発生する
+"   E411: highlight group not found: Normal
+" ref: [Just Another Camelog](http://www.camelstudio.jp/note/vim/186/)
+colorscheme default
 NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " インデントの深さに色を付ける
