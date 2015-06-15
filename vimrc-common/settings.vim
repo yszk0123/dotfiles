@@ -7,20 +7,22 @@
 " set noignorecase
 " set browsedir=buffer
 
-" バックアップの設定
-" node.jsのfs.watch()などで正しくイベントを受け取れるようにするには
-" backupcopyオプションを適切に設定する必要がある
-" backupcopyをauto/yesにした場合, バックアップの際にファイルはリネームされる
-" fs.watch()ではこれを"ファイルが削除された"ものとみなしてしまう
-" backupcopyをnoにした場合,この問題は起こらないが, バックアップの度にファイル
-" コピーが発生する
-set nobackup
-set nowritebackup
-set swapfile
-set noundofile
-set backupdir=$HOME/vimfiles/tmp
-set directory=$HOME/vimfiles/tmp
-set viminfo+=n$HOME/vimfiles/viminfo.txt
+if g:my_local_mode
+  " バックアップの設定
+  " node.jsのfs.watch()などで正しくイベントを受け取れるようにするには
+  " backupcopyオプションを適切に設定する必要がある
+  " backupcopyをauto/yesにした場合, バックアップの際にファイルはリネームされる
+  " fs.watch()ではこれを"ファイルが削除された"ものとみなしてしまう
+  " backupcopyをnoにした場合,この問題は起こらないが, バックアップの度にファイル
+  " コピーが発生する
+  set nobackup
+  set nowritebackup
+  set swapfile
+  set noundofile
+  set backupdir=~/vimfiles/tmp
+  set directory=~/vimfiles/tmp
+  set viminfo+=n~/vimfiles/viminfo.txt
+endif
 
 " Cのプリプロセッサ行("#"で始まる行)にもインデントを適用する
 " (coffeescriptなどでは"#"をコメント開始に使うため)
