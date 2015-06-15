@@ -43,7 +43,7 @@ runtime vimrc-common/settings.vim
 runtime vimrc-common/javascript.vim
 
 " GUI限定のプラグイン
-if has('gui_running')
+if has('gui')
   NeoBundle 'Shougo/vimproc.vim', {
     \ 'build' : {
     \     'windows' : 'make -f make_mingw32.mak',
