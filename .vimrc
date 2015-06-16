@@ -9,8 +9,10 @@ if has('gui_running') && !has('unix')
   scriptencoding cp932
 endif
 
-" 0: 仕事用など, 1: 自分用のPC
-let g:my_local_mode = 1
+" my_local_mode~というファイルの存在有無により
+" 自分用のPC限定の設定を行うかどうかを決める
+" 無: 仕事用など, 有: 自分用のPC
+let g:my_local_mode = glob($HOME . '/dotfiles/my_local_mode*')
 
 " NeoBundle準備
 "filetype off
