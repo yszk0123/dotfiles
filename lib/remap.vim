@@ -43,6 +43,10 @@ xnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
 
+" Bash like keys for the terminal
+cnoremap <C-a> <home>
+cnoremap <C-e> <end>
+
 " inoremap <C-B> <Left>
 " inoremap <C-F> <Right>
 " inoremap <C-J> <Down>
@@ -71,9 +75,6 @@ nnoremap [util]bl :ls<CR>:buffer<Space>
 nnoremap [util]bt :tabs<CR>:tabnext<Space>
 
 nnoremap [util]m <C-w>_
-
-" noremap gh gT
-" noremap gl gt
 
 " gfを置き換えて, 分割ウィンドウで編集するようにする
 " (gf: カーソルの下か後ろの名前のファイルを編集する)
@@ -114,10 +115,14 @@ endif
 "   title: The ultimate Vim configuration - vimrc
 "   url: http://amix.dk/vim/vimrc.html
 " move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+
+" Resize the window
+nnoremap + <C-w>+
+nnoremap - <C-w>-
 
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 " CAUTION: a register 'z' is used
