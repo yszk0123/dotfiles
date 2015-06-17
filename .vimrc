@@ -47,7 +47,6 @@ NeoBundle 'Shougo/vimproc.vim', {
   \    },
   \ }
 runtime lib/commands.vim
-runtime lib/abbreviations.vim
 runtime lib/filetype.vim
 runtime lib/plugins.vim
 runtime lib/remap.vim
