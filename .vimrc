@@ -46,19 +46,19 @@ NeoBundle 'Shougo/vimproc.vim', {
   \     'unix' : 'make -f make_unix.mak',
   \    },
   \ }
-runtime vimrc-common/commands.vim
-runtime vimrc-common/abbreviations.vim
-runtime vimrc-common/filetype.vim
-runtime vimrc-common/plugins.vim
-runtime vimrc-common/remap.vim
-runtime vimrc-common/settings.vim
-runtime vimrc-common/javascript.vim
-runtime vimrc-gui/unite.vim
-runtime vimrc-gui/ruby.vim
+runtime lib/commands.vim
+runtime lib/abbreviations.vim
+runtime lib/filetype.vim
+runtime lib/plugins.vim
+runtime lib/remap.vim
+runtime lib/settings.vim
+runtime lib/javascript.vim
+runtime lib/unite.vim
+runtime lib/ruby.vim
 if g:my_local_mode && has('gui_running')
-  runtime vimrc-gui/neocomplete.vim
-  runtime vimrc-gui/typescript.vim
-  " runtime vimrc-gui/you-complete-me.vim
+  runtime lib/neocomplete.vim
+  runtime lib/typescript.vim
+  " runtime lib/you-complete-me.vim
 endif
 
 call neobundle#end()
