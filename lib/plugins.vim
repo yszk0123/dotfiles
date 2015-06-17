@@ -265,3 +265,10 @@ NeoBundle 'artnez/vim-wipeout'
 " nnoremap [util]y :<C-u>YRShow<CR>
 " let g:yankring_max_history = 10
 " }}}
+
+" For Markdown {{{
+" ref: [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
+NeoBundle "godlygeek/tabular"
+NeoBundle "joker1007/vim-markdown-quote-syntax"
+NeoBundle "rcmdnk/vim-markdown"
+" }}}
