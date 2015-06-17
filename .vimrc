@@ -38,16 +38,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " キーマップ用のプレフィックス定義
 runtime define-prefix.vim
 
-" GUI,非GUIで共用のプラグイン
-runtime vimrc-common/commands.vim
-runtime vimrc-common/abbreviations.vim
-runtime vimrc-common/filetype.vim
-runtime vimrc-common/plugins.vim
-runtime vimrc-common/remap.vim
-runtime vimrc-common/settings.vim
-runtime vimrc-common/javascript.vim
-
-" 追加のプラグイン
 NeoBundle 'Shougo/vimproc.vim', {
   \ 'build' : {
   \     'windows' : 'make -f make_mingw32.mak',
@@ -56,7 +46,13 @@ NeoBundle 'Shougo/vimproc.vim', {
   \     'unix' : 'make -f make_unix.mak',
   \    },
   \ }
-runtime vimrc-gui/plugins.vim
+runtime vimrc-common/commands.vim
+runtime vimrc-common/abbreviations.vim
+runtime vimrc-common/filetype.vim
+runtime vimrc-common/plugins.vim
+runtime vimrc-common/remap.vim
+runtime vimrc-common/settings.vim
+runtime vimrc-common/javascript.vim
 runtime vimrc-gui/unite.vim
 runtime vimrc-gui/ruby.vim
 if g:my_local_mode && has('gui_running')
