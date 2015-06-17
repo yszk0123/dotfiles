@@ -3,7 +3,7 @@
 nnoremap <silent> <C-s> :<C-u>update<CR>
 inoremap <silent> <C-s> <Esc>:<C-u>update<CR>
 
-" Ctrl+qでウインドウを閉じる
+" Close the window by Ctrl+q
 nnoremap <C-q> :<C-u>q<CR>
 
 nnoremap <CR> o
@@ -20,16 +20,16 @@ vnoremap <C-x> d
 vnoremap <C-c> y
 inoremap <C-v> <Esc>p
 
-" 折り畳みモードをインデントに設定
+" Switch folding methods
 nnoremap [util]fi :<C-u>setlocal foldmethod=indent<CR>
 nnoremap [util]fm :<C-u>setlocal foldmethod=marker<CR>
 nnoremap [util]fs :<C-u>setlocal foldmethod=syntax<CR>
 
-" 日付挿入
+" Insert the current date
 nnoremap <F6> <Esc>i<C-R>=strftime("%Y-%m-%dT%H:%M")<CR><Esc>
 inoremap <F6> <C-R>=strftime("%Y-%m-%dT%H:%M")<CR>
 
-" カーソル移動 {{{
+" Move the cursor {{{
 " 表示行単位のカーソル移動
 " Ctrl+*のタイプはnyaosやtcshのキーバインドになるべく合わせている
 nnoremap H ^
@@ -42,6 +42,7 @@ onoremap k gk
 xnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
+
 " inoremap <C-B> <Left>
 " inoremap <C-F> <Right>
 " inoremap <C-J> <Down>
