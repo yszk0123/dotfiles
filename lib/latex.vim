@@ -6,6 +6,10 @@
 NeoBundleLazy 'vim-latex/vim-latex'
 autocmd FileType tex NeoBundleSource vim-latex
 
+" For Windows
+" TODO: ここで勝手に設定していいか
+set shellslash
+
 let s:lib_path = has('mac') ? '/Library/TeX/texbin/' : ''
 " set grepprg=grep\ -nH\ $*
 
