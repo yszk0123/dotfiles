@@ -1,15 +1,23 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 " NeoBundle 'moll/vim-node'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'elzr/vim-json'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'wavded/vim-stylus'
 
+NeoBundleLazy 'elzr/vim-json'
+autocmd FileType json NeoBundleSource 'elzr/vim-json'
+NeoBundleLazy 'digitaltoad/vim-jade'
+autocmd FileType jade NeoBundleSource 'digitaltoad/vim-jade'
+NeoBundleLazy 'kchmck/vim-coffee-script'
+autocmd FileType coffee NeoBundleSource 'kchmck/vim-coffee-script'
+NeoBundleLazy 'wavded/vim-stylus'
+autocmd FileType stylus NeoBundleSource 'wavded/vim-stylus'
+
+NeoBundleLazy 'hail2u/vim-css3-syntax'
+autocmd FileType css,html NeoBundleSource 'hail2u'
 " NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'othree/html5.vim'
+NeoBundleLazy 'othree/html5.vim'
+autocmd FileType html NeoBundleSource 'othree/html5.vim'
+NeoBundleLazy 'mattn/emmet-vim'
+autocmd FileType css,html NeoBundleSource 'emmet-vim'
 
 " Perlスタイルの正規表現
 " NeoBundle 'othree/eregex.vim'
@@ -190,7 +198,7 @@ nnoremap [util]q :<C-u>Qfreplace<CR>
 " }}}
 
 " vim-quickrun {{{
-NeoBundle 'thinca/vim-quickrun', { "autoload": { "commands": ["QuickRun"] } }
+NeoBundleLazy 'thinca/vim-quickrun', { "autoload": { "commands": ["QuickRun"] } }
 if !exists('g:quickrun_config')
   let g:quickrun_config = {}
 endif
