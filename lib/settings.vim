@@ -33,7 +33,6 @@ endif
 
 set autoindent
 set backspace=indent,eol,start
-set clipboard=unnamed,autoselect
 set expandtab
 " 折りたたみを手動操作, 開いた状態で編集開始
 " set foldmethod=manual
@@ -42,13 +41,9 @@ set expandtab
 set formatoptions+=mM
 " 自動整形を避ける
 set formatoptions-=tca
-" better peformance
-set lazyredraw
 set list
 set listchars=tab:>~,trail:~,nbsp:~,extends:>,precedes:<,
 " set listchars=tab:^\ ,trail:~,eol:$
-" 描画高速化
-set nocursorline
 set incsearch
 set number
 set scrolloff=3
@@ -64,7 +59,16 @@ set tabstop=2
 " set textwidth=0
 " set winheight=6
 
-" get quiet messages (require 7.4 patch 314)
+" Clipboard
+set clipboard=unnamed,autoselect
+
+" 描画高速化
+set nocursorline
+
+" Better peformance
+set lazyredraw
+
+" Get quiet messages (require 7.4 patch 314)
 if has("patch-7.4.314")
   set shortmess+=c
 endif
