@@ -68,6 +68,18 @@ set nocursorline
 " Better peformance
 set lazyredraw
 
+" Cursor settings. This makes terminal vim sooo much nicer!
+" Tmux will only forward escape sequences to the terminal if surrounded by a DCS
+" sequence
+" ref: [dotfiles/.vimrc at master · terryma/dotfiles](https://github.com/terryma/dotfiles/blob/master/.vimrc)
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
 " Get quiet messages (require 7.4 patch 314)
 if has("patch-7.4.314")
   set shortmess+=c
