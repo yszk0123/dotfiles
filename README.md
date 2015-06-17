@@ -1,3 +1,9 @@
+# Vim関係
+
+## Macの場合
+
+[MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)をインストール
+
 # Ruby関係
 
 ## Macの場合
@@ -11,3 +17,9 @@ PATH=/usr/local/Cellar/ruby/<ruby version>/bin:$PATH
 gem update --system
 gem install bundler
 
+# Tex関係
+
+## Macの場合
+
+[MacTeX](https://www.tug.org/mactex/)をインストール
+Vim用に[vim-latex](https://github.com/vim-latex/vim-latex)も導入
