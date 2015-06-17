@@ -4,7 +4,7 @@
 "   > \documentclass[uplatex,12pt]{jsbook}
 
 NeoBundleLazy 'vim-latex/vim-latex'
-autocmd FileType tex NeoBundleSource 'vim-latex/vim-latex'
+autocmd FileType tex NeoBundleSource vim-latex
 
 let s:lib_path = has('mac') ? '/Library/TeX/texbin/' : ''
 " set grepprg=grep\ -nH\ $*

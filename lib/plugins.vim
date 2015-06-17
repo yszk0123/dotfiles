@@ -3,21 +3,21 @@
 NeoBundle 'tpope/vim-surround'
 
 NeoBundleLazy 'elzr/vim-json'
-autocmd FileType json NeoBundleSource 'elzr/vim-json'
+autocmd FileType json NeoBundleSource vim-json
 NeoBundleLazy 'digitaltoad/vim-jade'
-autocmd FileType jade NeoBundleSource 'digitaltoad/vim-jade'
+autocmd FileType jade NeoBundleSource vim-jade
 NeoBundleLazy 'kchmck/vim-coffee-script'
-autocmd FileType coffee NeoBundleSource 'kchmck/vim-coffee-script'
+autocmd FileType coffee NeoBundleSource vim-coffee-script
 NeoBundleLazy 'wavded/vim-stylus'
-autocmd FileType stylus NeoBundleSource 'wavded/vim-stylus'
+autocmd FileType stylus NeoBundleSource vim-stylus
 
 NeoBundleLazy 'hail2u/vim-css3-syntax'
-autocmd FileType css,html NeoBundleSource 'hail2u'
+autocmd FileType css,html NeoBundleSource hail2u
 " NeoBundle 'taichouchou2/html5.vim'
 NeoBundleLazy 'othree/html5.vim'
-autocmd FileType html NeoBundleSource 'othree/html5.vim'
+autocmd FileType html NeoBundleSource html5.vim
 NeoBundleLazy 'mattn/emmet-vim'
-autocmd FileType css,html NeoBundleSource 'emmet-vim'
+autocmd FileType css,html NeoBundleSource emmet-vim
 
 " Perlスタイルの正規表現
 " NeoBundle 'othree/eregex.vim'
