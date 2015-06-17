@@ -78,3 +78,6 @@ let g:Tex_IgnoredWarnings =
     \"Citation %.%# undefined\n".
     \"LaTeX Font Warning: Font shape `%s' undefined\n".
     \"LaTeX Font Warning: Some font shapes were not available, defaults substituted."
+
+imap <C-t> <Plug>IMAP_JumpForward
+nmap <C-t> <Plug>IMAP_JumpForward
