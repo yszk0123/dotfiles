@@ -158,11 +158,12 @@ nnoremap [util]vS :<C-u>VimShellInteractive<Space>
 
 " vim-fugitive {{{
 NeoBundle 'tpope/vim-fugitive'
-nnoremap [util]gC :<C-u>Gcd<Space>
+nnoremap [util]gcd :<C-u>Gcd<Space>
 nnoremap [util]gL :<C-u>Glcd<Space>
 nnoremap [util]ga :<C-u>Gadd<Space>
 nnoremap [util]gb :<C-u>Gblame<Space>
-nnoremap [util]gc :<C-u>Gcommit<Space>
+nnoremap [util]gco :<C-u>Gcommit<Space>
+nnoremap [util]gca :<C-u>Gcommit<Space>
 nnoremap [util]gd :<C-u>Gdiff<Space>
 nnoremap [util]ge :<C-u>Gedit<Space>
 nnoremap [util]gl :<C-u>Glog<Space>
