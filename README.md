@@ -1,5 +1,9 @@
 # Vim関係
 
+## NeoBundle
+
+    $ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+
 ## Macの場合
 
 [MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)をインストール
