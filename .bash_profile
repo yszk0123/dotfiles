@@ -51,3 +51,8 @@ alias gstd='git stash drop'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Load .bashrc
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
