@@ -163,7 +163,7 @@ nnoremap [util]gL :<C-u>Glcd<Space>
 nnoremap [util]ga :<C-u>Gadd<Space>
 nnoremap [util]gb :<C-u>Gblame<Space>
 nnoremap [util]gco :<C-u>Gcommit<Space>
-nnoremap [util]gca :<C-u>Gcommit<Space>
+nnoremap [util]gca :<C-u>Gcommit --amend --reuse-message=HEAD<Space>
 nnoremap [util]gd :<C-u>Gdiff<Space>
 nnoremap [util]ge :<C-u>Gedit<Space>
 nnoremap [util]gl :<C-u>Glog<Space>
