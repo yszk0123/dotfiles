@@ -1,3 +1,6 @@
+export NVM_DIR="/home/ec2-user/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # シェルログイン時，自動でセッションにアタッチできるようにする
 # ref:
 #   [Vim - ターミナルマルチプレクサ tmux をカスタマイズする - Qiita](http://qiita.com/b4b4r07/items/01359e8a3066d1c37edc)

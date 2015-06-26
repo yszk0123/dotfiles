@@ -50,7 +50,16 @@ alias gstd='git stash drop'
 # Ruby + Ruby on Rails
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -s rbenv ]; then
+  eval "$(rbenv init -)"
+fi
+
+# NVM
+
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  $NVM_DIR/nvm.sh
+  PATH="$NVM_DIR:$PATH"
+fi
 
 # Load .bashrc
 if [ -f ~/.bashrc ]; then
