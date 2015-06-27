@@ -20,7 +20,7 @@ fi
 
 # Node.js
 export NVM_DIR=~/.nvm
-if [ -s ~/dotfiles/my_local_mode ] && [ is_exists "brew" ]; then
+if [ -s ~/dotfiles/my_local_mode ] && is_exists "brew"; then
   export NVM_DIR=$(brew --prefix nvm)
 fi
 
