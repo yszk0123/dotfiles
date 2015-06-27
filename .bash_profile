@@ -19,15 +19,12 @@ fi
 # fi
 
 # Node.js
-if [ -s ~/dotfiles/my_local_mode ]; then
-  if is_exists "brew"; then
-    export NVM_DIR=$(brew --prefix nvm)
-  else
-    export NVM_DIR=~/.nvm
-  fi
+export NVM_DIR=~/.nvm
+if [ -s ~/dotfiles/my_local_mode ] && [ is_exists "brew" ]; then
+  export NVM_DIR=$(brew --prefix nvm)
 fi
 
-if [ -n $NVM_DIR ] && [ -s $NVM_DIR/nvm.sh ]; then
+if [ -s $NVM_DIR/nvm.sh ]; then
   source $NVM_DIR/nvm.sh
   nvm use iojs
   # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
