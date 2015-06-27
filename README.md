@@ -1,6 +1,18 @@
 # Shell
 
-chsh -s <path/to/zsh>
+## Install zsh
+
+    chsh -s <path/to/zsh>
+
+## Install oh-my-zsh
+
+via curl
+
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+via wget
+
+    sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # Vim関係
 
