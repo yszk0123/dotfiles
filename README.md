@@ -1,3 +1,7 @@
+# Shell
+
+chsh -s <path/to/zsh>
+
 # Vim関係
 
 ## NeoBundle
