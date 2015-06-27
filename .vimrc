@@ -46,6 +46,11 @@ NeoBundle 'Shougo/vimproc.vim', {
   \     'unix' : 'make -f make_unix.mak',
   \    },
   \ }
+
+" 色関係の設定が確実に反映されるように
+" 他のファイルより先に読み込んでおく
+runtime lib/color.vim
+
 runtime lib/commands.vim
 runtime lib/filetype.vim
 runtime lib/plugins.vim
