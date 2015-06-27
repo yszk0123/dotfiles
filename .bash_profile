@@ -27,7 +27,7 @@ if [ -s ~/dotfiles/my_local_mode ]; then
   fi
 fi
 
-if [ -n $NVM_DIR && -s $NVM_DIR/nvm.sh ]; then
+if [ -n $NVM_DIR ] && [ -s $NVM_DIR/nvm.sh ]; then
   source $NVM_DIR/nvm.sh
   nvm use iojs
   # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
