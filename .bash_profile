@@ -25,11 +25,12 @@ if [ -s ~/dotfiles/my_local_mode* ]; then
   else
     export NVM_DIR=~/.nvm
   fi
-  if [ -s $NVM_DIR/nvm.sh ]; then
-    source $NVM_DIR/nvm.sh
-    nvm use iojs
-    # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-  fi
+fi
+
+if [ -n $NVM_DIR && -s $NVM_DIR/nvm.sh ]; then
+  source $NVM_DIR/nvm.sh
+  nvm use iojs
+  # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 fi
 
 # Git shortcut
