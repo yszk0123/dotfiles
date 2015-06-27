@@ -133,6 +133,6 @@ setopt brace_ccl
 ## コマンドラインでも # 以降をコメントと見なす
 setopt interactive_comments
 
-if [ -s .bash_profile ]; then
-  source .bash_profile
+if [ -s ~/.bash_profile ]; then
+  source ~/.bash_profile
 fi
