@@ -61,4 +61,5 @@ function tmux_automatically_attach_session()
         fi
     fi
 }
-tmux_automatically_attach_session
+
+alias tmuxa=tmux_automatically_attach_session
