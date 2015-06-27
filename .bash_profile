@@ -6,7 +6,7 @@ function is_exists() {
 export PATH
 
 # 自分用のPC限定の設定
-if [ -s ~/dotfiles/my_local_mode* ]; then
+if [ -s ~/dotfiles/my_local_mode ]; then
   # MacVim
   alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim '
 fi
@@ -19,7 +19,7 @@ fi
 # fi
 
 # Node.js
-if [ -s ~/dotfiles/my_local_mode* ]; then
+if [ -s ~/dotfiles/my_local_mode ]; then
   if is_exists "brew"; then
     export NVM_DIR=$(brew --prefix nvm)
   else
