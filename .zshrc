@@ -87,10 +87,19 @@ source $ZSH/oh-my-zsh.sh
 export LANG=ja_JP.UTF-8
  
 # Keybinding
+
 bindkey -v
+bindkey -r '^]'
 # bindkey "" history-incremental-search-backward
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
+
+# 補完候補のメニュー選択で、矢印キーの代わりにhjklで移動出来るようにする。
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
 
 # HISTORY
 HISTFILE=~/.zsh_history
