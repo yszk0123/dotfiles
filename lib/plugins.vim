@@ -1,6 +1,9 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 " NeoBundle 'moll/vim-node'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/gitignore'
 
 NeoBundleLazy 'elzr/vim-json'
 autocmd FileType json NeoBundleSource vim-json
@@ -97,8 +100,8 @@ let g:lightline.inactive.left = [ [ 'relativepath' ] ]
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
 NeoBundle 'AndrewRadev/splitjoin.vim'
-nnoremap [util]j :<C-u>SplitjoinJoin<CR>
-nnoremap [util]J :<C-u>SplitjoinSplit<CR>
+nnoremap <Leader>j :<C-u>SplitjoinJoin<CR>
+nnoremap <Leader>J :<C-u>SplitjoinSplit<CR>
 " }}}
 
 " supertab {{{
@@ -131,8 +134,8 @@ NeoBundle 'tomtom/tcomment_vim'
 " VimFiler {{{
 NeoBundleLazy 'Shougo/vimfiler', { "autoload": { "commands": ["VimFilerBufferDir", "VimFilerCurrentDir"] } }
 let g:vimfiler_safe_mode_by_default = 0
-nnoremap [util]vf :<C-u>VimFilerBufferDir<CR>
-nnoremap [util]vF :<C-u>VimFilerCurrentDir<CR>
+nnoremap <Leader>vf :<C-u>VimFilerBufferDir<CR>
+nnoremap <Leader>vF :<C-u>VimFilerCurrentDir<CR>
 " }}}
 
 " VimShell {{{
@@ -145,8 +148,8 @@ if !exists('g:vimshell_interactive_encodings')
 endif
 let g:vimshell_interactive_encodings['node'] = 'utf-8'
 let g:vimshell_interactive_encodings['mongo'] = 'utf-8'
-nnoremap [util]vs :<C-u>VimShell<CR>
-nnoremap [util]vS :<C-u>VimShellInteractive<Space>
+nnoremap <Leader>vs :<C-u>VimShell<CR>
+nnoremap <Leader>vS :<C-u>VimShellInteractive<Space>
 
 " nnoremap [vimshell]h :<C-u>VimShell<CR>
 " nnoremap [vimshell]p :<C-u>VimShellPop<CR>
@@ -156,19 +159,25 @@ nnoremap [util]vS :<C-u>VimShellInteractive<Space>
 " nnoremap [vimshell]e :<C-u>VimShellSendString<CR>
 " }}}
 
+" vim-expand-region {{{
+NeoBundle 'terryma/vim-expand-region'
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+" }}}
+
 " vim-fugitive {{{
 NeoBundle 'tpope/vim-fugitive'
-nnoremap [util]gcd :<C-u>Gcd<Space>
-nnoremap [util]gL :<C-u>Glcd<Space>
-nnoremap [util]ga :<C-u>Gadd<Space>
-nnoremap [util]gb :<C-u>Gblame<Space>
-nnoremap [util]gco :<C-u>Gcommit<Space>
-nnoremap [util]gca :<C-u>Gcommit --amend --reuse-message=HEAD<Space>
-nnoremap [util]gd :<C-u>Gdiff<Space>
-nnoremap [util]ge :<C-u>Gedit<Space>
-nnoremap [util]gl :<C-u>Glog<Space>
-nnoremap [util]gs :<C-u>Gstatus<CR>
-nnoremap [util]gw :<C-u>Gwrite<Space>
+nnoremap <Leader>gcd :<C-u>Gcd<Space>
+nnoremap <Leader>gL :<C-u>Glcd<Space>
+nnoremap <Leader>ga :<C-u>Gadd<Space>
+nnoremap <Leader>gb :<C-u>Gblame<Space>
+nnoremap <Leader>gco :<C-u>Gcommit<Space>
+nnoremap <Leader>gca :<C-u>Gcommit --amend --reuse-message=HEAD<Space>
+nnoremap <Leader>gd :<C-u>Gdiff<Space>
+nnoremap <Leader>ge :<C-u>Gedit<Space>
+nnoremap <Leader>gl :<C-u>Glog<Space>
+nnoremap <Leader>gs :<C-u>Gstatus<CR>
+nnoremap <Leader>gw :<C-u>Gwrite<Space>
 " }}}
 
 " vim-gitgutter {{{
@@ -195,7 +204,7 @@ map S  <Plug>(operator-sort)
 
 " vim-qfreplace {{{
 NeoBundle 'thinca/vim-qfreplace'
-nnoremap [util]q :<C-u>Qfreplace<CR>
+nnoremap <Leader>q :<C-u>Qfreplace<CR>
 " }}}
 
 " vim-quickrun {{{
@@ -212,15 +221,15 @@ let g:quickrun_config.coffee = {
   \   'type': 'coffee',
   \   'exec': 'coffee %o %a %S'
   \ }
-nnoremap [util]qr :QuickRun<CR>
-nnoremap [util]qR :QuickRun -cmdopt<Space>
-vnoremap [util]qr :QuickRun<CR>
-vnoremap [util]qR :QuickRun -cmdopt<Space>
+nnoremap <Leader>qr :QuickRun<CR>
+nnoremap <Leader>qR :QuickRun -cmdopt<Space>
+vnoremap <Leader>qr :QuickRun<CR>
+vnoremap <Leader>qR :QuickRun -cmdopt<Space>
 " }}}
 
 " vim-rooter: change working directory to project root {{{
 NeoBundle 'airblade/vim-rooter'
-map <silent> [util]C <Plug>RooterChangeToRootDirectory
+map <silent> <Leader>C <Plug>RooterChangeToRootDirectory
 let g:rooter_manual_only = 1
 let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
 "}}}
@@ -245,6 +254,7 @@ NeoBundle 'Raimondi/delimitMate'
 " syntax:   y
 " wiw:      ,
 
+" NeoBundle 'nelstrom/vim-textobj-rubyblock'
 " NeoBundle 'glts/vim-textobj-indblock'
 " NeoBundle 'kana/vim-textobj-datetime'
 " NeoBundle 'kana/vim-textobj-syntax'
@@ -263,7 +273,7 @@ NeoBundle 'artnez/vim-wipeout'
 
 " YankRing {{{
 " NeoBundle 'vim-scripts/YankRing.vim'
-" nnoremap [util]y :<C-u>YRShow<CR>
+" nnoremap <Leader>y :<C-u>YRShow<CR>
 " let g:yankring_max_history = 10
 " }}}
 

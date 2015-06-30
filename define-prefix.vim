@@ -1,11 +1,10 @@
 " キーマップ用のプレフィックス定義
 
+let mapleader = "\<Space>"
+
 " For utility
-nnoremap [util] <Nop>
-vnoremap [util] <Nop>
-" nmap <Space> [util]
-nmap , [util]
-vmap , [util]
+nnoremap <Leader> <Nop>
+vnoremap <Leader> <Nop>
 
 " For unite
 nnoremap [unite] <Nop>
@@ -15,11 +14,11 @@ nmap sx [unite-ex]
 
 " For typescript
 nnoremap [tsc] <Nop>
-nmap ,t [tsc]
+nmap <Leader>t [tsc]
 
 " For jshint
 nnoremap [jshint] <Nop>
-nmap ,h [jshint]
+nmap <Leader>h [jshint]
 
 " For VimShell
 " nnoremap [vimshell] <Nop>

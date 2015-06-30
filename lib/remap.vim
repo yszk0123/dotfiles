@@ -9,11 +9,23 @@ nnoremap <C-q> :<C-u>q<CR>
 nnoremap <CR> o
 inoremap <C-c> <Esc>
 nnoremap <silent> <Leader><Leader><Leader> :noh<CR>
-nnoremap <silent> <Space><Space>l :noh<CR>
 " inoremap <C-f> <C-x><C-f>
 
-nnoremap vv <C-v>
+" nnoremap vv <C-v>
 nnoremap Y y$
+
+" 貼り付けたテキストの末尾へ自動的に移動
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" システムのクリップボードにコピー＆ペーストする
+vnoremap <Leader>y "+y
+vnoremap <Leader>d "+d
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
 
 " 特定の条件下でWindows互換のテキスト操作
 vnoremap <C-x> d
@@ -21,9 +33,9 @@ vnoremap <C-c> y
 inoremap <C-v> <Esc>p
 
 " Switch folding methods
-nnoremap [util]fi :<C-u>setlocal foldmethod=indent<CR>
-nnoremap [util]fm :<C-u>setlocal foldmethod=marker<CR>
-nnoremap [util]fs :<C-u>setlocal foldmethod=syntax<CR>
+nnoremap <Leader>fi :<C-u>setlocal foldmethod=indent<CR>
+nnoremap <Leader>fm :<C-u>setlocal foldmethod=marker<CR>
+nnoremap <Leader>fs :<C-u>setlocal foldmethod=syntax<CR>
 
 " Insert the current date
 nnoremap <F6> <Esc>i<C-R>=strftime("%Y-%m-%dT%H:%M")<CR><Esc>
@@ -45,7 +57,9 @@ nnoremap <Up>   gk
 
 " Bash like keys for the terminal
 cnoremap <C-a> <home>
+nnoremap <C-a> <home>
 cnoremap <C-e> <end>
+nnoremap <C-e> <end>
 
 " inoremap <C-B> <Left>
 " inoremap <C-F> <Right>
@@ -66,15 +80,15 @@ cnoremap <C-e> <end>
 "}}}
 
 " バッファ,タブページ,ウィンドウの操作 {{{
-nnoremap [util]bb :b#<CR>
-nnoremap [util]bp :bprevious<CR>
-nnoremap [util]bn :bnext<CR>
-nnoremap [util]bd :bdelete<CR>
+nnoremap <Leader>bb :b#<CR>
+nnoremap <Leader>bp :bprevious<CR>
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bd :bdelete<CR>
 " 単純なバッファリストからの移動
-nnoremap [util]bl :ls<CR>:buffer<Space>
-nnoremap [util]bt :tabs<CR>:tabnext<Space>
+nnoremap <Leader>bl :ls<CR>:buffer<Space>
+nnoremap <Leader>bt :tabs<CR>:tabnext<Space>
 
-nnoremap [util]m <C-w>_
+nnoremap <Leader>m <C-w>_
 
 " gfを置き換えて, 分割ウィンドウで編集するようにする
 " (gf: カーソルの下か後ろの名前のファイルを編集する)
@@ -134,19 +148,19 @@ vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " 各種ショートカット {{{
 " 新しいタブを開く
-nnoremap [util]n :<C-u>tabnew<CR>
+nnoremap <Leader>n :<C-u>tabnew<CR>
 " 新しいタブを一番右に開く
-nnoremap [util]N :<C-u>tabnew<bar>tabmove<CR>
+nnoremap <Leader>N :<C-u>tabnew<bar>tabmove<CR>
 " 編集中のファイルのあるディレクトリをカレントディレクトリに設定
-nnoremap [util]c :<C-u>cd %:h<CR>
+nnoremap <Leader>c :<C-u>cd %:h<CR>
 " 編集中のファイルのあるディレクトリをカレントディレクトリに設定
-nnoremap [util]l :<C-u>lcd %:h<CR>
+nnoremap <Leader>l :<C-u>lcd %:h<CR>
 " 編集中のファイル名を表示 (:fileの方が便利)
-" nnoremap [util]f :<C-u>echo expand('%:p')<CR>
-" nnoremap [util]e :<C-u>edit<Space>
-" nnoremap [util]p :<C-u>pedit<Space>
+" nnoremap <Leader>f :<C-u>echo expand('%:p')<CR>
+" nnoremap <Leader>e :<C-u>edit<Space>
+" nnoremap <Leader>p :<C-u>pedit<Space>
 " preview windowでテンプレートファイルを開く
-nnoremap [util]t :<C-u>pedit D:/common/templates/
+nnoremap <Leader>t :<C-u>pedit D:/common/templates/
 "}}}
 
 " toggle slash (for Windows) {{{
