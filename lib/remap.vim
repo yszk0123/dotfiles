@@ -4,11 +4,12 @@ nnoremap <silent> <C-s> :<C-u>update<CR>
 inoremap <silent> <C-s> <Esc>:<C-u>update<CR>
 
 " Close the window by Ctrl+q
-nnoremap <C-q> :<C-u>q<CR>
+nnoremap <silent> <C-q> :<C-u>q<CR>
+nnoremap <silent> <Leader>q :<C-u>q<CR>
 
 nnoremap <CR> o
 inoremap <C-c> <Esc>
-nnoremap <silent> <Leader><Leader><Leader> :noh<CR>
+nnoremap <silent> <Leader><Leader> :noh<CR>
 " inoremap <C-f> <C-x><C-f>
 
 " nnoremap vv <C-v>
