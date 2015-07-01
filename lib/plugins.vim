@@ -271,7 +271,7 @@ NeoBundle 'artnez/vim-wipeout'
 
 " For Markdown {{{
 " ref: [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
-NeoBundle "godlygeek/tabular"
-NeoBundle "joker1007/vim-markdown-quote-syntax"
-NeoBundle "rcmdnk/vim-markdown"
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 " }}}
