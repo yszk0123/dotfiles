@@ -51,11 +51,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 " 他のファイルより先に読み込んでおく
 runtime lib/color.vim
 
-runtime lib/commands.vim
-runtime lib/filetype.vim
-runtime lib/plugins.vim
-runtime lib/remap.vim
-runtime lib/settings.vim
 runtime lib/javascript.vim
 runtime lib/unite.vim
 runtime lib/ruby.vim
@@ -65,6 +60,11 @@ if g:my_local_mode && has('gui_running')
   runtime lib/typescript.vim
   " runtime lib/you-complete-me.vim
 endif
+runtime lib/commands.vim
+runtime lib/filetype.vim
+runtime lib/plugins.vim
+runtime lib/remap.vim
+runtime lib/settings.vim
 
 call neobundle#end()
 
