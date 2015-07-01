@@ -87,15 +87,7 @@ au VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 "}}}
 
 " lightline {{{
-NeoBundle 'itchyny/lightline.vim'
-
-if !exists('g:lightline')
-  let g:lightline = { 'active': {}, 'inactive': {} }
-endif
-let g:lightline.active.left = [
-  \ [ 'mode', 'paste' ],
-  \ [ 'readonly', 'relativepath', 'modified' ] ]
-let g:lightline.inactive.left = [ [ 'relativepath' ] ]
+NeoBundle 'bling/vim-airline'
 " }}}
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
