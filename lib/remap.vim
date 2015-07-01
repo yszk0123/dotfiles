@@ -94,13 +94,6 @@ nnoremap <Leader>m <C-w>_
 " (gf: カーソルの下か後ろの名前のファイルを編集する)
 noremap gf :sp <cfile><CR>
 
-" ref: Revert,Double,ScreenModeなどの解説
-"   title: scrnmode.vim : スクリーンのサイズを簡単切替え — 名無しのvim使い
-"   url: http://nanasi.jp/articles/vim/scrnmode_vim.html
-nnoremap <C-w>[ :<C-u>Revert<CR>
-nnoremap <C-w>] :<C-u>Double<CR>
-"}}}
-
 " 各種詰め合わせ {{{
 " ref:
 "   title: vimのカスタマイズとTips - fudist
