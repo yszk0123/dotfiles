@@ -32,6 +32,10 @@ autocmd FileType css,html NeoBundleSource emmet-vim
 " au WinLeave *[unite]* AcpUnlock
 " }}}
 
+if executable('ag')
+  NeoBundle 'rking/ag.vim'
+endif
+
 " Alignta {{{
 " TODO: ソート+整列
 " NeoBundleLazy 'h1mesuke/vim-alignta.git', { "autoload": { "commands": ["Align"] } }
