@@ -27,6 +27,9 @@ fi
 if [ -s $NVM_DIR/nvm.sh ]; then
   source $NVM_DIR/nvm.sh
   nvm use iojs
+
+  # Enable tab-completion
+  . <(npm completion)
   # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 fi
 
