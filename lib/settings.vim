@@ -41,6 +41,8 @@ set expandtab
 set formatoptions+=mM
 " 自動整形を避ける
 set formatoptions-=tca
+" ステータスラインを常に表示
+set laststatus=2
 set list
 set listchars=tab:>~,trail:~,nbsp:~,extends:>,precedes:<,
 " set listchars=tab:^\ ,trail:~,eol:$
