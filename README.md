@@ -14,6 +14,29 @@ via wget
 
     sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+## oh-my-zsh plugins
+
+### zsh-syntax-highlighting
+
+Clone the repository
+
+    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+In .zshrc
+
+    plugins+=(zsh-syntax-highlighting)
+
+### zsh-completions 
+
+Clone the repository
+
+    git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+
+In .zshrc
+
+    plugins+=(zsh-completions)
+    autoload -U compinit && compinit
+
 # Vim関係
 
 ## NeoBundle
