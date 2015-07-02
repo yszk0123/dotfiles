@@ -1,6 +1,7 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 " NeoBundle 'moll/vim-node'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/gitignore'
