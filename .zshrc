@@ -49,9 +49,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bundler git npm rails)
+plugins=(brew bundler git npm rails zsh-syntax-highlighting)
 
 # User configuration
+
+# zsh-completions
+plugins+=(zsh-completions)
+autoload -U compinit && compinit
 
 export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
