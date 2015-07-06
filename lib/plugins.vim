@@ -1,6 +1,10 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 " NeoBundle 'moll/vim-node'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mxw/vim-jsx'
+" NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'othree/html5.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/gitignore'
@@ -16,11 +20,6 @@ autocmd FileType stylus NeoBundleSource vim-stylus
 
 NeoBundleLazy 'hail2u/vim-css3-syntax'
 autocmd FileType css,html NeoBundleSource hail2u
-" NeoBundle 'taichouchou2/html5.vim'
-NeoBundleLazy 'othree/html5.vim'
-autocmd FileType html NeoBundleSource html5.vim
-NeoBundleLazy 'mattn/emmet-vim'
-autocmd FileType css,html NeoBundleSource emmet-vim
 
 " Perlスタイルの正規表現
 " NeoBundle 'othree/eregex.vim'

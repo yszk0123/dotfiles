@@ -43,10 +43,3 @@ let g:used_javascript_libs = 'underscore'
 " autocmd FileType css,stylus noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " }}}
 " }}}
-
-" framework specific plugins {{{
-" vim-jsx {{{
-NeoBundle 'mxw/vim-jsx'
-" }}}
-" }}}
-
