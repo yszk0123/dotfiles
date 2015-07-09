@@ -54,7 +54,7 @@ runtime lib/color.vim
 runtime lib/javascript.vim
 runtime lib/unite.vim
 runtime lib/ruby.vim
-runtime lib/latex.vim
+" runtime lib/latex.vim
 if g:my_local_mode && has('gui_running')
   runtime lib/neocomplete.vim
   runtime lib/typescript.vim
