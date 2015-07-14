@@ -7,6 +7,7 @@
 " NeoBundle 'Shougo/unite-session'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'tsukkee/unite-tag'
 
 " data_directory
 let g:unite_data_directory = $HOME . '/vimfiles/.unite'
