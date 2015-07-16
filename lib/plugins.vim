@@ -8,6 +8,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/gitignore'
+NeoBundle 'szw/vim-tags'
 
 NeoBundleLazy 'elzr/vim-json'
 autocmd FileType json NeoBundleSource vim-json

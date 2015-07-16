@@ -5,13 +5,14 @@
 # ln -sf ~/dotfiles/ftdetect ~/.vim
 # ln -sf ~/dotfiles/indent ~/.vim
 
+ln -sf ~/dotfiles/.ansible.cfg ~/.ansible.cfg
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.ctags ~/.ctags
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.ansible.cfg ~/.ansible.cfg
 
 if [ -s ~/dotfiles/my_local_mode* ]; then
   ln -sf ~/dotfiles/.gemrc ~/.gemrc

@@ -117,8 +117,10 @@ nnoremap <silent> [unite]m :<C-u>Unite -buffer-name=files neomru/file<CR>
 "最近使用したディレクトリ
 nnoremap <silent> [unite]d :<C-u>Unite -buffer-name=files neomru/directory<CR>
 nnoremap <silent> [unite]D :<C-u>Unite -buffer-name=files -default-action=lcd neomru/directory<CR>
+"タグ
+nnoremap <silent> [unite]t :<C-u>Unite tag<CR>
 "タブページ一覧
-nnoremap <silent> [unite]t :<C-u>Unite tab<CR>
+nnoremap <silent> [unite]T :<C-u>Unite tab<CR>
 
 "ブックマーク一覧
 nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>

@@ -1,0 +1,3 @@
+--apend=yes
+--recurse=yes
+--langmap=JavaScript:+.jsx
