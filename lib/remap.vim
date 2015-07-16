@@ -17,10 +17,12 @@ nnoremap <silent> <Leader><Leader> :noh<CR>
 command! -bang -range ToggleReadOnly call <SID>toggleReadOnly()
 noremap <silent> <Leader>r :<C-u>ToggleReadOnly<CR>
 function! s:toggleReadOnly()
-  if &readonly
+  if &readonly || !&modifiable
     execute 'set noreadonly'
+    execute 'set modifiable'
   else
     execute 'set readonly'
+    execute 'set nomodifiable'
   endif
 endfunction
 " }}}
