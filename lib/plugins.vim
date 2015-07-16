@@ -110,8 +110,8 @@ nnoremap <bar> :<C-u>Switch<CR>
 " }}}
 
 " {{{
-NeoBundle 'majutsushi/tagbar'
-nnoremap <Leader>t :<C-u>TagbarToggle<CR>
+" NeoBundle 'majutsushi/tagbar'
+" nnoremap <Leader>t :<C-u>TagbarToggle<CR>
 " }}}
 
 " tcomment {{{
