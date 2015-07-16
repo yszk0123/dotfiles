@@ -109,6 +109,11 @@ NeoBundle 'AndrewRadev/switch.vim'
 nnoremap <bar> :<C-u>Switch<CR>
 " }}}
 
+" {{{
+NeoBundle 'majutsushi/tagbar'
+nnoremap <Leader>t :<C-u>TagbarToggle<CR>
+" }}}
+
 " tcomment {{{
 NeoBundle 'tomtom/tcomment_vim'
 " let g:tcommentMapLeader1 = '<C-a>'

@@ -18,10 +18,11 @@ fi
 #   export DOCKER_TLS_VERIFY=1
 # fi
 
-# Node.js
+# Node.js & brew
 export NVM_DIR=~/.nvm
 if [ -s ~/dotfiles/my_local_mode ] && is_exists "brew"; then
   export NVM_DIR=$(brew --prefix nvm)
+  PATH=/usr/local/Cellar:$PATH
 fi
 
 if [ -s $NVM_DIR/nvm.sh ]; then
