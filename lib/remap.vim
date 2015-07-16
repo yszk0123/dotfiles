@@ -12,6 +12,19 @@ inoremap <C-c> <Esc>
 nnoremap <silent> <Leader><Leader> :noh<CR>
 " inoremap <C-f> <C-x><C-f>
 
+" Mode {{{
+" Toggle readonly mode
+command! -bang -range ToggleReadOnly call <SID>toggleReadOnly()
+noremap <silent> <Leader>r :<C-u>ToggleReadOnly<CR>
+function! s:toggleReadOnly()
+  if &readonly
+    execute 'set noreadonly'
+  else
+    execute 'set readonly'
+  endif
+endfunction
+" }}}
+
 " Copy & paste {{{
 " nnoremap vv <C-v>
 nnoremap Y y$
