@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 # LANG
 export LANG=ja_JP.UTF-8
- 
+
 # Keybinding
 
 bindkey -v
@@ -105,6 +105,28 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
+#------------------------------------------------------------------------------
+# ref: [少し凝った zshrc](https://gist.github.com/mollifier/4979906)
+
+# 色を使用出来るようにする
+autoload -Uz colors
+colors
+
+# プロンプト
+# 1行表示
+# PROMPT="%~ %# "
+# 2行表示
+# PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
+# %# "
+
+# 単語の区切り文字を指定する
+autoload -Uz select-word-style
+select-word-style default
+# ここで指定した文字は単語区切りとみなされる
+# / も区切りと扱うので、^W でディレクトリ１つ分を削除できる
+zstyle ':zle:*' word-chars " /=;@:{},|"
+zstyle ':zle:*' word-style unspecified
+
 # HISTORY
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -115,22 +137,26 @@ setopt hist_no_store
 setopt append_history
 ## すぐにヒストリファイルに追記する。
 #setopt inc_append_history
-## 直前と同じコマンドをヒストリに追加しない
-setopt hist_ignore_dups
 ## zsh の開始, 終了時刻をヒストリファイルに書き込む
 setopt extended_history
 ## ヒストリを呼び出してから実行する間に一旦編集
 setopt hist_verify
-## ヒストリを共有
+## 同時に起動したzshの間でヒストリを共有する
 setopt share_history
-## コマンドラインの先頭がスペースで始まる場合ヒストリに追加しない
+## スペースから始まるコマンド行はヒストリに残さない
 setopt hist_ignore_space
- 
+## 直前と同じコマンドをヒストリに追加しない
+setopt hist_ignore_dups
+## 同じコマンドをヒストリに残さない
+# setopt hist_ignore_all_dups
+## ヒストリに保存するときに余分なスペースを削除する
+setopt hist_reduce_blanks
+
 # 補完
 autoload -Uz compinit
 compinit
 ## The following lines were added by compinstall
-zstyle :compinstall filename '/home/myokoym/.zshrc'
+# zstyle :compinstall filename '/home/<user>/.zshrc'
 ## 補完候補を一覧表示
 setopt auto_list
 ## TAB で順に補完候補を切り替える
@@ -151,7 +177,13 @@ setopt correct
 setopt mark_dirs
 ## 最後のスラッシュを自動的に削除しない
 setopt noautoremoveslash
- 
+## 補完で小文字でも大文字にマッチさせる
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+## ../ の後は今いるディレクトリを補完しない
+zstyle ':completion:*' ignore-parents parent pwd ..
+## ps コマンドのプロセス名補完
+zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+
 # 未分類
 ## コアダンプサイズを制限
 limit coredumpsize 102400
@@ -163,10 +195,11 @@ setopt nobeep
 setopt long_list_jobs
 ## サスペンド中のプロセスと同じコマンド名を実行した場合はリジューム
 setopt auto_resume
-## cd 時に自動で push
+## cd 時に自動で pushd
 setopt auto_pushd
-## 同じディレクトリを pushd しない
+## 重複したディレクトリを pushd しない
 setopt pushd_ignore_dups
+## 高機能なワイルドカード展開を使用する
 ## ファイル名で #, ~, ^ の 3 文字を正規表現として扱う
 setopt extended_glob
 ## =command を command のパス名に展開する
@@ -185,6 +218,12 @@ setopt brace_ccl
 #setopt NO_flow_control
 ## コマンドラインでも # 以降をコメントと見なす
 setopt interactive_comments
+# 日本語ファイル名を表示可能にする
+setopt print_eight_bit
+## Ctrl+S/Ctrl+Q によるフローコントロールを無効にする
+setopt no_flow_control
+## Ctrl+Dでzshを終了しない
+setopt ignore_eof
 
 # Ctrl-ZでVimとシェルをトグル
 # ref: [Vimの生産性を高める12の方法 | 開発手法・プロジェクト管理 | POSTD](http://postd.cc/how-to-boost-your-vim-productivity/)
@@ -221,8 +260,52 @@ else
     alias lv="$PAGER"
 fi
 
+# エイリアス
+
+alias la='ls -a'
+alias ll='ls -l'
+
+## 上書き確認
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# alias mkdir='mkdir -p'
+
+# グローバルエイリアス
+alias -g L='| less'
+alias -g G='| grep'
+
+# C で標準出力をクリップボードにコピーする
+# mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
+if which pbcopy >/dev/null 2>&1 ; then
+  # Mac
+  alias -g C='| pbcopy'
+elif which xsel >/dev/null 2>&1 ; then
+  # Linux
+  alias -g C='| xsel --input --clipboard'
+elif which putclip >/dev/null 2>&1 ; then
+  # Cygwin
+  alias -g C='| putclip'
+fi
+
+# OS 別の設定
+case ${OSTYPE} in
+  darwin*)
+    #Mac用の設定
+    export CLICOLOR=1
+    alias ls='ls -G -F'
+    ;;
+  linux*)
+    #Linux用の設定
+    alias ls='ls -F --color=auto'
+    ;;
+esac
+
 # その他
 
 if [ -s ~/.bash_profile ]; then
   source ~/.bash_profile
 fi
+
+# vim:set ft=zsh:
