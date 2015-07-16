@@ -12,6 +12,7 @@ inoremap <C-c> <Esc>
 nnoremap <silent> <Leader><Leader> :noh<CR>
 " inoremap <C-f> <C-x><C-f>
 
+" Copy & paste {{{
 " nnoremap vv <C-v>
 nnoremap Y y$
 
@@ -32,17 +33,22 @@ vnoremap <Leader>P "+P
 vnoremap <C-x> d
 vnoremap <C-c> y
 inoremap <C-v> <Esc>p
+" }}}
 
+" Folding {{{
 " Switch folding methods
 nnoremap <Leader>fi :<C-u>setlocal foldmethod=indent<CR>
 nnoremap <Leader>fm :<C-u>setlocal foldmethod=marker<CR>
 nnoremap <Leader>fs :<C-u>setlocal foldmethod=syntax<CR>
+" }}}
 
+" Date {{{
 " Insert the current date
 nnoremap <F6> <Esc>i<C-R>=strftime("%Y-%m-%dT%H:%M")<CR><Esc>
 inoremap <F6> <C-R>=strftime("%Y-%m-%dT%H:%M")<CR>
+" }}}
 
-" Move the cursor {{{
+" Cursor manipulation {{{
 " 表示行単位のカーソル移動
 " Ctrl+*のタイプはnyaosやtcshのキーバインドになるべく合わせている
 nnoremap H ^
@@ -80,7 +86,7 @@ nnoremap <C-e> <end>
 " nnoremap [] ?}<CR>
 "}}}
 
-" バッファ,タブページ,ウィンドウの操作 {{{
+" バッファ, タブページ, ウィンドウの操作 {{{
 nnoremap <Leader>bb :b#<CR>
 nnoremap <Leader>bp :bprevious<CR>
 nnoremap <Leader>bn :bnext<CR>
@@ -94,6 +100,7 @@ nnoremap <Leader>m <C-w>_
 " gfを置き換えて, 分割ウィンドウで編集するようにする
 " (gf: カーソルの下か後ろの名前のファイルを編集する)
 noremap gf :sp <cfile><CR>
+" }}}
 
 " 各種詰め合わせ {{{
 " ref:
@@ -118,7 +125,7 @@ if has('folding')
 endif
 "}}}
 
-" {{{
+" Window manipulation {{{
 " ref:
 "   title: The ultimate Vim configuration - vimrc
 "   url: http://amix.dk/vim/vimrc.html
@@ -157,7 +164,7 @@ nnoremap <Leader>l :<C-u>lcd %:h<CR>
 nnoremap <Leader>t :<C-u>pedit D:/common/templates/
 "}}}
 
-" toggle slash (for Windows) {{{
+" Toggle slash (for Windows) {{{
 " ref:
 "   title: Change between backslash and forward slash - Vim Tips Wiki
 "   url: http://vim.wikia.com/wiki/Change_between_backslash_and_forward_slash
