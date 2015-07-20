@@ -1,41 +1,62 @@
+# ref: [少し凝った zshrc](https://gist.github.com/mollifier/4979906)
 # plugins=(brew bundler git npm rails zsh-syntax-highlighting)
-#
-# # zsh-completions
-# plugins+=(zsh-completions)
-# autoload -U compinit && compinit
+## zsh-completions
+##plugins+=(zsh-completions)
+##autoload -U compinit && compinit
 
+# Path
 export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+##export MANPATH="/usr/local/man:$MANPATH"
 
 # LANG
 export LANG=ja_JP.UTF-8
 
-# Keybinding
+# 日本語ファイル名を表示可能にする
+setopt print_eight_bit
+# 単語の区切り文字を指定
+autoload -Uz select-word-style
+select-word-style default
+## ここで指定した文字は単語区切りとみなされる
+## / も区切りと扱うので、^W でディレクトリ１つ分を削除できる
+zstyle ':zle:*' word-chars " /=;@:{},|"
+zstyle ':zle:*' word-style unspecified
 
+# 色を使用可能にする
+autoload -Uz colors
+colors
+
+# Prompt
+PROMPT="%{${fg[green]}%}%~%{${reset_color}%}$ "
+
+# Keybinding
 bindkey -v
-# bindkey -r '^]'
-# bindkey "" history-incremental-search-backward
-# ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
+##bindkey -r '^]'
+##bindkey "" history-incremental-search-backward
+## ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
 
-# 補完候補のメニュー選択で、矢印キーの代わりにhjklで移動出来るようにする。
+## Ctrl-ZでVimとシェルをトグル
+## ref: [Vimの生産性を高める12の方法 | 開発手法・プロジェクト管理 | POSTD](http://postd.cc/how-to-boost-your-vim-productivity/)
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
+## 補完候補のメニュー選択で、矢印キーの代わりにhjklで移動出来るようにする。
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
-#------------------------------------------------------------------------------
-# ref: [少し凝った zshrc](https://gist.github.com/mollifier/4979906)
-
-# 色を使用出来るようにする
-autoload -Uz colors
-colors
-
-# プロンプト
-PROMPT="%{${fg[green]}%}%~%{${reset_color}%}$ "
-
-# vcs_info
+# VCS
 autoload -Uz vcs_info
 autoload -Uz add-zsh-hook
  
@@ -48,15 +69,7 @@ function _update_vcs_info_msg() {
 }
 add-zsh-hook precmd _update_vcs_info_msg
 
-# 単語の区切り文字を指定する
-autoload -Uz select-word-style
-select-word-style default
-# ここで指定した文字は単語区切りとみなされる
-# / も区切りと扱うので、^W でディレクトリ１つ分を削除できる
-zstyle ':zle:*' word-chars " /=;@:{},|"
-zstyle ':zle:*' word-style unspecified
-
-# HISTORY
+# History
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -65,7 +78,7 @@ setopt hist_no_store
 ## ヒストリファイルに追記する。
 setopt append_history
 ## すぐにヒストリファイルに追記する。
-#setopt inc_append_history
+###setopt inc_append_history
 ## zsh の開始, 終了時刻をヒストリファイルに書き込む
 setopt extended_history
 ## ヒストリを呼び出してから実行する間に一旦編集
@@ -77,15 +90,15 @@ setopt hist_ignore_space
 ## 直前と同じコマンドをヒストリに追加しない
 setopt hist_ignore_dups
 ## 同じコマンドをヒストリに残さない
-# setopt hist_ignore_all_dups
+### setopt hist_ignore_all_dups
 ## ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
 
-# 補完
+# Completion
 autoload -Uz compinit
 compinit
 ## The following lines were added by compinstall
-# zstyle :compinstall filename '/home/<user>/.zshrc'
+##zstyle :compinstall filename '/home/<user>/.zshrc'
 ## 補完候補を一覧表示
 setopt auto_list
 ## TAB で順に補完候補を切り替える
@@ -101,7 +114,7 @@ zstyle ':completion:*:default' menu select=1
 ## 補完候補を詰めて表示
 setopt list_packed
 ## スペルチェック
-# setopt correct
+### setopt correct
 ## ファイル名の展開でディレクトリにマッチした場合末尾に / を付加する
 setopt mark_dirs
 ## 最後のスラッシュを自動的に削除しない
@@ -112,6 +125,75 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' ignore-parents parent pwd ..
 ## ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+
+# Alias
+
+alias la='ls -a'
+alias ll='ls -l'
+
+## 上書き確認
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+##alias mkdir='mkdir -p'
+
+## グローバルエイリアス
+alias -g L='| less'
+alias -g G='| grep'
+
+## C で標準出力をクリップボードにコピーする
+### ref: mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
+if which pbcopy >/dev/null 2>&1 ; then
+  # Mac
+  alias -g C='| pbcopy'
+elif which xsel >/dev/null 2>&1 ; then
+  # Linux
+  alias -g C='| xsel --input --clipboard'
+elif which putclip >/dev/null 2>&1 ; then
+  # Cygwin
+  alias -g C='| putclip'
+fi
+
+# lvの設定
+## ref: [おすすめzsh設定 - ククログ(2011-09-05)](http://www.clear-code.com/blog/2011/9/5.html)
+
+if type lv > /dev/null 2>&1; then
+    ## lvを優先する。
+    export PAGER="lv"
+else
+    ## lvがなかったらlessを使う。
+    export PAGER="less"
+fi
+
+if [ "$PAGER" = "lv" ]; then
+    ## -c: ANSIエスケープシーケンスの色付けなどを有効にする。
+    ## -l: 1行が長くと折り返されていても1行として扱う。
+    ##     （コピーしたときに余計な改行を入れない。）
+    export LV="-c -l"
+else
+    ## lvがなくてもlvでページャーを起動する。
+    alias lv="$PAGER"
+fi
+
+# OS 別の設定
+case ${OSTYPE} in
+  darwin*)
+    #Mac用の設定
+    export CLICOLOR=1
+    alias ls='ls -G -F'
+    ;;
+  linux*)
+    #Linux用の設定
+    alias ls='ls -F --color=auto'
+    ;;
+esac
+
+# その他
+
+if [ -s ~/.bash_profile ]; then
+  source ~/.bash_profile
+fi
 
 # 未分類
 ## コアダンプサイズを制限
@@ -144,97 +226,12 @@ setopt auto_cd
 ## {a-c} を a b c に展開する機能を使えるようにする
 setopt brace_ccl
 ## Ctrl+S/Ctrl+Q によるフロー制御を使わないようにする
-#setopt NO_flow_control
+###setopt NO_flow_control
 ## コマンドラインでも # 以降をコメントと見なす
 setopt interactive_comments
-# 日本語ファイル名を表示可能にする
-setopt print_eight_bit
 ## Ctrl+S/Ctrl+Q によるフローコントロールを無効にする
 setopt no_flow_control
 ## Ctrl+Dでzshを終了しない
 setopt ignore_eof
-
-# Ctrl-ZでVimとシェルをトグル
-# ref: [Vimの生産性を高める12の方法 | 開発手法・プロジェクト管理 | POSTD](http://postd.cc/how-to-boost-your-vim-productivity/)
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line
-  else
-    zle push-input
-    zle clear-screen
-  fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
-
-# lvの設定
-# ref: [おすすめzsh設定 - ククログ(2011-09-05)](http://www.clear-code.com/blog/2011/9/5.html)
-
-if type lv > /dev/null 2>&1; then
-    ## lvを優先する。
-    export PAGER="lv"
-else
-    ## lvがなかったらlessを使う。
-    export PAGER="less"
-fi
-
-if [ "$PAGER" = "lv" ]; then
-    ## -c: ANSIエスケープシーケンスの色付けなどを有効にする。
-    ## -l: 1行が長くと折り返されていても1行として扱う。
-    ##     （コピーしたときに余計な改行を入れない。）
-    export LV="-c -l"
-else
-    ## lvがなくてもlvでページャーを起動する。
-    alias lv="$PAGER"
-fi
-
-# エイリアス
-
-alias la='ls -a'
-alias ll='ls -l'
-
-## 上書き確認
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-# alias mkdir='mkdir -p'
-
-# グローバルエイリアス
-alias -g L='| less'
-alias -g G='| grep'
-
-# C で標準出力をクリップボードにコピーする
-# mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
-if which pbcopy >/dev/null 2>&1 ; then
-  # Mac
-  alias -g C='| pbcopy'
-elif which xsel >/dev/null 2>&1 ; then
-  # Linux
-  alias -g C='| xsel --input --clipboard'
-elif which putclip >/dev/null 2>&1 ; then
-  # Cygwin
-  alias -g C='| putclip'
-fi
-
-# OS 別の設定
-case ${OSTYPE} in
-  darwin*)
-    #Mac用の設定
-    export CLICOLOR=1
-    alias ls='ls -G -F'
-    ;;
-  linux*)
-    #Linux用の設定
-    alias ls='ls -F --color=auto'
-    ;;
-esac
-
-# その他
-
-if [ -s ~/.bash_profile ]; then
-  source ~/.bash_profile
-fi
 
 # vim:set ft=zsh:
