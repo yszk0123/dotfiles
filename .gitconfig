@@ -16,3 +16,5 @@
 	required = true
 [alias]
 	co = checkout
+[ghq]
+  root = ~/web
