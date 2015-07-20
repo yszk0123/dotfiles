@@ -4,14 +4,11 @@
 ##plugins+=(zsh-completions)
 ##autoload -U compinit && compinit
 
-# Path
-export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
-##export MANPATH="/usr/local/man:$MANPATH"
-
-# LANG
+# Language
+## LANG
 export LANG=ja_JP.UTF-8
 
-# 日本語ファイル名を表示可能にする
+## 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 # 単語の区切り文字を指定
 autoload -Uz select-word-style
@@ -27,6 +24,11 @@ colors
 
 # Prompt
 PROMPT="%{${fg[green]}%}%~%{${reset_color}%}$ "
+
+# Bash共通設定
+if [ -s ~/.bash_profile ]; then
+  source ~/.bash_profile
+fi
 
 # Keybinding
 bindkey -v
@@ -126,19 +128,7 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 ## ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
-# Alias
-
-alias la='ls -a'
-alias ll='ls -l'
-
-## 上書き確認
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-##alias mkdir='mkdir -p'
-
-## グローバルエイリアス
+# グローバルエイリアス
 alias -g L='| less'
 alias -g G='| grep'
 
@@ -155,27 +145,6 @@ elif which putclip >/dev/null 2>&1 ; then
   alias -g C='| putclip'
 fi
 
-# lvの設定
-## ref: [おすすめzsh設定 - ククログ(2011-09-05)](http://www.clear-code.com/blog/2011/9/5.html)
-
-if type lv > /dev/null 2>&1; then
-    ## lvを優先する。
-    export PAGER="lv"
-else
-    ## lvがなかったらlessを使う。
-    export PAGER="less"
-fi
-
-if [ "$PAGER" = "lv" ]; then
-    ## -c: ANSIエスケープシーケンスの色付けなどを有効にする。
-    ## -l: 1行が長くと折り返されていても1行として扱う。
-    ##     （コピーしたときに余計な改行を入れない。）
-    export LV="-c -l"
-else
-    ## lvがなくてもlvでページャーを起動する。
-    alias lv="$PAGER"
-fi
-
 # OS 別の設定
 case ${OSTYPE} in
   darwin*)
@@ -188,12 +157,6 @@ case ${OSTYPE} in
     alias ls='ls -F --color=auto'
     ;;
 esac
-
-# その他
-
-if [ -s ~/.bash_profile ]; then
-  source ~/.bash_profile
-fi
 
 # 未分類
 ## コアダンプサイズを制限
