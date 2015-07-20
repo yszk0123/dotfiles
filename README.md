@@ -1,3 +1,18 @@
+# はじめに
+
+Xcode，HomebrewとAnsibleを導入する
+ref: [HomebrewとAnsibleでMacの開発環境構築を自動化する | mawatari.jp](http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible)
+
+    $ sudo xcodebuild -license
+    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ brew update
+    $ brew install ansible
+
+# 使い方
+
+    $ cd ~
+    $ ./dotfiles/update.sh
+
 # Shell
 
 ## Install zsh
