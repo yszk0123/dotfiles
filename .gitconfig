@@ -17,4 +17,4 @@
 [alias]
 	co = checkout
 [ghq]
-  root = ~/web
+  root = ~/src

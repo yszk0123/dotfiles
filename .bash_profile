@@ -8,6 +8,10 @@ function is_exists() {
 export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
 ##export MANPATH="/usr/local/man:$MANPATH"
 
+# Homebrew & Homebrew Cask
+## ref: [HomebrewとAnsibleでMacの開発環境構築を自動化する | mawatari.jp](http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible)
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # 自分用のPC限定の設定
 if [ -s ~/dotfiles/my_local_mode ]; then
   # MacVim

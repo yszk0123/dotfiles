@@ -1,0 +1,63 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  sudo: no
+  roles:
+    - homebrew
+    - homebrew-cask
+  vars:
+    # Tap external Homebrew repositories.
+    #
+    # e.g.
+    # - homebrew/binary
+    homebrew_repositories:
+
+    # Managed Homebrew packages.
+    #
+    # e.g.
+    # - package_name
+    # or
+    # { name: package_name, state: package_state, install_options: [with-baz, enable-debug] }
+    #
+    # state choices: [head, latest, present, absent, linked, unlinked] (default: latest)
+    # install_options: string or sequence (default: none)
+    homebrew_packages:
+      # - { name: docker }
+      # - { name: git }
+      # - { name: rbenv-gem-rehash }
+      # - { name: vim }
+      # - { name: zsh }
+      # - { name: zsh-completions }
+      # - { name: zsh-syntax-highlighting }
+      - { name: ansible }
+      - { name: ctags }
+      - { name: jq }
+      - { name: nvm }
+      - { name: openssl, state: linked, install_options: force } }
+      - { name: peco }
+      - { name: rbenv }
+      - { name: readline }
+      - { name: the_silver_searcher }
+      - { name: tmux }
+      - { name: tree }
+
+    # Tap external Homebrew Cask repositories.
+    homebrew_cask_repositories:
+      - caskroom/versions
+
+    # Managed Homebrew Cask packages.
+    #
+    # e.g.
+    # - package_name
+    # or
+    # { name: package_name, state: package_state }
+    #
+    # state choices: [present, absent, installed, uninstalled] (default: present)
+    homebrew_cask_packages:
+      # - { name: firefox-ja }
+      # - { name: google-chrome }
+      # - { name: google-japanese-ime }
+      # - { name: iterm2 }
+      # - { name: karabiner }
+      # - { name: vagrant }
+      # - { name: virtualbox }
