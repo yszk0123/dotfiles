@@ -33,7 +33,7 @@
       - { name: ctags }
       - { name: jq }
       - { name: nvm }
-      - { name: openssl, state: linked, install_options: force } }
+      - { name: openssl, state: linked, install_options: force }
       - { name: peco }
       - { name: rbenv }
       - { name: readline }
