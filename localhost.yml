@@ -31,6 +31,7 @@
       # - { name: zsh-syntax-highlighting }
       - { name: ansible }
       - { name: ctags }
+      - { name: ghq }
       - { name: jq }
       - { name: nvm }
       - { name: openssl, state: linked, install_options: force }
