@@ -46,6 +46,14 @@ let g:neomru#do_validate = 1
 
 " call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
+let g:unite_source_grep_default_opts = '-inH ' .
+  \ '--exclude-dir=".git" ' .
+  \ '--exclude-dir=".hg" ' .
+  \ '--exclude-dir=".svn" ' .
+  \ '--exclude-dir=".bzr" ' .
+  \ '--exclude-dir="node_modules" ' .
+  \ '--exclude-dir="bower_components"'
+
 " unite grep に ag(The Silver Searcher) を使う {{{
 if executable('ag')
   " grep設定
