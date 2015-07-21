@@ -62,12 +62,12 @@ if executable('ag')
   let g:unite_source_grep_max_candidates = 100
 
   let g:unite_source_rec_async_command='ag --follow --nocolor --nogroup --hidden -g ""'
-
-  "サブディレクトリを含むプロジェクトディレクトリの全ファイル一覧
-  nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=files file_rec/git:--cached:--others:--exclude-standard<CR>
-  nnoremap <silent> [unite]R :<C-u>UniteResume files<CR>
-  nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=files file_rec/async<CR>
 endif
+
+"サブディレクトリを含むプロジェクトディレクトリの全ファイル一覧
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=files file_rec/git:--cached:--others:--exclude-standard<CR>
+nnoremap <silent> [unite]R :<C-u>UniteResume files<CR>
+nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=files file_rec/async<CR>
 "}}}
 
 " " TODO: ショートカット用ソースを作成 {{{
