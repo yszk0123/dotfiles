@@ -65,6 +65,7 @@ runtime lib/filetype.vim
 runtime lib/plugins.vim
 runtime lib/remap.vim
 runtime lib/settings.vim
+runtime lib/abbreviations.vim
 
 call neobundle#end()
 
