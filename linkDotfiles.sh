@@ -5,6 +5,8 @@
 # ln -sf ~/dotfiles/ftdetect ~/.vim
 # ln -sf ~/dotfiles/indent ~/.vim
 
+ln -sf ~/dotfiles/.git_template/ ~/.git_template/
+
 ln -sf ~/dotfiles/.ansible.cfg ~/.ansible.cfg
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
