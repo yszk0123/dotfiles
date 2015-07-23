@@ -282,7 +282,7 @@ NeoBundle 'artnez/vim-wipeout'
 NeoBundle 'nelstrom/vim-markdown-folding'
 let g:markdown_fold_style = 'nested'
 " TODO: これでいいのか
-autocmd FileType zsh runtime! ftplugin/markdown/folding.vim
+" autocmd FileType zsh runtime! ftplugin/markdown/folding.vim
 
 " " ref: [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
 " NeoBundle 'plasticboy/vim-markdown'
