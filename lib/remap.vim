@@ -179,6 +179,14 @@ nnoremap <Leader>l :<C-u>lcd %:h<CR>
 nnoremap <Leader>t :<C-u>pedit D:/common/templates/
 "}}}
 
+" 80桁を超えた部分をハイライト {{{
+" ref: [【Vim】80桁教信者の憂鬱 その２（ホットキーでトグル、他） | blog.remora.cx](http://blog.remora.cx/2013/06/source-in-80-columns-2.html)
+noremap <Plug>(ToggleColorColumn)
+            \ :<c-u>let &colorcolumn = len(&colorcolumn) > 0 ? '' :
+            \   join(range(81, 999), ',')<CR>
+nmap <Leader>; <Plug>(ToggleColorColumn)
+" }}}
+
 " Toggle slash (for Windows) {{{
 " ref:
 "   title: Change between backslash and forward slash - Vim Tips Wiki
