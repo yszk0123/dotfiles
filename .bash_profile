@@ -44,6 +44,8 @@ fi
 # Alias
 alias la='ls -a'
 alias ll='ls -l'
+alias pu='pushd'
+alias po='popd'
 
 ## ghq & peco
 alias ghqp='cd $(ghq list -p | peco)'
@@ -60,7 +62,7 @@ alias mv='mv -i'
 ### ref: [【翻訳】Gitコマンドラインショートカット](http://postd.cc/git-command-line-shortcuts/)
 alias ga='git add'
 alias gaa='git add .'
-alias gaaa='git add -A'
+alias gaA='git add -A'
 alias gb='git branch'
 alias gbd='git branch -d '
 alias gc='git commit'
@@ -69,7 +71,8 @@ alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
 alias gd='git diff'
-alias gda='git diff HEAD'
+alias gdH='git diff HEAD'
+alias gdH1='git diff HEAD~'
 alias gi='git init'
 alias glo='git log'
 alias glg='git log --graph --oneline --decorate --all'
