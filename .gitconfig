@@ -4,6 +4,8 @@
 [core]
 	excludesfile = /Users/suzukiyuuji/.gitignore_global
   editor = /usr/bin/vim
+[diff]
+  renames = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
