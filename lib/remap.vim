@@ -185,6 +185,7 @@ noremap <Plug>(ToggleColorColumn)
             \ :<c-u>let &colorcolumn = len(&colorcolumn) > 0 ? '' :
             \   join(range(81, 999), ',')<CR>
 nmap <Leader>; <Plug>(ToggleColorColumn)
+let &colorcolumn = join(range(81, 999), ',')
 " }}}
 
 " Toggle slash (for Windows) {{{
