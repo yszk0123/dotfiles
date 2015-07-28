@@ -7,8 +7,8 @@ nnoremap <Leader> <Nop>
 vnoremap <Leader> <Nop>
 
 " For unite
-nnoremap [unite] <Nop>
-nmap s [unite]
+nnoremap [util] <Nop>
+nmap s [util]
 nnoremap [unite-ex] <Nop>
 nmap sx [unite-ex]
 

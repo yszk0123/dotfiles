@@ -1,4 +1,4 @@
-" CAUTION: キーマップ "[unite]s"をctrlpに割り当てる
+" CAUTION: キーマップ "[util]s"をctrlpに割り当てる
 "  ref:
 "    title:VimのUniteプラグインでファイル、バッファ、ブックマーク管理 | karakaram-blog
 "    url: http://www.karakaram.com/unite
@@ -83,9 +83,9 @@ endfunction
 
 nnoremap <silent> <C-p> :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 "サブディレクトリを含むプロジェクトディレクトリの全ファイル一覧
-nnoremap <silent> [unite]r :<C-u>call <SID>uniteFileRecAsyncOrGit()<CR>
-nnoremap <silent> [unite]R :<C-u>UniteResume files<CR>
-nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=files file_rec/async<CR>
+nnoremap <silent> [util]r :<C-u>call <SID>uniteFileRecAsyncOrGit()<CR>
+nnoremap <silent> [util]R :<C-u>UniteResume files<CR>
+nnoremap <silent> [util]e :<C-u>Unite -buffer-name=files file_rec/async<CR>
 "}}}
 
 " " TODO: ショートカット用ソースを作成 {{{
@@ -121,57 +121,57 @@ endfunction
 "   let g:unite_source_mru_do_validate = !g:unite_source_mru_do_validate
 "   echo 'toggled. current state is ' . g:unite_source_mru_do_validate
 " endfunction
-" nnoremap [unite]t :<C-u>call <SID>toggleUniteMruValidate()<CR>
+" nnoremap [util]t :<C-u>call <SID>toggleUniteMruValidate()<CR>
 
 "現在開いているファイルのディレクトリ下のファイル一覧。
 "開いていない場合はカレントディレクトリ
-nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> [unite]F :<C-u>UniteWithCurrentDir -buffer-name=files file<CR>
+nnoremap <silent> [util]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [util]F :<C-u>UniteWithCurrentDir -buffer-name=files file<CR>
 "バッファ一覧
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [util]b :<C-u>Unite buffer<CR>
 "バッファ一覧(選択モードでスタート)
-nnoremap <silent> [unite]B :<C-u>Unite -no-start-insert buffer<CR>
+nnoremap <silent> [util]B :<C-u>Unite -no-start-insert buffer<CR>
 "最近使用したファイル一覧
-nnoremap <silent> [unite]m :<C-u>Unite -buffer-name=files neomru/file<CR>
+nnoremap <silent> [util]m :<C-u>Unite -buffer-name=files neomru/file<CR>
 "最近使用したディレクトリ
-nnoremap <silent> [unite]d :<C-u>Unite -buffer-name=files neomru/directory<CR>
-nnoremap <silent> [unite]D :<C-u>Unite -buffer-name=files -default-action=lcd neomru/directory<CR>
+nnoremap <silent> [util]d :<C-u>Unite -buffer-name=files neomru/directory<CR>
+nnoremap <silent> [util]D :<C-u>Unite -buffer-name=files -default-action=lcd neomru/directory<CR>
 "タグ
-nnoremap <silent> [unite]t :<C-u>Unite tag<CR>
+nnoremap <silent> [util]t :<C-u>Unite tag<CR>
 "タブページ一覧
-nnoremap <silent> [unite]T :<C-u>Unite tab<CR>
+nnoremap <silent> [util]T :<C-u>Unite tab<CR>
 
 "ブックマーク一覧
-nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
+nnoremap <silent> [util]c :<C-u>Unite bookmark<CR>
 "ブックマーク一覧(選択モードでスタート)
-nnoremap <silent> [unite]C :<C-u>Unite -no-start-insert bookmark<CR>
+nnoremap <silent> [util]C :<C-u>Unite -no-start-insert bookmark<CR>
 "ブックマークに追加
-nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
+nnoremap <silent> [util]a :<C-u>UniteBookmarkAdd<CR>
 
 " grep検索
-nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> [util]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 " grep検索(ファイル名のみ)
-nnoremap <silent> [unite]G :<C-u>Unite grep:.:"-l" -buffer-name=search-buffer<CR>
+nnoremap <silent> [util]G :<C-u>Unite grep:.:"-l" -buffer-name=search-buffer<CR>
 " カーソル位置の単語をgrep検索
-nnoremap <silent> [unite]* :<C-u>Unite grep:<C-r>=<SID>getbufdir()<CR> -buffer-name=search-buffer<CR><C-R><C-w>
-nnoremap <silent> [unite]+ :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-w>
+nnoremap <silent> [util]* :<C-u>Unite grep:<C-r>=<SID>getbufdir()<CR> -buffer-name=search-buffer<CR><C-R><C-w>
+nnoremap <silent> [util]+ :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-w>
 " grep検索結果の再呼出
-nnoremap <silent> [unite]u :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent> [util]u :<C-u>UniteResume search-buffer<CR>
 " 行検索
-nnoremap <silent> [unite]l :<C-u>Unite line -buffer-name=search-buffer<CR>
+nnoremap <silent> [util]l :<C-u>Unite line -buffer-name=search-buffer<CR>
 
 "プロジェクト
-nnoremap <silent> [unite]p :<C-u>Unite -buffer-name=project file_rec
+nnoremap <silent> [util]p :<C-u>Unite -buffer-name=project file_rec
   \ -no-quit -vertical -winwidth=26 -wrap -long-source-names<CR>
-nnoremap <silent> [unite]P :<C-u>Unite -buffer-name=project file_rec
+nnoremap <silent> [util]P :<C-u>Unite -buffer-name=project file_rec
   \ -no-quit -vertical -winwidth=26 -wrap -long-source-names -resume<CR>
-" nnoremap <silent> [unite]F :<C-u>Unite -buffer-name=files file<CR>
+" nnoremap <silent> [util]F :<C-u>Unite -buffer-name=files file<CR>
 
 " 色々
-" nnoremap <silent> [unite]a :<C-u>UniteWithCurrentDir
+" nnoremap <silent> [util]a :<C-u>UniteWithCurrentDir
 "         \ -buffer-name=files buffer bookmark file<CR>
 " 色々ジャンプ 
-" nnoremap <silent> [unite]j :<C-u>Unite
+" nnoremap <silent> [util]j :<C-u>Unite
 "         \ -buffer-name=files -no-split
 "         \ jump_point file_point buffer_tab
 "         \ file_rec:! file file/new<CR>
@@ -190,11 +190,11 @@ nnoremap <silent> [unite-ex]me :<C-u>Unite output:message<CR>
 " nnoremap <silent> [unite-ex]se :<C-u>Unite session<CR>
 
 "見出し一覧
-" nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
+" nnoremap <silent> [util]o :<C-u>Unite outline<CR>
 "見出し一覧(分割表示)
-" nnoremap <silent> [unite]vo :<C-u>Unite -vertical -winwidth=40 outline<CR>
+" nnoremap <silent> [util]vo :<C-u>Unite -vertical -winwidth=40 outline<CR>
 "おまけ(カレントディレクトリ内のファイル一覧(分割表示))
-" nnoremap <silent> [unite]vf :<C-u>vsplit<CR><C-w><C-w>:e %:h<CR>
+" nnoremap <silent> [util]vf :<C-u>vsplit<CR><C-w><C-w>:e %:h<CR>
 " }}}
 
 "uniteを開いている間のキーマッピング

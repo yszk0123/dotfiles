@@ -28,8 +28,8 @@ autocmd FileType css,html NeoBundleSource hail2u
 " acp (vim-autocomplpop, AutoComplPop) {{{
 " NeoBundle 'D:/common/lib/vim-autocomplpop'
 " let g:acp_behaviorKeywordIgnores = ['D:', 'C:', '\\', '/', '.', ':']
-" au WinEnter *[unite]* AcpLock
-" au WinLeave *[unite]* AcpUnlock
+" au WinEnter *[util]* AcpLock
+" au WinLeave *[util]* AcpUnlock
 " }}}
 
 if executable('ag')
@@ -44,8 +44,8 @@ endif
 " "       \ ["Align at ':'", '01 :\zs/1'],
 " "       \ ["Align at ','", '01 ,\zs'],
 " "       \]
-" " nnoremap [unite]a :<C-u>Unite alignta:options<CR>
-" " xnoremap [unite]a :<C-u>Unite alignta:arguments<CR>
+" " nnoremap [util]a :<C-u>Unite alignta:options<CR>
+" " xnoremap [util]a :<C-u>Unite alignta:arguments<CR>
 " " nnoremap gc `[v`]
 " " nnoremap [align] <Nop>
 " " nmap <Space>a [align]
