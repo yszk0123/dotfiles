@@ -203,18 +203,6 @@ map R  <Plug>(operator-replace)
 map S  <Plug>(operator-sort)
 "}}}
 
-" vim-submode {{{
-NeoBundle 'kana/vim-submode'
-call submode#enter_with('winresize', 'n', '', 's>', '<C-w>>')
-call submode#enter_with('winresize', 'n', '', 's<', '<C-w><')
-call submode#enter_with('winresize', 'n', '', 's+', '<C-w>+')
-call submode#enter_with('winresize', 'n', '', 's-', '<C-w>-')
-call submode#map('winresize', 'n', '', '>', '<C-w>>')
-call submode#map('winresize', 'n', '', '<', '<C-w><')
-call submode#map('winresize', 'n', '', '+', '<C-w>+')
-call submode#map('winresize', 'n', '', '-', '<C-w>-')
-" }}}
-
 " vim-qfreplace {{{
 NeoBundle 'thinca/vim-qfreplace'
 nnoremap <Leader>q :<C-u>Qfreplace<CR>
