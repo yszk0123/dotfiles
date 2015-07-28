@@ -150,9 +150,17 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
 
-" Resize the window
+" Resize/move/split windows
+
 nnoremap + <C-w>+
 nnoremap - <C-w>-
+nnoremap [util]H <C-w>H
+nnoremap [util]J <C-w>J
+nnoremap [util]K <C-w>K
+nnoremap [util]L <C-w>L
+nnoremap [util]= <C-w>=
+nnoremap [util]s :<C-u>split
+nnoremap [util]v :<C-u>vsplit
 
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 " CAUTION: a register 'z' is used
