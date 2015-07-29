@@ -36,26 +36,6 @@ if executable('ag')
   NeoBundle 'rking/ag.vim'
 endif
 
-" Alignta {{{
-" TODO: ソート+整列
-" NeoBundleLazy 'h1mesuke/vim-alignta.git', { "autoload": { "commands": ["Align"] } }
-" " let g:unite_source_alignta_preset_arguments = [
-" "       \ ["Align at '='", '=>\='],
-" "       \ ["Align at ':'", '01 :\zs/1'],
-" "       \ ["Align at ','", '01 ,\zs'],
-" "       \]
-" " nnoremap [util]a :<C-u>Unite alignta:options<CR>
-" " xnoremap [util]a :<C-u>Unite alignta:arguments<CR>
-" " nnoremap gc `[v`]
-" " nnoremap [align] <Nop>
-" " nmap <Space>a [align]
-" " nnoremap [align]a :Alignta 0:1 :\zs/1<CR>
-" " xnoremap [align]a :Alignta 0:1 :\zs/1<CR>
-" vnoremap <silent> = :Align 1 =<CR>
-" vnoremap <silent> * :Align 01 :\zs/1<CR>
-" vnoremap <silent> , :Align 01 ,\zs<CR>
-"}}}
-
 " clever-f {{{
 NeoBundle 'rhysd/clever-f.vim'
 let g:clever_f_smart_case = 1
@@ -158,6 +138,14 @@ nnoremap <Leader>vS :<C-u>VimShellInteractive<Space>
 " nnoremap [vimshell]c :<C-u>VimShellInteractive coffee<CR>
 " nnoremap [vimshell]j :<C-u>VimShellInteractive jade<CR>
 " nnoremap [vimshell]e :<C-u>VimShellSendString<CR>
+" }}}
+
+" vim-easy-align {{{
+NeoBundle 'junegunn/vim-easy-align'
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 " }}}
 
 " vim-expand-region {{{
