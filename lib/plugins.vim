@@ -236,10 +236,15 @@ let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
 "}}}
 
 " vim-smartinput: 囲み系補完 {{{
-" NeoBundle 'kana/vim-smartinput'
+NeoBundle 'kana/vim-smartinput'
 NeoBundle 'Raimondi/delimitMate'
 "}}}
-
+" vim-smartword {{{
+NeoBundle 'kana/vim-smartword'
+nmap w <Plug>(smartword-w)
+nmap b <Plug>(smartword-b)
+nmap e <Plug>(smartword-e)
+" }}}
 " vim-textobj-* {{{
 " ref:
 "   title: Vim の textobj プラグインをまとめた - C++でゲームプログラミング
