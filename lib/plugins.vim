@@ -7,6 +7,7 @@ NeoBundle 'mxw/vim-jsx'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/gitignore'
 NeoBundle 'szw/vim-tags'
 
