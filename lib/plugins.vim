@@ -102,10 +102,11 @@ let g:syntastic_javascript_checkers = ['eslint']
 " $ gem install rubocop
 let g:syntastic_ruby_checkers = ['rubocop']
 
+" mode=activeでバッファ保存時などに自動的にチェック
 " mode=passiveで明示的に:SyntasticCheckを呼び出さない限りチェックしない
 let g:syntastic_mode_map = {
-  \ 'mode': 'passive',
-  \ 'active_filetypes': ['coffeescript', 'javascript', 'ruby'],
+  \ 'mode': 'active',
+  \ 'passive_filetypes': ['html', 'text'],
   \ }
 
 set statusline+=%#warningmsg#
