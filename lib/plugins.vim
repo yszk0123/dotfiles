@@ -89,7 +89,30 @@ NeoBundle 'AndrewRadev/switch.vim'
 nnoremap <bar> :<C-u>Switch<CR>
 " }}}
 
-" {{{
+" syntastic {{{
+NeoBundle 'scrooloose/syntastic'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_save = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
+" $ gem install rubocop
+let g:syntastic_ruby_checkers = ['rubocop']
+
+" mode=passiveで明示的に:SyntasticCheckを呼び出さない限りチェックしない
+let g:syntastic_mode_map = {
+  \ 'mode': 'passive',
+  \ 'active_filetypes': ['coffeescript', 'javascript', 'ruby'],
+  \ }
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" }}}
+
+" tagbar {{{
 " NeoBundle 'majutsushi/tagbar'
 " nnoremap <Leader>t :<C-u>TagbarToggle<CR>
 " }}}
