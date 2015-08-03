@@ -39,6 +39,7 @@
       - { name: rbenv }
       - { name: readline }
       - { name: the_silver_searcher }
+      - { name: tig }
       - { name: tmux }
       - { name: tree }
 
