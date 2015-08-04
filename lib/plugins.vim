@@ -100,7 +100,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 " $ gem install rubocop
-let g:syntastic_ruby_checkers = ['rubocop']
+" let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_ruby_checkers = []
 
 " mode=activeでバッファ保存時などに自動的にチェック
 " mode=passiveで明示的に:SyntasticCheckを呼び出さない限りチェックしない
