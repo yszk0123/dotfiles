@@ -46,13 +46,14 @@ let g:neomru#do_validate = 1
 
 " call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
+let s:ignores = [''] + map([
+  \ '.hg', '.svn', '.git', '.bzr',
+  \ 'bower_components', 'node_modules',
+  \ 'log', 'vendor', 'tmp', 'backup', 'dist', 'dest', 'build'
+  \ ], '"\"" . v:val . "\""')
+
 let g:unite_source_grep_default_opts = '-inH ' .
-  \ '--exclude-dir=".git" ' .
-  \ '--exclude-dir=".hg" ' .
-  \ '--exclude-dir=".svn" ' .
-  \ '--exclude-dir=".bzr" ' .
-  \ '--exclude-dir="node_modules" ' .
-  \ '--exclude-dir="bower_components"'
+  \ join(s:ignores, ' --exclude-dir=')
 
 " unite grep に ag(The Silver Searcher) を使う {{{
 if executable('ag')
@@ -62,14 +63,13 @@ if executable('ag')
   " let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_default_opts =
     \ '--line-numbers --nocolor --nogroup --hidden ' .
-    \ '--ignore ".hg" --ignore ".svn" --ignore ".git" ' .
-    \ '--ignore "bower_components" ' .
-    \ '--ignore "vendor" --ignore "tmp" --ignore "bin" ' .
-    \ '--ignore "backup" --ignore "dist" --ignore "dest" --ignore "build" --ignore ".bzr"'
+    \ join(s:ignores, ' --ignore ')
   let g:unite_source_grep_recursive_opt = ''
   let g:unite_source_grep_max_candidates = 100
 
-  let g:unite_source_rec_async_command='ag --follow --nocolor --nogroup --hidden -g ""'
+  let g:unite_source_rec_async_command =
+    \ 'ag --follow --nocolor --nogroup --hidden -g "" ' .
+    \ join(s:ignores, ' --ignore ')
 endif
 
 " ref: [Vim - file_rec/asyncとfile_rec/gitを自動的に切り換える - Qiita](http://qiita.com/yuku_t/items/9263e6d9105ba972aea8)
@@ -217,11 +217,11 @@ function! s:unite_my_settings()"{{{
   " 入力モードのときctrl+wでバックスラッシュも削除
   imap <buffer> <C-w>  <Plug>(unite_delete_backward_path)
   nmap <buffer> <Left> <Plug>(unite_delete_backward_path)
-  nmap <buffer> h      <Plug>(unite_delete_backward_path)
+  nmap <buffer> h      <Plug>(unite_deletE_BACkward_path)
   " 挿入モードのときPでオートプレビュー切替(pでプレビュー)
   nmap <buffer> P      <Plug>(unite_toggle_auto_preview)
   " 更新(キャッシュクリア)
-  nmap <buffer> <F5>   <Plug>(unite_redraw)
+  nmap <buffer> <F5>   <Plug>(unite_REDRAw)
   " マークして次の候補の移動
   nmap <buffer> m      <Plug>(unite_toggle_mark_current_candidate)
   nmap <buffer> M      <Plug>(unite_toggle_mark_current_candidate_up)
