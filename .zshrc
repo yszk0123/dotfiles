@@ -58,6 +58,11 @@ function load_additional_features() {
   if is_exists "rbenv"; then
     eval "$(rbenv init -)"
   fi
+  alias be='bundle exec'
+  alias berc='bundle exec rails c'
+  alias bers='bundle exec rails s'
+  alias ber='bundle exec rspec'
+  alias staging_be='RAILS_ENV=staging bundle exec'
   # }}}
 }
 alias laf=load_additional_features
