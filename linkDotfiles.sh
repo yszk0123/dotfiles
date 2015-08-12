@@ -9,8 +9,7 @@ ln -sf ~/dotfiles/.bundle ~/.bundle
 ln -sf ~/dotfiles/.git_template ~/.git_template
 
 ln -sf ~/dotfiles/.ansible.cfg ~/.ansible.cfg
-ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.zprofile ~/.zprofile
 ln -sf ~/dotfiles/.ctags ~/.ctags
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
