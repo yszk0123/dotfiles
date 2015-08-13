@@ -33,38 +33,8 @@ source ~/dotfiles/lib/utils.zsh
 source ~/dotfiles/lib/vcs.zsh
 source ~/dotfiles/lib/lv.zsh
 source ~/dotfiles/lib/os.zsh
-
-function load_additional_features() {
-  # Node.js {{{
-  # 自分用のPC限定の設定
-  export NVM_DIR=~/.nvm
-  if [ -s ~/dotfiles/my_local_mode ] && is_exists "brew"; then
-    export NVM_DIR=$(brew --prefix nvm)
-    PATH=/usr/local/Cellar:$PATH
-  fi
-
-  # if [ -s $NVM_DIR/nvm.sh ]; then
-  source $NVM_DIR/nvm.sh
-  nvm use iojs
-
-  # Enable tab-completion
-  . <(npm completion)
-  # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-  # }}}
-
-  # Ruby + Ruby on Rails {{{
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  if is_exists "rbenv"; then
-    eval "$(rbenv init -)"
-  fi
-  alias be='bundle exec'
-  alias berc='bundle exec rails c'
-  alias bers='bundle exec rails s'
-  alias ber='bundle exec rspec'
-  alias staging_be='RAILS_ENV=staging bundle exec'
-  # }}}
-}
-alias laf=load_additional_features
+source ~/dotfiles/lib/node.zsh
+source ~/dotfiles/lib/ruby.zsh
 
 # Alias {{{
 alias la='ls -a'
