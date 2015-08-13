@@ -25,16 +25,10 @@ colors
 # Prompt
 PROMPT="%{${fg[green]}%}%~%{${reset_color}%}$ "
 
-source ~/dotfiles/lib/complete.zsh
-source ~/dotfiles/lib/history.zsh
-source ~/dotfiles/lib/clipboard.zsh
-source ~/dotfiles/lib/settings.zsh
-source ~/dotfiles/lib/utils.zsh
-source ~/dotfiles/lib/vcs.zsh
-source ~/dotfiles/lib/lv.zsh
-source ~/dotfiles/lib/os.zsh
-source ~/dotfiles/lib/node.zsh
-source ~/dotfiles/lib/ruby.zsh
+# lib
+for name in clipboard complete docker history lv node os ruby settings utils vcs; do
+  source "$HOME/dotfiles/lib/$name.zsh"
+done
 
 # Alias {{{
 alias la='ls -a'

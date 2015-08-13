@@ -14,12 +14,8 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 # }}}
 
-# Docker {{{
-# if is_exists "boot2docker"; then
-#   export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
-#   export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
-#   export DOCKER_TLS_VERIFY=1
-# fi
+# Ruby {{{
+export PATH="$HOME/.rbenv/bin:$PATH"
 # }}}
 
 # vim:set ft=zsh:
