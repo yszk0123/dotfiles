@@ -18,15 +18,8 @@ select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
-# 色を使用可能にする
-autoload -Uz colors
-colors
-
-# Prompt
-PROMPT="%{${fg[green]}%}%~%{${reset_color}%}$ "
-
 # lib
-for name in clipboard complete docker history lv node os ruby settings utils vcs; do
+for name in clipboard complete docker history lv node os prompt ruby settings utils vcs; do
   source "$HOME/dotfiles/lib/$name.zsh"
 done
 
