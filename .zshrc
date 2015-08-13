@@ -25,7 +25,6 @@ colors
 # Prompt
 PROMPT="%{${fg[green]}%}%~%{${reset_color}%}$ "
 
-source ~/dotfiles/lib/tmux.zsh
 source ~/dotfiles/lib/complete.zsh
 source ~/dotfiles/lib/history.zsh
 source ~/dotfiles/lib/clipboard.zsh
