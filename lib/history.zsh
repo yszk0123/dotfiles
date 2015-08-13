@@ -36,4 +36,22 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end 
 
+# ディレクトリ履歴 {{{
+# cf. [chpwd_recent_dirs](http://blog.n-z.jp/blog/2013-11-12-zsh-cdr.html)
+zstyle ':completion:*' menu select
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
+zstyle ':completion:*:descriptions' format '%BCompleting%b %U%d%u'
+
+typeset -ga chpwd_functions
+
+# if is-at-least 4.3.11; then
+if [[ -n $(echo $fpath/chpwd_recent_dirs) && -n $(echo $fpath/cdr) ]]; then
+  autoload -Uz chpwd_recent_dirs cdr
+  chpwd_functions+=chpwd_recent_dirs
+  zstyle ":chpwd:*" recent-dirs-max 500
+  zstyle ":chpwd:*" recent-dirs-default true
+  zstyle ":completion:*" recent-dirs-insert both
+fi
+# }}}
+
 # vim:set ft=zsh:
