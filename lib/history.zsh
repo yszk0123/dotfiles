@@ -28,4 +28,12 @@ bindkey -v
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
 
+# 履歴の検索
+# cf. [zshの設定メモ - Webtech Walker](http://webtech-walker.com/archive/2008/12/15101251.html)
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end 
+
 # vim:set ft=zsh:
