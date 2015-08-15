@@ -249,10 +249,6 @@ let g:rooter_manual_only = 1
 let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
 "}}}
 
-" vim-smartinput: 囲み系補完 {{{
-NeoBundle 'kana/vim-smartinput'
-NeoBundle 'Raimondi/delimitMate'
-"}}}
 " vim-smartword {{{
 NeoBundle 'kana/vim-smartword'
 nmap w <Plug>(smartword-w)
@@ -296,6 +292,15 @@ NeoBundle 'artnez/vim-wipeout'
 " nnoremap <Leader>y :<C-u>YRShow<CR>
 " let g:yankring_max_history = 10
 " }}}
+
+" 囲み系補完 {{{
+" NeoBundle 'kana/vim-smartinput'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'Raimondi/delimitMate'
+let delimitMate_expand_space = 1
+let delimitMate_expand_cr = 1
+au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
+"}}}
 
 " For Markdown {{{
 NeoBundle 'nelstrom/vim-markdown-folding'
