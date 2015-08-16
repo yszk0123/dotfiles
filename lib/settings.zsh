@@ -9,7 +9,7 @@ setopt long_list_jobs
 ## サスペンド中のプロセスと同じコマンド名を実行した場合はリジューム
 setopt auto_resume
 ## cd 時に自動で pushd
-setopt auto_pushd
+# setopt auto_pushd
 ## 重複したディレクトリを pushd しない
 setopt pushd_ignore_dups
 ## 高機能なワイルドカード展開を使用する
@@ -27,8 +27,6 @@ setopt print_eight_bit
 setopt auto_cd
 ## {a-c} を a b c に展開する機能を使えるようにする
 setopt brace_ccl
-## Ctrl+S/Ctrl+Q によるフロー制御を使わないようにする
-###setopt NO_flow_control
 ## コマンドラインでも # 以降をコメントと見なす
 setopt interactive_comments
 ## Ctrl+S/Ctrl+Q によるフローコントロールを無効にする
