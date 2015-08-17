@@ -19,6 +19,16 @@ ref: [HomebrewとAnsibleでMacの開発環境構築を自動化する | mawatari
 
     chsh -s <path/to/zsh>
 
+## zaw
+
+    $ pushd $ZDOTDIR
+    $ git clone https://github.com/zsh-users/zaw.git
+    $ popd
+
+In .zshrc
+
+    source $ZDOTDIR/zaw/zaw.zsh
+
 ## Install oh-my-zsh
 
 via curl
