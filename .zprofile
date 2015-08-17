@@ -4,8 +4,10 @@ export LANG=ja_JP.UTF-8
 export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
 ##export MANPATH="/usr/local/man:$MANPATH"
 
-# ZDOTDIR
+# zsh {{{
 export ZDOTDIR="$HOME/.zsh"
+fpath=($fpath "$ZDOTDIR/zsh/Functions(N/)")
+# }}}
 
 # Homebrew & Homebrew Cask
 ## ref: [HomebrewとAnsibleでMacの開発環境構築を自動化する | mawatari.jp](http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible)
