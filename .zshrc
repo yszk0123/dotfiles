@@ -19,7 +19,7 @@ zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
 # lib
-for name in clipboard complete docker history lv node os prompt ruby settings utils vcs; do
+for name in clipboard complete docker history lv node os prompt ruby settings utils vcs zaw; do
   source "$HOME/dotfiles/lib/$name.zsh"
 done
 
