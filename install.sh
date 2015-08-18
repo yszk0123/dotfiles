@@ -19,7 +19,7 @@ fi
   case $yn in
     [Yy]* )
       pushd $ZDOTDIR
-      git clone --clone 1 https://github.com/zsh-users/zsh.git
+      git clone --depth 1 https://github.com/zsh-users/zsh.git
       popd
       ;;
   esac

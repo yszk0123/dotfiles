@@ -6,7 +6,7 @@ export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:
 
 # zsh {{{
 export ZDOTDIR="$HOME/.zsh"
-fpath=($fpath "$ZDOTDIR/zsh/Functions")
+fpath=($fpath "$ZDOTDIR/zsh/Functions/Chpwd" "$ZDOTDIR/zsh/Functions/Zle")
 # }}}
 
 # Homebrew & Homebrew Cask
