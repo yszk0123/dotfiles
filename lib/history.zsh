@@ -1,4 +1,4 @@
-HISTFILE=~/.zsh_history
+HISTFILE="$ZDOTDIR/.zsh_history"
 HISTSIZE=1000000
 SAVEHIST=1000000
 ## history (fc -l) コマンドをヒストリリストから取り除く。
