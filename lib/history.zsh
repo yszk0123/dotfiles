@@ -18,7 +18,7 @@ setopt hist_ignore_space
 ## 直前と同じコマンドをヒストリに追加しない
 setopt hist_ignore_dups
 ## 同じコマンドをヒストリに残さない
-### setopt hist_ignore_all_dups
+setopt hist_ignore_all_dups
 ## ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
 
