@@ -24,3 +24,14 @@ fi
       ;;
   esac
 # fi
+
+if [ ! -s "$HOME/.tmux/plugins/tpm/tpm" ]; then
+  read -p "Do you wish to install tpm? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      pushd $ZDOTDIR
+      git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+      pop
+      ;;
+  esac
+fi
