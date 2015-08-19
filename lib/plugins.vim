@@ -202,7 +202,9 @@ nnoremap <Leader>gw :<C-u>Gwrite<Space>
 " let g:gitgutter_eager = 0
 " }}}
 
-" vim-hybrid {{{
+" Colorscheme {{{
+" NeoBundle 'wimstefan/Lightning'
+NeoBundle 'reedes/vim-colors-pencil'
 NeoBundle 'w0ng/vim-hybrid'
 au VimEnter * :colorscheme hybrid
 " }}}
