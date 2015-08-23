@@ -178,6 +178,9 @@ nmap ga <Plug>(EasyAlign)
 NeoBundle 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+nmap <C-n> <Plug>(expand_region_expand)
+vmap <C-n> <Plug>(expand_region_expand)
+vmap <C-p> <Plug>(expand_region_shrink)
 " }}}
 
 " vim-fugitive {{{
