@@ -6,7 +6,6 @@ NeoBundle 'mxw/vim-jsx'
 " NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/gitignore'
 NeoBundle 'szw/vim-tags'
@@ -169,18 +168,19 @@ nnoremap <Leader>vS :<C-u>VimShellInteractive<Space>
 " vim-easy-align {{{
 NeoBundle 'junegunn/vim-easy-align'
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
+" vmap <Enter> <Plug>(EasyAlign)
+vmap _ <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 " }}}
 
-" vim-expand-region {{{
+" selection {{{
+NeoBundle 'tpope/vim-surround'
+xmap s <Plug>VSurround
+
 NeoBundle 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
-nmap <C-n> <Plug>(expand_region_expand)
-vmap <C-n> <Plug>(expand_region_expand)
-vmap <C-p> <Plug>(expand_region_shrink)
 " }}}
 
 " vim-fugitive {{{
@@ -219,7 +219,7 @@ NeoBundle 'emonkak/vim-operator-sort'
 NeoBundle 'kana/vim-operator-replace'
 
 map R  <Plug>(operator-replace)
-map S  <Plug>(operator-sort)
+map M  <Plug>(operator-sort)
 "}}}
 
 " vim-qfreplace {{{
