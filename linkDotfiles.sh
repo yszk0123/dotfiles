@@ -5,6 +5,7 @@
 # ln -si ~/dotfiles/ftdetect ~/.vim
 # ln -si ~/dotfiles/indent ~/.vim
 
+ln -si ~/dotfiles/.atom ~/.atom
 ln -si ~/dotfiles/.bundle ~/.bundle
 ln -si ~/dotfiles/.git_template ~/.git_template
 

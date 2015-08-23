@@ -1,0 +1,20 @@
+hello_ruby:
+  title: "hello_ruby"
+  paths: [
+    "~/work/hello_ruby"
+  ]
+"hello-javascript":
+  title: "hello-javascript"
+  paths: [
+    "~/work/hello-javascript"
+  ]
+refactor:
+  title: "refactor"
+  paths: [
+    "~/tmp/refactor"
+  ]
+dotfiles:
+  title: "dotfiles"
+  paths: [
+    "~/dotfiles"
+  ]

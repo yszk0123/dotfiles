@@ -1,0 +1,25 @@
+"*":
+  "exception-reporting":
+    userId: "e5b3e0c4-6b69-1af4-6a65-5cd0dea5e26e"
+  welcome:
+    showOnStartup: false
+  editor:
+    fontSize: 13
+    invisibles: {}
+    showIndentGuide: true
+  core:
+    disabledPackages: [
+      "term2"
+    ]
+  "markdown-preview": {}
+  "vim-mode":
+    wrapLeftRightMotion: true
+    useSmartcaseForSearch: true
+    useClipboardAsDefaultRegister: true
+  term2: {}
+  "git-projects":
+    ignoredPatterns: "node_modules;\\.git;vendor;bower_components;dist;build"
+    rootPath: "~/work;~/src"
+    showGitInfo: false
+  "vim-surround": {}
+  "expand-region": {}
