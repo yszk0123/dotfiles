@@ -12,6 +12,7 @@ hash -d sg=~/src/github.com
 # {{{
 alias la='ls -a'
 alias ll='ls -l'
+alias lla='ls -lA'
 alias pu='pushd'
 alias po='popd'
 # }}}
