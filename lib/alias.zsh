@@ -33,6 +33,7 @@ alias mv='mv -i'
 # グローバルエイリアス {{{
 alias -g L='| less'
 alias -g G='| grep'
+alias -g P='| perl -nle'
 # }}}
 
 # vim:set ft=zsh:
