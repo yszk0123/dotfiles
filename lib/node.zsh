@@ -24,6 +24,8 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
   nvm() { load_node; nvm "$@"; }
   npm() { load_node; npm "$@"; }
   node() { load_node; node "$@"; }
+
+  alias -g N="| node -r $HOME/dotfiles/lib/oneline-helper.js -e"
 fi
 
 # vim:set ft=zsh:
