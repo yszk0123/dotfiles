@@ -26,6 +26,11 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
   node() { load_node; node "$@"; }
 
   alias -g N="| node -r $HOME/dotfiles/lib/oneline-helper.js -e"
+
+  function getNpmPackageVersion() {
+    local code="console.log(JSON.parse(require('fs').readFileSync(require.resolve('$1/package.json'))).version)"
+    node -e "$code"
+  }
 fi
 
 # vim:set ft=zsh:
