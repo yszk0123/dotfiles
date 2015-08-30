@@ -1,16 +1,12 @@
-if is_exists "boot2docker"; then
+if is_exists "docker-machine"; then
   function load_docker() {
-    unset -f boot2docker
-    unset -f boot2docker-vm
+    unset -f docker-machine
     unset -f docker
 
-    export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
-    export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
-    export DOCKER_TLS_VERIFY=1
+    eval "$(docker-machine env default)"
   }
 
-  boot2docker-vm() { load_docker; boot2docker-vm "$@"; }
-  boot2docker() { load_docker; boot2docker "$@"; }
+  docker-machine() { load_docker; docker-machine "$@"; }
   docker() { load_docker; docker "$@"; }
 fi
 
