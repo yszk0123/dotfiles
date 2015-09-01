@@ -63,3 +63,4 @@
       # - { name: karabiner }
       # - { name: vagrant }
       # - { name: virtualbox }
+      - { name: flux } # f.lux
