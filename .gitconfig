@@ -24,4 +24,6 @@
 	pick = cherry-pick
 	unstage = reset HEAD --
 [ghq]
-  root = ~/src
+	root = ~/src
+[merge]
+	tool = vimdiff
