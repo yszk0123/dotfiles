@@ -49,7 +49,8 @@ let g:neomru#do_validate = 1
 let s:ignores = [''] + map([
   \ '.hg', '.svn', '.git', '.bzr',
   \ 'bower_components', 'node_modules',
-  \ 'log', 'vendor', 'tmp', 'backup', 'dist', 'dest', 'build'
+  \ 'log', 'vendor', 'tmp', 'backup', 'dist', 'dest', 'build',
+  \ 'coverage', 'images', 'assets'
   \ ], '"\"" . v:val . "\""')
 
 let g:unite_source_grep_default_opts = '-inH ' .
