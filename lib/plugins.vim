@@ -90,28 +90,28 @@ nnoremap <bar> :<C-u>Switch<CR>
 " }}}
 
 " syntastic {{{
-NeoBundle 'scrooloose/syntastic'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_save = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-
-" $ gem install rubocop
-" let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_ruby_checkers = []
-
-" mode=activeでバッファ保存時などに自動的にチェック
-" mode=passiveで明示的に:SyntasticCheckを呼び出さない限りチェックしない
-let g:syntastic_mode_map = {
-  \ 'mode': 'active',
-  \ 'passive_filetypes': ['html', 'text'],
-  \ }
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" NeoBundle 'scrooloose/syntastic'
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_save = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['eslint']
+"
+" " $ gem install rubocop
+" " let g:syntastic_ruby_checkers = ['rubocop']
+" let g:syntastic_ruby_checkers = []
+"
+" " mode=activeでバッファ保存時などに自動的にチェック
+" " mode=passiveで明示的に:SyntasticCheckを呼び出さない限りチェックしない
+" let g:syntastic_mode_map = {
+"   \ 'mode': 'active',
+"   \ 'passive_filetypes': ['html', 'text'],
+"   \ }
+"
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 " }}}
 
 " tagbar {{{
@@ -185,7 +185,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " vim-fugitive {{{
 NeoBundle 'tpope/vim-fugitive'
-nnoremap <Leader>gcd :<C-u>Gcd<Space>
+nnoremap <Leader>gC :<C-u>Gcd<Space>
 nnoremap <Leader>gL :<C-u>Glcd<Space>
 nnoremap <Leader>ga :<C-u>Gadd<Space>
 nnoremap <Leader>gb :<C-u>Gblame<Space>
@@ -247,12 +247,12 @@ let g:quickrun_config.coffee = {
 " vnoremap <Leader>qR :QuickRun -cmdopt<Space>
 " }}}
 
-" vim-rooter: change working directory to project root {{{
-NeoBundle 'airblade/vim-rooter'
-map <silent> <Leader>C <Plug>RooterChangeToRootDirectory
-let g:rooter_manual_only = 1
-let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
-"}}}
+" vim-smartword {{{
+NeoBundle 'kana/vim-smartword'
+nmap w <Plug>(smartword-w)
+nmap b <Plug>(smartword-b)
+nmap e <Plug>(smartword-e)
+" }}}
 
 " vim-textobj-* {{{
 " ref:
