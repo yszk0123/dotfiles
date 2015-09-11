@@ -176,9 +176,9 @@ nnoremap <Leader>n :<C-u>tabnew<CR>
 " 新しいタブを一番右に開く
 nnoremap <Leader>N :<C-u>tabnew<bar>tabmove<CR>
 " 編集中のファイルのあるディレクトリをカレントディレクトリに設定
-nnoremap <Leader>c :<C-u>cd %:h<CR>
+nnoremap <Leader>C :<C-u>cd %:h<CR>
 " 編集中のファイルのあるディレクトリをカレントディレクトリに設定
-nnoremap <Leader>l :<C-u>lcd %:h<CR>
+nnoremap <Leader>L :<C-u>lcd %:h<CR>
 " 編集中のファイル名を表示 (:fileの方が便利)
 " nnoremap <Leader>f :<C-u>echo expand('%:p')<CR>
 " nnoremap <Leader>e :<C-u>edit<Space>

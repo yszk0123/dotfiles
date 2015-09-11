@@ -185,8 +185,8 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " vim-fugitive {{{
 NeoBundle 'tpope/vim-fugitive'
-nnoremap <Leader>gc :<C-u>Gcd<CR>
-nnoremap <Leader>gl :<C-u>Glcd<CR>
+nnoremap <Leader>c :<C-u>Gcd<CR>
+nnoremap <Leader>l :<C-u>Glcd<CR>
 nnoremap <Leader>ga :<C-u>Gadd<Space>
 nnoremap <Leader>gb :<C-u>Gblame<Space>
 nnoremap <Leader>gC :<C-u>Gcommit<Space>
