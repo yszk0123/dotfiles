@@ -48,6 +48,7 @@ vnoremap <Leader>P "+P
 vnoremap <C-x> d
 vnoremap <C-c> y
 inoremap <C-v> <Esc>p
+nnoremap <C-s> :<C-u>write<CR>
 " }}}
 
 " Folding {{{
