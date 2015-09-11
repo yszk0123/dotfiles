@@ -185,15 +185,15 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " vim-fugitive {{{
 NeoBundle 'tpope/vim-fugitive'
-nnoremap <Leader>gC :<C-u>Gcd<Space>
-nnoremap <Leader>gL :<C-u>Glcd<Space>
+nnoremap <Leader>gc :<C-u>Gcd<CR>
+nnoremap <Leader>gl :<C-u>Glcd<CR>
 nnoremap <Leader>ga :<C-u>Gadd<Space>
 nnoremap <Leader>gb :<C-u>Gblame<Space>
-nnoremap <Leader>gco :<C-u>Gcommit<Space>
-nnoremap <Leader>gca :<C-u>Gcommit --amend --reuse-message=HEAD<Space>
+nnoremap <Leader>gC :<C-u>Gcommit<Space>
+nnoremap <Leader>gA :<C-u>Gcommit --amend --reuse-message=HEAD<Space>
 nnoremap <Leader>gd :<C-u>Gdiff<Space>
 nnoremap <Leader>ge :<C-u>Gedit<Space>
-nnoremap <Leader>gl :<C-u>Glog<Space>
+nnoremap <Leader>gL :<C-u>Glog<Space>
 nnoremap <Leader>gs :<C-u>Gstatus<CR>
 nnoremap <Leader>gw :<C-u>Gwrite<Space>
 " }}}
@@ -246,6 +246,13 @@ let g:quickrun_config.coffee = {
 " vnoremap <Leader>qr :QuickRun<CR>
 " vnoremap <Leader>qR :QuickRun -cmdopt<Space>
 " }}}
+
+" vim-rooter: change working directory to project root {{{
+" NeoBundle 'airblade/vim-rooter'
+" map <silent> <Leader>C <Plug>RooterChangeToRootDirectory
+" let g:rooter_manual_only = 1
+" let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
+"}}}
 
 " vim-smartword {{{
 NeoBundle 'kana/vim-smartword'
