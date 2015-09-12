@@ -23,25 +23,48 @@
     # install_options: string or sequence (default: none)
     homebrew_packages:
       # - { name: docker }
-      # - { name: git }
-      # - { name: rbenv-gem-rehash }
-      # - { name: vim }
-      # - { name: zsh }
       # - { name: zsh-completions }
       # - { name: zsh-syntax-highlighting }
       - { name: ansible }
+      - { name: brew-cask }
+      - { name: coreutils }
       - { name: ctags }
+      - { name: dos2unix }
+      - { name: elixir }
+      - { name: erlang }
       - { name: ghq }
+      - { name: git }
+      - { name: git-flow }
+      - { name: graphviz }
+      - { name: jenkins }
       - { name: jq }
+      - { name: libevent }
+      - { name: libgphoto2 }
       - { name: nvm }
+      - { name: openssl }
       - { name: openssl, state: linked, install_options: force }
-      - { name: peco }
+      - { name: pcre }
+      - { name: pkg-config }
       - { name: rbenv }
+      - { name: rbenv-gem-rehash }
       - { name: readline }
+      - { name: reattach-to-user-namespace }
+      - { name: rename }
+      - { name: rlwrap }
+      - { name: rsense }
       - { name: the_silver_searcher }
       - { name: tig }
       - { name: tmux }
       - { name: tree }
+      - { name: vim }
+      - { name: wine }
+      - { name: zsh }
+
+      # pixta
+      # - { name: imagemagick }
+      # - { name: passenger }
+      # - { name: mysql }
+      # - { name: redis }
 
     # Tap external Homebrew Cask repositories.
     homebrew_cask_repositories:
@@ -58,9 +81,9 @@
     homebrew_cask_packages:
       # - { name: firefox-ja }
       # - { name: google-chrome }
-      # - { name: google-japanese-ime }
-      # - { name: iterm2 }
-      # - { name: karabiner }
+      - { name: google-japanese-ime }
+      - { name: iterm2 }
+      - { name: karabiner }
       # - { name: vagrant }
       # - { name: virtualbox }
       - { name: flux } # f.lux
