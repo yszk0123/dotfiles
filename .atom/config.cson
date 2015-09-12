@@ -19,7 +19,7 @@
   term2: {}
   "git-projects":
     ignoredPatterns: "node_modules;\\.git;vendor;bower_components;dist;build"
-    rootPath: "~/work;~/src"
+    rootPath: "~/work;~/src;~/pixta"
     showGitInfo: false
   "vim-surround": {}
   "expand-region": {}
