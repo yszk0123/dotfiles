@@ -32,8 +32,11 @@
   'ctrl-j': 'window:focus-pane-below'
   'ctrl-k': 'window:focus-pane-above'
   'ctrl-l': 'window:focus-pane-on-right'
-  
+
 '.platform-darwin atom-pane atom-text-editor:not([mini])':
   'ctrl-/': 'emmet:toggle-comment'
 'atom-workspace atom-text-editor:not([mini])':
   'ctrl-/': 'editor:toggle-line-comments'
+
+'atom-text-editor':
+  'cmd-l': 'expose:toggle'
