@@ -62,7 +62,7 @@ if executable('ag')
   let g:unite_source_grep_command = 'ag'
   " let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_default_opts =
-    \ '--line-numbers --nocolor --nogroup --hidden ' .
+    \ '-i --vimgrep --line-numbers --nocolor --nogroup --hidden ' .
     \ join(s:ignores, ' --ignore ')
   let g:unite_source_grep_recursive_opt = ''
   let g:unite_source_grep_max_candidates = 100
