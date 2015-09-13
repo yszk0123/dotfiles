@@ -2,7 +2,7 @@
 	name = Yuji Suzuki
 	email = y0suzuki0123@gmail.com
 [core]
-	excludesfile = /Users/suzukiyuuji/.gitignore_global
+	excludesfile = ~/.gitignore_global
   editor = /usr/bin/vim
 [init]
   templatedir = ~/.git_template
