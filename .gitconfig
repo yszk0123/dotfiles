@@ -3,11 +3,11 @@
 	email = y0suzuki0123@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
-  editor = /usr/bin/vim
+	editor = /usr/bin/vim
 [init]
-  templatedir = ~/.git_template
+	templatedir = ~/.git_template
 [diff]
-  renames = true
+	renames = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
