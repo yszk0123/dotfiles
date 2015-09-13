@@ -241,10 +241,10 @@ let g:quickrun_config.coffee = {
   \   'type': 'coffee',
   \   'exec': 'coffee %o %a %S'
   \ }
-nnoremap <Leader>qr :QuickRun<CR>
-nnoremap <Leader>qR :QuickRun -cmdopt<Space>
-vnoremap <Leader>qr :QuickRun<CR>
-vnoremap <Leader>qR :QuickRun -cmdopt<Space>
+" nnoremap <Leader>qr :QuickRun<CR>
+" nnoremap <Leader>qR :QuickRun -cmdopt<Space>
+" vnoremap <Leader>qr :QuickRun<CR>
+" vnoremap <Leader>qR :QuickRun -cmdopt<Space>
 " }}}
 
 " vim-rooter: change working directory to project root {{{
