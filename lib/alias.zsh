@@ -32,10 +32,11 @@ alias mv='mv -i'
 
 #alias mkdir='mkdir -p'
 
-# グローバルエイリアス {{{
-alias -g L='| less'
+# Global aliases {{{
 alias -g G='| grep'
+alias -g L='| less'
 alias -g P='| perl -nle'
+alias -g S='| sed'
 # }}}
 
 # vim:set ft=zsh:
