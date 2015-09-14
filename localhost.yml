@@ -36,7 +36,7 @@
       - { name: git }
       - { name: git-flow }
       - { name: graphviz }
-      - { name: jenkins }
+      #- { name: jenkins }
       - { name: jq }
       - { name: libevent }
       - { name: libgphoto2 }
@@ -57,7 +57,7 @@
       - { name: tmux }
       - { name: tree }
       - { name: vim }
-      - { name: wine }
+      #- { name: wine }
       - { name: zsh }
 
       # pixta
@@ -81,9 +81,16 @@
     homebrew_cask_packages:
       # - { name: firefox-ja }
       # - { name: google-chrome }
+      # - { name: pixate-studio }
+      # - { name: skim }
+      # - { name: vagrant }
+      # - { name: virtualbox }
+      - { name: atom }
+      - { name: bettertouchtool }
+      - { name: dropbox }
+      - { name: evernote }
+      - { name: flux } # f.lux
       - { name: google-japanese-ime }
       - { name: iterm2 }
       - { name: karabiner }
-      # - { name: vagrant }
-      # - { name: virtualbox }
-      - { name: flux } # f.lux
+      - { name: lastpass }
