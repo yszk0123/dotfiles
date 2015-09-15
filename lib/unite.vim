@@ -7,6 +7,7 @@
 " NeoBundle 'Shougo/unite-session'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'tsukkee/unite-tag'
 
 " data_directory
@@ -108,6 +109,12 @@ nnoremap <silent> [util]e :<C-u>Unite -buffer-name=files file_rec/async<CR>
 " "}}}
 
 " キーマッピング {{{
+
+autocmd BufEnter *
+  \   if empty(&buftype)
+  \|      nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
+  \|  endif
+
 " 以下,UniteWithBufferDirだとうまくいかないケースがあるので
 " expand()関数を利用して,カレントバッファのディレクトリを自分で取得する
 " Windowsではパスの区切り文字が'\'なので,これも置き換えが必要
