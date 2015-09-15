@@ -1,4 +1,9 @@
 " {{{
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-bundler'
+" }}}
+
+" {{{
 " ref: [VimでRSenseを使って快適Rubyプログラミング - NigoroJr](http://nigorojr.com/articles/19)
 " ref: [RSenseを使ってVimをIDEっぽくする（Ruby向け） - WEB SALAD](http://web-salad.hateblo.jp/entry/2014/10/07/102349)
 " Macは別途brewでインストールした方が確実
