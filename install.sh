@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 if [ -z "$ZDOTDIR" ]; then
   echo 'Define ZDOTDIR!'
   exit 1
@@ -42,5 +44,19 @@ if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
     [Yy]* )
       curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
       ;;
+  esac
+fi
+
+if !is_exists 'ghq'; then
+  read -p "Do you wish to install ghq? [YyNn]" yn
+  case $yn in
+    [Yy]* ) go get https://github.com/motemen/ghq ;;
+  esac
+fi
+
+if !is_exists 'peco'; then
+  read -p "Do you wish to install ghq? [YyNn]" yn
+  case $yn in
+    [Yy]* ) go get https://github.com/peco/peco ;;
   esac
 fi
