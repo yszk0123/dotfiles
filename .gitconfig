@@ -27,3 +27,6 @@
 	root = ~/src
 [merge]
 	tool = vimdiff
+[credential]
+	username = yszk0123
+	helper = cache
