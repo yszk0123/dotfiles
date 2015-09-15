@@ -25,6 +25,8 @@
       # - { name: docker }
       # - { name: zsh-completions }
       # - { name: zsh-syntax-highlighting }
+      #- { name: jenkins }
+      #- { name: wine }
       - { name: ansible }
       - { name: brew-cask }
       - { name: coreutils }
@@ -36,7 +38,6 @@
       - { name: git }
       - { name: git-flow }
       - { name: graphviz }
-      #- { name: jenkins }
       - { name: jq }
       - { name: libevent }
       - { name: libgphoto2 }
@@ -52,12 +53,12 @@
       - { name: rename }
       - { name: rlwrap }
       - { name: rsense }
+      - { name: ruby-build }
       - { name: the_silver_searcher }
       - { name: tig }
       - { name: tmux }
       - { name: tree }
       - { name: vim }
-      #- { name: wine }
       - { name: zsh }
 
       # pixta
