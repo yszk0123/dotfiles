@@ -102,6 +102,11 @@ nnoremap <C-e> <end>
 " nnoremap [] ?}<CR>
 "}}}
 
+" Jump {{{
+" Show a list when there are several matching tags, otherwise <C-]>
+nnoremap <C-]> g<C-]>
+" }}}
+
 " バッファ, タブページ, ウィンドウの操作 {{{
 nnoremap <Leader>bb :b#<CR>
 nnoremap <Leader>bp :bprevious<CR>
