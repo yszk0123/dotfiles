@@ -84,6 +84,9 @@ nnoremap <C-a> <home>
 cnoremap <C-e> <end>
 nnoremap <C-e> <end>
 
+" Go to older position in change list
+nnoremap g: g;
+
 " inoremap <C-B> <Left>
 " inoremap <C-F> <Right>
 " inoremap <C-J> <Down>
