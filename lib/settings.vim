@@ -64,11 +64,12 @@ set tabstop=2
 " Clipboard
 set clipboard=unnamed,autoselect
 
-" 描画高速化
-set nocursorline
-
-" Better peformance
+" Better performance
+autocmd InsertEnter,InsertLeave * set cursorline!
 set lazyredraw
+
+" Highlight cursorline in insert mode
+set nocursorline
 
 " Cursor settings. This makes terminal vim sooo much nicer!
 " Tmux will only forward escape sequences to the terminal if surrounded by a DCS
