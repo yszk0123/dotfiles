@@ -62,7 +62,7 @@ set tabstop=2
 " set winheight=6
 
 " Clipboard
-set clipboard=unnamed,autoselect
+set clipboard=unnamed
 
 " Better performance
 autocmd InsertEnter,InsertLeave * set cursorline!
