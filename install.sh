@@ -60,3 +60,13 @@ if !is_exists 'peco'; then
     [Yy]* ) go get https://github.com/peco/peco ;;
   esac
 fi
+
+if !is_exists 'nvim'; then
+  read -p "Do you wish to install nvim? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      brew tap neovim/neovim
+      brew install --HEAD neovim
+      ;;
+  esac
+fi

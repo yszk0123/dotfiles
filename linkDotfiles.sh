@@ -15,6 +15,7 @@ ln -si ~/dotfiles/.zshrc "$ZDOTDIR/.zshrc"
 for target in .atom .bundle .git_template .ansible.cfg .ctags .gitconfig .tmux.conf .vimrc; do
   ln -si ~/dotfiles/$target ~/$target
 done
+ln -si ~/dotfiles/.vimrc ~/.nvimrc
 
 if [ -s ~/dotfiles/my_local_mode* ]; then
   for target in .gemrc .gvimrc .irbrc; do
