@@ -183,8 +183,9 @@ vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 " }}}
 
-" vim-fugitive {{{
+" vim-fugitive + gitv {{{
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv'
 nnoremap <Leader>c :<C-u>Gcd<CR>
 nnoremap <Leader>l :<C-u>Glcd<CR>
 nnoremap <Leader>ga :<C-u>Gadd<Space>
