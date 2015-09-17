@@ -4,8 +4,12 @@ nnoremap <silent> <C-s> :<C-u>update<CR>
 inoremap <silent> <C-s> <Esc>:<C-u>update<CR>
 
 " Close the window by Ctrl+q
-nnoremap <silent> <C-q> :<C-u>q<CR>
 nnoremap <silent> <Leader>q :<C-u>q<CR>
+
+nnoremap <silent> <Leader>w :<C-u>w<CR>
+
+" Suppress unnecessary popup
+map q: :q
 
 nnoremap <CR> o
 inoremap <C-c> <Esc>
