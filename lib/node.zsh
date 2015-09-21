@@ -14,7 +14,7 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
     echo 'Loading nvm/npm/node...'
 
     source "$NVM_DIR/nvm.sh"
-    nvm use 4.0.0
+    nvm use default
 
     # Enable tab-completion
     [[ -f "$NVM_DIR/bash_completion" ]] && . "$NVM_DIR/bash_completion"
