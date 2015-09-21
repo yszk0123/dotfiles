@@ -2,13 +2,17 @@ Remote-FTP@0.7.2
 autocomplete-modules@1.1.0
 autocomplete-ruby@0.1.0
 emmet@2.3.12
+ex-mode@0.7.0
 expand-region@0.2.3
-expose@0.5.0
-git-plus@5.4.6
+expose@0.6.0
+git-plus@5.4.7
 git-projects@1.15.0
-minimap@4.13.1
-project-manager@1.15.11
-term2@0.9.15
-vim-mode@0.58.0
+jumpy@2.0.10
+language-babel@0.15.1
+minimap@4.13.3
+project-manager@2.5.1
+react@0.12.10
+term2@0.9.20
+vim-mode@0.60.0
 vim-surround@0.8.0
 
