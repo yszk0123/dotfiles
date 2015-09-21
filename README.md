@@ -91,3 +91,7 @@ gem install bundler
 
 [MacTeX](https://www.tug.org/mactex/)をインストール
 Vim用に[vim-latex](https://github.com/vim-latex/vim-latex)も導入
+
+# ctags関係
+
+cf. [dotfiles/.ctags at master · claytron/dotfiles](https://github.com/claytron/dotfiles/blob/master/.ctags)
