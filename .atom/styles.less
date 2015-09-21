@@ -9,17 +9,64 @@
  */
 
 .tree-view {
+}
 
+// Compact tab-bar
+// cf. [ATOMおすすめのパッケージ（styles.lessとkeymap.csonも晒す） - Qiita](http://qiita.com/kng/items/8ccd5791905e42800d34)
+.list-inline.tab-bar {
+  @font-size-base: 9pt;
+  @tab-height: @font-size-base * 2;
+  @tab-font-size: 7.2pt;
+
+  height: @tab-height;
+  line-height: @tab-height;
+  padding: 0;
+
+  &:after {
+    top: @tab-height;
+  }
+
+  .tab {
+    top: 0px;
+    max-width: 12%;
+
+    &:before,
+    &:after {
+      transform: none;
+      border-radius: 0;
+    }
+
+    &.modified:not(:hover) .close-icon {
+      top: 0;
+      height: @tab-height / 2;
+      width: @tab-height;
+    }
+
+    &:before, .title, .close-icon {
+      height: @tab-height;
+      line-height: @tab-height;
+      font-size: @tab-font-size;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .title:before {
+      line-height: @tab-height;
+      font-size: @tab-font-size;
+    }
+
+    .close-icon:hover {
+      color: #f88;
+    }
+  }
 }
 
 // style the background and foreground colors on the atom-text-editor-element
 // itself
 atom-text-editor {
-
 }
 
 // To style other content in the text editor's shadow DOM, use the ::shadow
 // expression
 atom-text-editor::shadow .cursor {
-
 }
