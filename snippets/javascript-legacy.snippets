@@ -1,19 +1,23 @@
 snippet require-var
-abbr    rqv
+alias   rqv
 options head
-  var ${0:TARGET} = '${1:#:module}';
+  var ${1:name} = '${2:module}';
+  ${0:TARGET}
 
 snippet require-var-node-module
-abbr    rqvm
+alias   rqvm
 options head
-  var ${0:TARGET} = '$0';
+  var ${1:name} = '$1';
+  ${0:TARGET}
 
 snippet require
-abbr    rq
+alias   rq
 options head
-  const ${0:TARGET} = '${1:#:module}';
+  const ${1:name} = '${2:module}';
+  ${0:TARGET}
 
 snippet require-node-module
-abbr    rqm
+alias   rqm
 options head
-  const ${0:TARGET} = '$0';
+  const ${1:name} = '$1';
+  ${0:TARGET}

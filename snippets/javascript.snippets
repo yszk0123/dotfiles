@@ -1,32 +1,36 @@
 snippet const
-abbr    cn
+alias   cn
 options head
-  const ${1:#:name} = ${0:TARGET};
+  const ${1:name} = ${2:value};
+  ${0:TARGET}
 
 snippet let
 options head
-  let ${1:#:name} = ${0:TARGET};
+  let ${1:name} = ${2:value};
+  ${0:TARGET}
 
 snippet var
 options head
-  var ${1:#:name} = ${0:TARGET};
+  var ${1:name} = ${2:value};
+  ${0:TARGET}
 
 snippet use-strict
-abbr    us
+alias   us
 options head
   'use strict';
+  ${0:TARGET}
 
-snippet function
-abbr    fn
+snippet named-function
+alias   fn
 options word
-  function ${1:#:function_name}(${2:#:arguments}) {
+  function ${1:function_name}(${2:#:arguments}) {
     ${0:TARGET}
   }
 
-snippet inline-function
-abbr    f
+snippet anonymous-function
+alias   f
 options word
-  function(${1}) { ${0:TARGET} }
+  function(${1:#:arguments}) { ${0:TARGET} }
 
 snippet if
 options head
@@ -35,9 +39,9 @@ options head
   }
 
 snippet if-else
-abbr    ife
+alias   ife
 options head
-  if (${1:#:condition}) {
+  if (${1:condition}) {
     ${0:TARGET}
   }
   else {
@@ -45,7 +49,7 @@ options head
 
 snippet for
 options head
-  for (let ${1:i}=0; $1 < ${2:#:collection}.length; $1 += 1) {
+  for (let ${1:i}=0; $1 < ${2:collection}.length; $1 += 1) {
     ${0:TARGET}
   }
 
@@ -56,9 +60,9 @@ options head
   }
 
 snippet switch
-abbr    sw
+alias   sw
 options head
-  switch (${1:#:var}) {
+  switch (${1:var}) {
     ${0:TARGET}
   }
 
@@ -84,12 +88,12 @@ options head
   console.log(${0:TARGET});
 
 snippet console-warn
-abbr    cw
+alias   cw
 options head
   console.warn(${0:TARGET});
 
 snippet console-info
-abbr    ci
+alias   ci
 options head
   console.info(${0:TARGET});
 
@@ -103,84 +107,93 @@ options head
 # ------------------------------------------------------------------------------
 
 snippet class
-abbr    cls
+alias   cls
 options head
-  class ${1:#:name} {
+  class ${1:name} {
     ${0:TARGET}
   }
 
 snippet class-extends
-abbr    cx
+alias   cx
 options head
-  class ${1:#:name} extends ${2:#:base} {
+  class ${1:name} extends ${2:base} {
     ${0:TARGET}
   }
 
 snippet import
-abbr    im
+alias   im
 options head
-  import ${0:TARGET} from '${1:#:module}';
+  import ${1:name} from '${2:module}';
+  ${0:TARGET}
 
 snippet import-node-module
-abbr    imm
+alias   imm
 options head
-  import ${0:TARGET} from '$0';
+  import ${1:name} from '$1';
+  ${0:TARGET}
 
 snippet import-only
-abbr    imo
+alias   imo
 options head
-  import {${0:TARGET}} from '${1:#:module}';
+  import {${1:name}} from '${2:module}';
+  ${0:TARGET}
 
 snippet import-as
-abbr    ima
+alias   ima
 options head
-  import ${0:TARGET} as ${1:#:as} from '${2:#:module}';
+  import ${1:name} as ${2:as} from '${3:module}';
+  ${0:TARGET}
 
 snippet export
-abbr    x
+alias   x
 options head
-  export ${0:TARGET};
+  export ${1:name};
+  ${0:TARGET}
 
 snippet export-default
-abbr    xd
+alias   xd
 options head
-  export default ${0:TARGET};
+  export default ${1:name};
+  ${0:TARGET}
 
 snippet export-only
-abbr    xo
+alias   xo
 options head
-  export {${0:TARGET}};
+  export {${1:names}};
+  ${0:TARGET}
 
 snippet export-default-class-extends
-abbr    xdcx
+alias   xdcx
 options head
-  export default class ${1:#:name} extends ${2:#:base} {
+  export default class ${1:name} extends ${2:base} {
     ${0:TARGET}
   }
 
 snippet export-default-function
-abbr    xdfn
+alias   xdfn
 options head
-  export default function ${1:#:name}(${2:#:arguments}) {
+  export default function ${1:name}(${2:#:arguments}) {
     ${0:TARGET}
   }
 
 snippet export-function
-abbr    xfn
+alias   xfn
 options head
-  export function ${1:#:name}(${2:#:arguments}) {
+  export function ${1:name}(${2:#:arguments}) {
     ${0:TARGET}
   }
 
 snippet export-constant
-abbr    ecn
+alias   ecn
 options head
-  export const ${1:#:name} = ${0:TARGET};
+  export const ${1:name} = ${2:value};
+  ${0:TARGET}
 
 snippet export-default-constant
-abbr    edcn
+alias   edcn
 options head
-  export default const ${1:#:name} = ${0:TARGET};
+  export default const ${1:name} = ${2:value};
+  ${0:TARGET}
 
 # Include additional snippets
 # ------------------------------------------------------------------------------
