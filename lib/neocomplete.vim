@@ -139,6 +139,9 @@ if has("patch-7.4.314")
 endif
 
 " neosnippet {{{
+" Settings
+let g:neosnippet#snippets_directory = $HOME . '/dotfiles/snippets/'
+
 " Plugin key-mappings.
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
