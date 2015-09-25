@@ -27,9 +27,6 @@ call neobundle#begin(expand($HOME . '/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" キーマップ用のプレフィックス定義
-runtime define-prefix.vim
-
 NeoBundle 'Shougo/vimproc.vim', {
   \ 'build' : {
   \     'windows' : 'make -f make_mingw32.mak',
@@ -39,25 +36,22 @@ NeoBundle 'Shougo/vimproc.vim', {
   \    },
   \ }
 
-" 色関係の設定が確実に反映されるように
-" 他のファイルより先に読み込んでおく
-runtime lib/color.vim
+" キーマップ用のプレフィックス定義
+runtime define-prefix.vim
 
-runtime lib/javascript.vim
-runtime lib/unite.vim
-runtime lib/ruby.vim
-" runtime lib/latex.vim
-if g:my_local_mode && has('gui_running')
-  runtime lib/neocomplete.vim
-  runtime lib/typescript.vim
-  " runtime lib/you-complete-me.vim
-endif
-runtime lib/commands.vim
-runtime lib/filetype.vim
-runtime lib/plugins.vim
-runtime lib/remap.vim
-runtime lib/settings.vim
-runtime lib/abbreviations.vim
+" 色関係の設定が確実に反映されるように
+" lib/color.vimは早めにロードしておく
+let s:libs = split(
+  \ 'color ' .
+  \ 'javascript ruby ' .
+  \ 'unite neocomplete neosnippet ' .
+  \ 'commands filetype plugins remap settings abbreviations', ' ')
+"   \ 'typescript latex ' .
+"   \ 'neosnippet-snippets ' .
+"   \ 'you-complete-me ' .
+for lib in s:libs
+  execute 'runtime lib/' . lib . '.vim'
+endfor
 
 call neobundle#end()
 
