@@ -100,7 +100,6 @@ au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " Enable heavy omni completion.
 " if !exists('g:neocomplete#sources#omni#input_patterns')
 "   let g:neocomplete#sources#omni#input_patterns = {}
-" endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
@@ -124,14 +123,15 @@ au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "       \ 'Vinarise' : 'vinarise#complete',
 " \}
 
-" For smart TAB completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" :
-     \ <SID>check_back_space() ? "\<TAB>" :
-     \ neocomplete#start_manual_complete()
-function! s:check_back_space() "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
+" " For smart TAB completion. {{{
+" inoremap <expr><TAB> pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ neocomplete#start_manual_complete()
+" function! s:check_back_space() "{{{
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~ '\s'
+" endfunction
+" }}}
 
 " get quiet messages (require 7.4 patch 314)
 if has("patch-7.4.314")
@@ -145,12 +145,11 @@ smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets' behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+imap <expr><TAB> pumvisible() ? "\<C-n>" :
+  \ neosnippet#expandable_or_jumpable() ? "\<TAB>" :
+  \ "\<Plug>(neosnippet_expand_or_jump)"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For snippet_complete marker.
 if has('conceal')
@@ -158,6 +157,5 @@ if has('conceal')
 endif
 
 " Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
+" let g:neosnippet#enable_snipmate_compatibility = 1
 " }}}
-
