@@ -20,18 +20,10 @@ if has('vim_starting')
   if &compatible
     set nocompatible
   endif
-  if !g:my_local_mode && (has('win32') || has('win64'))
-    set runtimepath+=$VIM/bundle/neobundle.vim/
-  else
-    set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
-  endif
+  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
   set runtimepath+=$HOME/dotfiles/
 endif
-if !g:my_local_mode && (has('win32') || has('win64'))
-  call neobundle#begin(expand($VIM . '/bundle/'))
-else
-  call neobundle#begin(expand($HOME . '/.vim/bundle/'))
-endif
+call neobundle#begin(expand($HOME . '/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
