@@ -1,0 +1,26 @@
+snippet react-import
+abbr    rim
+options head
+  import React from 'react';
+  ${0:TARGET}
+
+snippet react-component
+abbr    rc
+options head
+  class ${1:#:name} extends React.Component {
+    ${0:TARGET}
+  }
+
+snippet react-export-default-component
+abbr    rxdc
+options head
+  export default class ${1:#:name} extends React.Component {
+    ${0:TARGET}
+  }
+
+snippet react-export-component
+abbr    rxc
+options head
+  export class ${1:#:name} extends React.Component {
+    ${0:TARGET}
+  }

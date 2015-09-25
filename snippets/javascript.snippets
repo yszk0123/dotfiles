@@ -1,0 +1,189 @@
+snippet const
+abbr    cn
+options head
+  const ${1:#:name} = ${0:TARGET};
+
+snippet let
+options head
+  let ${1:#:name} = ${0:TARGET};
+
+snippet var
+options head
+  var ${1:#:name} = ${0:TARGET};
+
+snippet use-strict
+abbr    us
+options head
+  'use strict';
+
+snippet function
+abbr    fn
+options word
+  function ${1:#:function_name}(${2:#:arguments}) {
+    ${0:TARGET}
+  }
+
+snippet inline-function
+abbr    f
+options word
+  function(${1}) { ${0:TARGET} }
+
+snippet if
+options head
+  if (${1:true}) {
+    ${0:TARGET}
+  }
+
+snippet if-else
+abbr    ife
+options head
+  if (${1:#:condition}) {
+    ${0:TARGET}
+  }
+  else {
+  }
+
+snippet for
+options head
+  for (let ${1:i}=0; $1 < ${2:#:collection}.length; $1 += 1) {
+    ${0:TARGET}
+  }
+
+snippet while
+options head
+  while (${1:true}) {
+    ${0:TARGET}
+  }
+
+snippet switch
+abbr    sw
+options head
+  switch (${1:#:var}) {
+    ${0:TARGET}
+  }
+
+snippet case
+options head
+  case ${1:value}:
+    ${0:TARGET}
+    break;
+
+snippet console-log
+alias   cl
+options head
+  console.log(${0:TARGET});
+
+snippet console-trace
+alias   ct
+options head
+  console.trace(${0:TARGET});
+
+snippet console-error
+alias   ce
+options head
+  console.log(${0:TARGET});
+
+snippet console-warn
+abbr    cw
+options head
+  console.warn(${0:TARGET});
+
+snippet console-info
+abbr    ci
+options head
+  console.info(${0:TARGET});
+
+snippet iife
+options head
+  (function(${1:#:arguments}) {
+    ${0:TARGET}
+  })(${2});
+
+# ES2015+
+# ------------------------------------------------------------------------------
+
+snippet class
+abbr    cls
+options head
+  class ${1:#:name} {
+    ${0:TARGET}
+  }
+
+snippet class-extends
+abbr    cx
+options head
+  class ${1:#:name} extends ${2:#:base} {
+    ${0:TARGET}
+  }
+
+snippet import
+abbr    im
+options head
+  import ${0:TARGET} from '${1:#:module}';
+
+snippet import-node-module
+abbr    imm
+options head
+  import ${0:TARGET} from '$0';
+
+snippet import-only
+abbr    imo
+options head
+  import {${0:TARGET}} from '${1:#:module}';
+
+snippet import-as
+abbr    ima
+options head
+  import ${0:TARGET} as ${1:#:as} from '${2:#:module}';
+
+snippet export
+abbr    x
+options head
+  export ${0:TARGET};
+
+snippet export-default
+abbr    xd
+options head
+  export default ${0:TARGET};
+
+snippet export-only
+abbr    xo
+options head
+  export {${0:TARGET}};
+
+snippet export-default-class-extends
+abbr    xdcx
+options head
+  export default class ${1:#:name} extends ${2:#:base} {
+    ${0:TARGET}
+  }
+
+snippet export-default-function
+abbr    xdfn
+options head
+  export default function ${1:#:name}(${2:#:arguments}) {
+    ${0:TARGET}
+  }
+
+snippet export-function
+abbr    xfn
+options head
+  export function ${1:#:name}(${2:#:arguments}) {
+    ${0:TARGET}
+  }
+
+snippet export-constant
+abbr    ecn
+options head
+  export const ${1:#:name} = ${0:TARGET};
+
+snippet export-default-constant
+abbr    edcn
+options head
+  export default const ${1:#:name} = ${0:TARGET};
+
+# Include additional snippets
+# ------------------------------------------------------------------------------
+
+include javascript-react.snippets
+include javascript-legacy.snippets

@@ -1,0 +1,19 @@
+snippet require-var
+abbr    rqv
+options head
+  var ${0:TARGET} = '${1:#:module}';
+
+snippet require-var-node-module
+abbr    rqvm
+options head
+  var ${0:TARGET} = '$0';
+
+snippet require
+abbr    rq
+options head
+  const ${0:TARGET} = '${1:#:module}';
+
+snippet require-node-module
+abbr    rqm
+options head
+  const ${0:TARGET} = '$0';
