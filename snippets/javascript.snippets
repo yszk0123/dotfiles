@@ -20,7 +20,7 @@ options head
   'use strict';
   ${0:TARGET}
 
-snippet named-function
+snippet function
 alias   fn
 options word
   function ${1:function_name}(${2:#:arguments}) {
@@ -73,27 +73,27 @@ options head
     break;
 
 snippet console-log
-alias   cl
+alias   log
 options head
   console.log(${0:TARGET});
 
 snippet console-trace
-alias   ct
+alias   trace
 options head
   console.trace(${0:TARGET});
 
 snippet console-error
-alias   ce
+alias   error
 options head
   console.log(${0:TARGET});
 
 snippet console-warn
-alias   cw
+alias   warn
 options head
   console.warn(${0:TARGET});
 
 snippet console-info
-alias   ci
+alias   info
 options head
   console.info(${0:TARGET});
 
