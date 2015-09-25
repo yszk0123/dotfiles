@@ -81,7 +81,7 @@ nnoremap <Leader>J :<C-u>SplitjoinSplit<CR>
 " }}}
 
 " supertab {{{
-NeoBundle 'ervandew/supertab'
+" NeoBundle 'ervandew/supertab'
 " }}}
 
 " switch: 似たような表現を切り替える(true <=> false, if <=> elseif など) {{{
