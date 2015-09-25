@@ -36,12 +36,10 @@ NeoBundle 'Shougo/vimproc.vim', {
   \    },
   \ }
 
-" キーマップ用のプレフィックス定義
-runtime define-prefix.vim
-
-" 色関係の設定が確実に反映されるように
-" lib/color.vimは早めにロードしておく
+" キープレフィックス・色関係の設定が確実に反映されるように
+" lib/define-prefix.vimとlib/color.vimは早めにロードしておく
 let s:libs = split(
+  \ 'define-prefix ' .
   \ 'color ' .
   \ 'javascript ruby ' .
   \ 'unite neocomplete neosnippet ' .
