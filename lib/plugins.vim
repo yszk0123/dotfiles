@@ -311,9 +311,16 @@ au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
 
 " For Markdown {{{
 NeoBundle 'nelstrom/vim-markdown-folding'
+NeoBundle 'jtratner/vim-flavored-markdown'
 let g:markdown_fold_style = 'nested'
 " TODO: これでいいのか
 " autocmd FileType zsh runtime! ftplugin/markdown/folding.vim
+
+" Use flavored-markdown by default
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
 
 " " ref: [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
 " NeoBundle 'plasticboy/vim-markdown'
