@@ -3,41 +3,53 @@
 Xcode，HomebrewとAnsibleを導入する
 ref: [HomebrewとAnsibleでMacの開発環境構築を自動化する | mawatari.jp](http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible)
 
-    $ sudo xcodebuild -license
-    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    $ brew update
-    $ brew install ansible
+```sh
+$ sudo xcodebuild -license
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew update
+$ brew install ansible
+```
 
 # 使い方
 
-    $ cd ~
-    $ ./dotfiles/update.sh
+```sh
+$ cd ~
+$ ./dotfiles/update.sh
+```
 
 # Shell
 
 ## Install zsh
 
-    chsh -s <path/to/zsh>
+```sh
+$ chsh -s <path/to/zsh>
+```
 
 ## zaw
 
-    $ pushd $ZDOTDIR
-    $ git clone https://github.com/zsh-users/zaw.git
-    $ popd
+```sh
+$ pushd $ZDOTDIR && git clone https://github.com/zsh-users/zaw.git && popd
+```
 
 In .zshrc
 
-    source $ZDOTDIR/zaw/zaw.zsh
+```sh
+$ source $ZDOTDIR/zaw/zaw.zsh
+```
 
 ## Install oh-my-zsh
 
 via curl
 
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```sh
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
 via wget
 
-    sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```sh
+$ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
 
 ## oh-my-zsh plugins
 
@@ -45,28 +57,38 @@ via wget
 
 Clone the repository
 
-    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+```sh
+$ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+```
 
 In .zshrc
 
-    plugins+=(zsh-syntax-highlighting)
+```zsh
+plugins+=(zsh-syntax-highlighting)
+```
 
-### zsh-completions 
+### zsh-completions
 
 Clone the repository
 
-    git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+```sh
+$ git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+```
 
 In .zshrc
 
-    plugins+=(zsh-completions)
-    autoload -U compinit && compinit
+```zsh
+plugins+=(zsh-completions)
+autoload -U compinit && compinit
+```
 
 # Vim関係
 
 ## NeoBundle
 
-    $ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+```sh
+$ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+```
 
 ## Macの場合
 
@@ -77,13 +99,18 @@ In .zshrc
 ## Macの場合
 
 基本brewでインストール
-brew install ruby
-PATH=/usr/local/Cellar/ruby/<ruby version>/bin:$PATH
+
+```sh
+$ brew install ruby
+$ PATH=/usr/local/Cellar/ruby/<ruby version>/bin:$PATH
+```
 
 ## Gem
 
-gem update --system
-gem install bundler
+```sh
+$ gem update --system
+$ gem install bundler
+```
 
 # Tex関係
 
