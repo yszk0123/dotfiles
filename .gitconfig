@@ -23,6 +23,7 @@
 	last = log -1 HEAD
 	pick = cherry-pick
 	unstage = reset HEAD --
+  ctags = ./.git/hooks/ctags
 [ghq]
 	root = ~/src
 [merge]
