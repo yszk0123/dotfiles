@@ -5,7 +5,10 @@
 .atom/storage/
 
 *.pyc
-*.swp
+*.sw[nop]
 *~
 .DS_Store
 my_local_mode*
+
+tags
+!tags/
