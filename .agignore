@@ -1,0 +1,7 @@
+.git/
+bower_components/
+node_modules/
+vendor/
+log/
+tags/
+tmp/
