@@ -43,7 +43,7 @@ let s:libs = split(
   \ 'color ' .
   \ 'javascript ruby ' .
   \ 'unite neocomplete neosnippet ' .
-  \ 'commands filetype plugins remap settings abbreviations', ' ')
+  \ 'commands filetype plugins remap settings abbreviations lint', ' ')
 "   \ 'typescript latex ' .
 "   \ 'neosnippet-snippets ' .
 "   \ 'you-complete-me ' .
