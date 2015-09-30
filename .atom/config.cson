@@ -4,17 +4,30 @@
   welcome:
     showOnStartup: false
   editor:
-    fontSize: 13
+    fontSize: 12
     invisibles: {}
     showIndentGuide: true
-  core: {}
+    lineHeight: 1.2
+    showInvisibles: true
+  core:
+    disabledPackages: [
+      "jumpy"
+      "expose"
+      "project-manager"
+      "background-tips"
+    ]
+    themes: [
+      "nucleus-dark-ui"
+      "one-dark-syntax"
+    ]
+    audioBeep: false
   "markdown-preview": {}
   "vim-mode":
     wrapLeftRightMotion: true
     useSmartcaseForSearch: true
     useClipboardAsDefaultRegister: true
   term2:
-    autoRunCommand: 'login -f `whoami`'
+    autoRunCommand: "login -f `whoami`"
   "git-projects":
     ignoredPatterns: "node_modules;\\.git;vendor;bower_components;dist;build"
     rootPath: "~/work;~/src;~/pixta"
@@ -25,3 +38,16 @@
   "language-babel": {}
   jumpy: {}
   minimap: {}
+  "atom-beautify":
+    _analyticsUserId: "d4f77605-0a76-45b9-a795-464b55ae2baf"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  nuclide:
+    remoteProjectsConfig: []
+  "autocomplete-ctags": {}
+  "merge-conflicts": {}
+  "atom-material-ui":
+    compactTreeView: true
+    disableAnimations: true
+    slimScrollbar: true
+    tabSize: "Small"
