@@ -32,11 +32,22 @@
   'ctrl-j': 'window:focus-pane-below'
   'ctrl-k': 'window:focus-pane-above'
   'ctrl-l': 'window:focus-pane-on-right'
+  's r': 'fuzzy-finder:toggle-file-finder'
+  's g': 'project-find:show'
+  's shift-g': 'find-and-replace:show-replace'
+  'space g s': 'git-plus:status'
+  'space g g': 'git-plus:menu'
+  'space g c': 'git-plus:commit'
+  'space n': 'application:new-file'
+  'space shift-n': 'application:new-window'
+  'space t': 'term2:open'
+  'space w': 'pane:close'
+  'space l': 'term2:open'
+  'shift-h': 'editor:move-to-first-character-of-line'
+  'shift-l': 'editor:move-to-end-of-line'
+  'ctrl-o': 'symbols-view:return-from-declaration'
 
 '.platform-darwin atom-pane atom-text-editor:not([mini])':
   'ctrl-/': 'emmet:toggle-comment'
 'atom-workspace atom-text-editor:not([mini])':
   'ctrl-/': 'editor:toggle-line-comments'
-
-'atom-text-editor':
-  'cmd-l': 'expose:toggle'
