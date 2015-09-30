@@ -26,7 +26,6 @@
       # - { name: zsh-completions }
       # - { name: zsh-syntax-highlighting }
       #- { name: jenkins }
-      #- { name: wine }
       - { name: ansible }
       - { name: brew-cask }
       - { name: coreutils }
@@ -59,6 +58,7 @@
       - { name: tmux }
       - { name: tree }
       - { name: vim }
+      - { name: wine }
       - { name: zsh }
 
       # pixta
@@ -66,6 +66,7 @@
       # - { name: passenger }
       # - { name: mysql }
       # - { name: redis }
+      # - { name: qt }
 
     # Tap external Homebrew Cask repositories.
     homebrew_cask_repositories:
@@ -80,6 +81,7 @@
     #
     # state choices: [present, absent, installed, uninstalled] (default: present)
     homebrew_cask_packages:
+      # - { name: alfred }
       # - { name: firefox-ja }
       # - { name: google-chrome }
       # - { name: pixate-studio }
@@ -94,4 +96,7 @@
       - { name: google-japanese-ime }
       - { name: iterm2 }
       - { name: karabiner }
+      - { name: kindle }
       - { name: lastpass }
+      - { name: skitch }
+      - { name: xquartz } # required by wine
