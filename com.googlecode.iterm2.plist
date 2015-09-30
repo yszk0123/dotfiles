@@ -1152,6 +1152,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSColorPanelMode</key>
+	<string>0</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -1173,16 +1175,21 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>302</string>
+		<string>319</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame Preferences</key>
 	<string>124 170 924 485 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>430 36 850 740 0 0 1280 777 </string>
+	<string>591 20 689 757 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1343,11 +1350,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.11759774386882782</real>
+				<real>0.15999999642372131</real>
 				<key>Green Component</key>
-				<real>0.11759574711322784</real>
+				<real>0.15999999642372131</real>
 				<key>Red Component</key>
-				<real>0.11759926378726959</real>
+				<real>0.15999999642372131</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -1914,7 +1921,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>463745521.09919202</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>463745521.09949303</real>
+	<real>465206564.57149899</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1957,7 +1964,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-09-12T10:11:05Z</date>
+	<date>2015-09-29T08:02:23Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1996,6 +2003,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>2.1.1</string>
 </dict>
