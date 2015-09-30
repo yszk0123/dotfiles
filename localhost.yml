@@ -87,7 +87,6 @@
       # - { name: pixate-studio }
       # - { name: skim }
       # - { name: vagrant }
-      # - { name: virtualbox }
       - { name: atom }
       - { name: bettertouchtool }
       - { name: dropbox }
@@ -98,5 +97,7 @@
       - { name: karabiner }
       - { name: kindle }
       - { name: lastpass }
+      - { name: otto }
       - { name: skitch }
+      - { name: virtualbox }
       - { name: xquartz } # required by wine
