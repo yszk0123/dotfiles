@@ -29,7 +29,7 @@ let g:unite_enable_short_source_names = 1
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 "画面分割の設定(右側or下側)
-let g:unite_split_rule = 'botright'
+" let g:unite_split_rule = 'botright'
 "
 let g:unite_cursor_line_time = '0.15'
 let g:unite_update_time = 780
