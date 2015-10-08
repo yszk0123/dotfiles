@@ -1,6 +1,6 @@
 " {{{
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-bundler'
+NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload': { 'filetypes': ['ruby'] } }
+NeoBundleLazy 'tpope/vim-bundler', { 'autoload': { 'filetypes': ['ruby'] } }
 " }}}
 
 " {{{
@@ -9,16 +9,16 @@ NeoBundle 'tpope/vim-bundler'
 " Macは別途brewでインストールした方が確実
 " if !has('mac')
 "   NeoBundleLazy 'marcus/rsense', {
-"     \ 'autoload': {
-"     \   'filetypes': 'ruby',
-"     \ },
+"     \ 'autoload': { 'filetypes': 'ruby' }
 "     \ }
 " endif
-" NeoBundle 'supermomonga/neocomplete-rsense.vim', {
+" NeoBundleLazy 'supermomonga/neocomplete-rsense.vim', {
 "   \ 'depends': ['Shougo/neocomplete.vim', 'marcus/rsense'],
+"   \ 'autoload': { 'filetypes': 'ruby' }
 "   \ }
-" NeoBundle 'supermomonga/neocomplete-rsense.vim', {
+" NeoBundleLazy 'supermomonga/neocomplete-rsense.vim', {
 "   \ 'depends': ['Shougo/neocomplete.vim'],
+"   \ 'autoload': { 'filetypes': 'ruby' }
 "   \ }
 
 " オムニ補完有効化

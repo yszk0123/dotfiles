@@ -3,8 +3,7 @@
 "   > 以下のようにdocumentclassを変更する。
 "   > \documentclass[uplatex,12pt]{jsbook}
 
-NeoBundleLazy 'vim-latex/vim-latex'
-autocmd FileType tex NeoBundleSource vim-latex
+NeoBundleLazy 'vim-latex/vim-latex', { 'autoload': { 'filetypes': ['tex'] } }
 
 " For Windows
 " TODO: ここで勝手に設定していいか

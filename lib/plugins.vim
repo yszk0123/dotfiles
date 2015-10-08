@@ -1,26 +1,20 @@
 " NeoBundle 'matthewtodd/vim-twilight'
 " NeoBundle 'moll/vim-node'
 NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mxw/vim-jsx'
-" NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'othree/html5.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/gitignore'
 NeoBundle 'szw/vim-tags'
 
-NeoBundleLazy 'elzr/vim-json'
-autocmd FileType json NeoBundleSource vim-json
-NeoBundleLazy 'digitaltoad/vim-jade'
-autocmd FileType jade NeoBundleSource vim-jade
-NeoBundleLazy 'kchmck/vim-coffee-script'
-autocmd FileType coffee NeoBundleSource vim-coffee-script
-NeoBundleLazy 'wavded/vim-stylus'
-autocmd FileType stylus NeoBundleSource vim-stylus
-
-NeoBundleLazy 'hail2u/vim-css3-syntax'
-autocmd FileType css,html NeoBundleSource hail2u
+NeoBundleLazy 'mattn/emmet-vim', { 'autoload': { 'filetypes': ['html', 'javascript', 'css', 'jsx', 'stylus', 'less', 'sass'] } }
+NeoBundleLazy 'mxw/vim-jsx', { 'autoload': { 'filetypes': ['javascript', 'jsx'] } }
+" NeoBundle 'taichouchou2/html5.vim'
+NeoBundleLazy 'othree/html5.vim', { 'autoload': { 'filetypes': ['html'] } }
+NeoBundleLazy 'elzr/vim-json', { 'autoload': { 'filetypes': ['json'] } }
+NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload': { 'filetypes': ['jade'] } }
+NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'] } }
+NeoBundleLazy 'wavded/vim-stylus', { 'autoload': { 'filetypes': ['stylus'] } }
+NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload': { 'filetypes': ['css', 'html'] } }
 
 " Perlスタイルの正規表現
 " NeoBundle 'othree/eregex.vim'
@@ -33,7 +27,7 @@ autocmd FileType css,html NeoBundleSource hail2u
 " }}}
 
 if executable('ag')
-  NeoBundle 'rking/ag.vim'
+  NeoBundleLazy 'rking/ag.vim', { 'autoload': { 'commands': ['Ag', 'AgFile', 'AgBuffer', 'AgAdd', 'AgHelp', 'AgFromSearch'] } }
 endif
 
 " clever-f {{{
@@ -313,7 +307,7 @@ au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
 " ref: [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
 " NeoBundle 'plasticboy/vim-markdown'
 " NeoBundle 'jtratner/vim-flavored-markdown'
-NeoBundle 'joker1007/vim-markdown-quote-syntax'
+NeoBundleLazy 'joker1007/vim-markdown-quote-syntax', { 'autoload': { 'filetypes': ['markdown', 'mkd', 'md'] } }
 " NeoBundle 'nelstrom/vim-markdown-folding'
 " NeoBundle 'kannokanno/previm'
 " NeoBundle 'tyru/open-browser.vim'
