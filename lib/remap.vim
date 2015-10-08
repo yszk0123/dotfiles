@@ -231,3 +231,22 @@ endfunction
 command! -bang -range ToggleSlash <line1>,<line2>call ToggleSlash(<bang>1)
 noremap <silent> <F8> :ToggleSlash<CR>
 " }}}
+
+" Map tab to execute omini complete {{{
+" cf. [tabでomni補完するための.vimrcの設定 « StudioT::DevLog](http://studiot.jp/blog/?p=184)
+function s:smartTab()
+  if pumvisible()
+    return "\<c-n>"
+  endif
+  let col = col('.') - 1
+  " if !col || getline('.')[col - 1] !~ '\k\|<\|/'
+  if !col || getline('.')[col - 1] =~ '\s'
+    return "\<tab>"
+  elseif exists('&omnifunc') && &omnifunc == ''
+    return "\<c-n>"
+  else
+    return "\<c-x>\<c-o>"
+  endif
+endfunction
+inoremap <silent> <tab> <c-r>=<SID>smartTab()<cr>
+" }}}
