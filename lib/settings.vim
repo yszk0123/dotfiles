@@ -71,6 +71,10 @@ set lazyredraw
 " Highlight cursorline in insert mode
 set nocursorline
 
+" Disable beeping
+set visualbell
+set t_vb=
+
 " Cursor settings. This makes terminal vim sooo much nicer!
 " Tmux will only forward escape sequences to the terminal if surrounded by a DCS
 " sequence
