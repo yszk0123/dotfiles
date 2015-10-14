@@ -225,11 +225,11 @@ function! s:unite_my_settings()"{{{
   " 入力モードのときctrl+wでバックスラッシュも削除
   imap <buffer> <C-w>  <Plug>(unite_delete_backward_path)
   nmap <buffer> <Left> <Plug>(unite_delete_backward_path)
-  nmap <buffer> h      <Plug>(unite_deletE_BACkward_path)
+  nmap <buffer> h      <Plug>(unite_delete_backward_path)
   " 挿入モードのときPでオートプレビュー切替(pでプレビュー)
   nmap <buffer> P      <Plug>(unite_toggle_auto_preview)
   " 更新(キャッシュクリア)
-  nmap <buffer> R   <Plug>(unite_REDRAw)
+  nmap <buffer> R   <Plug>(unite_redraw)
   " マークして次の候補の移動
   nmap <buffer> m      <Plug>(unite_toggle_mark_current_candidate)
   nmap <buffer> M      <Plug>(unite_toggle_mark_current_candidate_up)
