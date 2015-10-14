@@ -229,7 +229,7 @@ function! s:unite_my_settings()"{{{
   " 挿入モードのときPでオートプレビュー切替(pでプレビュー)
   nmap <buffer> P      <Plug>(unite_toggle_auto_preview)
   " 更新(キャッシュクリア)
-  nmap <buffer> <F5>   <Plug>(unite_REDRAw)
+  nmap <buffer> R   <Plug>(unite_REDRAw)
   " マークして次の候補の移動
   nmap <buffer> m      <Plug>(unite_toggle_mark_current_candidate)
   nmap <buffer> M      <Plug>(unite_toggle_mark_current_candidate_up)
