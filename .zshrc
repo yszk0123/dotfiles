@@ -23,7 +23,7 @@ for name in alias clipboard complete docker history keybinding lv node os prompt
   source "$HOME/dotfiles/lib/$name.zsh"
 done
 
-# Workaround for GUI app doesn't get /etc/paths
-export PATH=$(cat /etc/paths | xargs | tr " " :)
+# Workaround for GUI app which doesn't get /etc/paths
+export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 
 # vim:set ft=zsh:
