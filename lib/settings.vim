@@ -57,6 +57,8 @@ set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
+" タイトル設定
+set title
 " 自動改行を行わない
 " set textwidth=0
 " set winheight=6
