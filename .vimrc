@@ -42,7 +42,7 @@ let s:libs = split(
   \ 'define-prefix ' .
   \ 'color ' .
   \ 'javascript ruby ' .
-  \ 'unite ' .
+  \ 'unite evernote ' .
   \ 'commands filetype plugins remap settings abbreviations lint', ' ')
 "   \ 'neocomplete neosnippet ' .
 "   \ 'typescript latex ' .
