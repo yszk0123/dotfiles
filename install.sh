@@ -1,4 +1,8 @@
-#!/bin/zsh
+#!/bin/bash
+function is_exists() {
+  type "$1" >/dev/null 2>&1
+  return $?
+}
 
 if [ -z "$ZDOTDIR" ]; then
   echo 'Define ZDOTDIR!'
@@ -47,21 +51,21 @@ if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
   esac
 fi
 
-if !is_exists 'ghq'; then
+if ! is_exists 'ghq'; then
   read -p "Do you wish to install ghq? [YyNn]" yn
   case $yn in
     [Yy]* ) go get https://github.com/motemen/ghq ;;
   esac
 fi
 
-if !is_exists 'peco'; then
+if ! is_exists 'peco'; then
   read -p "Do you wish to install ghq? [YyNn]" yn
   case $yn in
     [Yy]* ) go get https://github.com/peco/peco ;;
   esac
 fi
 
-if !is_exists 'nvim'; then
+if ! is_exists 'nvim'; then
   read -p "Do you wish to install nvim? [YyNn]" yn
   case $yn in
     [Yy]* )
