@@ -12,7 +12,7 @@ ln -sni ~/dotfiles/.zprofile ~/.zprofile
 ln -sni ~/dotfiles/.zprofile "$ZDOTDIR/.zprofile"
 ln -sni ~/dotfiles/.zshrc "$ZDOTDIR/.zshrc"
 
-for target in .atom .bundle .git_template .ansible.cfg .ctags .gitconfig .tmux.conf .vimrc .rspec; do
+for target in .atom .bundle .git_template .ansible.cfg .ctags .gitconfig .peco .tmux.conf .vimrc .rspec; do
   ln -sni ~/dotfiles/$target ~/$target
 done
 ln -sni ~/dotfiles/.vimrc ~/.nvimrc
