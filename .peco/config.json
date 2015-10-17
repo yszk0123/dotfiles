@@ -6,7 +6,7 @@
     "ArrowRight": "peco.ForwardChar",
     "Tab": "peco.ToggleSelectionAndSelectNext",
     "Pgup": "peco.ScrollPageUp",
-    "Pgdn": "peco.ScrollPageDown"
+    "Pgdn": "peco.ScrollPageDown",
     "M-Esc": "peco.Cancel"
   }
 }
