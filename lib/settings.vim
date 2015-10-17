@@ -21,7 +21,11 @@ if g:my_local_mode
   set noundofile
   set backupdir=~/vimfiles/tmp
   set directory=~/vimfiles/tmp
-  set viminfo+=n~/vimfiles/viminfo.txt
+  if has('nvim')
+    set viminfo+=n~/vimfiles/nviminfo.txt
+  else
+    set viminfo+=n~/vimfiles/viminfo.txt
+  end
 endif
 
 " Cのプリプロセッサ行("#"で始まる行)にもインデントを適用する
