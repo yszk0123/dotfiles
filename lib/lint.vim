@@ -1,3 +1,4 @@
+set nospell
 " " Enable spellchecking
 " if has('patch-7.4.089')
 "   set spelllang=en,cjk
