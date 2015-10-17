@@ -67,6 +67,12 @@ set title
 " set textwidth=0
 " set winheight=6
 
+" Session {{{
+set sessionoptions-=buffers
+set sessionoptions-=help
+set sessionoptions-=options
+" }}}
+
 " Clipboard
 set clipboard=unnamed
 
