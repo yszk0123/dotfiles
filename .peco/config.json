@@ -1,0 +1,12 @@
+{
+  "Prompt": "[peco]",
+  "InitialFilter": "SmartCase",
+  "Keymap": {
+    "ArrowLeft": "peco.BackwardChar",
+    "ArrowRight": "peco.ForwardChar",
+    "Tab": "peco.ToggleSelectionAndSelectNext",
+    "Pgup": "peco.ScrollPageUp",
+    "Pgdn": "peco.ScrollPageDown"
+    "M-Esc": "peco.Cancel"
+  }
+}
