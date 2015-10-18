@@ -77,11 +77,11 @@ set sessionoptions-=options
 set clipboard=unnamed
 
 " Better performance
-autocmd InsertEnter,InsertLeave * set cursorline!
+set nocursorline
 set lazyredraw
 
 " Highlight cursorline in insert mode
-set nocursorline
+autocmd InsertEnter,InsertLeave * set cursorline!
 
 " Disable beeping
 set visualbell
