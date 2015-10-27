@@ -12,8 +12,6 @@
   core:
     disabledPackages: [
       "jumpy"
-      "expose"
-      "project-manager"
       "background-tips"
     ]
     themes: [
@@ -51,3 +49,7 @@
     disableAnimations: true
     slimScrollbar: true
     tabSize: "Small"
+  "ever-notedown":
+    toc: false
+    mathjaxCustomMacros: "Math"
+    gitPath: "/Users/yszk0123/src/Dropbox/evnd"
