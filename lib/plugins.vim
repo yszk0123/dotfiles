@@ -204,6 +204,7 @@ nnoremap <Leader>gw :<C-u>Gwrite<Space>
 " NeoBundle 'wimstefan/Lightning'
 NeoBundle 'reedes/vim-colors-pencil'
 NeoBundle 'w0ng/vim-hybrid'
+set background=dark
 au VimEnter * :colorscheme hybrid
 " }}}
 
