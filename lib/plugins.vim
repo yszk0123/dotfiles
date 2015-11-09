@@ -202,10 +202,12 @@ nnoremap <Leader>gw :<C-u>Gwrite<Space>
 
 " Colorscheme {{{
 " NeoBundle 'wimstefan/Lightning'
-NeoBundle 'reedes/vim-colors-pencil'
-NeoBundle 'w0ng/vim-hybrid'
+" NeoBundle 'reedes/vim-colors-pencil'
+" NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'kristijanhusak/vim-hybrid-material'
 set background=dark
-au VimEnter * :colorscheme hybrid
+" au VimEnter * :colorscheme hybrid
+au VimEnter * :colorscheme hybrid_reverse
 " }}}
 
 " vim-operator-* {{{
@@ -310,8 +312,8 @@ au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
 " NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundleLazy 'joker1007/vim-markdown-quote-syntax', { 'autoload': { 'filetypes': ['markdown', 'mkd', 'md'] } }
 " NeoBundle 'nelstrom/vim-markdown-folding'
-" NeoBundle 'kannokanno/previm'
-" NeoBundle 'tyru/open-browser.vim'
+NeoBundleLazy 'kannokanno/previm', { 'autoload': { 'commands': ['PrevimOpen'] } }
+NeoBundleLazy 'tyru/open-browser.vim', { 'autoload': { 'commands': ['OpenBrowser', 'OpenBrowserSearch', 'OpenBrowserSmartSearch'] } }
 let g:markdown_fold_style = 'nested'
 " TODO: これでいいのか
 " autocmd FileType zsh runtime! ftplugin/markdown/folding.vim
