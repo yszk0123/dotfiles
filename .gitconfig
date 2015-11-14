@@ -3,9 +3,11 @@
 	email = y0suzuki0123@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = /usr/bin/vim
+	editor = vim
 [init]
 	templatedir = ~/.git_template
+[color]
+	ui = auto
 [diff]
 	renames = true
 [difftool "sourcetree"]
