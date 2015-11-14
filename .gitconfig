@@ -29,7 +29,9 @@
 [ghq]
 	root = ~/src
 [merge]
-	tool = vimdiff2
+	tool = fugitive
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 [credential]
 	username = yszk0123
 	helper = cache
