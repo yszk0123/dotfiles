@@ -40,6 +40,7 @@ alias gsta='git stash apply'
 alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
+alias gsts='git stash show'
 alias gt='git tag'
 # }}}
 
