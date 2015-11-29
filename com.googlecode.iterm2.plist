@@ -1110,6 +1110,13 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x72-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>13</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x77-0x100000</key>
 		<dict>
 			<key>Action</key>
@@ -1196,8 +1203,12 @@
 	</dict>
 	<key>NSWindow Frame Preferences</key>
 	<string>77 317 606 456 0 0 1280 777 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>236 502 400 129 0 0 1440 877 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>410 364 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>230 29 1207 843 0 0 1440 877 </string>
+	<string>427 456 850 571 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>504 187 850 571 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1931,7 +1942,7 @@
 		</dict>
 	</array>
 	<key>NoSyncLastTipTime</key>
-	<real>468403489.87499499</real>
+	<real>469626193.000121</real>
 	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux</key>
 	<true/>
 	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux_selection</key>
@@ -1978,6 +1989,15 @@
 		<string>0022</string>
 		<string>0023</string>
 		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
+		<string>0032</string>
+		<string>0033</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -2019,11 +2039,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>http://iterm2.com/appcasts/testing3.xml</string>
+	<string>https://iterm2.com/appcasts/testing3.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-11-05T05:00:39Z</date>
+	<date>2015-11-18T16:38:19Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -2075,6 +2095,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20151001</string>
+	<string>2.9.20151111</string>
 </dict>
 </plist>
