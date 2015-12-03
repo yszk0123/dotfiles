@@ -17,3 +17,4 @@ au BufRead,BufNewFile,BufReadPre *.jsx setlocal filetype=javascript
 au BufRead,BufNewFile,BufReadPre *.coffee setlocal filetype=coffee nofoldenable
 au BufRead,BufNewFile,BufReadPre *.cson setlocal filetype=coffee nofoldenable
 au BufRead,BufNewFile,BufReadPre *.md setlocal filetype=markdown
+au BufRead,BufNewFile,BufReadPre *.{ts,tsx} setlocal filetype=typescript

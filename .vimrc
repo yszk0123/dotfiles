@@ -43,11 +43,11 @@ let s:libs = split(
   \ 'color ' .
   \ 'javascript ruby ' .
   \ 'unite ' .
+  \ 'typescript you-complete-me ' .
   \ 'commands filetype plugins remap settings abbreviations lint', ' ')
 "   \ 'neocomplete neosnippet ' .
 "   \ 'typescript latex ' .
 "   \ 'neosnippet-snippets ' .
-"   \ 'you-complete-me ' .
 for lib in s:libs
   execute 'runtime lib/' . lib . '.vim'
 endfor
