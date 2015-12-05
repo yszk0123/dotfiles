@@ -37,6 +37,7 @@ endif
 
 set autoindent
 set backspace=indent,eol,start
+set colorcolumn=80,100
 set expandtab
 " 折りたたみを手動操作, 開いた状態で編集開始
 " set foldmethod=manual
