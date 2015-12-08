@@ -2,12 +2,14 @@
 ### cf. [【翻訳】Gitコマンドラインショートカット](http://postd.cc/git-command-line-shortcuts/)
 # Aliases {{{
 alias ga='git add'
+alias gau='git add -u'
 alias gaA='git add -A'
 alias gb='git branch'
 alias gbd='git branch -d '
 alias gc='git commit'
 alias gca='git commit --amend'
 alias gcar='git commit --amend --reuse-message=HEAD'
+alias gcaar='git commit -a --amend --reuse-message=HEAD'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gcob='git checkout -b'
