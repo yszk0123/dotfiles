@@ -32,6 +32,3 @@
 	tool = fugitive
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
-[credential]
-	username = yszk0123
-	helper = cache
