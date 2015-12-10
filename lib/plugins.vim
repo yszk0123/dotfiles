@@ -298,13 +298,17 @@ NeoBundle 'artnez/vim-wipeout'
 " }}}
 
 " 囲み系補完 {{{
+" {{{
 " NeoBundle 'kana/vim-smartinput'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'Raimondi/delimitMate'
 let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
-au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
-"}}}
+let delimitMate_matchpairs = '(:),{:}'
+au FileType html let b:delimitMate_matchpairs = '(:),[:],{:},<:>'
+au FileType coffee let delimitMate_nesting_quotes = ['"','`']
+" }}}
+" }}}
 
 " For Markdown {{{
 " ref: [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
