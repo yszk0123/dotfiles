@@ -1167,10 +1167,12 @@
 	<false/>
 	<key>NSColorPanelMode</key>
 	<string>0</string>
+	<key>NSNavLastCurrentDirectory</key>
+	<string>~/src/github.com/yszk0123/dotfiles</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -1202,15 +1204,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>77 317 606 456 0 0 1280 777 </string>
+	<string>164 564 606 456 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>236 502 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>427 456 850 571 0 0 1680 1027 </string>
+	<string>210 14 1466 1013 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>504 187 850 571 0 0 1440 877 </string>
+	<string>199 143 850 571 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>504 89 850 571 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1381,8 +1383,6 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
-			<key>Background Image Location</key>
-			<string></string>
 			<key>Blend</key>
 			<real>0.30000001192092896</real>
 			<key>Blink Allowed</key>
@@ -1392,7 +1392,7 @@
 			<key>Blur</key>
 			<false/>
 			<key>Blur Radius</key>
-			<real>2</real>
+			<real>18.141466346153848</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1911,6 +1911,8 @@
 					<string>\btelnet:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\b</string>
 				</dict>
 			</array>
+			<key>Space</key>
+			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -1918,7 +1920,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.10494868713017752</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1936,18 +1938,20 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>7</integer>
 			<key>Working Directory</key>
 			<string>/Users/yszk0123</string>
 		</dict>
 	</array>
 	<key>NoSyncLastTipTime</key>
-	<real>469626193.000121</real>
+	<real>471429891.66536498</real>
 	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux</key>
 	<true/>
 	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux_selection</key>
 	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
+	<true/>
+	<key>NoSyncSilenceAnnoyingBellAutomatically</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>467608307.913706</real>
@@ -1998,6 +2002,18 @@
 		<string>0031</string>
 		<string>0032</string>
 		<string>0033</string>
+		<string>0034</string>
+		<string>0035</string>
+		<string>0036</string>
+		<string>0037</string>
+		<string>0038</string>
+		<string>0039</string>
+		<string>0040</string>
+		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -2043,7 +2059,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-11-18T16:38:19Z</date>
+	<date>2015-12-10T05:37:14Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
