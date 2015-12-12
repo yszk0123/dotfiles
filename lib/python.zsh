@@ -3,6 +3,8 @@ if is_exists 'pyenv'; then
     unset -f pyenv
     unset -f pip
     unset -f pip3
+    unset -f nv
+    unset -f nvim
 
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
@@ -11,6 +13,8 @@ if is_exists 'pyenv'; then
   pyenv() { load_python; rbenv "$@"; }
   pip() { load_python; pip "$@"; }
   pip3() { load_python; pip3 "$@"; }
+  nv() { load_python; nvim "$@"; }
+  nvim() { load_python; nvim "$@"; }
 fi
 
 # vim:set ft=zsh:

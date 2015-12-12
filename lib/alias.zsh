@@ -19,10 +19,6 @@ alias pu='pushd'
 alias po='popd'
 # }}}
 
-# {{{
-alias nv='nvim'
-# }}}
-
 # ghq & peco {{{
 alias ghqp='cd $(ghq list -p | peco)'
 alias ghqp-open='gh-open $(ghq list -p | peco)'
