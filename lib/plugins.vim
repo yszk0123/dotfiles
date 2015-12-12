@@ -16,6 +16,16 @@ NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'
 NeoBundleLazy 'wavded/vim-stylus', { 'autoload': { 'filetypes': ['stylus'] } }
 NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload': { 'filetypes': ['css', 'html'] } }
 
+" deoplete-vim {{
+if has('nvim')
+  NeoBundle 'Shougo/deoplete.nvim'
+  let g:deoplete#enable_at_startup = 1
+
+  NeoBundleLazy 'benekastah/neomake'
+  nnoremap <Leader>s :<C-u>Neomake<CR>
+endif
+" }}}
+
 " Perlスタイルの正規表現
 " NeoBundle 'othree/eregex.vim'
 
