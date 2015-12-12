@@ -24,6 +24,10 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
 # }}}
 
+# Python {{{
+export PATH="$HOME/.pyenv/bin:$PATH"
+# }}}
+
 # TypeScript {{{
 export PATH="$PATH:$HOME/.nvm/versions/node/v4.1.0/bin"
 # }}}
