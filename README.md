@@ -94,6 +94,16 @@ $ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install
 
 [MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)をインストール
 
+## Neovim
+
+`$ brew install neovim`
+`$ mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}`
+`$ ln -s ~/.vim $XDG_CONFIG_HOME/nvim`
+`$ ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim`
+
+To use deoplete.vim
+`$ sudo pip3 install neovim`
+
 # Ruby関係
 
 ## Macの場合
@@ -122,3 +132,10 @@ Vim用に[vim-latex](https://github.com/vim-latex/vim-latex)も導入
 # ctags関係
 
 cf. [dotfiles/.ctags at master · claytron/dotfiles](https://github.com/claytron/dotfiles/blob/master/.ctags)
+
+# Python
+
+`$ brew install pyenv pyenv-virtualenv`
+`$ pyenv install <version>`
+`$ pyenv global <version>`
+`$ pyenv rehash`
