@@ -4,7 +4,8 @@
 "  http://d.hatena.ne.jp/vimtaku/20121117/1353138802
 "let g:plugin_migemo_disable = 1
 
-" set noignorecase
+set ignorecase
+set smartcase
 " set browsedir=buffer
 
 if g:my_local_mode
