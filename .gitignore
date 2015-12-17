@@ -1,8 +1,11 @@
 .atom/.apm/
 .atom/.node-gyp/
+.atom/blob-store/
 .atom/compile-cache/
+.atom/gist-it.token
 .atom/packages/
 .atom/storage/
+tmp/
 
 *.pyc
 *.sw[nop]
@@ -10,5 +13,6 @@
 .DS_Store
 my_local_mode*
 
+.tags*
 tags
 !tags/
