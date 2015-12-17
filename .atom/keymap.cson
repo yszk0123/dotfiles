@@ -27,27 +27,44 @@
 'atom-text-editor.vim-mode.visual-mode':
   'v': 'expand-region:expand'
   'ctrl-v': 'expand-region:shrink'
+
 'atom-text-editor.vim-mode:not(.insert-mode)':
+  # cursor
   'ctrl-h': 'window:focus-pane-on-left'
   'ctrl-j': 'window:focus-pane-below'
   'ctrl-k': 'window:focus-pane-above'
   'ctrl-l': 'window:focus-pane-on-right'
+  'shift-h': 'editor:move-to-first-character-of-line'
+  'shift-l': 'editor:move-to-end-of-line'
+  'enter': 'core:move-down'
+
   's r': 'fuzzy-finder:toggle-file-finder'
   's g': 'project-find:show'
   's shift-g': 'find-and-replace:show-replace'
+
+  'space n': 'application:new-file'
+  'space shift-n': 'application:new-window'
+  'space w': 'pane:close'
+
+  # comment
+  'ctrl-/': 'editor:toggle-line-comments'
+  # 'ctrl-/': 'emmet:toggle-comment'
+
+  # 'ctrl-o': 'symbols-view:return-from-declaration'
+
+  # git-plus
+  'space g a': 'git-plus:add'
   'space g s': 'git-plus:status'
   'space g g': 'git-plus:menu'
   'space g c': 'git-plus:commit'
-  'space n': 'application:new-file'
-  'space shift-n': 'application:new-window'
-  'space t': 'term2:open'
-  'space w': 'pane:close'
-  'space l': 'term2:open'
-  'shift-h': 'editor:move-to-first-character-of-line'
-  'shift-l': 'editor:move-to-end-of-line'
-  'ctrl-o': 'symbols-view:return-from-declaration'
 
-'.platform-darwin atom-pane atom-text-editor:not([mini])':
-  'ctrl-/': 'emmet:toggle-comment'
-'atom-workspace atom-text-editor:not([mini])':
-  'ctrl-/': 'editor:toggle-line-comments'
+  # term2
+  'space t': 'term2:open'
+  'space l': 'term2:open'
+
+'atom-workspace':
+  # cursor-history
+  'ctrl-i':     'cursor-history:next'
+  'ctrl-o':     'cursor-history:prev'
+  'ctrl-cmd-i': 'cursor-history:next-within-editor'
+  'ctrl-cmd-o': 'cursor-history:prev-within-editor'
