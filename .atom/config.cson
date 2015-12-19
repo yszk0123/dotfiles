@@ -13,12 +13,15 @@
     disabledPackages: [
       "jumpy"
       "background-tips"
+      "live-archive"
     ]
     themes: [
       "nucleus-dark-ui"
       "one-dark-syntax"
     ]
     audioBeep: false
+    projectHome: "/Users/yszk0123/src/github.com/yszk0123"
+    openEmptyEditorOnStart: false
   "markdown-preview": {}
   "vim-mode":
     wrapLeftRightMotion: true
@@ -28,7 +31,7 @@
     autoRunCommand: "login -f `whoami`"
   "git-projects":
     ignoredPatterns: "node_modules;\\.git;vendor;bower_components;dist;build"
-    rootPath: "~/work;~/src;~/pixta"
+    rootPath: "~/work;~/src"
     showGitInfo: false
   "vim-surround": {}
   "expand-region": {}
@@ -38,6 +41,7 @@
   minimap: {}
   "atom-beautify":
     _analyticsUserId: "d4f77605-0a76-45b9-a795-464b55ae2baf"
+    beautifyEntireFileOnSave: false
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
   nuclide:
@@ -53,3 +57,19 @@
     toc: false
     mathjaxCustomMacros: "Math"
     gitPath: "/Users/yszk0123/src/Dropbox/evnd"
+  "gist-it":
+    newGistsDefaultToPrivate: true
+  "linter-eslint": {}
+  linter:
+    lintOnFlyInterval: 1500
+  "autocomplete-plus": {}
+  "autocomplete-ruby": {}
+  "fuzzy-finder":
+    ignoredNames: [
+      "vendor/"
+      "db/"
+      "analysis/"
+    ]
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "git-blame": {}
