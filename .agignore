@@ -1,7 +1,9 @@
 .git/
+analysis/
 bower_components/
-node_modules/
-vendor/
+db/
 log/
+node_modules/
 tags/
 tmp/
+vendor/
