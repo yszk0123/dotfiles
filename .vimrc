@@ -41,13 +41,13 @@ NeoBundle 'Shougo/vimproc.vim', {
 let s:libs = split(
   \ 'define-prefix ' .
   \ 'color ' .
-  \ 'javascript ruby ' .
+  \ 'javascript ' .
   \ 'unite ' .
-  \ 'typescript you-complete-me ' .
   \ 'commands filetype plugins remap settings abbreviations lint', ' ')
-"   \ 'neocomplete neosnippet ' .
-"   \ 'typescript latex ' .
-"   \ 'neosnippet-snippets ' .
+  " \ 'typescript you-complete-me ' .
+  " \ 'syntastic ' .
+  " \ 'neocomplete neosnippet neosnippet-snippets ' .
+  " \ 'latex ruby ' .
 for lib in s:libs
   execute 'runtime lib/' . lib . '.vim'
 endfor

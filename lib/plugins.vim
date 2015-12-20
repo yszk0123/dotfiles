@@ -9,7 +9,7 @@ NeoBundleLazy 'mxw/vim-jsx', { 'autoload': { 'filetypes': ['javascript', 'jsx'] 
 " NeoBundle 'taichouchou2/html5.vim'
 NeoBundleLazy 'othree/html5.vim', { 'autoload': { 'filetypes': ['html'] } }
 NeoBundleLazy 'elzr/vim-json', { 'autoload': { 'filetypes': ['json'] } }
-NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload': { 'filetypes': ['jade'] } }
+" NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload': { 'filetypes': ['jade'] } }
 NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'] } }
 NeoBundleLazy 'wavded/vim-stylus', { 'autoload': { 'filetypes': ['stylus'] } }
 NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload': { 'filetypes': ['css', 'html'] } }
@@ -176,8 +176,7 @@ if !exists('g:quickrun_config')
 endif
 let g:quickrun_config.javascript = {
   \   'type': 'javascript',
-  \   'exec': 'node %o %a %S',
-  \   'cmdopt': '--harmony'
+  \   'exec': 'node %o %a %S'
   \ }
 let g:quickrun_config.coffee = {
   \   'type': 'coffee',
@@ -212,8 +211,8 @@ au FileType coffee let delimitMate_nesting_quotes = ['"','`']
 " NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundleLazy 'joker1007/vim-markdown-quote-syntax', { 'autoload': { 'filetypes': ['markdown', 'mkd', 'md'] } }
 " NeoBundle 'nelstrom/vim-markdown-folding'
-NeoBundleLazy 'kannokanno/previm', { 'autoload': { 'commands': ['PrevimOpen'] } }
-NeoBundleLazy 'tyru/open-browser.vim', { 'autoload': { 'commands': ['OpenBrowser', 'OpenBrowserSearch', 'OpenBrowserSmartSearch'] } }
+" NeoBundleLazy 'kannokanno/previm', { 'autoload': { 'commands': ['PrevimOpen'] } }
+" NeoBundleLazy 'tyru/open-browser.vim', { 'autoload': { 'commands': ['OpenBrowser', 'OpenBrowserSearch', 'OpenBrowserSmartSearch'] } }
 let g:markdown_fold_style = 'nested'
 " TODO: これでいいのか
 " autocmd FileType zsh runtime! ftplugin/markdown/folding.vim
