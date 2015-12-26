@@ -1,20 +1,18 @@
-hello_ruby:
-  title: "hello_ruby"
+private:
+  title: "private"
   paths: [
-    "~/work/hello_ruby"
+    "~/src/gitlab.com/yszk0123/notes"
+    "~/src/gitlab.com/yszk0123/spot"
+    "~/src/gitlab.com/yszk0123/chrome-tabsort"
+    "~/src/github.com/yszk0123/dotfiles"
+    # "~/src/gitlab.com/yszk0123/spot-with-typescript"
   ]
-"hello-javascript":
-  title: "hello-javascript"
+pixta:
+  title: "pixta"
   paths: [
-    "~/work/hello-javascript"
-  ]
-refactor:
-  title: "refactor"
-  paths: [
-    "~/tmp/refactor"
-  ]
-dotfiles:
-  title: "dotfiles"
-  paths: [
-    "~/dotfiles"
+    "~/src/gitlab.com/yszk0123/pixta-notes"
+    "~/src/gitlab.pixtavietnam.com/pixta-dev/pixta-ftpuser-accounts"
+    # "~/src/gitlab.pixtavietnam.com/infrastructure/custom-cookbooks"
+    # "~/src/gitlab.pixta.jp/pixta-dev/pixta"
+    "~/src/github.com/yszk0123/dotfiles"
   ]

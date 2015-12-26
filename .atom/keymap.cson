@@ -38,8 +38,9 @@
   'shift-l': 'editor:move-to-end-of-line'
   'enter': 'core:move-down'
 
+  # 's g': 'project-find:show'
   's r': 'fuzzy-finder:toggle-file-finder'
-  's g': 'project-find:show'
+  's g': 'fuzzy-grep:toggle'
   's shift-g': 'find-and-replace:show-replace'
 
   'space n': 'application:new-file'
@@ -61,6 +62,9 @@
   # term2
   'space t': 'term2:open'
   'space l': 'term2:open'
+
+  # user
+  'space space': 'user:toggle-todo-checkbox'
 
 'atom-workspace':
   # cursor-history

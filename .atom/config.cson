@@ -14,6 +14,17 @@
       "jumpy"
       "background-tips"
       "live-archive"
+      "symbols-view"
+      "atom-ctags"
+      "language-csharp"
+      "language-java"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "welcome"
+      "language-clojure"
+      "language-c"
     ]
     themes: [
       "nucleus-dark-ui"
@@ -22,6 +33,9 @@
     audioBeep: false
     projectHome: "/Users/yszk0123/src/github.com/yszk0123"
     openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "git-plus"
+    ]
   "markdown-preview": {}
   "vim-mode":
     wrapLeftRightMotion: true
@@ -73,3 +87,16 @@
   "tree-view":
     hideVcsIgnoredFiles: true
   "git-blame": {}
+  "atom-ctags":
+    cmdArgs: "--exclude=node_modules/ --exclude=.atom/ --exclude=vendor/ --exclude=db/ --exclude=analysis/"
+  "atom-fuzzy-grep": {}
+  "advanced-open-file": {}
+  "git-plus":
+    wordDiff: false
+  "atom-ternjs":
+    lint: false
+  "atom-typescript": {}
+  "project-manager": {}
+  emmet: {}
+  "language-elm": {}
+  "cursor-history": {}
