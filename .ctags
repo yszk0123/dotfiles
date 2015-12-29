@@ -1,3 +1,4 @@
+--exclude=.atom
 --exclude=.git
 --exclude=log
 --exclude=node_modules
