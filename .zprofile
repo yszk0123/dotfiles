@@ -29,7 +29,7 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 # }}}
 
 # TypeScript {{{
-export PATH="$PATH:$HOME/.nvm/versions/node/v4.1.0/bin"
+export PATH="$PATH:$HOME/.nvm/versions/node/v4.2.3/bin"
 # }}}
 
 # vim:set ft=zsh:
