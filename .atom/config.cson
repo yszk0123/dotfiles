@@ -4,11 +4,12 @@
   welcome:
     showOnStartup: false
   editor:
-    fontSize: 12
     invisibles: {}
     showIndentGuide: true
     lineHeight: 1.2
     showInvisibles: true
+    preferredLineLength: 100
+    fontSize: 12
   core:
     disabledPackages: [
       "jumpy"
@@ -84,8 +85,7 @@
       "db/"
       "analysis/"
     ]
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   "git-blame": {}
   "atom-ctags":
     cmdArgs: "--exclude=node_modules/ --exclude=.atom/ --exclude=vendor/ --exclude=db/ --exclude=analysis/"
@@ -100,3 +100,7 @@
   emmet: {}
   "language-elm": {}
   "cursor-history": {}
+  "linter-tslint": {}
+".gfm.source":
+  editor:
+    preferredLineLength: 100
