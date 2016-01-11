@@ -64,7 +64,10 @@
   'space l': 'term2:open'
 
   # user
-  'space space': 'user:toggle-todo-checkbox'
+  'space d': 'user:insert-current-date'
+  '|': 'user:toggle-todo-checkbox'
+  '-': 'user:toggle-previous-word'
+  '+': 'user:toggle-next-word'
 
 'atom-workspace':
   # cursor-history
