@@ -86,7 +86,7 @@ DateUtils = do () ->
 
   stringify = (d) ->
     tzString = "#{sign(d.tz)}#{pad(d.tz)}:00"
-    "#{d.Y}-#{pad(d.M+1)}-#{pad(d.D)}T#{pad(d.h)}-#{pad(d.m)}-#{pad(d.s)}#{tzString}"
+    "#{d.Y}-#{pad(d.M+1)}-#{pad(d.D)}T#{pad(d.h)}:#{pad(d.m)}:#{pad(d.s)}#{tzString}"
 
   { formatDate, stringify }
 
