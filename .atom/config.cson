@@ -93,6 +93,7 @@
   "advanced-open-file": {}
   "git-plus":
     wordDiff: false
+    splitPane: "down"
   "atom-ternjs":
     lint: false
   "atom-typescript": {}
@@ -101,6 +102,19 @@
   "language-elm": {}
   "cursor-history": {}
   "linter-tslint": {}
+  term3: {}
+  "spell-check": {}
+  "linter-shellcheck": {}
+  "todo-show":
+    ignoreThesePaths: [
+      "**/node_modules/"
+      "**/vendor/"
+      "**/bower_components/"
+      "**/dist/"
+    ]
 ".gfm.source":
+  editor:
+    preferredLineLength: 100
+".diff.source":
   editor:
     preferredLineLength: 100
