@@ -24,6 +24,16 @@ alias ghqp='cd $(ghq list -p | peco)'
 alias ghqp-open='gh-open $(ghq list -p | peco)'
 # }}}
 
+# npm {{{
+alias ni='npm install'
+alias nis='npm install --save'
+alias nid='npm install --save-dev'
+alias nig='npm install --global'
+alias nt='npm test'
+alias nit='npm install && npm test'
+alias nr='npm run'
+# }}}
+
 # 上書き確認 {{{
 alias rm='rm -i'
 alias cp='cp -i'
