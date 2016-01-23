@@ -9,14 +9,13 @@
     lineHeight: 1.2
     showInvisibles: true
     preferredLineLength: 100
-    fontSize: 12
+    fontSize: 13
   core:
     disabledPackages: [
       "jumpy"
       "background-tips"
       "live-archive"
       "symbols-view"
-      "atom-ctags"
       "language-csharp"
       "language-java"
       "language-mustache"
@@ -85,10 +84,11 @@
       "db/"
       "analysis/"
     ]
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "git-blame": {}
   "atom-ctags":
-    cmdArgs: "--exclude=node_modules/ --exclude=.atom/ --exclude=vendor/ --exclude=db/ --exclude=analysis/"
+    disableComplete: true
   "atom-fuzzy-grep": {}
   "advanced-open-file": {}
   "git-plus":
@@ -116,5 +116,11 @@
   editor:
     preferredLineLength: 100
 ".diff.source":
+  editor:
+    preferredLineLength: 100
+".source.ts":
+  editor:
+    preferredLineLength: 100
+".source.tsx":
   editor:
     preferredLineLength: 100

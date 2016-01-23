@@ -69,6 +69,10 @@
   '-': 'user:toggle-previous-word'
   '+': 'user:toggle-next-word'
 
+  # other
+  'alt-d': 'user:go-to-path'
+  # 'alt-d': 'symbols-view:go-to-declaration'
+
 'atom-workspace':
   # cursor-history
   'ctrl-i':     'cursor-history:next'
