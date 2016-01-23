@@ -1,16 +1,41 @@
---exclude=.atom
---exclude=.git
---exclude=log
---exclude=node_modules
--R
---tag-relative=yes
---exclude=*.min.js
---exclude=jquery.*.js
---exclude=jquery-*.js
---exclude=vendor
---languages=-html
 --extra=+q+f
 --fields=+i+a+S+n
+--languages=-html
+--tag-relative=yes
+
+--exclude=*.min.js
+--exclude=.atom
+--exclude=.git
+--exclude=.hg
+--exclude=.svn
+--exclude=\*.Master
+--exclude=\*.bak
+--exclude=\*.cache
+--exclude=\*.class
+--exclude=\*.csproj
+--exclude=\*.csproj.user
+--exclude=\*.dll
+--exclude=\*.map
+--exclude=\*.min.\*
+--exclude=\*.pdb
+--exclude=\*.pyc
+--exclude=\*.sln
+--exclude=\*.swp
+--exclude=\*.tar.\*
+--exclude=analysis
+--exclude=bower_components
+--exclude=build
+--exclude=cscope.\*
+--exclude=db
+--exclude=dist
+--exclude=jquery-*.js
+--exclude=jquery.*.js
+--exclude=log
+--exclude=min
+--exclude=node_modules
+--exclude=tags
+--exclude=tmp
+--exclude=vendor
 
 --regex-ruby=/(^|;)[ \t]*(class|module)[ \t]+([A-Z][[:alnum:]_]+(::[A-Z][[:alnum:]_]+)+)/\3/c,class,constant/
 --regex-ruby=/(^|[:;])[ \t]*([A-Z][[:alnum:]_]+) *=/\2/c,class,constant/
@@ -43,6 +68,19 @@
 --regex-js=/([A-Za-z0-9._$]+)[ \t]*=[ \t]*\[/\1/a,array/
 --regex-js=/['"]*([A-Za-z$][A-Za-z0-9_$]+)['"]*:[ \t]*\[/\1/a,array/
 --regex-js=/([A-Za-z0-9._$]+)\[["']([A-Za-z0-9_$]+)["']\][ \t]*=[ \t]*\[/\1\.\2/a,array/
+
+--langdef=typescript
+--langmap=typescript:.ts
+--langmap=typescript:+.tsx
+--regex-typescript=/^[ \t]*(export)?[ \t]*class[ \t]+([a-zA-Z0-9_]+)/\2/c,classes/
+--regex-typescript=/^[ \t]*(export)?[ \t]*module[ \t]+([a-zA-Z0-9_]+)/\2/n,modules/
+--regex-typescript=/^[ \t]*(export)?[ \t]*function[ \t]+([a-zA-Z0-9_]+)/\2/f,functions/
+--regex-typescript=/^[ \t]*export[ \t]+(const|let|var)[ \t]+([a-zA-Z0-9_]+)/\2/v,variables/
+--regex-typescript=/^[ \t]*(const|let|var)[ \t]+([a-zA-Z0-9_]+)[ \t]*=[ \t]*function[ \t]*\(\)/\2/v,varlambdas/
+--regex-typescript=/^[ \t]*(export)?[ \t]*(public|protected|private)[ \t]+(static)?[ \t]*([a-zA-Z0-9_]+)/\4/m,members/
+--regex-typescript=/^[ \t]*(export)?[ \t]*interface[ \t]+([a-zA-Z0-9_]+)/\2/i,interfaces/
+--regex-typescript=/^[ \t]*(export)?[ \t]*enum[ \t]+([a-zA-Z0-9_]+)/\2/e,enums/
+--regex-typescript=/^[ \t]*import[ \t]+([a-zA-Z0-9_]+)/\1/I,imports/
 
 --langmap=Lisp:+.clj
 
