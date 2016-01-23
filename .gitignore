@@ -5,6 +5,7 @@
 .atom/gist-it.token
 .atom/packages/
 .atom/storage/
+node_modules/
 tmp/
 
 *.pyc
