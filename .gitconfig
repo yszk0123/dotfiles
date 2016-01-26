@@ -29,3 +29,5 @@
 	tool = fugitive
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+[push]
+	default = simple
