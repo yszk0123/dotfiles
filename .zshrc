@@ -20,7 +20,7 @@ zstyle ':zle:*' word-style unspecified
 
 # lib
 for name in alias clipboard complete docker history keybinding lv node os prompt ruby python settings utils vcs zaw; do
-  source "$HOME/dotfiles/lib/$name.zsh"
+  source "$HOME/dotfiles/zsh/$name.zsh"
 done
 
 # Workaround for GUI app which doesn't get /etc/paths

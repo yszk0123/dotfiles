@@ -49,7 +49,7 @@ let s:libs = split(
   " \ 'neocomplete neosnippet neosnippet-snippets ' .
   " \ 'latex ruby ' .
 for lib in s:libs
-  execute 'runtime lib/' . lib . '.vim'
+  execute 'runtime vim/' . lib . '.vim'
 endfor
 
 call neobundle#end()
