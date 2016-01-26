@@ -1210,9 +1210,9 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>236 502 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 364 620 392 0 0 1440 877 </string>
+	<string>330 289 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 2 514 775 0 0 1280 777 </string>
+	<string>0 19 640 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>199 143 850 571 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1819,7 +1819,7 @@
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
-			<false/>
+			<true/>
 			<key>Smart Cursor Color</key>
 			<true/>
 			<key>Smart Selection Rules</key>
@@ -1946,7 +1946,7 @@
 		</dict>
 	</array>
 	<key>NoSyncLastTipTime</key>
-	<real>472897598.33198202</real>
+	<real>474696393.00813699</real>
 	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux</key>
 	<true/>
 	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux_selection</key>
@@ -1962,7 +1962,7 @@
 	<key>NoSyncTimeOfLastPromoDownload</key>
 	<real>467587466.88585401</real>
 	<key>NoSyncTipsDisabled</key>
-	<false/>
+	<true/>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
@@ -2026,6 +2026,12 @@
 		<string>0053</string>
 		<string>0054</string>
 		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
+		<string>0058</string>
+		<string>0059</string>
+		<string>0060</string>
+		<string>0061</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -2073,7 +2079,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-27T06:00:19Z</date>
+	<date>2016-01-24T19:22:39Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -2125,6 +2131,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20151111</string>
+	<string>2.9.20160113</string>
 </dict>
 </plist>
