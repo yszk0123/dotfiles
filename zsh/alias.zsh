@@ -17,6 +17,7 @@ alias ll='ls -l'
 alias lla='ls -lA'
 alias pu='pushd'
 alias po='popd'
+alias cgrep='grep --color=always'
 # }}}
 
 # ghq & peco {{{
@@ -43,6 +44,7 @@ alias mv='mv -i'
 #alias mkdir='mkdir -p'
 
 # Global aliases {{{
+alias -g C='| grep --color=always'
 alias -g G='| grep'
 alias -g L='| less'
 alias -g P='| perl -nle'
