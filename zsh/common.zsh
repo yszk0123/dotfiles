@@ -20,4 +20,9 @@ function load_env_locally() {
 alias lenv=load_env_locally
 alias le=load_env_locally
 
+# direnv
+if is_exists "direnv"; then
+  eval "$(direnv hook zsh)"
+fi
+
 # vim:set ft=zsh:
