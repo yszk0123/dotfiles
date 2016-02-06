@@ -26,7 +26,7 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
   node() { load_node; node "$@"; }
 
   alias -g N="| node -r $HOME/dotfiles/lib/oneline-helper.js -e"
-  alias npmo="npm --cache-min 9999999"
+  alias npmo="npm install --cache-min 9999999"
 
   function getNpmPackageVersion() {
     local code="console.log(JSON.parse(require('fs').readFileSync(require.resolve('$1/package.json'))).version)"
