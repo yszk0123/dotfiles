@@ -37,6 +37,10 @@ alias nit='npm install && npm test'
 alias nr='npm run'
 # }}}
 
+# vim {{{
+alias nv='nvim'
+# }}}
+
 # 上書き確認 {{{
 alias rm='rm -i'
 alias cp='cp -i'
