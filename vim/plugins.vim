@@ -148,10 +148,14 @@ nnoremap <Leader>gw :<C-u>Gwrite<Space>
 " NeoBundle 'wimstefan/Lightning'
 " NeoBundle 'reedes/vim-colors-pencil'
 " NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'kristijanhusak/vim-hybrid-material'
+" NeoBundle 'kristijanhusak/vim-hybrid-material'
+NeoBundle 'NLKNguyen/papercolor-theme'
+
 set background=dark
+
 " au VimEnter * :colorscheme hybrid
-au VimEnter * :colorscheme hybrid_reverse
+" au VimEnter * :colorscheme hybrid_reverse
+au VimEnter * :colorscheme PaperColor
 " }}}
 
 " vim-operator-* {{{
