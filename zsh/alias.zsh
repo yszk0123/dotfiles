@@ -17,7 +17,9 @@ alias ll='ls -l'
 alias lla='ls -lA'
 alias pu='pushd'
 alias po='popd'
-alias cgrep='grep --color=always'
+# Format (pretty print)
+alias grepf='grep --color=always'
+alias agf='ag --group --color'
 # }}}
 
 # ghq & peco {{{
