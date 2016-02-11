@@ -44,11 +44,14 @@ alias mv='mv -i'
 #alias mkdir='mkdir -p'
 
 # Global aliases {{{
-alias -g C='| grep --color=always'
-alias -g G='| grep'
-alias -g L='| less'
+alias -g G0='| grep'
+alias -g L0='| less'
 alias -g P='| perl -nle'
 alias -g S='| sed'
+# Format (pretty print)
+alias -g G='| grep --color=always'
+alias -g L="| less --tabs=1,5 -R"
+alias -g D="| diff-so-fancy | less --tabs=1,5 -R"
 # }}}
 
 # vim:set ft=zsh:
