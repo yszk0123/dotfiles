@@ -9,7 +9,7 @@ if is_exists 'pyenv'; then
     eval "$(pyenv virtualenv-init -)"
   }
 
-  pyenv() { load_python; rbenv "$@"; }
+  pyenv() { load_python; pyenv "$@"; }
   pip() { load_python; pip "$@"; }
   pip3() { load_python; pip3 "$@"; }
   nvim() { load_python; nvim "$@"; }
