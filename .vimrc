@@ -41,7 +41,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 let s:libs = split(
   \ 'define-prefix ' .
   \ 'color ' .
-  \ 'javascript ' .
+  \ 'javascript typescript ' .
   \ 'unite ' .
   \ 'commands filetype plugins remap settings abbreviations lint', ' ')
   " \ 'typescript you-complete-me ' .
