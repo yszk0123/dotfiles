@@ -4,7 +4,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/gitignore'
 NeoBundle 'szw/vim-tags'
 
-NeoBundleLazy 'mattn/emmet-vim', { 'autoload': { 'filetypes': ['html', 'javascript', 'css', 'jsx', 'stylus', 'less', 'sass'] } }
+NeoBundleLazy 'mattn/emmet-vim', { 'autoload': { 'filetypes': ['html', 'javascript', 'typescript', 'css', 'jsx', 'tsx', 'stylus', 'less', 'sass'] } }
 NeoBundleLazy 'mxw/vim-jsx', { 'autoload': { 'filetypes': ['javascript', 'jsx'] } }
 " NeoBundle 'taichouchou2/html5.vim'
 NeoBundleLazy 'othree/html5.vim', { 'autoload': { 'filetypes': ['html'] } }
