@@ -8,11 +8,15 @@ NeoBundleLazy 'mattn/emmet-vim', { 'autoload': { 'filetypes': ['html', 'javascri
 NeoBundleLazy 'mxw/vim-jsx', { 'autoload': { 'filetypes': ['javascript', 'jsx'] } }
 " NeoBundle 'taichouchou2/html5.vim'
 NeoBundleLazy 'othree/html5.vim', { 'autoload': { 'filetypes': ['html'] } }
-NeoBundleLazy 'elzr/vim-json', { 'autoload': { 'filetypes': ['json'] } }
 " NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload': { 'filetypes': ['jade'] } }
 NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'] } }
 NeoBundleLazy 'wavded/vim-stylus', { 'autoload': { 'filetypes': ['stylus'] } }
 NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload': { 'filetypes': ['css', 'html'] } }
+
+" vim-json {{{
+NeoBundleLazy 'elzr/vim-json', { 'autoload': { 'filetypes': ['json'] } }
+let g:vim_json_syntax_conceal = 0
+" }}}
 
 " deoplete-vim {{
 if has('nvim')
