@@ -24,7 +24,7 @@
   "atom-ternjs":
     lint: false
   "atom-typescript":
-    typescriptServices: "/Users/yszk0123/.nvm/versions/node/v4.2.3/lib/node_modules/typescript/lib/typescriptServices.js"
+    typescriptServices: "/Users/yszk0123/.nodebrew/current/lib/node_modules/typescript/lib/typescriptServices.js"
   "autocomplete-ctags": {}
   "autocomplete-plus": {}
   "autocomplete-ruby": {}
