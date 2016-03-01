@@ -1,18 +1,17 @@
 private:
   title: "private"
   paths: [
-    "~/src/gitlab.com/yszk0123/notes"
-    "~/src/gitlab.com/yszk0123/spot"
-    "~/src/gitlab.com/yszk0123/chrome-tabsort"
-    "~/src/github.com/yszk0123/dotfiles"
-    # "~/src/gitlab.com/yszk0123/spot-with-typescript"
+    "/Users/yszk0123/src/gitlab.com/yszk0123/notes"
+    "/Users/yszk0123/src/gitlab.com/yszk0123/spot-with-typescript"
+    "/Users/yszk0123/src/gitlab.com/yszk0123/hello"
+    "/Users/yszk0123/src/gitlab.com/yszk0123/pixta-notes"
+    "/Users/yszk0123/src/github.com/yszk0123/dotfiles"
+    "/Users/yszk0123/src/gitlab.com/yszk0123/daily-tips-notifier"
   ]
 pixta:
   title: "pixta"
   paths: [
     "~/src/gitlab.com/yszk0123/pixta-notes"
     "~/src/gitlab.pixtavietnam.com/pixta-dev/pixta-ftpuser-accounts"
-    # "~/src/gitlab.pixtavietnam.com/infrastructure/custom-cookbooks"
-    # "~/src/gitlab.pixta.jp/pixta-dev/pixta"
     "~/src/github.com/yszk0123/dotfiles"
   ]

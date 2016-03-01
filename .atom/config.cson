@@ -1,20 +1,43 @@
 "*":
-  "exception-reporting":
-    userId: "e5b3e0c4-6b69-1af4-6a65-5cd0dea5e26e"
-  welcome:
-    showOnStartup: false
-  editor:
-    invisibles: {}
-    showIndentGuide: true
-    lineHeight: 1.2
-    showInvisibles: true
-    preferredLineLength: 100
-    fontSize: 13
+  "advanced-open-file": {}
+  "atom-beautify":
+    _analyticsUserId: "d4f77605-0a76-45b9-a795-464b55ae2baf"
+    beautifyEntireFileOnSave: false
+  "atom-ctags":
+    disableComplete: true
+  "atom-fuzzy-grep": {}
+  "atom-material-ui":
+    compactTreeView: true
+    disableAnimations: true
+    fonts: {}
+    panels:
+      panelContrast: true
+    slimScrollbar: true
+    tabSize: "Small"
+    tabs:
+      tabSize: "Small"
+    treeView:
+      compactTreeView: true
+    ui:
+      disableAnimations: true
+      slimScrollbar: true
+  "atom-ternjs":
+    lint: false
+  "atom-typescript":
+    typescriptServices: "/Users/yszk0123/.nvm/versions/node/v4.2.3/lib/node_modules/typescript/lib/typescriptServices.js"
+  "autocomplete-ctags": {}
+  "autocomplete-plus": {}
+  "autocomplete-ruby": {}
+  "autohide-tree-view":
+    animationSpeed: 3.5
+    hideDelay: 250
+    maxWidth: 300
+    minWidth: 135
+    showDelay: 150
   core:
+    audioBeep: false
     disabledPackages: [
-      "jumpy"
       "background-tips"
-      "live-archive"
       "symbols-view"
       "language-csharp"
       "language-java"
@@ -25,86 +48,71 @@
       "welcome"
       "language-clojure"
       "language-c"
+      "autocomplete-modules"
     ]
-    themes: [
-      "nucleus-dark-ui"
-      "one-dark-syntax"
-    ]
-    audioBeep: false
-    projectHome: "/Users/yszk0123/src/github.com/yszk0123"
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "git-plus"
     ]
-  "markdown-preview": {}
-  "vim-mode":
-    wrapLeftRightMotion: true
-    useSmartcaseForSearch: true
-    useClipboardAsDefaultRegister: true
-  term2:
-    autoRunCommand: "login -f `whoami`"
-  "git-projects":
-    ignoredPatterns: "node_modules;\\.git;vendor;bower_components;dist;build"
-    rootPath: "~/work;~/src"
-    showGitInfo: false
-  "vim-surround": {}
+    projectHome: "/Users/yszk0123/src/github.com/yszk0123"
+    themes: [
+      "nucleus-dark-ui"
+      "one-dark-syntax"
+    ]
+  "cursor-history": {}
+  editor:
+    fontSize: 13
+    invisibles: {}
+    lineHeight: 1.2
+    preferredLineLength: 100
+    showIndentGuide: true
+    showInvisibles: true
+  emmet: {}
+  "ever-notedown":
+    gitPath: "/Users/yszk0123/src/Dropbox/evnd"
+    mathjaxCustomMacros: "Math"
+    toc: false
+  "exception-reporting":
+    userId: "e5b3e0c4-6b69-1af4-6a65-5cd0dea5e26e"
   "expand-region": {}
-  react: {}
-  "language-babel": {}
-  jumpy: {}
-  minimap: {}
-  "atom-beautify":
-    _analyticsUserId: "d4f77605-0a76-45b9-a795-464b55ae2baf"
-    beautifyEntireFileOnSave: false
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  nuclide:
-    remoteProjectsConfig: []
-  "autocomplete-ctags": {}
-  "merge-conflicts": {}
-  "atom-material-ui":
-    compactTreeView: true
-    disableAnimations: true
-    slimScrollbar: true
-    tabSize: "Small"
-  "ever-notedown":
-    toc: false
-    mathjaxCustomMacros: "Math"
-    gitPath: "/Users/yszk0123/src/Dropbox/evnd"
-  "gist-it":
-    newGistsDefaultToPrivate: true
-  "linter-eslint": {}
-  linter:
-    lintOnFlyInterval: 1500
-  "autocomplete-plus": {}
-  "autocomplete-ruby": {}
   "fuzzy-finder":
     ignoredNames: [
       "vendor/"
       "db/"
       "analysis/"
     ]
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "gist-it":
+    newGistsDefaultToPrivate: true
   "git-blame": {}
-  "atom-ctags":
-    disableComplete: true
-  "atom-fuzzy-grep": {}
-  "advanced-open-file": {}
   "git-plus":
+    splitPane: "Down"
     wordDiff: false
-    splitPane: "down"
-  "atom-ternjs":
-    lint: false
-  "atom-typescript": {}
-  "project-manager": {}
-  emmet: {}
+  "git-projects":
+    ignoredPatterns: "node_modules;\\.git;vendor;bower_components;dist;build"
+    rootPath: "~/work;~/src"
+    showGitInfo: false
+  jumpy: {}
+  "language-babel": {}
   "language-elm": {}
-  "cursor-history": {}
-  "linter-tslint": {}
-  term3: {}
-  "spell-check": {}
+  linter:
+    lintOnFlyInterval: 1500
+  "linter-eslint": {}
   "linter-shellcheck": {}
+  "linter-tslint": {}
+  "markdown-preview": {}
+  "merge-conflicts": {}
+  minimap: {}
+  nuclide:
+    remoteProjectsConfig: []
+  "project-manager": {}
+  react: {}
+  "spell-check": {}
+  tabs: {}
+  term2:
+    autoRunCommand: "login -f `whoami`"
+  term3: {}
   "todo-show":
     ignoreThesePaths: [
       "**/node_modules/"
@@ -112,10 +120,21 @@
       "**/bower_components/"
       "**/dist/"
     ]
-".gfm.source":
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+    wrapLeftRightMotion: true
+  "vim-surround": {}
+  welcome:
+    showOnStartup: false
+  zentabs:
+    neverCloseUnsaved: true
+".diff.source":
   editor:
     preferredLineLength: 100
-".diff.source":
+".gfm.source":
   editor:
     preferredLineLength: 100
 ".source.ts":
