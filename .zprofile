@@ -28,8 +28,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
 # }}}
 
-# TypeScript {{{
-export PATH="$PATH:$HOME/.nvm/versions/node/v4.2.3/bin"
+# nodebrew {{{
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 # }}}
 
 # vim:set ft=zsh:
