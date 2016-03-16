@@ -1,28 +1,28 @@
-" NeoBundle 'matthewtodd/vim-twilight'
-" NeoBundle 'moll/vim-node'
+" Plug 'matthewtodd/vim-twilight'
+" Plug 'moll/vim-node'
 
 " Perlスタイルの正規表現
-" NeoBundle 'othree/eregex.vim'
+" Plug 'othree/eregex.vim'
 
 " acp (vim-autocomplpop, AutoComplPop) {{{
-" NeoBundle 'D:/common/lib/vim-autocomplpop'
+" Plug 'D:/common/lib/vim-autocomplpop'
 " let g:acp_behaviorKeywordIgnores = ['D:', 'C:', '\\', '/', '.', ':']
 " au WinEnter *[util]* AcpLock
 " au WinLeave *[util]* AcpUnlock
 " }}}
 
 " supertab {{{
-" NeoBundle 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 " }}}
 
 " tagbar {{{
-" NeoBundle 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 " nnoremap <Leader>t :<C-u>TagbarToggle<CR>
 " }}}
 
 " ultisnips {{{
-" NeoBundle 'SirVer/ultisnips'
-" NeoBundle 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 "
 " " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " let g:UltiSnipsExpandTrigger = "<c-i>"
@@ -34,7 +34,7 @@
 " }}}
 
 " vim-rooter: change working directory to project root {{{
-" NeoBundle 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 " map <silent> <Leader>C <Plug>RooterChangeToRootDirectory
 " let g:rooter_manual_only = 1
 " let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
@@ -44,7 +44,7 @@
 " ref:
 "   title: Vim の textobj プラグインをまとめた - C++でゲームプログラミング
 "   url: http://d.hatena.ne.jp/osyo-manga/20130717/1374069987
-" NeoBundle 'kana/vim-textobj-user'
+" Plug 'kana/vim-textobj-user'
 
 " between:  f
 " comment:  c
@@ -55,35 +55,35 @@
 " syntax:   y
 " wiw:      ,
 
-" NeoBundle 'nelstrom/vim-textobj-rubyblock'
-" NeoBundle 'glts/vim-textobj-indblock'
-" NeoBundle 'kana/vim-textobj-datetime'
-" NeoBundle 'kana/vim-textobj-syntax'
-" NeoBundle 'mattn/vim-textobj-url'
-" NeoBundle 'thinca/vim-textobj-between'
-" NeoBundle 'h1mesuke/textobj-wiw'
-" NeoBundle 'kana/vim-textobj-fold'
-" NeoBundle 'kana/vim-textobj-indent'
-" NeoBundle 'kana/vim-textobj-lastpat'
-" NeoBundle 'thinca/vim-textobj-comment'
+" Plug 'nelstrom/vim-textobj-rubyblock'
+" Plug 'glts/vim-textobj-indblock'
+" Plug 'kana/vim-textobj-datetime'
+" Plug 'kana/vim-textobj-syntax'
+" Plug 'mattn/vim-textobj-url'
+" Plug 'thinca/vim-textobj-between'
+" Plug 'h1mesuke/textobj-wiw'
+" Plug 'kana/vim-textobj-fold'
+" Plug 'kana/vim-textobj-indent'
+" Plug 'kana/vim-textobj-lastpat'
+" Plug 'thinca/vim-textobj-comment'
 "}}}
 
 " vim-smartword {{{
-NeoBundle 'kana/vim-smartword'
+Plug 'kana/vim-smartword'
 nmap w <Plug>(smartword-w)
 nmap b <Plug>(smartword-b)
 nmap e <Plug>(smartword-e)
 " }}}
 
 " vim-gitgutter {{{
-" NeoBundle 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 " let g:gitgutter_enabled = 0
 " let g:gitgutter_realtime = 0
 " let g:gitgutter_eager = 0
 " }}}
 
 " YankRing {{{
-" NeoBundle 'vim-scripts/YankRing.vim'
+" Plug 'vim-scripts/YankRing.vim'
 " nnoremap <Leader>y :<C-u>YRShow<CR>
 " let g:yankring_max_history = 10
 " }}}

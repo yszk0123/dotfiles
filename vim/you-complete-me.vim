@@ -1,4 +1,4 @@
-NeoBundleLazy 'Valloric/YouCompleteMe', { 'autoload': { 'filetypes': ['typescript'] } }
+Plug 'Valloric/YouCompleteMe', { 'for': ['typescript'], 'do': './install.py' }
 let g:ycm_server_log_level = 'warning'
 " let g:ycm_allow_changing_updatetime = 0
 let g:ycm_min_num_identifier_candidate_chars = 3

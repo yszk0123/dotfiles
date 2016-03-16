@@ -3,12 +3,12 @@
 "    title:VimのUniteプラグインでファイル、バッファ、ブックマーク管理 | karakaram-blog
 "    url: http://www.karakaram.com/unite
 
-" NeoBundle 'Shougo/unite-outline'
-" NeoBundle 'Shougo/unite-session'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neoinclude.vim'
-NeoBundle 'tsukkee/unite-tag'
+" Plug 'Shougo/unite-outline'
+" Plug 'Shougo/unite-session'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/neoinclude.vim'
+Plug 'tsukkee/unite-tag'
 
 " data_directory
 let g:unite_data_directory = $HOME . '/vimfiles/.unite'

@@ -1,5 +1,5 @@
 " vim-geeknote {{{
-NeoBundle 'neilagabriel/vim-geeknote'
+Plug 'neilagabriel/vim-geeknote'
 nnoremap [util]e :<C-u>Geeknote<CR>
 let g:GeeknoteFormat = 'plain'
 " let g:GeeknoteFormat = 'markdown'

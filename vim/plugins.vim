@@ -1,39 +1,44 @@
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'vim-scripts/gitignore'
-NeoBundle 'szw/vim-tags'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/gitignore'
+Plug 'szw/vim-tags'
 
-NeoBundleLazy 'mattn/emmet-vim', { 'autoload': { 'filetypes': ['html', 'javascript', 'typescript', 'css', 'jsx', 'tsx', 'stylus', 'less', 'sass'] } }
-NeoBundleLazy 'mxw/vim-jsx', { 'autoload': { 'filetypes': ['javascript', 'jsx'] } }
-" NeoBundle 'taichouchou2/html5.vim'
-NeoBundleLazy 'othree/html5.vim', { 'autoload': { 'filetypes': ['html'] } }
-" NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload': { 'filetypes': ['jade'] } }
-NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'] } }
-NeoBundleLazy 'wavded/vim-stylus', { 'autoload': { 'filetypes': ['stylus'] } }
-NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload': { 'filetypes': ['css', 'html'] } }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'typescript', 'css', 'jsx', 'tsx', 'stylus', 'less', 'sass'] }
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'jsx'] }
+" Plug 'taichouchou2/html5.vim'
+Plug 'othree/html5.vim', { 'for': 'html' }
+" Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+" Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+" Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html'] }
 
 " vim-json {{{
-NeoBundleLazy 'elzr/vim-json', { 'autoload': { 'filetypes': ['json'] } }
+Plug 'elzr/vim-json', { 'for': 'json' }
 let g:vim_json_syntax_conceal = 0
 " }}}
 
 " deoplete-vim {{
 if has('nvim')
-  NeoBundle 'Shougo/deoplete.nvim'
+  Plug 'Shougo/deoplete.nvim'
   let g:deoplete#enable_at_startup = 1
 
-  NeoBundleLazy 'benekastah/neomake'
+  Plug 'benekastah/neomake'
   nnoremap <Leader>s :<C-u>Neomake<CR>
 endif
 " }}}
 
 if executable('ag')
-  NeoBundleLazy 'rking/ag.vim', { 'autoload': { 'commands': ['Ag', 'AgFile', 'AgBuffer', 'AgAdd', 'AgHelp', 'AgFromSearch'] } }
+  Plug 'rking/ag.vim', { 'on': ['Ag', 'AgFile', 'AgBuffer', 'AgAdd', 'AgHelp', 'AgFromSearch'] }
 endif
 
+" nerdtree {{{
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+nnoremap <Leader>t :<C-u>NERDTreeToggle<CR>
+" }}}
+
 " clever-f {{{
-NeoBundle 'rhysd/clever-f.vim'
+Plug 'rhysd/clever-f.vim'
 let g:clever_f_smart_case = 1
 let g:clever_f_use_migemo = 1
 let g:clever_f_fix_key_direction = 0
@@ -47,7 +52,7 @@ let g:clever_f_chars_match_any_signs = ''
 "   E411: highlight group not found: Normal
 " ref: [Just Another Camelog](http://www.camelstudio.jp/note/vim/186/)
 colorscheme default
-NeoBundle 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " インデントの深さに色を付ける
 let g:indent_guides_start_level=2
@@ -67,34 +72,34 @@ au VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 "}}}
 
 " lightline {{{
-NeoBundle 'bling/vim-airline'
+Plug 'bling/vim-airline'
 " }}}
 
 " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
-NeoBundle 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 nnoremap <Leader>j :<C-u>SplitjoinJoin<CR>
 nnoremap <Leader>J :<C-u>SplitjoinSplit<CR>
 " }}}
 
 " switch: 似たような表現を切り替える(true <=> false, if <=> elseif など) {{{
-NeoBundle 'AndrewRadev/switch.vim'
+Plug 'AndrewRadev/switch.vim'
 nnoremap <bar> :<C-u>Switch<CR>
 " }}}
 
 " tcomment {{{
-NeoBundle 'tomtom/tcomment_vim'
+Plug 'tomtom/tcomment_vim'
 " let g:tcommentMapLeader1 = '<C-a>'
 "}}}
 
 " VimFiler {{{
-NeoBundleLazy 'Shougo/vimfiler', { "autoload": { "commands": ["VimFilerBufferDir", "VimFilerCurrentDir"] } }
+Plug 'Shougo/vimfiler', { 'on': ['VimFilerBufferDir', 'VimFilerCurrentDir'] }
 let g:vimfiler_safe_mode_by_default = 0
 nnoremap <Leader>vf :<C-u>VimFilerBufferDir<CR>
 nnoremap <Leader>vF :<C-u>VimFilerCurrentDir<CR>
 " }}}
 
 " VimShell {{{
-NeoBundleLazy 'Shougo/vimshell.vim', { "autoload": { "commands": ["VimShell", "VimShellInteractive", "VimShellPop"] } }
+Plug 'Shougo/vimshell.vim', { 'on': ['VimShell', 'VimShellInteractive', 'VimShellPop'] }
 
 " TODO: NeoBundleLazyで遅延読込しているために,デフォルトが設定される前に以下が実行されてしまう
 let g:vimshell_temporary_directory = "expand('~/vimfiles/.vimshell')"
@@ -115,7 +120,7 @@ nnoremap <Leader>vS :<C-u>VimShellInteractive<Space>
 " }}}
 
 " vim-easy-align {{{
-NeoBundle 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align'
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 " vmap <Enter> <Plug>(EasyAlign)
 vmap _ <Plug>(EasyAlign)
@@ -124,17 +129,17 @@ nmap ga <Plug>(EasyAlign)
 " }}}
 
 " selection {{{
-NeoBundle 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 xmap s <Plug>VSurround
 
-NeoBundle 'terryma/vim-expand-region'
+Plug 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 " }}}
 
 " vim-fugitive + gitv {{{
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'gregsexton/gitv'
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
 nnoremap <Leader>c :<C-u>Gcd<CR>
 nnoremap <Leader>l :<C-u>Glcd<CR>
 nnoremap <Leader>ga :<C-u>Gadd<Space>
@@ -149,11 +154,11 @@ nnoremap <Leader>gw :<C-u>Gwrite<Space>
 " }}}
 
 " Colorscheme {{{
-" NeoBundle 'wimstefan/Lightning'
-" NeoBundle 'reedes/vim-colors-pencil'
-" NeoBundle 'w0ng/vim-hybrid'
-" NeoBundle 'kristijanhusak/vim-hybrid-material'
-NeoBundle 'NLKNguyen/papercolor-theme'
+" Plug 'wimstefan/Lightning'
+" Plug 'reedes/vim-colors-pencil'
+" Plug 'w0ng/vim-hybrid'
+" Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'NLKNguyen/papercolor-theme'
 
 set background=dark
 
@@ -163,22 +168,22 @@ au VimEnter * :colorscheme PaperColor
 " }}}
 
 " vim-operator-* {{{
-NeoBundle 'kana/vim-operator-user'
+Plug 'kana/vim-operator-user'
 
-NeoBundle 'emonkak/vim-operator-sort'
-NeoBundle 'kana/vim-operator-replace'
+Plug 'emonkak/vim-operator-sort'
+Plug 'kana/vim-operator-replace'
 
 map R  <Plug>(operator-replace)
 map M  <Plug>(operator-sort)
 "}}}
 
 " vim-qfreplace {{{
-NeoBundle 'thinca/vim-qfreplace'
+Plug 'thinca/vim-qfreplace'
 nnoremap <Leader>q :<C-u>Qfreplace<CR>
 " }}}
 
 " vim-quickrun {{{
-NeoBundleLazy 'thinca/vim-quickrun', { "autoload": { "commands": ["QuickRun"] } }
+Plug 'thinca/vim-quickrun', { 'on': 'QuickRun' }
 if !exists('g:quickrun_config')
   let g:quickrun_config = {}
 endif
@@ -197,14 +202,14 @@ let g:quickrun_config.coffee = {
 " }}}
 
 " vim-wipeout {{{
-NeoBundle 'artnez/vim-wipeout'
+Plug 'artnez/vim-wipeout'
 " }}}
 
 " 囲み系補完 {{{
 " {{{
-" NeoBundle 'kana/vim-smartinput'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'Raimondi/delimitMate'
+" Plug 'kana/vim-smartinput'
+Plug 'tpope/vim-endwise'
+Plug 'Raimondi/delimitMate'
 let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
 let delimitMate_matchpairs = '(:),{:}'
@@ -215,12 +220,12 @@ au FileType coffee let delimitMate_nesting_quotes = ['"','`']
 
 " For Markdown {{{
 " ref: [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
-" NeoBundle 'plasticboy/vim-markdown'
-" NeoBundle 'jtratner/vim-flavored-markdown'
-NeoBundleLazy 'joker1007/vim-markdown-quote-syntax', { 'autoload': { 'filetypes': ['markdown', 'mkd', 'md'] } }
-" NeoBundle 'nelstrom/vim-markdown-folding'
-" NeoBundleLazy 'kannokanno/previm', { 'autoload': { 'commands': ['PrevimOpen'] } }
-" NeoBundleLazy 'tyru/open-browser.vim', { 'autoload': { 'commands': ['OpenBrowser', 'OpenBrowserSearch', 'OpenBrowserSmartSearch'] } }
+" Plug 'plasticboy/vim-markdown'
+" Plug 'jtratner/vim-flavored-markdown'
+Plug 'joker1007/vim-markdown-quote-syntax', { 'for': ['markdown', 'mkd', 'md'] }
+" Plug 'nelstrom/vim-markdown-folding'
+" Plug 'kannokanno/previm', { 'on': 'PrevimOpen' }
+" Plug 'tyru/open-browser.vim', { 'on': ['OpenBrowser', 'OpenBrowserSearch', 'OpenBrowserSmartSearch'] }
 let g:markdown_fold_style = 'nested'
 " TODO: これでいいのか
 " autocmd FileType zsh runtime! ftplugin/markdown/folding.vim

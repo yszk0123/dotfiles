@@ -1,6 +1,6 @@
 " {{{
-NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload': { 'filetypes': ['ruby'] } }
-NeoBundleLazy 'tpope/vim-bundler', { 'autoload': { 'filetypes': ['ruby'] } }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 " }}}
 
 " {{{
@@ -8,9 +8,7 @@ NeoBundleLazy 'tpope/vim-bundler', { 'autoload': { 'filetypes': ['ruby'] } }
 " ref: [RSenseを使ってVimをIDEっぽくする（Ruby向け） - WEB SALAD](http://web-salad.hateblo.jp/entry/2014/10/07/102349)
 " Macは別途brewでインストールした方が確実
 " if !has('mac')
-"   NeoBundleLazy 'marcus/rsense', {
-"     \ 'autoload': { 'filetypes': 'ruby' }
-"     \ }
+"   Plug 'marcus/rsense', { 'for': 'ruby' }
 " endif
 " NeoBundleLazy 'supermomonga/neocomplete-rsense.vim', {
 "   \ 'depends': ['Shougo/neocomplete.vim', 'marcus/rsense'],

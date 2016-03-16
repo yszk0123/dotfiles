@@ -1,8 +1,8 @@
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-" NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+" Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0

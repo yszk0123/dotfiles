@@ -1,25 +1,25 @@
 " basic plugin {{{
 " vim-javascript {{{
-" NeoBundle 'taichouchou2/vim-javascript'
-NeoBundle 'pangloss/vim-javascript'
+" Plug 'taichouchou2/vim-javascript'
+Plug 'pangloss/vim-javascript'
 let javascript_ignore_javaScriptdoc = 1
 " let g:javascript_conceal = 1
 " }}}
 " vim-js-indent {{{
-" NeoBundle 'jason0x43/vim-js-indent'
+" Plug 'jason0x43/vim-js-indent'
 " }}}
 
-" NeoBundle 'jelera/vim-javascript-syntax'
+" Plug 'jelera/vim-javascript-syntax'
 " }}}
 
 " integration with command line tools {{{
 " tern_for_vim {{{
-" NeoBundle 'marijnh/tern_for_vim'
+" Plug 'marijnh/tern_for_vim'
 " }}}
 
 " javascript-libraries-syntax {{{
 " javascriptの主要なライブラリの構文定義
-NeoBundle 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/javascript-libraries-syntax.vim'
 
 " comma separated list
 "   Support libs id:
@@ -37,7 +37,7 @@ let g:used_javascript_libs = 'underscore'
 " }}}
 
 " vim-jsbeautify {{{
-" NeoBundle 'maksimr/vim-jsbeautify'
+" Plug 'maksimr/vim-jsbeautify'
 " autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " autocmd FileType css,stylus noremap <buffer> <c-f> :call CSSBeautify()<cr>

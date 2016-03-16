@@ -1,5 +1,5 @@
 " typescript-vim {{{
-NeoBundleLazy 'leafgarland/typescript-vim', { 'autoload': { 'filetypes': ['typescript'] } }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 " }}}
 
 " Tsuquyomi {{{

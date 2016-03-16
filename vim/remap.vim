@@ -185,7 +185,7 @@ nnoremap <Leader>L :<C-u>lcd %:h<CR>
 " nnoremap <Leader>e :<C-u>edit<Space>
 " nnoremap <Leader>p :<C-u>pedit<Space>
 " preview windowでテンプレートファイルを開く
-nnoremap <Leader>t :<C-u>pedit D:/common/templates/
+" nnoremap <Leader>t :<C-u>pedit D:/common/templates/
 "}}}
 
 " 80桁を超えた部分をハイライト {{{
