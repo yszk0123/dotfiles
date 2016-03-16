@@ -19,7 +19,7 @@ zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
 # lib
-for name in alias clipboard common complete docker history keybinding lv os prompt ruby python settings utils vcs zaw; do
+for name in alias clipboard common complete docker fzf history keybinding lv os prompt ruby python settings utils vcs zaw; do
   source "$HOME/dotfiles/zsh/$name.zsh"
 done
 

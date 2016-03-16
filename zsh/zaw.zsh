@@ -24,7 +24,7 @@ bindkey '^R' zaw-history
 bindkey '^X^F' zaw-git-files
 bindkey '^X^B' zaw-git-branches
 bindkey '^X^P' zaw-process
-bindkey '^T' zaw-tmux
+# bindkey '^T' zaw-tmux
 # }}}
 
 # vim:set ft=zsh:

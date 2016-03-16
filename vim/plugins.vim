@@ -34,7 +34,12 @@ endif
 
 " nerdtree {{{
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-nnoremap <Leader>t :<C-u>NERDTreeToggle<CR>
+nnoremap <Leader>h :<C-u>NERDTreeToggle<CR>
+" }}}
+
+" fzf {{{
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
+nnoremap <Leader>f :<C-u>FZF<CR>
 " }}}
 
 " clever-f {{{
