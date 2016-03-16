@@ -43,9 +43,9 @@ let s:libs = split(
   \ 'color ' .
   \ 'javascript typescript ' .
   \ 'unite ' .
+  \ 'syntastic ' .
   \ 'commands filetype plugins remap settings abbreviations lint', ' ')
   " \ 'typescript you-complete-me ' .
-  " \ 'syntastic ' .
   " \ 'neocomplete neosnippet neosnippet-snippets ' .
   " \ 'latex ruby ' .
 for lib in s:libs
