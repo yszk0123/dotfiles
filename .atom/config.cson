@@ -120,6 +120,9 @@
       "**/bower_components/"
       "**/dist/"
     ]
+  "tool-bar":
+    iconSize: "16px"
+    position: "Left"
   "tree-view":
     hideVcsIgnoredFiles: true
   "vim-mode":
