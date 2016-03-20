@@ -8,8 +8,12 @@
 node_modules/
 tmp/
 
+*.beam
+*.gz
 *.pyc
 *.sw[nop]
+*.tar
+*.zip
 *~
 .DS_Store
 my_local_mode*
