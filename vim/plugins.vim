@@ -32,6 +32,11 @@ if executable('ag')
   Plug 'rking/ag.vim', { 'on': ['Ag', 'AgFile', 'AgBuffer', 'AgAdd', 'AgHelp', 'AgFromSearch'] }
 endif
 
+" editorconfig-vim {{{
+Plug 'editorconfig/editorconfig-vim'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+" }}}
+
 " nerdtree {{{
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 nnoremap <Leader>h :<C-u>NERDTreeToggle<CR>
