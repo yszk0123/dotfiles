@@ -4,6 +4,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
 Plug 'szw/vim-tags'
 
+Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'typescript', 'css', 'jsx', 'tsx', 'stylus', 'less', 'sass'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'jsx'] }
 " Plug 'taichouchou2/html5.vim'

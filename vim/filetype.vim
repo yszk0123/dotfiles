@@ -18,3 +18,4 @@ au BufRead,BufNewFile,BufReadPre *.coffee setlocal filetype=coffee nofoldenable
 au BufRead,BufNewFile,BufReadPre *.cson setlocal filetype=coffee nofoldenable
 au BufRead,BufNewFile,BufReadPre *.md setlocal filetype=markdown
 au BufRead,BufNewFile,BufReadPre *.{ts,tsx} setlocal filetype=typescript
+au BufRead,BufNewFile,BufReadPre *.slim setlocal filetype=slim
