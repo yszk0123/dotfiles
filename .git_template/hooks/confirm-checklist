@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo '\033[0;31m====================\nCHECK FOLLOWING CONDITIONS BEFORE PUSH\n1. Test your modification in development/staging environment\n====================\033[0m'
+
+# Capture keyboard input
+exec < /dev/tty
+
+read -p "...checked? [YyNn]" yn
+case $yn in
+  [Yy] | "yes" | "Yes" | "YES" ) break ;;
+  [Nn] | "no" | "No" | "NO" ) exit 1 ;;
+  * )
+    echo "yes or no"
+    exit 1
+    ;;
+esac

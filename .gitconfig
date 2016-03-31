@@ -1,6 +1,8 @@
 [user]
 	name = Yuji Suzuki
 	email = y0suzuki0123@gmail.com
+[init]
+	templatedir = ~/.git_template
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
