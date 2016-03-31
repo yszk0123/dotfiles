@@ -1,3 +1,5 @@
+Plug 'facebook/vim-flow', { 'for': 'javascript' }
+
 " basic plugin {{{
 " vim-javascript {{{
 " Plug 'taichouchou2/vim-javascript'
