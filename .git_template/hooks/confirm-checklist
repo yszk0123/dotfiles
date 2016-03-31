@@ -1,11 +1,11 @@
 #!/bin/sh
 
 cat <<CHECKLIST
-\033[0;31m====================
+$(echo "\033[0;31m")====================
 CHECK FOLLOWING CONDITIONS BEFORE PUSH
 1. Test your modification in development/staging environment
 2. View your diff
-====================\033[0m
+====================$(echo "\033[0m")
 CHECKLIST
 
 # Capture keyboard input

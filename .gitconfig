@@ -3,6 +3,8 @@
 	email = y0suzuki0123@gmail.com
 [init]
 	templatedir = ~/.git_template
+[commit]
+  template = ~/.git_template/commit_message.txt
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
