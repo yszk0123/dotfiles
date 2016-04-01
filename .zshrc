@@ -27,3 +27,6 @@ done
 export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 
 # vim:set ft=zsh:
+
+# Fuzzy finder
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
