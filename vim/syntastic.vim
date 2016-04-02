@@ -19,7 +19,7 @@ let g:syntastic_ruby_checkers = []
 " mode=passiveで明示的に:SyntasticCheckを呼び出さない限りチェックしない
 let g:syntastic_mode_map = {
   \ 'mode': 'active',
-  \ 'passive_filetypes': ['html', 'text', 'markdown'],
+  \ 'passive_filetypes': ['javascript', 'html', 'text', 'markdown'],
   \ }
 
 set statusline+=%#warningmsg#
