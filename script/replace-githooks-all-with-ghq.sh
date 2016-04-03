@@ -4,8 +4,8 @@
 function replace-githooks() {
   if [ -e .git/hooks ]; then
     rm -rf .git/hooks
-    ln -s ~/.git_template/hooks .git/hooks
   fi
+  ln -s ~/.git_template/hooks .git/hooks
 }
 
 for repo in `ghq list`; do
