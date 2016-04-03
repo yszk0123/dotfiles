@@ -126,7 +126,7 @@ noremap gf :sp <cfile><CR>
 " }}}
 
 " 各種詰め合わせ {{{
-" ref:
+" cf.
 "   title: vimのカスタマイズとTips - fudist
 "   url:   https://sites.google.com/site/fudist/Home/vim-nihongo-ban/tips#TOC--13
 "強制前保存終了を無効化
@@ -149,7 +149,7 @@ endif
 "}}}
 
 " Window manipulation {{{
-" ref:
+" cf.
 "   title: The ultimate Vim configuration - vimrc
 "   url: http://amix.dk/vim/vimrc.html
 " Resize/move/split windows
@@ -189,7 +189,7 @@ nnoremap <Leader>L :<C-u>lcd %:h<CR>
 "}}}
 
 " 80桁を超えた部分をハイライト {{{
-" ref: [【Vim】80桁教信者の憂鬱 その２（ホットキーでトグル、他） | blog.remora.cx](http://blog.remora.cx/2013/06/source-in-80-columns-2.html)
+" cf. [【Vim】80桁教信者の憂鬱 その２（ホットキーでトグル、他） | blog.remora.cx](http://blog.remora.cx/2013/06/source-in-80-columns-2.html)
 " その１ {{{
 " noremap <Plug>(ToggleColorColumn)
 "             \ :<c-u>let &colorcolumn = len(&colorcolumn) > 0 ? '' :

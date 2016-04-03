@@ -41,7 +41,7 @@
 "}}}
 
 " vim-textobj-* {{{
-" ref:
+" cf.
 "   title: Vim の textobj プラグインをまとめた - C++でゲームプログラミング
 "   url: http://d.hatena.ne.jp/osyo-manga/20130717/1374069987
 " Plug 'kana/vim-textobj-user'

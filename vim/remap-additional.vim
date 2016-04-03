@@ -1,5 +1,5 @@
 " Toggle slash (for Windows) {{{
-" ref:
+" cf.
 "   title: Change between backslash and forward slash - Vim Tips Wiki
 "   url: http://vim.wikia.com/wiki/Change_between_backslash_and_forward_slash
 function! ToggleSlash(independent) range

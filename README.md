@@ -1,7 +1,7 @@
 # はじめに
 
 Xcode，HomebrewとAnsibleを導入する
-ref: [HomebrewとAnsibleでMacの開発環境構築を自動化する | mawatari.jp](http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible)
+cf. [HomebrewとAnsibleでMacの開発環境構築を自動化する | mawatari.jp](http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible)
 
 ```sh
 $ sudo xcodebuild -license

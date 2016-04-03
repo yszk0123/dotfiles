@@ -1,5 +1,5 @@
 " CAUTION: キーマップ "[util]s"をctrlpに割り当てる
-"  ref:
+"  cf.
 "    title:VimのUniteプラグインでファイル、バッファ、ブックマーク管理 | karakaram-blog
 "    url: http://www.karakaram.com/unite
 
@@ -74,7 +74,7 @@ if executable('ag')
     \ join(s:ignores, ' --ignore ')
 endif
 
-" ref: [Vim - file_rec/asyncとfile_rec/gitを自動的に切り換える - Qiita](http://qiita.com/yuku_t/items/9263e6d9105ba972aea8)
+" cf. [Vim - file_rec/asyncとfile_rec/gitを自動的に切り換える - Qiita](http://qiita.com/yuku_t/items/9263e6d9105ba972aea8)
 function! s:uniteFileRecAsyncOrGit()
   if isdirectory(getcwd()."/.git")
     Unite -buffer-name=files file_rec/git:--cached:--others:--exclude-standard

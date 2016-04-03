@@ -1,3 +1,7 @@
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
 
 " basic plugin {{{

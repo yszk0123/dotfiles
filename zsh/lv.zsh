@@ -1,4 +1,4 @@
-## ref: [おすすめzsh設定 - ククログ(2011-09-05)](http://www.clear-code.com/blog/2011/9/5.html)
+## cf. [おすすめzsh設定 - ククログ(2011-09-05)](http://www.clear-code.com/blog/2011/9/5.html)
 
 if type lv > /dev/null 2>&1; then
     ## lvを優先する。

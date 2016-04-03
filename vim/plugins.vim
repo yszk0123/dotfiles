@@ -9,9 +9,6 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'typescript', 'css', 'js
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'jsx'] }
 " Plug 'taichouchou2/html5.vim'
 Plug 'othree/html5.vim', { 'for': 'html' }
-" Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
-" Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-" Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html'] }
 
 " vim-json {{{
@@ -61,7 +58,7 @@ let g:clever_f_chars_match_any_signs = ''
 " Note: vim-indent-guidesの前にcolorschemeを設定しないと
 "   まれに次のようなエラーが発生する
 "   E411: highlight group not found: Normal
-" ref: [Just Another Camelog](http://www.camelstudio.jp/note/vim/186/)
+" cf. [Just Another Camelog](http://www.camelstudio.jp/note/vim/186/)
 colorscheme default
 Plug 'nathanaelkane/vim-indent-guides'
 
@@ -230,7 +227,7 @@ au FileType coffee let delimitMate_nesting_quotes = ['"','`']
 " }}}
 
 " For Markdown {{{
-" ref: [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
+" cf. [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
 " Plug 'plasticboy/vim-markdown'
 " Plug 'jtratner/vim-flavored-markdown'
 Plug 'joker1007/vim-markdown-quote-syntax', { 'for': ['markdown', 'mkd', 'md'] }

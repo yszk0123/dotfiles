@@ -1,4 +1,4 @@
-" ref: [Macのvim-latexの設定 - adragoonaの日記](http://adragoona.hatenablog.com/entry/2014/11/26/203044)
+" cf. [Macのvim-latexの設定 - adragoonaの日記](http://adragoona.hatenablog.com/entry/2014/11/26/203044)
 "   > uplatexでコンパイルする場合は、documentclassにオプションでuplatexをつけないと駄目な場合がある。
 "   > 以下のようにdocumentclassを変更する。
 "   > \documentclass[uplatex,12pt]{jsbook}
