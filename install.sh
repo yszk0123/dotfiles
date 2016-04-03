@@ -9,6 +9,17 @@ if [ -z "$ZDOTDIR" ]; then
   exit 1
 fi
 
+if [ ! -s "$ZDOTDIR/zsh-git-prompt/zshrc.sh" ]; then
+  read -p "Do you wish to install zsh-git-prompt? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      pushd $ZDOTDIR
+      git clone https://github.com/olivierverdier/zsh-git-prompt.git
+      popd
+      ;;
+  esac
+fi
+
 if [ ! -s "$ZDOTDIR/zaw/zaw.zsh" ]; then
   read -p "Do you wish to install zaw? [YyNn]" yn
   case $yn in
