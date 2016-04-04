@@ -25,3 +25,5 @@ let g:syntastic_mode_map = {
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+nnoremap <Leader>s :<C-u>SyntasticCheck<CR>

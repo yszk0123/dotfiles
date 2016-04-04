@@ -22,7 +22,6 @@ if has('nvim')
   let g:deoplete#enable_at_startup = 1
 
   Plug 'benekastah/neomake'
-  nnoremap <Leader>s :<C-u>Neomake<CR>
 endif
 " }}}
 
