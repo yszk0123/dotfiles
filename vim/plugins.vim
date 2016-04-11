@@ -129,6 +129,7 @@ set background=dark
 " au VimEnter * :colorscheme hybrid
 " au VimEnter * :colorscheme hybrid_reverse
 au VimEnter * :colorscheme PaperColor
+au VimEnter * :hi Comment term=bold ctermfg=235 ctermbg=240 guifg=#606060
 " }}}
 
 " vim-operator-* {{{
