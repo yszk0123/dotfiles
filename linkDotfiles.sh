@@ -17,7 +17,7 @@ for target in .atom .bundle .git_template .ansible.cfg .ctags .gitconfig .peco .
 done
 ln -sni ~/dotfiles/.vimrc ~/.nvimrc
 
-if [ -s ~/dotfiles/my_local_mode* ]; then
+if [ -f "$HOME/dotfiles/my_local_mode" ]; then
   for target in .gemrc .gvimrc .irbrc; do
     ln -sni ~/dotfiles/$target ~/$target
   done
