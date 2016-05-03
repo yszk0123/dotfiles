@@ -1,9 +1,3 @@
-# ref: [少し凝った zshrc](https://gist.github.com/mollifier/4979906)
-# plugins=(brew bundler git npm rails zsh-syntax-highlighting)
-## zsh-completions
-##plugins+=(zsh-completions)
-##autoload -U compinit && compinit
-
 source ~/dotfiles/zsh/common/utils.zsh
 
 # Language
