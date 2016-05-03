@@ -22,25 +22,28 @@
     # state choices: [head, latest, present, absent, linked, unlinked] (default: latest)
     # install_options: string or sequence (default: none)
     homebrew_packages:
+      # - { name: ansible }
       # - { name: docker }
+      # - { name: dos2unix }
+      # - { name: elixir }
+      # - { name: erlang }
+      # - { name: graphviz }
+      # - { name: jenkins }
+      # - { name: libevent }
+      # - { name: libgphoto2 }
+      # - { name: rsense }
+      # - { name: ruby-build }
+      # - { name: wine }
       # - { name: zsh-completions }
       # - { name: zsh-syntax-highlighting }
-      #- { name: jenkins }
-      - { name: ansible }
+      # - { name: nvm }
       - { name: brew-cask }
       - { name: coreutils }
       - { name: ctags }
-      - { name: dos2unix }
-      - { name: elixir }
-      - { name: erlang }
       - { name: ghq }
       - { name: git }
       - { name: git-flow }
-      - { name: graphviz }
       - { name: jq }
-      - { name: libevent }
-      - { name: libgphoto2 }
-      - { name: nvm }
       - { name: openssl }
       - { name: openssl, state: linked, install_options: force }
       - { name: pcre }
@@ -51,14 +54,10 @@
       - { name: reattach-to-user-namespace }
       - { name: rename }
       - { name: rlwrap }
-      - { name: rsense }
-      - { name: ruby-build }
-      - { name: the_silver_searcher }
       - { name: tig }
       - { name: tmux }
       - { name: tree }
       - { name: vim }
-      - { name: wine }
       - { name: zsh }
 
       # pixta
@@ -86,7 +85,8 @@
       # - { name: google-chrome }
       # - { name: pixate-studio }
       # - { name: skim }
-      # - { name: vagrant }
+      # - { name: skitch }
+      # - { name: xquartz } # required by wine
       - { name: atom }
       - { name: bettertouchtool }
       - { name: dropbox }
@@ -98,6 +98,5 @@
       - { name: kindle }
       - { name: lastpass }
       - { name: otto }
-      - { name: skitch }
+      - { name: vagrant }
       - { name: virtualbox }
-      - { name: xquartz } # required by wine

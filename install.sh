@@ -53,11 +53,11 @@ if [ ! -s "$HOME/.tmux/plugins/tpm/tpm" ]; then
   esac
 fi
 
-if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
-  read -p "Do you wish to install nvm? [YyNn]" yn
+if ! is_exists 'brew'; then
+  read -p "Do you wish to install brew? [YyNn]" yn
   case $yn in
     [Yy]* )
-      curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       ;;
   esac
 fi
@@ -89,6 +89,24 @@ if ! is_exists 'nvim'; then
     [Yy]* )
       brew tap neovim/neovim
       brew install --HEAD neovim
+      ;;
+  esac
+fi
+
+if ! is_exists 'nodebrew'; then
+  read -p "Do you wish to install nodebrew? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      curl -L git.io/nodebrew | perl - setup
+      ;;
+  esac
+fi
+
+if ! is_exists 'the_silver_searcher'; then
+  read -p "Do you wish to install the_silver_searcher? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      brew install the_silver_searcher
       ;;
   esac
 fi
