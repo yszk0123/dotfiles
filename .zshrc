@@ -4,7 +4,7 @@
 ##plugins+=(zsh-completions)
 ##autoload -U compinit && compinit
 
-source ~/dotfiles/helpers/utils.zsh
+source ~/dotfiles/zsh/common/utils.zsh
 
 # Language
 ## 日本語ファイル名を表示可能にする
