@@ -12,7 +12,7 @@ for name in zsh tmux brew go npm pip; do
   source "$HOME/dotfiles/scripts/install/$name.sh"
 done
 
-if ! is_exists 'nodebrew'; then
+if ! is_exists "nodebrew"; then
   read -p "Do you wish to install nodebrew? [YyNn]" yn
   case $yn in
     [Yy]* )
@@ -21,7 +21,7 @@ if ! is_exists 'nodebrew'; then
   esac
 fi
 
-if ! is_exists 'fzf'; then
+if ! is_exists "fzf"; then
   read -p "Do you wish to install fzf? [YyNn]" yn
   case $yn in
     [Yy]* )

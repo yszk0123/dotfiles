@@ -11,7 +11,7 @@ function is_installed() {
   fi
 }
 
-if ! is_exists 'brew'; then
+if ! is_exists "brew"; then
   read -p "Do you wish to install brew? [YyNn]" yn
   case $yn in
     [Yy]* )
@@ -32,7 +32,7 @@ for target in git-secrets the_silver_searcher; do
 done
 
 # cf. https://github.com/neovim/homebrew-neovim/blob/master/README.md
-if ! is_exists 'nvim'; then
+if ! is_exists "nvim"; then
   read -p "Do you wish to install nvim? [YyNn]" yn
   case $yn in
     [Yy]* )
