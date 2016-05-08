@@ -1,22 +1,11 @@
 #!/bin/bash
 
-if ! is_exists "ghq"; then
-  read -p "Do you wish to install ghq? [YyNn]" yn
-  case $yn in
-    [Yy]* ) go get https://github.com/motemen/ghq ;;
-  esac
-fi
+for target in "https://github.com/motemen/ghq" "https://github.com/typester/gh-open" "https://github.com/peco/peco"; do
+  TARGET_POSTFIX="${target##*/}"
+  [ is_exists $TARGET_POSTFIX ] && continue
 
-if ! is_exists "gh-open"; then
-  read -p "Do you wish to install gh-open? [YyNn]" yn
+  read -p "Do you wish to install $TARGET_POSTFIX? [YyNn]" yn
   case $yn in
-    [Yy]* ) go get https://github.com/typester/gh-open ;;
+    [Yy]* ) go get $target ;;
   esac
-fi
-
-if ! is_exists "peco"; then
-  read -p "Do you wish to install ghq? [YyNn]" yn
-  case $yn in
-    [Yy]* ) go get https://github.com/peco/peco ;;
-  esac
-fi
+done
