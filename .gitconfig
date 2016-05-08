@@ -2,11 +2,11 @@
 	name = Yuji Suzuki
 	email = y0suzuki0123@gmail.com
 [init]
-	templatedir = ~/.git_template
+	templatedir = ~/.git-template
 [commit]
-  template = ~/.git_template/commit_message.txt
+  template = ~/.git-template/commit-message.txt
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore-global
 	editor = vim
 [color]
 	ui = auto
