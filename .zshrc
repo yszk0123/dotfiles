@@ -1,4 +1,4 @@
-source ~/dotfiles/zsh/common/utils.zsh
+source ~/dotfiles/scripts/common/utils.sh
 
 # Language
 ## 日本語ファイル名を表示可能にする
