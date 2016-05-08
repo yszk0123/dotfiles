@@ -1,5 +1,16 @@
 #!/bin/bash
 
+BREW_LIST="$(brew list)"
+
+function is_installed() {
+  local result=$(echo "$BREW_LIST" | grep "^$1$")
+  if [ -z "$result" ]; then
+    return 1;
+  else
+    return 0;
+  fi
+}
+
 if ! is_exists 'brew'; then
   read -p "Do you wish to install brew? [YyNn]" yn
   case $yn in
@@ -33,6 +44,15 @@ if ! is_exists 'the_silver_searcher'; then
   case $yn in
     [Yy]* )
       brew install the_silver_searcher
+      ;;
+  esac
+fi
+
+if ! is_installed "git-secrets"; then
+  read -p "Do you wish to install git-secrets? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      brew install git-secrets
       ;;
   esac
 fi
