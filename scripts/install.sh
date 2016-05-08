@@ -1,15 +1,14 @@
 #!/bin/bash
-function is_exists() {
-  type "$1" >/dev/null 2>&1
-  return $?
-}
+
+source ~/dotfiles/scripts/common/utils.sh
 
 if [ -z "$ZDOTDIR" ]; then
-  echo 'Define ZDOTDIR!'
+  echo_color "Define ZDOTDIR!" "31"
   exit 1
 fi
 
 for name in zsh tmux brew go npm pip; do
+  echo_color "installing $name commands ..." "32"
   source "$HOME/dotfiles/scripts/install/$name.sh"
 done
 
