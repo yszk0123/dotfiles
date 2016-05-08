@@ -20,6 +20,17 @@ if ! is_exists 'brew'; then
   esac
 fi
 
+for target in git-secrets the_silver_searcher; do
+  [ is_installed $target ] && continue
+
+  read -p "Do you wish to install $target? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      brew install "$target"
+      ;;
+  esac
+done
+
 # cf. https://github.com/neovim/homebrew-neovim/blob/master/README.md
 if ! is_exists 'nvim'; then
   read -p "Do you wish to install nvim? [YyNn]" yn
@@ -35,24 +46,6 @@ else
     [Yy]* )
       brew update
       brew upgrade neovim
-      ;;
-  esac
-fi
-
-if ! is_exists 'the_silver_searcher'; then
-  read -p "Do you wish to install the_silver_searcher? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      brew install the_silver_searcher
-      ;;
-  esac
-fi
-
-if ! is_installed "git-secrets"; then
-  read -p "Do you wish to install git-secrets? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      brew install git-secrets
       ;;
   esac
 fi
