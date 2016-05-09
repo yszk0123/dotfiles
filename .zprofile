@@ -32,4 +32,8 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 # }}}
 
+# pkgconfig {{{
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+# }}}
+
 # vim:set ft=zsh:
