@@ -70,8 +70,11 @@ if executable('ag')
   let g:unite_source_grep_max_candidates = 100
 
   let g:unite_source_rec_async_command =
-    \ 'ag --follow --nocolor --nogroup --hidden -g "" ' .
-    \ join(s:ignores, ' --ignore ')
+    \ split(
+    \   'ag --follow --nocolor --nogroup --hidden -g ' .
+    \   join(s:ignores, ' --ignore '),
+    \   ' '
+    \ )
 endif
 
 " cf. [Vim - file_rec/asyncとfile_rec/gitを自動的に切り換える - Qiita](http://qiita.com/yuku_t/items/9263e6d9105ba972aea8)
@@ -79,12 +82,12 @@ function! s:uniteFileRecAsyncOrGit()
   if isdirectory(getcwd()."/.git")
     Unite -buffer-name=files file_rec/git:--cached:--others:--exclude-standard
   else
-    Unite file_rec/async
+    Unite -buffer-name=files file_rec/async
   endif
 endfunction
 
-nnoremap <silent> <C-p> :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 "サブディレクトリを含むプロジェクトディレクトリの全ファイル一覧
+" nnoremap <silent> <C-p> :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 nnoremap <silent> [util]r :<C-u>call <SID>uniteFileRecAsyncOrGit()<CR>
 nnoremap <silent> [util]R :<C-u>UniteResume files<CR>
 nnoremap <silent> [util]e :<C-u>Unite -buffer-name=files file_rec/async<CR>
