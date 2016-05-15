@@ -49,6 +49,10 @@
       "language-clojure"
       "language-c"
       "autocomplete-modules"
+      "atom-typescript"
+      "linter-tslint"
+      "atom-ctags"
+      "language-elm"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [

@@ -2,9 +2,7 @@ private:
   title: "private"
   paths: [
     "/Users/yszk0123/src/gitlab.com/yszk0123/notes"
-    "/Users/yszk0123/src/gitlab.com/yszk0123/spot-with-typescript"
     "/Users/yszk0123/src/gitlab.com/yszk0123/hello"
-    "/Users/yszk0123/src/gitlab.com/yszk0123/pixta-notes"
     "/Users/yszk0123/src/github.com/yszk0123/dotfiles"
     "/Users/yszk0123/src/gitlab.com/yszk0123/daily-tips-notifier"
   ]
