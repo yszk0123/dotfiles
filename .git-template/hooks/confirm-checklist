@@ -15,7 +15,7 @@ read -p "view diff in browser? [YyNn]" yn
 case $yn in
   [Yy] | "yes" | "Yes" | "YES" )
     BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    render-diff origin/$BRANCH | browser
+    devtools-render-diff origin/$BRANCH | browser
     ;;
   * ) break ;;
 esac
