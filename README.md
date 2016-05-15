@@ -1,18 +1,29 @@
-# 使い方
+# Usage
 
 `$ cd ~ && ./dotfiles/update.sh`
 
-# Shell 関連
+# Shell
 
 ## zsh
 
 `$ chsh -s <path/to/zsh>`
 
-# Vim 関係
+## Environment variable
 
-## Mac 日本語環境 GUI
+Set following environment variables for convenience.
 
-[MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)をインストール
+| Environment variable        | Purpose |
+| --------------------------- | ---------- |
+| `GITLAB_PRIVATE_TOKEN`      | To call GitLab API |
+| `HOMEBREW_GITHUB_API_TOKEN` | To avoid "GitHub API rate limit exceeded" |
+
+`direnv` is a handy tool to set environment variables.
+
+# Vim
+
+## Mac GUI for Japanese Environment
+
+Install [MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)
 
 ## Neovim
 
@@ -24,7 +35,7 @@
 To use deoplete.vim
 `$ sudo pip3 install neovim`
 
-# Ruby 関係
+# Ruby
 
 ## Gem
 
@@ -33,9 +44,9 @@ $ gem update --system
 $ gem install bundler
 ```
 
-# ctags 関係
+# ctags
 
-cf. [dotfiles/.ctags at master · claytron/dotfiles](https://github.com/claytron/dotfiles/blob/master/.ctags)
+cf. [claytron/dotfiles](https://github.com/claytron/dotfiles/blob/master/.ctags)
 
 # Python
 
@@ -44,9 +55,10 @@ cf. [dotfiles/.ctags at master · claytron/dotfiles](https://github.com/claytron
 `$ pyenv global <version>`
 `$ pyenv rehash`
 
-# Tex 関係
+# Tex
 
-## Macの場合
+## For Mac
+Install [MacTeX](https://www.tug.org/mactex/)
 
-[MacTeX](https://www.tug.org/mactex/)をインストール
-Vim用に[vim-latex](https://github.com/vim-latex/vim-latex)も導入
+## For Vim
+Install [vim-latex](https://github.com/vim-latex/vim-latex) for Vim
