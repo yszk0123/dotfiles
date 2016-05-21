@@ -27,6 +27,25 @@
 	last = log -1 HEAD
 	pick = cherry-pick
 	unstage = reset HEAD --
+	tags = tag
+	stashes = stash list
+	remotes = remote -v
+	summary = status -u -s
+	prestage = diff -w --word-diff=color
+	precommit = diff --staged -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
+	move = mv
+	remove = rm
+	unmerged = branch --no-merged
+	unstash = stash pop
+	what = show -w
+	untrack = rm -r --cached
+	rewrite = rebase -i
+	amend = commit --amend
+	back = checkout "-"
+	contributors = shortlog -s -n
+	filetrail = log --follow -p -w
+	mergetrail = log --ancestry-path --merges
+	unmerged = diff --name-only --diff-filter=U
 [ghq]
 	root = ~/src
 [merge]
