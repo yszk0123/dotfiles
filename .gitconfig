@@ -46,6 +46,9 @@
 	filetrail = log --follow -p -w
 	mergetrail = log --ancestry-path --merges
 	unmerged = diff --name-only --diff-filter=U
+	simple-tag = log --pretty=oneline
+	push-all-tags-to-remote = git push origin --tags
+	# remove-remote-tag = git tag -d <tag>
 [ghq]
 	root = ~/src
 [merge]
