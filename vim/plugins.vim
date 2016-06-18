@@ -2,19 +2,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
-Plug 'szw/vim-tags'
-
-Plug 'slim-template/vim-slim', { 'for': ['slim'] }
-Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'typescript', 'css', 'jsx', 'tsx', 'stylus', 'less', 'sass'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'jsx'] }
-" Plug 'taichouchou2/html5.vim'
-Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html'] }
-
-" vim-json {{{
-Plug 'elzr/vim-json', { 'for': 'json' }
-let g:vim_json_syntax_conceal = 0
-" }}}
 
 " deoplete-vim {{
 if has('nvim')
@@ -52,41 +39,11 @@ let g:clever_f_fix_key_direction = 0
 let g:clever_f_chars_match_any_signs = ''
 "}}}
 
-" indent_guides {{{
-"--------------
-" Note: vim-indent-guidesの前にcolorschemeを設定しないと
-"   まれに次のようなエラーが発生する
-"   E411: highlight group not found: Normal
-" cf. [Just Another Camelog](http://www.camelstudio.jp/note/vim/186/)
-colorscheme default
-Plug 'nathanaelkane/vim-indent-guides'
-
-" インデントの深さに色を付ける
-let g:indent_guides_start_level=2
-let g:indent_guides_auto_colors=0
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_color_change_percent=20
-let g:indent_guides_guide_size=1
-let g:indent_guides_space_guides=1
-
-"hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
-"hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
-"au FileType coffee,ruby,javascript,python IndentGuidesEnable
-"nmap <silent><Leader>ig <Plug>IndentGuidesToggle
-
-au VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
-au VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
-"}}}
-
-" lightline {{{
-Plug 'bling/vim-airline'
-" }}}
-
-" splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
-Plug 'AndrewRadev/splitjoin.vim'
-nnoremap <Leader>j :<C-u>SplitjoinJoin<CR>
-nnoremap <Leader>J :<C-u>SplitjoinSplit<CR>
-" }}}
+" " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
+" Plug 'AndrewRadev/splitjoin.vim'
+" nnoremap <Leader>j :<C-u>SplitjoinJoin<CR>
+" nnoremap <Leader>J :<C-u>SplitjoinSplit<CR>
+" " }}}
 
 " switch: 似たような表現を切り替える(true <=> false, if <=> elseif など) {{{
 Plug 'AndrewRadev/switch.vim'
@@ -223,17 +180,4 @@ let delimitMate_matchpairs = '(:),{:}'
 au FileType html let b:delimitMate_matchpairs = '(:),[:],{:},<:>'
 au FileType coffee let delimitMate_nesting_quotes = ['"','`']
 " }}}
-" }}}
-
-" For Markdown {{{
-" cf. [VimでMarkdownの環境を整える その2](http://rcmdnk.github.io/blog/2014/10/30/computer-vim-markdown/)
-" Plug 'plasticboy/vim-markdown'
-" Plug 'jtratner/vim-flavored-markdown'
-Plug 'joker1007/vim-markdown-quote-syntax', { 'for': ['markdown', 'mkd', 'md'] }
-" Plug 'nelstrom/vim-markdown-folding'
-" Plug 'kannokanno/previm', { 'on': 'PrevimOpen' }
-" Plug 'tyru/open-browser.vim', { 'on': ['OpenBrowser', 'OpenBrowserSearch', 'OpenBrowserSmartSearch'] }
-let g:markdown_fold_style = 'nested'
-" TODO: これでいいのか
-" autocmd FileType zsh runtime! ftplugin/markdown/folding.vim
 " }}}

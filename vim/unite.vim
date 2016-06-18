@@ -6,14 +6,12 @@
 " Plug 'Shougo/unite-outline'
 " Plug 'Shougo/unite-session'
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/neomru.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'tsukkee/unite-tag'
 
 " data_directory
 let g:unite_data_directory = $HOME . '/vimfiles/.unite'
-let g:neomru#file_mru_path = $HOME . '/vimfiles/.cache/neomru/file'
-let g:neomru#directory_mru_path = $HOME . '/vimfiles/.cache/neomru/directory'
+
 " if has('win32') || has('mac')
 " elseif  has('macunix')
 "   let g:unite_data_directory = '/Volumes/RamDisk/.unite'
@@ -33,16 +31,6 @@ let g:unite_enable_smart_case = 1
 "
 let g:unite_cursor_line_time = '0.15'
 let g:unite_update_time = 780
-
-"最近開いたファイル履歴の保存数
-let g:neomru#file_mru_limit = 1000
-let g:neomru#directory_mru_limit = 1000
-"file_mruの表示フォーマットを指定。空にすると表示スピードが高速化される
-let g:neomru#filename_format = ''
-let g:neomru#time_format = ''
-" 履歴アイテムのリンク切れを行う
-let g:neomru#do_validate = 1
-" call unite#custom#source('neomru', 'max_candidates', 50)
 "}}}
 
 " call unite#filters#matcher_default#use(['matcher_fuzzy'])
@@ -142,11 +130,6 @@ nnoremap <silent> [util]F :<C-u>UniteWithCurrentDir -buffer-name=files file<CR>
 nnoremap <silent> [util]b :<C-u>Unite buffer<CR>
 "バッファ一覧(選択モードでスタート)
 nnoremap <silent> [util]B :<C-u>Unite -no-start-insert buffer<CR>
-"最近使用したファイル一覧
-nnoremap <silent> [util]m :<C-u>Unite -buffer-name=files neomru/file<CR>
-"最近使用したディレクトリ
-nnoremap <silent> [util]d :<C-u>Unite -buffer-name=files neomru/directory<CR>
-nnoremap <silent> [util]D :<C-u>Unite -buffer-name=files -default-action=lcd neomru/directory<CR>
 "タグ
 nnoremap <silent> [util]t :<C-u>Unite tag<CR>
 "タブページ一覧

@@ -21,6 +21,7 @@ if has('vim_starting')
   endif
   set runtimepath+=$HOME/dotfiles/
 endif
+syntax off
 
 call plug#begin('~/.vim/plugged')
 
@@ -28,16 +29,21 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
 " キープレフィックス・色関係の設定が確実に反映されるように
 " lib/define-prefix.vimとlib/color.vimは早めにロードしておく
-let s:libs = split(
-  \ 'define-prefix ' .
-  \ 'color ' .
-  \ 'javascript typescript ' .
-  \ 'unite ' .
-  \ 'syntastic ' .
-  \ 'commands filetype plugins remap settings abbreviations lint', ' ')
+if empty($REDUCE_VIM_PLUGINS)
+  let s:libs = split(
+    \ 'define-prefix color ' .
+    \ 'javascript typescript ' .
+    \ 'unite neomru syntastic ' .
+    \ 'commands filetype additional-plugins plugins remap settings abbreviations lint', ' ')
   " \ 'typescript you-complete-me ' .
   " \ 'neocomplete neosnippet neosnippet-snippets ' .
   " \ 'latex ruby ' .
+else
+  let s:libs = split(
+    \ 'define-prefix color ' .
+    \ 'unite ' .
+    \ 'commands filetype plugins remap settings abbreviations', ' ')
+endif
 for lib in s:libs
   execute 'runtime vim/' . lib . '.vim'
 endfor
