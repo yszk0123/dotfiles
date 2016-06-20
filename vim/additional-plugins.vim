@@ -1,6 +1,6 @@
 Plug 'szw/vim-tags'
 Plug 'slim-template/vim-slim', { 'for': ['slim'] }
-Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'typescript', 'css', 'jsx', 'tsx', 'stylus', 'less', 'sass'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'typescript', 'css', 'jsx', 'tsx', 'stylus', 'less', 'sass', 'eruby'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'jsx'] }
 " Plug 'taichouchou2/html5.vim'
 Plug 'othree/html5.vim', { 'for': 'html' }
