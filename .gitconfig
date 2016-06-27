@@ -48,7 +48,28 @@
 	unmerged = diff --name-only --diff-filter=U
 	simple-tag = log --pretty=oneline
 	push-all-tags-to-remote = git push origin --tags
-	# remove-remote-tag = git tag -d <tag>
+	# remove-remote-tag = git tag --delete <tag>
+
+	# cf. [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig)
+	# cf. https://github.com/GitAlias/gitalias
+	publish = !"git push -u origin $(git branch-name)"
+	unpublish = !"git push --delete origin $(git branch-name)"
+	find-by-code = !"f() { query=\"$1\"; shift; git log --pretty=format:'%C(yellow)%h %Cblue%ad  %Creset%s %Cgreen%cn %Cred%d' --decorate --date=short -S\"$query\" \"$@\"; }; f \"$@\""
+	find-by-commit = !"f() { query=\"$1\"; shift; git log --pretty=format:'%C(yellow)%h %Cblue%ad  %Creset%s %Cgreen%cn %Cred%d' --decorate --date=short --grep=\"$query\" \"$@\"; }; f \"$@\""
+	find-branches-by-commit = branch --always --contains
+	find-tags-by-commit = describe -always --contains
+	exec = !exec
+	branch-name = !"git rev-parse --abbrev-ref HEAD"
+	edit-unmerged = !"f() { git ls-files --unmerged | cut -f2 | sort -u ; }; $EDITOR `f`"
+	add-unmerged = !"f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+	wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"[WIP] CLEANUP BEFORE PUSH\""
+	unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
+	topic-start = "!f(){ branch=$1; git checkout master; git fetch; git rebase; git checkout -b "$branch" master; };f"
+	topic-pull = "!f(){ branch=$(git branch-name); git checkout master; git pull; git checkout "$branch"; git rebase master; };f"
+	topic-push = "!f(){ branch=$(git branch-name); git push -u origin "$branch"; };f"
+	topic-finish = "!f(){ branch=$(git branch-name); git checkout master; git branch -d "$branch"; git push origin ":$branch"; };f"
+	cp = cherry-pick
+	cp-nx = cherry-pick --no-commit -x
 [ghq]
 	root = ~/src
 [merge]
