@@ -53,16 +53,14 @@
       "linter-tslint"
       "atom-ctags"
       "language-elm"
+      "emmet"
+      "merge-conflicts"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "git-plus"
     ]
     projectHome: "/Users/yszk0123/src/github.com/yszk0123"
-    themes: [
-      "nucleus-dark-ui"
-      "one-dark-syntax"
-    ]
   "cursor-history": {}
   editor:
     fontSize: 13
@@ -79,6 +77,7 @@
   "exception-reporting":
     userId: "e5b3e0c4-6b69-1af4-6a65-5cd0dea5e26e"
   "expand-region": {}
+  "file-icons": {}
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
   "fuzzy-finder":
@@ -94,7 +93,7 @@
     splitPane: "Down"
     wordDiff: false
   "git-projects":
-    ignoredPatterns: "node_modules;\\.git;vendor;bower_components;dist;build"
+    ignoredPatterns: "node_modules;\\.git;vendor;bower_components;dist;build;tmp"
     rootPath: "~/work;~/src"
     showGitInfo: false
   jumpy: {}
