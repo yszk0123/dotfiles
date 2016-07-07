@@ -1,6 +1,6 @@
 # Usage
 
-`$ cd ~ && ./dotfiles/update.sh`
+`$ sh ~/dotfiles/update.sh`
 
 # Shell
 
