@@ -3,12 +3,11 @@
 # cd ~abc => /a/b/c
 # hash -d abc=/a/b/c
 hash -d D=~/Dropbox
-hash -d Dg=~/Dropbox/git
-hash -d d=~/dotfiles
-hash -d sD=~/src/Dropbox
-hash -d sG=~/src/gist.github.com
-hash -d sg=~/src/github.com
-hash -d sp=~/src/gitlab.pixta.jp
+hash -d dot=~/dotfiles
+hash -d gist=~/src/gist.github.com
+hash -d hub=~/src/github.com
+hash -d lab=~/src/gitlab.com
+hash -d labp=~/src/gitlab.pixta.jp
 # }}}
 
 # {{{
@@ -22,19 +21,18 @@ alias grepf='grep --color=always'
 alias agf='ag --group --color'
 # }}}
 
+# docker {{{
+alias d='docker'
+alias de='docker exec'
+alias dc='docker-compose'
+alias dcb='docker-compose build'
+alias dcr='docker-compose run --rm'
+alias dcu='docker-compose up'
+# }}}
+
 # ghq & peco {{{
 alias ghqp='cd $(ghq list -p | peco)'
 alias ghqp-open='gh-open $(ghq list -p | peco)'
-# }}}
-
-# npm {{{
-alias ni='npm install'
-alias nis='npm install --save'
-alias nid='npm install --save-dev'
-alias nig='npm install --global'
-alias nt='npm test'
-alias nit='npm install && npm test'
-alias nr='npm run'
 # }}}
 
 # vim {{{
