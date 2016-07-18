@@ -6,7 +6,7 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
 autoload -Uz compinit
-compinit
+compinit -u
 ## The following lines were added by compinstall
 ##zstyle :compinstall filename '/home/<user>/.zshrc'
 ## 補完候補を一覧表示
