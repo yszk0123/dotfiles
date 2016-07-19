@@ -1,9 +1,9 @@
 #!/bin/sh
-local_hook="$HOME"/.git_template/local-hooks/pre-push
+# local_hook="$HOME"/.git_template/local-hooks/pre-push
 
-if [ -f "$local_hook" ]; then
-  . "$local_hook"
-fi
+# if [ -f "$local_hook" ]; then
+#   . "$local_hook"
+# fi
 
 # remote="$1"
 # url="$2"
@@ -36,6 +36,6 @@ fi
 # 	fi
 # done
 
-.git/hooks/confirm-checklist || exit 1
+# .git/hooks/confirm-checklist || exit 1
 
 exit 0
