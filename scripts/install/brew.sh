@@ -20,7 +20,7 @@ if ! is_exists "brew"; then
   esac
 fi
 
-for target in git-secrets the_silver_searcher; do
+for target in git-secrets the_silver_searcher hub; do
   [ is_installed $target ] && continue
 
   read -p "Do you wish to install $target? [YyNn]" yn

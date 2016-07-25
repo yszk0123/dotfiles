@@ -58,4 +58,8 @@ alias -g L="| less --tabs=1,5 -R"
 alias -g D="| diff-so-fancy | less --tabs=1,5 -R"
 # }}}
 
+if is_exists "hub"; then
+  alias git=hub
+fi
+
 # vim:set ft=zsh:
