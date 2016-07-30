@@ -47,7 +47,8 @@
 	mergetrail = log --ancestry-path --merges
 	unmerged = diff --name-only --diff-filter=U
 	simple-tag = log --pretty=oneline
-	push-all-tags-to-remote = git push origin --tags
+	push-all-tags-to-remote = push origin --tags
+	show-ignored-files = status --ignored
 	# remove-remote-tag = git tag --delete <tag>
 
 	# cf. [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig)
