@@ -17,8 +17,8 @@ if executable('ag')
 endif
 
 " editorconfig-vim {{{
-Plug 'editorconfig/editorconfig-vim'
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+" Plug 'editorconfig/editorconfig-vim'
+" let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " }}}
 
 " nerdtree {{{
