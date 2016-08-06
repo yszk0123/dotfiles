@@ -137,10 +137,16 @@
     showOnStartup: false
   zentabs:
     neverCloseUnsaved: true
+".coffee.jsx.source":
+  editor:
+    preferredLineLength: 100
 ".diff.source":
   editor:
     preferredLineLength: 100
 ".gfm.source":
+  editor:
+    preferredLineLength: 100
+".js.jsx.source":
   editor:
     preferredLineLength: 100
 ".source.ts":
