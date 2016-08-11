@@ -2,6 +2,7 @@ export LANG=ja_JP.UTF-8
 
 # Path {{{
 export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
+export PATH="$HOME/dotfiles/bin:$PATH"
 ##export MANPATH="/usr/local/man:$MANPATH"
 # }}}
 
