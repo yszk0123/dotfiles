@@ -16,9 +16,12 @@ alias ll='ls -l'
 alias lla='ls -lA'
 alias pu='pushd'
 alias po='popd'
-# Format (pretty print)
+alias findi='find . \( -path ./.git -o -path \*/node_modules -o -path ./.tmp -o -path ./tmp \) -prune -o -type d -print'
+alias treei='tree -I ".git|node_modules|bower_components|.tmp|tmp|vendor"'
+# Format (pretty print) {{{
 alias grepf='grep --color=always'
 alias agf='ag --group --color'
+# }}}
 # }}}
 
 # docker {{{
