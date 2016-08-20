@@ -27,3 +27,12 @@ if [ ! -s "$HOME/.vim/autoload/plug.vim" ]; then
       ;;
   esac
 fi
+
+if ! is_exists "with"; then
+  read -p "Do you wish to install plug.vim? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      curl -sLo- https://cdn.rawgit.com/mchav/with/master/install | bash
+      ;;
+  esac
+fi
