@@ -55,7 +55,6 @@
 	# cf. https://github.com/GitAlias/gitalias
 	publish = !"git push -u origin $(git branch-name)"
 	unpublish = !"git push --delete origin $(git branch-name)"
-	find-by-code = !"f() { query=\"$1\"; shift; git log --pretty=format:'%C(yellow)%h %Cblue%ad  %Creset%s %Cgreen%cn %Cred%d' --decorate --date=short -S\"$query\" \"$@\"; }; f \"$@\""
 	find-by-commit = !"f() { query=\"$1\"; shift; git log --pretty=format:'%C(yellow)%h %Cblue%ad  %Creset%s %Cgreen%cn %Cred%d' --decorate --date=short --grep=\"$query\" \"$@\"; }; f \"$@\""
 	find-branches-by-commit = branch --always --contains
 	find-tags-by-commit = describe -always --contains
