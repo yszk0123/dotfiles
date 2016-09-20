@@ -29,19 +29,20 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
 " キープレフィックス・色関係の設定が確実に反映されるように
 " lib/define-prefix.vimとlib/color.vimは早めにロードしておく
-if empty($REDUCE_VIM_PLUGINS)
+if !empty($ADDITIONAL_VIM_PLUGINS)
   let s:libs = split(
     \ 'define-prefix color ' .
     \ 'javascript typescript ' .
     \ 'unite neomru syntastic ' .
     \ 'commands filetype additional-plugins plugins remap settings abbreviations lint', ' ')
-  " \ 'typescript you-complete-me ' .
+  " \ 'you-complete-me ' .
   " \ 'neocomplete neosnippet neosnippet-snippets ' .
   " \ 'latex ruby ' .
 else
   let s:libs = split(
     \ 'define-prefix color ' .
-    \ 'unite ' .
+    \ 'javascript ' .
+    \ 'unite neomru ' .
     \ 'commands filetype plugins remap settings abbreviations', ' ')
 endif
 for lib in s:libs
