@@ -21,6 +21,7 @@ if has('vim_starting')
   endif
   set runtimepath+=$HOME/dotfiles/
 endif
+filetype off
 syntax off
 
 call plug#begin('~/.vim/plugged')
@@ -51,5 +52,12 @@ endfor
 
 call plug#end()
 
+" syntax and colorscheme {{{
 filetype plugin indent on
 syntax on
+
+" colorscheme hybrid
+" colorscheme hybrid_reverse
+colorscheme PaperColor
+set background=dark
+" }}}

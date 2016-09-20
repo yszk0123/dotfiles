@@ -12,10 +12,9 @@ au FileType python setlocal foldmethod=indent sw=4 sts=4 ts=4 et
 " テキストファイル/gitコミットで自動整形を行わない
 au FileType text,gitcommit setlocal textwidth=0
 
-au BufNewFile,BufRead *.story setf story
-au BufRead,BufNewFile,BufReadPre *.jsx setlocal filetype=javascript
-au BufRead,BufNewFile,BufReadPre *.coffee setlocal filetype=coffee nofoldenable
-au BufRead,BufNewFile,BufReadPre *.cson setlocal filetype=coffee nofoldenable
-au BufRead,BufNewFile,BufReadPre *.md setlocal filetype=markdown
-au BufRead,BufNewFile,BufReadPre *.{ts,tsx} setlocal filetype=typescript
-au BufRead,BufNewFile,BufReadPre *.slim setlocal filetype=slim
+au BufNewFile,BufRead *.jsx setlocal filetype=javascript
+au BufNewFile,BufRead *.coffee setlocal filetype=coffee nofoldenable
+au BufNewFile,BufRead *.cson setlocal filetype=coffee nofoldenable
+au BufNewFile,BufRead *.md setlocal filetype=markdown
+au BufNewFile,BufRead *.{ts,tsx} setlocal filetype=typescript
+au BufNewFile,BufRead *.slim setlocal filetype=slim

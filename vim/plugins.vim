@@ -88,13 +88,6 @@ nnoremap <Leader>vF :<C-u>VimFilerCurrentDir<CR>
 " Plug 'w0ng/vim-hybrid'
 " Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'NLKNguyen/papercolor-theme'
-
-set background=dark
-
-" au VimEnter * :colorscheme hybrid
-" au VimEnter * :colorscheme hybrid_reverse
-au VimEnter * :colorscheme PaperColor
-au VimEnter * :hi Comment term=bold ctermfg=235 ctermbg=240 guifg=#606060
 " }}}
 
 if executable('ag')
