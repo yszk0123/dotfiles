@@ -1,0 +1,8 @@
+#!/bin/sh
+# cf. http://unix.stackexchange.com/a/168582
+
+for p in "$@"; do
+  _dir="$(dirname -- "$p")"
+  [ -d "$_dir" ] || mkdir -p -- "$_dir"
+  touch -- "$p"
+done
