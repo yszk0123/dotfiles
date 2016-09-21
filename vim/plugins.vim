@@ -57,9 +57,10 @@ au FileType coffee let delimitMate_nesting_quotes = ['"','`']
 " }}}
 
 " git {{{
-Plug 'tpope/vim-fugitive', { 'on': [
-  \ 'Gcd', 'Glcd', 'Gadd', 'Gblame', 'Gcommit',
-  \ 'Gdiff', 'Gedit', 'Glog', 'Gstatus', 'Gwrite' ] }
+" Plug 'tpope/vim-fugitive', { 'on': [
+"   \ 'Gcd', 'Glcd', 'Gadd', 'Gblame', 'Gcommit',
+"   \ 'Gdiff', 'Gedit', 'Glog', 'Gstatus', 'Gwrite' ] }
+Plug 'tpope/vim-fugitive'
 nnoremap <Leader>c :<C-u>Gcd<CR>
 nnoremap <Leader>l :<C-u>Glcd<CR>
 nnoremap <Leader>ga :<C-u>Gadd<Space>
