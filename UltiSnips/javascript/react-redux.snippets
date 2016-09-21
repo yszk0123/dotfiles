@@ -1,0 +1,41 @@
+priority -50
+
+snippet container
+import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
+import * as selectors from '../../selectors'
+
+export function ${1:__Component__} (${2:_props}) {
+  return ${0:null}
+}
+
+$1.propTypes = {}
+
+export default connect(selectors.select$1)($1)
+endsnippet
+
+snippet selectors
+import { createSelector } from 'reselect'
+
+export const select${1:__Component__} = createSelector(
+  (state) => state.${1/^[A-Z]/\l$0/},
+  (${1/^[A-Z]/\l$0/}) => ${0:${1/^[A-Z]/\l$0/}}
+)
+endsnippet
+
+snippet reducers
+import $1 from './constants'
+
+const initialState = {$2}
+
+function reduce${3:__Component__} (state = initialState, action) {
+  switch (action.type) {
+    default:
+      return ${0:state}
+  }
+}
+
+export default {
+  ${3/^[A-Z]/\l$0/}: reduce$3
+}
+endsnippet

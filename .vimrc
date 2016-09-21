@@ -51,7 +51,7 @@ else
     \ 'define-prefix color ' .
     \ 'javascript ' .
     \ 'unite neomru ' .
-    \ 'commands filetype plugins remap settings abbreviations', ' ')
+    \ 'commands filetype plugins remap settings abbreviations advanced-plugins', ' ')
 endif
 for lib in s:libs
   execute 'runtime vim/' . lib . '.vim'

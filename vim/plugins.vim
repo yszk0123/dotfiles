@@ -46,7 +46,6 @@ map M  <Plug>(operator-sort)
 "}}}
 
 " 囲み系補完 {{{
-" {{{
 " Plug 'kana/vim-smartinput'
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
@@ -55,7 +54,6 @@ let delimitMate_expand_cr = 1
 let delimitMate_matchpairs = '(:),{:}'
 au FileType html let b:delimitMate_matchpairs = '(:),[:],{:},<:>'
 au FileType coffee let delimitMate_nesting_quotes = ['"','`']
-" }}}
 " }}}
 
 " git {{{
@@ -73,6 +71,19 @@ nnoremap <Leader>ge :<C-u>Gedit<Space>
 nnoremap <Leader>gL :<C-u>Glog<Space>
 nnoremap <Leader>gs :<C-u>Gstatus<CR>
 nnoremap <Leader>gw :<C-u>Gwrite<Space>
+" }}}
+
+" UltiSnips {{{
+Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" let g:UltiSnipsExpandTrigger = "<c-i>"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsListSnippets = "<c-tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsSnippetDirectories = [$HOME . '/dotfiles/UltiSnips']
 " }}}
 
 " VimFiler {{{
