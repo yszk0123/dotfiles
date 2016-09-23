@@ -10,4 +10,4 @@ mkdir -p "$PROJECT_DIR"
 cd "$PROJECT_DIR"
 git init
 git remote add origin "git@gitlab.com:$USER_NAME/$PROJECT_NAME.git"
-sh ~/dotfiles/gitlab/create-new-project.sh "$PROJECT_NAME"
+sh gitlab-create-new-project "$PROJECT_NAME"
