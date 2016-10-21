@@ -37,4 +37,8 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 # }}}
 
+# npm/yarn {{{
+export PATH="$HOME/.yarn/bin:$PATH"
+# }}}
+
 # vim:set ft=zsh:
