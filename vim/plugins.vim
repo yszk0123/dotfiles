@@ -15,6 +15,25 @@ let g:clever_f_fix_key_direction = 0
 let g:clever_f_chars_match_any_signs = ''
 "}}}
 
+" incsearch.vim {{{
+Plug 'haya14busa/incsearch.vim'
+
+" Basic keymap
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" Turn hlsearch off automatically
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+" }}}
+
 " " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
 " Plug 'AndrewRadev/splitjoin.vim'
 " nnoremap <Leader>j :<C-u>SplitjoinJoin<CR>
