@@ -40,6 +40,8 @@ alias ghqp-open='gh-open $(ghq list -p | peco)'
 
 # vim {{{
 alias nv='nvim'
+alias vi='env LANG=ja_JP.UTF-8 vim ADDITIONAL_VIM_PLUGINS=1 '
+alias v='env LANG=ja_JP.UTF-8 vim '
 # }}}
 
 # 上書き確認 {{{
