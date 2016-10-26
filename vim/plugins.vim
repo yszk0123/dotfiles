@@ -11,22 +11,22 @@ Plug 'vim-scripts/gitignore'
 Plug 'haya14busa/incsearch.vim'
 
 " Basic keymap
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+nmap /  <Plug>(incsearch-forward)
+nmap ?  <Plug>(incsearch-backward)
+nmap g/ <Plug>(incsearch-stay)
 
-map f  <Plug>(incsearch-forward)
-map F  <Plug>(incsearch-backward)
+nmap f  <Plug>(incsearch-forward)
+nmap F  <Plug>(incsearch-backward)
 
 " Turn hlsearch off automatically
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
+nmap n  <Plug>(incsearch-nohl-n)
+nmap N  <Plug>(incsearch-nohl-N)
+nmap *  <Plug>(incsearch-nohl-*)
+nmap #  <Plug>(incsearch-nohl-#)
+nmap g* <Plug>(incsearch-nohl-g*)
+nmap g# <Plug>(incsearch-nohl-g#)
 " }}}
 
 " " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
