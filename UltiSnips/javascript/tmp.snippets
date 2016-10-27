@@ -22,6 +22,12 @@ snippet c "const"
 const $1 = $2;
 endsnippet
 
+snippet cl "class"
+class $1 {
+	$0
+}
+endsnippet
+
 snippet t "type"
 type $1 = {
 	$0
@@ -30,6 +36,10 @@ endsnippet
 
 snippet e "export"
 export $0
+endsnippet
+
+snippet ed "export default"
+export default $0
 endsnippet
 
 snippet i "import"
@@ -54,6 +64,10 @@ endsnippet
 
 snippet id "import dispatch"
 import { Dispatch } from 'redux';
+endsnippet
+
+snippet ij "import jquery"
+import $ from 'jquery';
 endsnippet
 
 snippet it "import type"
