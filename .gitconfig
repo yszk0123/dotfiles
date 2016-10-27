@@ -4,7 +4,7 @@
 [init]
 	templatedir = ~/.git-template
 [commit]
-  template = ~/.git-template/commit-message.txt
+	verbose = true
 [core]
 	excludesfile = ~/.gitignore-global
 	editor = vim
@@ -88,3 +88,5 @@
 	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[rebase]
+	autosquash = true
