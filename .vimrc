@@ -40,10 +40,11 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 if !empty($ADDITIONAL_VIM_PLUGINS)
   let s:libs = split(
     \ 'define-prefix color ' .
-    \ 'javascript typescript ' .
-    \ 'unite neomru syntastic ' .
-    \ 'commands filetype additional-plugins plugins remap settings abbreviations lint', ' ')
-  " \ 'you-complete-me ' .
+    \ 'javascript ' .
+    \ 'unite neomru ' .
+    \ 'commands filetype plugins remap settings abbreviations advanced-plugins ' .
+    \ 'lint', ' ')
+  " \ 'you-complete-me syntastic additional-plugins ' .
   " \ 'neocomplete neosnippet neosnippet-snippets ' .
   " \ 'latex ruby ' .
 else
