@@ -17,6 +17,8 @@ alias gcaar='git commit -a --amend --reuse-message=HEAD'
 alias gcar='git commit --amend --reuse-message=HEAD'
 alias gcm='git commit -m'
 alias gcp='git commit --patch'
+gcf() { git commit -m "fixup! $1" }
+gcs() { git commit -m "squash! $1" }
 
 alias gco='git checkout'
 alias gcob='git checkout -b'
