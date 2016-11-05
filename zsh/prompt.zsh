@@ -24,12 +24,12 @@ function _update_prompt() {
   PROMPT="%F{cyan}%~%f $(_vcs_info)
 %F{cyan}$%f "
 
-  # プロンプトの幅が十分広ければホスト名など追加情報を表示
-  if [ $COLUMNS -gt 80 ]; then
-    RPROMPT='%F{yellow}%n@%M%f'
-  else
-    RPROMPT=''
-  fi
+  # # プロンプトの幅が十分広ければホスト名など追加情報を表示
+  # if [ $COLUMNS -gt 80 ]; then
+  #   RPROMPT='%F{yellow}%n@%M%f'
+  # else
+  #   RPROMPT=''
+  # fi
 }
 add-zsh-hook precmd _update_prompt
 
