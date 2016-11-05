@@ -1,0 +1,7 @@
+#!/bin/bash -e
+# cf. [2015年の\(ほどほどにつよい\) tmux環境設定まとめ \- Qiita](http://qiita.com/koara-local/items/940ce66e2ecd8e4d8582)
+
+need_version=$1
+current_version=$(tmux -V | awk '{print $2}')
+
+[[ $(echo "$current_version > $need_version" | bc) != 0 ]]

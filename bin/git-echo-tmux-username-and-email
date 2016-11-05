@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+cd $(tmux display-message -p -F "#{pane_current_path}")
+user_name=$(git config --get user.name)
+email=$(git config --get user.email)
+
+[ ! -z "${user_name}" ] && echo "[${user_name} | ${email}]"

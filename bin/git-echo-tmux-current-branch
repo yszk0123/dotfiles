@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+cd $(tmux display-message -p -F "#{pane_current_path}")
+branch=$(git branch | grep \*.* | sed -e 's/\*\ //')
+
+[ ! -z "${branch}" ] && echo "[${branch}]"
