@@ -7,6 +7,14 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
 
+" clever-f {{{
+Plug 'rhysd/clever-f.vim'
+let g:clever_f_smart_case = 1
+let g:clever_f_use_migemo = 1
+let g:clever_f_fix_key_direction = 0
+let g:clever_f_chars_match_any_signs = ''
+" }}}
+
 " incsearch.vim {{{
 Plug 'haya14busa/incsearch.vim'
 
@@ -14,9 +22,6 @@ Plug 'haya14busa/incsearch.vim'
 nmap /  <Plug>(incsearch-forward)
 nmap ?  <Plug>(incsearch-backward)
 nmap g/ <Plug>(incsearch-stay)
-
-nmap f  <Plug>(incsearch-forward)
-nmap F  <Plug>(incsearch-backward)
 
 " Turn hlsearch off automatically
 set hlsearch
