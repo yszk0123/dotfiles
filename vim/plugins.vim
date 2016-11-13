@@ -121,6 +121,11 @@ nnoremap <Leader>vF :<C-u>VimFilerCurrentDir<CR>
 Plug 'NLKNguyen/papercolor-theme'
 " }}}
 
+" vim-markdown {{{
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+" }}}
+
 if has('mac')
   Plug 'junegunn/vim-xmark', { 'do': 'make' }
 end
