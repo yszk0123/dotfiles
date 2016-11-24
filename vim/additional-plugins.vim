@@ -20,11 +20,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
 nnoremap <Leader>f :<C-u>FZF<CR>
 " }}}
 
-" nerdtree {{{
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-nnoremap <Leader>h :<C-u>NERDTreeToggle<CR>
-" }}}
-
 " vim-json {{{
 Plug 'elzr/vim-json', { 'for': 'json' }
 let g:vim_json_syntax_conceal = 0
