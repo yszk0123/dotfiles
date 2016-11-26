@@ -4,9 +4,20 @@
 
 cwd="$(cd $(dirname $0) && pwd)"
 
+if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
+  :
+else
+  echo "Not a git repository"
+  exit 1
+fi
+
 if [ ! -z "$(git status --porcelain)" ]; then
   echo "Working directory is not clean, please commit or stash uncommitted changes before execute this command"
   exit 1
+fi
+
+if ls -al | grep 'package.json'; then
+  echo "package.json not found"
 fi
 
 refactor-import-statement '{src,stories,test}/**' -q --inplace
