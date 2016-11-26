@@ -1,0 +1,14 @@
+#!/bin/bash -e
+# dependencies: eslint@3, babel-eslint, eslint-plugin-flowtype, eslint-plugin-import
+# dependencies: gitlab.com/yszk0123/refactor-import-statement
+
+cwd="$(cd $(dirname $0) && pwd)"
+
+if [ ! -z "$(git status --porcelain)" ]; then
+  echo "Working directory is not clean, please commit or stash uncommitted changes before execute this command"
+  exit 1
+fi
+
+refactor-import-statement '{src,stories,test}/**' -q --inplace
+
+eslint src --no-eslintrc --fix --quiet -c "$cwd/eslint-autofix-sort-imports-eslintrc.json"
