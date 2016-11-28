@@ -1,4 +1,0 @@
-#!/bin/bash -e
-
-eslint-autofix-sort-imports
-javascript-validate-flowtype-annotations
