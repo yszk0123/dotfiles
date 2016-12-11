@@ -1,5 +1,7 @@
 if has('nvim')
   Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+  let g:flow#autoclose = 1
+  let g:flow#enable = 0
 
   " deoplete {{{
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
