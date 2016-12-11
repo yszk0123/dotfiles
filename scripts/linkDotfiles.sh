@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # ln -si ~/dotfiles/.wgetrc ~/.wgetrc
 # ln -si ~/dotfiles/Brewfile ~/Brewfile
 # ln -si ~/dotfiles/colors ~/.vim
@@ -12,10 +12,13 @@ ln -sni ~/dotfiles/.zprofile ~/.zprofile
 ln -sni ~/dotfiles/.zprofile "$ZDOTDIR/.zprofile"
 ln -sni ~/dotfiles/.zshrc "$ZDOTDIR/.zshrc"
 
-for target in .atom .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .rspec; do
+for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .rspec; do
   ln -sni ~/dotfiles/$target ~/$target
 done
-ln -sni ~/dotfiles/.vimrc ~/.nvimrc
+
+: ${XDG_CONFIG_HOME:=~/.config}
+mkdir -p $XDG_CONFIG_HOME/nvim
+ln -sni ~/dotfiles/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
 if [ -f "$HOME/dotfiles/my_local_mode" ]; then
   for target in .gemrc .gvimrc .irbrc; do

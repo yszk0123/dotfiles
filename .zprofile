@@ -41,4 +41,8 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 # }}}
 
+# neovim {{{
+export XDG_CONFIG_HOME=~/.config
+# }}}
+
 # vim:set ft=zsh:
