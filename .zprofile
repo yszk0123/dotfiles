@@ -43,6 +43,9 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # neovim {{{
 export XDG_CONFIG_HOME=~/.config
+
+# Install neovim with pip3 (python 3.5.x)
+export PATH="$PATH:/usr/local/lib/python3.5/site-packages"
 # }}}
 
 # vim:set ft=zsh:

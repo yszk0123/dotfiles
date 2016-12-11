@@ -1,3 +1,28 @@
+if has('nvim')
+  Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+
+  " deoplete {{{
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_smart_case = 1
+  let g:deoplete#file#enable_buffer_path = 1
+
+  let g:deoplete#omni#input_patterns = {}
+  let g:deoplete#omni#input_patterns.javascript = '[^. *\t]\.\w*'
+
+  let g:deoplete#omni#functions = {}
+  let g:deoplete#omni#functions.javascript = 'flowcomplete#Complete'
+  " 'tern#Complete'
+  " }}}
+
+  " YouCompleteMe {{{
+  " Plug 'Valloric/YouCompleteMe'
+  " set omnifunc='flowcomplete#Complete'
+  " }}}
+endif
+
+
 " Plug 'matthewtodd/vim-twilight'
 " Plug 'moll/vim-node'
 
