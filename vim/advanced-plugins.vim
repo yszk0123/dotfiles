@@ -4,7 +4,7 @@ if has('nvim')
   let g:flow#enable = 0
 
   " deoplete {{{
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'for': 'javascript' }
 
   let g:deoplete#enable_at_startup = 1
   let g:deoplete#enable_smart_case = 1
