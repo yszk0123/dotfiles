@@ -7,4 +7,5 @@
 " Syntax highlight {{{
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'posva/vim-vue', { 'for': 'vue' }
 " }}}

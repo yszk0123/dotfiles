@@ -19,3 +19,4 @@ au BufNewFile,BufRead *.md setlocal filetype=markdown
 au BufNewFile,BufRead *.{ts,tsx} setlocal filetype=typescript
 au BufNewFile,BufRead *.slim setlocal filetype=slim
 au BufNewFile,BufRead Dockerfile.* setlocal filetype=dockerfile
+au BufNewFile,BufRead *.vue setlocal filetype=vue
