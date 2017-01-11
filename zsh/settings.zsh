@@ -14,7 +14,7 @@ setopt auto_resume
 setopt pushd_ignore_dups
 ## 高機能なワイルドカード展開を使用する
 ## ファイル名で #, ~, ^ の 3 文字を正規表現として扱う
-setopt extended_glob
+# setopt extended_glob
 ## =command を command のパス名に展開する
 setopt equals
 ## --prefix=/usr などの = 以降も補完
