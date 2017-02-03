@@ -6,6 +6,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
+Plug 'w0rp/ale'
 
 " clever-f {{{
 Plug 'rhysd/clever-f.vim'
