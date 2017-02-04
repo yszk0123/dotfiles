@@ -2,7 +2,10 @@
   "hotkey": "alt+space",
   "theme": "tinytacoteam/dark-theme",
   "plugins": [
-    "tinytacoteam/zazu-package-manager"
+    "tinytacoteam/zazu-package-manager",
+    "brpaz/zazu-encode-decode",
+    "tinytacoteam/zazu-chrome-bookmarks",
+    "tinytacoteam/zazu-fallback"
   ],
   "disableAnalytics": true
 }
