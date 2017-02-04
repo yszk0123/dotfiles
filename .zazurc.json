@@ -1,6 +1,8 @@
 {
   "hotkey": "alt+space",
   "theme": "tinytacoteam/dark-theme",
-  "plugins": [],
+  "plugins": [
+    "tinytacoteam/zazu-package-manager"
+  ],
   "disableAnalytics": true
 }
