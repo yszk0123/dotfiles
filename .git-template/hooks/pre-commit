@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-local_hook="$HOME"/.git_template/local-hooks/pre-commit
-
-if [ -f "$local_hook" ]; then
-  . "$local_hook"
-fi
