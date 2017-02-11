@@ -40,7 +40,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 if !empty($ADDITIONAL_VIM_PLUGINS)
   let s:libs = split(
     \ 'define-prefix color ' .
-    \ 'javascript ' .
+    \ 'javascript python ' .
     \ 'unite neomru ' .
     \ 'commands filetype plugins remap settings abbreviations advanced-plugins ' .
     \ 'lint', ' ')
@@ -50,7 +50,7 @@ if !empty($ADDITIONAL_VIM_PLUGINS)
 else
   let s:libs = split(
     \ 'define-prefix color ' .
-    \ 'javascript ' .
+    \ 'javascript python ' .
     \ 'unite neomru ' .
     \ 'commands filetype plugins remap settings abbreviations advanced-plugins', ' ')
 endif

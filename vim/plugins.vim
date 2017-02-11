@@ -6,7 +6,14 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
+
+" ale {{{
 Plug 'w0rp/ale'
+let g:ale_linters = {
+  \ 'javascript': ['eslint', 'flow'],
+  \ 'python': ['flake8'],
+  \ }
+" }}}
 
 " clever-f {{{
 Plug 'rhysd/clever-f.vim'
