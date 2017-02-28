@@ -7,6 +7,16 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
 
+" neoformat {{{
+Plug 'sbdchd/neoformat'
+let g:neoformat_enabled_javascript = ['prettier', 'eslint']
+let g:neoformat_javascript_prettier = {
+  \ 'exe': 'prettier',
+  \ 'args': ['--stdin', '--single-quote', '--trailing-comma all', '--print-width 100'],
+  \ 'stdin': 1,
+  \ }
+" }}}
+
 " ale {{{
 Plug 'w0rp/ale'
 let g:ale_linters = {
