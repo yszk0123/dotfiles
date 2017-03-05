@@ -38,7 +38,7 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 # }}}
 
 # npm/yarn {{{
-export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # }}}
 
 # neovim {{{
