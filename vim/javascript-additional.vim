@@ -1,7 +1,8 @@
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
-Plug 'facebook/vim-flow', { 'for': 'javascript' }
+Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+Plug 'fleischie/vim-styled-components', { 'for': 'fleischie/vim-styled-components' }
 
 " basic plugin {{{
 " vim-javascript {{{
