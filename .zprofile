@@ -1,7 +1,7 @@
 export LANG=ja_JP.UTF-8
 
 # Path {{{
-export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
 ##export MANPATH="/usr/local/man:$MANPATH"
 # }}}
@@ -17,12 +17,12 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Go {{{
 ## ref: [Mac の開発環境構築を自動化する (2015 年初旬編) - t-wadaのブログ](http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible)
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
+export GOPATH="$HOME"
+export PATH="$PATH:$GOPATH/bin"
 # }}}
 
 # Ruby {{{
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"
 # }}}
 
 # Python {{{
@@ -30,19 +30,19 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 # }}}
 
 # nodebrew {{{
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 # }}}
 
 # pkgconfig {{{
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 # }}}
 
-# npm/yarn {{{
+# npm / yarn {{{
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # }}}
 
 # neovim {{{
-export XDG_CONFIG_HOME=~/.config
+export XDG_CONFIG_HOME="~/.config"
 
 # Install neovim with pip3 (python 3.5.x)
 export PATH="$PATH:/usr/local/lib/python3.5/site-packages"
