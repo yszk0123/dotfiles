@@ -39,6 +39,9 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 # npm / yarn {{{
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Let npm packages maintain as dotfiles and expose as well as global packages
+export PATH="$HOME/dotfiles/node_modules/.bin:$PATH"
 # }}}
 
 # neovim {{{
