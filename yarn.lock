@@ -118,6 +118,10 @@ decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
+diff-so-fancy@^0.11.4:
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/diff-so-fancy/-/diff-so-fancy-0.11.4.tgz#85a91c13969e7217231374cfe8b50ac1583ab72f"
+
 error-ex@^1.2.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/error-ex/-/error-ex-1.3.1.tgz#f855a86ce61adc4e8621c3cda21e7a7612c3a8dc"
