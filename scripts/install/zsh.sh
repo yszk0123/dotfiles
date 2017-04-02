@@ -43,3 +43,15 @@ fi
       ;;
   esac
 # fi
+
+# if [ ! -s "$ZDOTDIR/completion/_docker-compose" ]; then
+  read -p "Do you wish to install completion for docker-compose? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      pushd $ZDOTDIR
+      mkdir -p completion/_docker-compose
+      curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
+      popd
+      ;;
+  esac
+# fi
