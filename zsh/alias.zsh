@@ -54,6 +54,9 @@ alias mv='mv -i'
 
 #alias mkdir='mkdir -p'
 
+# Wrap tmux to avoid issues with environment loading
+alias tmux='direnv exec / tmux'
+
 # Global aliases {{{
 alias -g G0='| grep'
 alias -g L0='| less'
