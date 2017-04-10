@@ -156,3 +156,7 @@ end
 if executable('ag')
   Plug 'rking/ag.vim', { 'on': ['Ag', 'AgFile', 'AgBuffer', 'AgAdd', 'AgHelp', 'AgFromSearch'] }
 endif
+
+if executable('rg')
+  Plug 'jremmen/vim-ripgrep', { 'on': ['Rg', 'RgRoot'] }
+endif
