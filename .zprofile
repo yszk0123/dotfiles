@@ -51,4 +51,8 @@ export XDG_CONFIG_HOME="~/.config"
 export PATH="$PATH:/usr/local/lib/python3.5/site-packages"
 # }}}
 
+# Rust {{{
+export PATH="$HOME/.cargo/bin:$PATH"
+# }}}
+
 # vim:set ft=zsh:
