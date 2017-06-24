@@ -1,0 +1,9 @@
+#!/bin/bash -e
+[ $# -lt 1 ] && cat <<EOS >&2 && exit 1
+$0 [...COMPONENT_PATHS]
+EOS
+
+cwd="$(cd "$(dirname "$0")" && pwd)"
+
+"$cwd/react-create-component" "$@"
+"$cwd/react-create-component-test" "$@"
