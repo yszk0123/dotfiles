@@ -1,0 +1,53 @@
+#!/bin/bash -e
+[ $# -lt 1 ] && cat <<EOS >&2 && exit 1
+$0 [...MUTATION_PATHS]
+EOS
+
+for MUTATION_PATH in "$@"; do
+  DIR="$(dirname "$MUTATION_PATH")"
+  TEST_DIR="$DIR/__tests__"
+  MUTATION_NAME=$(basename "$MUTATION_PATH")
+  LOWER_MUTATION_NAME="$(echo "$MUTATION_NAME" | ruby -pe "gsub(/^[A-Z]/) {|m| m[-1,1].downcase}")"
+
+  [ ! -e "$DIR" ] && mkdir -p "$DIR"
+  [ ! -e "$TEST_DIR" ] && mkdir -p "$TEST_DIR"
+
+  cat <<"EOS" | sed -e "s/{{mutationName}}/$MUTATION_NAME/g" -e "s/{{lowerMutationName}}/$LOWER_MUTATION_NAME/g" > "$DIR/${MUTATION_NAME}Mutation.js"
+import { commitMutation, graphql } from 'react-relay';
+import makeIdGenerator from '../common/makeIdGenerator';
+
+const generateId = makeIdGenerator();
+// const generateOptimisticId = makeIdGenerator('client:new{{mutationName}}');
+
+const mutation = graphql`
+  mutation {{mutationName}}Mutation($input: {{mutationName}}Input!) {
+    {{lowerMutationName}}(input: $input) {
+      id
+    }
+  }
+`;
+
+function commit(environment, data, user) {
+  return commitMutation(environment, {
+    mutation,
+    variables: {
+      input: {
+        clientMutationId: generateId(),
+      },
+    },
+    updater: store => {},
+    optimisticUpdater: store => {},
+  });
+}
+
+export default { commit };
+EOS
+
+  cat <<"EOS" | sed -e "s/{{mutationName}}/$MUTATION_NAME/g" -e "s/{{lowerMutationName}}/$LOWER_MUTATION_NAME/g" > "$TEST_DIR/${MUTATION_NAME}Mutation.test.js"
+// import {{mutationName}}Mutation from '../{{mutationName}}Mutation';
+
+test('commits', () => {
+  // {{mutationName}}Mutation.commit();
+});
+EOS
+done
