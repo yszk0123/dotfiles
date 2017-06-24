@@ -1,10 +1,11 @@
-#!/bin/sh
-# Note: see create-new-project.sh more detail
+#!/bin/bash -e
+# Note: see gitlab-create-new-project more detail
 USER_NAME="$1"
 PROJECT_NAME="$2"
 PROJECT_DIR="$HOME/src/gitlab.com/$USER_NAME/$PROJECT_NAME"
-[ -z "$USER_NAME" ] && echo USER_NAME required && exit 1
-[ -z "$PROJECT_NAME" ] && echo PROJECT_NAME required && exit 1
+[[ -z "$USER_NAME" || -z "$PROJECT_NAME" ]] && cat <<EOS >&2 && exit 1
+$0 [USER_NAME] [PROJECT_NAME]
+EOS
 
 mkdir -p "$PROJECT_DIR"
 cd "$PROJECT_DIR"
