@@ -12,7 +12,7 @@ Plug 'sbdchd/neoformat'
 let g:neoformat_enabled_javascript = ['prettier', 'eslint']
 let g:neoformat_javascript_prettier = {
   \ 'exe': 'prettier',
-  \ 'args': ['--stdin', '--single-quote', '--trailing-comma all', '--print-width 100'],
+  \ 'args': ['--stdin', '--single-quote', '--trailing-comma all'],
   \ 'stdin': 1,
   \ }
 " }}}
