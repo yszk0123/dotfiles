@@ -11,6 +11,7 @@ tap 'neovim/neovim'
 brew 'autoconf'
 brew 'automake'
 brew 'boost'
+brew 'fd'
 brew 'openssl', args: ['universal']
 brew 'readline'
 brew 'sqlite'
