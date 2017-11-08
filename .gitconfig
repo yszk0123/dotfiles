@@ -70,6 +70,7 @@
 	topic-finish = "!f(){ branch=$(git branch-name); git checkout master; git branch -d "$branch"; git push origin ":$branch"; };f"
 	cp = cherry-pick
 	cp-nx = cherry-pick --no-commit -x
+	list-ignored-files = git ls-files --other --ignored --exclude-standard
 
 	# cf. http://megakemp.com/2016/08/25/git-undo/ (translation: http://postd.cc/git-undo/)
 	undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
