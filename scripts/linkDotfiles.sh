@@ -12,7 +12,7 @@ ln -sni ~/dotfiles/.zprofile ~/.zprofile
 ln -sni ~/dotfiles/.zprofile "$ZDOTDIR/.zprofile"
 ln -sni ~/dotfiles/.zshrc "$ZDOTDIR/.zshrc"
 
-for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .rspec .zazurc.json .config/karabiner.json .config/assets; do
+for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .rspec .zazurc.json .config/karabiner; do
   ln -sni ~/dotfiles/$target ~/$target
 done
 
