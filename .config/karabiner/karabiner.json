@@ -8,8 +8,8 @@
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.to_delayed_action_delay_milliseconds": 400,
-                    "basic.to_if_alone_timeout_milliseconds": 800
+                    "basic.to_delayed_action_delay_milliseconds": 300,
+                    "basic.to_if_alone_timeout_milliseconds": 600
                 },
                 "rules": [
                     {
@@ -411,7 +411,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "escape"
+                                        "key_code": "tab"
                                     }
                                 ],
                                 "type": "basic"
