@@ -1,0 +1,14 @@
+[
+	{
+    "key": "cmd+k enter",
+    "command": "editor.action.rename"
+  },
+  {
+    "key": "cmd+k s",
+    "command": "editor.action.sortLinesAscending"
+  },
+  {
+    "key": "cmd+k shift+s",
+    "command": "editor.action.sortLinesDescending"
+  }
+]

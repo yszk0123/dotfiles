@@ -16,6 +16,10 @@ for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .pe
   ln -sni ~/dotfiles/$target ~/$target
 done
 
+for target in settings.json keybindings.json; do
+  ln -sni "$HOME/dotfiles/vscode/$target" "$HOME/Library/Application Support/Code/User/$target"
+done
+
 : "${XDG_CONFIG_HOME:=~/.config}"
 mkdir -p "$XDG_CONFIG_HOME/nvim"
 ln -sni ~/dotfiles/.vimrc "$XDG_CONFIG_HOME/nvim/init.vim"

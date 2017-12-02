@@ -1,0 +1,77 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["package.json"],
+      "url": "http://json.schemastore.org/package"
+    },
+    {
+      "fileMatch": ["bower.json"],
+      "url": "http://json.schemastore.org/bower"
+    },
+    {
+      "fileMatch": ["babelrc.json"],
+      "url": "http://json.schemastore.org/babelrc"
+    },
+    {
+      "fileMatch": [".eslintrc"],
+      "url": "http://json.schemastore.org/eslintrc"
+    },
+    {
+      "fileMatch": [".stylelintrc"],
+      "url": "http://json.schemastore.org/stylelint"
+    },
+    {
+      "fileMatch": ["manifest.json"],
+      "url": "http://json.schemastore.org/chrome-manifest"
+    }
+  ],
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/bower_components": true,
+    "**/node_modules": true,
+    "dist": true,
+    "build": true,
+    "tmp": true
+  },
+  "editor.renderIndentGuides": true,
+  "editor.rulers": [80, 100],
+  "editor.tabSize": 2,
+  "eslint.workingDirectories": [],
+  "explorer.confirmDragAndDrop": false,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": false,
+  "flow.runOnEdit": false,
+  "flow.useNPMPackagedFlow": true,
+  "git.confirmSync": false,
+  "html.format.extraLiners": "",
+  "html.format.indentInnerHtml": true,
+  "javascript.validate.enable": false,
+  "npm.bin": "yarn",
+  "npm.includeDirectories": ["frontend"],
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.pythonPath": "python3",
+  "sync.anonymousGist": false,
+  "sync.askGistName": false,
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.forceDownload": false,
+  "sync.gist": "9db5bac4a2030867479baf23811529ba",
+  "sync.host": "",
+  "sync.lastDownload": "2017-11-10T13:06:44.881Z",
+  "sync.lastUpload": "2017-11-11T16:17:20.155Z",
+  "sync.pathPrefix": "",
+  "sync.quietSync": false,
+  "typescript.validate.enable": false,
+  "vsicons.projectDetection.disableDetect": true,
+  "window.nativeTabs": true,
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.panel.location": "bottom"
+}
