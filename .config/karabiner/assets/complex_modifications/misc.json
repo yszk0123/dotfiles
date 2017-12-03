@@ -1,5 +1,5 @@
 {
-  "title": "Misc",
+  "title": "Shell-like shortcut",
   "rules": [
     {
       "description": "Misc",
@@ -20,6 +20,37 @@
               "modifiers": [
                 "left_shift",
                 "option"
+              ]
+            },
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com.googlecode.iterm2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_shift",
+                "left_command"
               ]
             },
             {
