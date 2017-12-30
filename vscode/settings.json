@@ -1,27 +1,39 @@
 {
   "json.schemas": [
     {
-      "fileMatch": ["package.json"],
+      "fileMatch": [
+        "package.json"
+      ],
       "url": "http://json.schemastore.org/package"
     },
     {
-      "fileMatch": ["bower.json"],
+      "fileMatch": [
+        "bower.json"
+      ],
       "url": "http://json.schemastore.org/bower"
     },
     {
-      "fileMatch": ["babelrc.json"],
+      "fileMatch": [
+        "babelrc.json"
+      ],
       "url": "http://json.schemastore.org/babelrc"
     },
     {
-      "fileMatch": [".eslintrc"],
+      "fileMatch": [
+        ".eslintrc"
+      ],
       "url": "http://json.schemastore.org/eslintrc"
     },
     {
-      "fileMatch": [".stylelintrc"],
+      "fileMatch": [
+        ".stylelintrc"
+      ],
       "url": "http://json.schemastore.org/stylelint"
     },
     {
-      "fileMatch": ["manifest.json"],
+      "fileMatch": [
+        "manifest.json"
+      ],
       "url": "http://json.schemastore.org/chrome-manifest"
     }
   ],
@@ -38,7 +50,10 @@
     "tmp": true
   },
   "editor.renderIndentGuides": true,
-  "editor.rulers": [80, 100],
+  "editor.rulers": [
+    80,
+    100
+  ],
   "editor.tabSize": 2,
   "eslint.workingDirectories": [],
   "explorer.confirmDragAndDrop": false,
@@ -51,7 +66,9 @@
   "html.format.indentInnerHtml": true,
   "javascript.validate.enable": false,
   "npm.bin": "yarn",
-  "npm.includeDirectories": ["frontend"],
+  "npm.includeDirectories": [
+    "frontend"
+  ],
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": false,
   "python.pythonPath": "python3",
@@ -71,7 +88,6 @@
   "window.nativeTabs": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Visual Studio Dark",
-  "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.panel.location": "bottom"
+  "explorer.confirmDelete": false
 }
