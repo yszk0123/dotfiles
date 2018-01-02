@@ -72,4 +72,8 @@ if is_exists "hub"; then
   alias git=hub
 fi
 
+# dokku {{{
+alias dokku='bash $HOME/src/github.com/dokku/dokku/contrib/dokku_client.sh'
+# }}}
+
 # vim:set ft=zsh:
