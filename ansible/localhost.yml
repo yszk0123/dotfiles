@@ -34,8 +34,6 @@
       # - { name: rsense }
       # - { name: ruby-build }
       # - { name: wine }
-      # - { name: zsh-completions }
-      # - { name: zsh-syntax-highlighting }
       # - { name: nvm }
       - { name: brew-cask }
       - { name: coreutils }
@@ -58,7 +56,7 @@
       - { name: tmux }
       - { name: tree }
       - { name: vim }
-      - { name: zsh }
+      - { name: fish }
 
       # pixta
       # - { name: imagemagick }
