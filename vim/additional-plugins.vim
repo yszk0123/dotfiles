@@ -112,8 +112,6 @@ au VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 Plug 'joker1007/vim-markdown-quote-syntax', { 'for': ['markdown', 'mkd', 'md'] }
 
 let g:markdown_fold_style = 'nested'
-" TODO: これでいいのか
-" autocmd FileType zsh runtime! ftplugin/markdown/folding.vim
 " }}}
 
 if has('nvim')

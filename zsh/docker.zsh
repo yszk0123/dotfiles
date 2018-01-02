@@ -8,14 +8,6 @@ if is_exists "docker-machine"; then
 
   docker-machine() { load_docker; docker-machine "$@"; }
   docker() { load_docker; docker "$@"; }
-
-  alias d='docker'
-  alias di='docker images'
-  alias dr='docker run'
-  alias dt='docker tag'
-
-  alias dm='docker-machine'
-  alias dmls='docker-machine ls'
 fi
 
 # vim:set ft=zsh:
