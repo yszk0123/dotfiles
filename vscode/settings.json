@@ -89,5 +89,6 @@
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.iconTheme": "vscode-icons",
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish"
 }
