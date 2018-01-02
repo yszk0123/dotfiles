@@ -1,25 +1,21 @@
 #!/bin/bash
-# ln -si ~/dotfiles/.wgetrc ~/.wgetrc
-# ln -si ~/dotfiles/Brewfile ~/Brewfile
-# ln -si ~/dotfiles/colors ~/.vim
-# ln -si ~/dotfiles/ftdetect ~/.vim
-# ln -si ~/dotfiles/indent ~/.vim
 
-# $ZDOTDIRが.zprofile中で指定される場合は、$HOME/.zprofileが読み込まれる（はず）
-# 念のため両方に用意しておく
-: "${ZDOTDIR:=~/.zsh}"
-ln -sni ~/dotfiles/.zprofile ~/.zprofile
-ln -sni ~/dotfiles/.zprofile "$ZDOTDIR/.zprofile"
-ln -sni ~/dotfiles/.zshrc "$ZDOTDIR/.zshrc"
-
-for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .rspec .zazurc.json .config/karabiner; do
+# Basic
+for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .rspec .config/karabiner; do
   ln -sni ~/dotfiles/$target ~/$target
 done
 
+# fish
+for target in config.fish alias.fish env.fish fishfile; do
+  ln -sni ~/dotfiles/.config/fish/$target ~/.config/fish/$target
+done
+
+# VS Code
 for target in settings.json keybindings.json; do
   ln -sni "$HOME/dotfiles/vscode/$target" "$HOME/Library/Application Support/Code/User/$target"
 done
 
+# nvim
 : "${XDG_CONFIG_HOME:=~/.config}"
 mkdir -p "$XDG_CONFIG_HOME/nvim"
 ln -sni ~/dotfiles/.vimrc "$XDG_CONFIG_HOME/nvim/init.vim"

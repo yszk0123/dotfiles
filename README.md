@@ -4,9 +4,9 @@
 
 # Shell
 
-## zsh
+## fish
 
-`$ chsh -s <path/to/zsh>`
+`$ chsh -s <path/to/fish>`
 
 ## Environment variable
 
@@ -28,3 +28,12 @@ For Openstack driver (ConoHa API)
 | `OS_REGION_NAME`            | tyo1 |
 
 `direnv` is a handy tool to set environment variables.
+
+# Tools
+
+## Yarn
+
+```sh
+yarn global add diff-so-fancy
+yarn global add fkill
+```
