@@ -7,10 +7,10 @@ Install [MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)
 ## Neovim
 
 ```sh
-$ brew install neovim
-$ mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
-$ ln -s ~/.vim $XDG_CONFIG_HOME/nvim
-$ ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+brew install neovim
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 ```
 
 To use deoplete.vim
@@ -21,8 +21,8 @@ To use deoplete.vim
 ## Gem
 
 ```sh
-$ gem update --system
-$ gem install bundler
+gem update --system
+gem install bundler
 ```
 
 # ctags
@@ -32,10 +32,10 @@ cf. [claytron/dotfiles](https://github.com/claytron/dotfiles/blob/master/.ctags)
 # Python
 
 ```sh
-$ brew install pyenv pyenv-virtualenv
-$ pyenv install <version>
-$ pyenv global <version>
-$ pyenv rehash
+brew install pyenv pyenv-virtualenv
+pyenv install <version>
+pyenv global <version>
+pyenv rehash
 ```
 
 # Tex

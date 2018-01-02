@@ -1,12 +1,16 @@
 # Usage
 
-`$ sh ~/dotfiles/update.sh`
+```sh
+sh ~/dotfiles/update.sh
+```
 
 # Shell
 
 ## fish
 
-`$ chsh -s <path/to/fish>`
+```sh
+chsh -s <path/to/fish>
+```
 
 ## Environment variable
 
