@@ -1,0 +1,9 @@
+#!/bin/sh
+
+f() {
+  query="$1"
+  shift
+  git log --pretty=format:'%C(yellow)%h %Cblue%ad  %Creset%s %Cgreen%cn %Cred%d' --decorate --date=short -G"$query" "$@"
+}
+
+f "$@"
