@@ -90,5 +90,9 @@
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.iconTheme": "vscode-icons",
   "explorer.confirmDelete": false,
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish"
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "gitlens.codeLens.scopes": [
+    "document"
+  ],
+  "window.zoomLevel": 0
 }

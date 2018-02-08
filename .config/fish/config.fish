@@ -15,7 +15,7 @@ source $HOME/.config/fish/env.fish
 eval (direnv hook fish)
 
 # rbenv
-# rbenv init - | source
+rbenv init - | source
 
 # ------------------------------------------------------------------------------
 # Keybindings
