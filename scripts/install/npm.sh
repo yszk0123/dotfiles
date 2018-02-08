@@ -11,6 +11,16 @@ function is_installed() {
   fi
 }
 
+if ! is_exists "node"; then
+  read -p "Do you wish to install node (via nodebrew)? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      nodebrew install-binary v8.9.4
+      nodebrew use v8.9.4
+      ;;
+  esac
+fi
+
 # cf. https://github.com/stevemao/diff-so-fancy
 for target in diff-so-fancy; do
   [ is_installed $target ] && continue

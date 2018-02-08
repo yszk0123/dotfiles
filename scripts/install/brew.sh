@@ -20,7 +20,7 @@ if ! is_exists "brew"; then
   esac
 fi
 
-for target in git-secrets the_silver_searcher hub; do
+for target in git-secrets the_silver_searcher hub peco; do
   [ is_installed $target ] && continue
 
   read -p "Do you wish to install $target? [YyNn]" yn
@@ -30,6 +30,15 @@ for target in git-secrets the_silver_searcher hub; do
       ;;
   esac
 done
+
+if ! is_exists "yarn"; then
+  read -p "Do you wish to install yarn? [YyNn]" yn
+  case $yn in
+    [Yy]* )
+      brew install yarn --without-node
+      ;;
+  esac
+fi
 
 # cf. https://github.com/neovim/homebrew-neovim/blob/master/README.md
 if ! is_exists "nvim"; then
