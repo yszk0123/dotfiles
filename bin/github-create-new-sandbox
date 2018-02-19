@@ -1,0 +1,8 @@
+#!/bin/bash -e
+PROJECT_NAME="$1"
+ORG_NAME=yszk0123-sandbox
+[[ -z "$PROJECT_NAME" || -z "$GITHUB_PERSONAL_ACCESS_TOKEN" ]] && cat <<EOS >&2 && exit 1
+$0 [PROJECT_NAME] [GITHUB_PERSONAL_ACCESS_TOKEN]
+EOS
+
+curl -v -X POST -H "Authorization: bearer $GITHUB_PERSONAL_ACCESS_TOKEN" -d "{\"name\":\"$PROJECT_NAME\"}" "https://api.github.com/orgs/$ORG_NAME/repos"
