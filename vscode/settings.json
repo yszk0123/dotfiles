@@ -64,7 +64,6 @@
   "git.confirmSync": false,
   "html.format.extraLiners": "",
   "html.format.indentInnerHtml": true,
-  "javascript.validate.enable": false,
   "npm.bin": "yarn",
   "npm.includeDirectories": [
     "frontend"
@@ -83,7 +82,6 @@
   "sync.lastUpload": "2017-11-11T16:17:20.155Z",
   "sync.pathPrefix": "",
   "sync.quietSync": false,
-  "typescript.validate.enable": false,
   "vsicons.projectDetection.disableDetect": true,
   "window.nativeTabs": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
