@@ -92,5 +92,34 @@
   "gitlens.codeLens.scopes": [
     "document"
   ],
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.labelFormat": "short",
+  "editor.formatOnSave": true,
+  "relativePath.ignore": [
+    "**/node_modules/**",
+    "**/*.dll",
+    "**/obj/**",
+    "**/objd/**",
+    "**/tmp/**",
+    "**/coverage/**"
+  ],
+  "workbench.editor.showTabs": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.packageManager": "yarn"
 }
