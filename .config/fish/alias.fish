@@ -74,11 +74,9 @@ if status --is-interactive
   abbr --add vi    'env LANG=ja_JP.UTF-8 vim ADDITIONAL_VIM_PLUGINS=1'
 
   # docker
-  abbr --add de    'docker exec'
-  abbr --add dc    'docker compose'
-  abbr --add deit  'docker exec -it'
-  abbr --add dr    'docker run'
-  abbr --add drit  'docker run -it --rm'
+  abbr --add dc    'docker-compose'
+  abbr --add de    'docker exec -it -e COLUMNS=200 -e LINES=50'
+  abbr --add dr    'docker run -it --rm'
 
   # dokku
   balias dokku 'bash $HOME/src/github.com/dokku/dokku/contrib/dokku_client.sh'
