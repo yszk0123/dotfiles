@@ -22,6 +22,7 @@ set XDG_CONFIG_HOME $HOME/.config
 
 # Python
 # set fish_user_paths $HOME/.pyenv/bin $fish_user_paths
+set fish_user_paths $HOME/Library/Python/2.7/bin $fish_user_paths
 
 # Ruby
 # set fish_user_paths $HOME/.rbenv/bin $fish_user_paths
