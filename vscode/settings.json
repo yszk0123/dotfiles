@@ -78,8 +78,8 @@
   "sync.forceDownload": false,
   "sync.gist": "9db5bac4a2030867479baf23811529ba",
   "sync.host": "",
-  "sync.lastDownload": "2017-11-10T13:06:44.881Z",
-  "sync.lastUpload": "2017-11-11T16:17:20.155Z",
+  "sync.lastDownload": "2018-05-07T07:54:49.066Z",
+  "sync.lastUpload": "2018-05-23T00:15:13.433Z",
   "sync.pathPrefix": "",
   "sync.quietSync": false,
   "vsicons.projectDetection.disableDetect": true,
@@ -121,5 +121,23 @@
     "typescript",
     "typescriptreact"
   ],
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "prettier.disableLanguages": [
+    "vue",
+    "markdown"
+  ],
+  "npm.enableScriptExplorer": true,
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "gitlens.historyExplorer.enabled": true
 }
