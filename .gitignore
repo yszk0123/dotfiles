@@ -1,3 +1,4 @@
+# Folders
 .atom/.apm/
 .atom/.node-gyp/
 .atom/blob-store/
@@ -5,9 +6,11 @@
 .atom/gist-it.token
 .atom/packages/
 .atom/storage/
+.bundle/cache/
 node_modules/
 tmp/
 
+# Files
 *.beam
 *.gz
 *.pyc
