@@ -23,14 +23,11 @@ rbenv init - | source
 
 function fish_user_key_bindings
   # peco
+
   bind \cr 'peco_select_history (commandline -b)'
   bind \cx\ck peco_kill
   bind \cg peco_recentd
   bind \c] peco_select_ghq_repository
-
-  # cf. https://github.com/fish-shell/fish-shell/wiki/Bash-Style-Command-Substitution-and-Chaining-(!!-!$-&&-%7C%7C)#getting--and-
-  bind "&&" 'commandline -i "; and"'
-  bind "||" 'commandline -i "; or"'
 end
 
 # ------------------------------------------------------------------------------
