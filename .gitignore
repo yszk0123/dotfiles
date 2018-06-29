@@ -19,6 +19,7 @@ tmp/
 *.zip
 *~
 .DS_Store
+.envrc
 my_local_mode*
 
 .tags*
