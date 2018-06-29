@@ -5,6 +5,11 @@ for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .pe
   ln -sni ~/dotfiles/$target ~/$target
 done
 
+# dotfiles (global)
+for target in gitignore; do
+  ln -sni ~/dotfiles/$target ~/.$target
+done
+
 # fish
 for target in config.fish alias.fish env.fish fishfile; do
   ln -sni ~/dotfiles/.config/fish/$target ~/.config/fish/$target

@@ -1,0 +1,10 @@
+# Folders
+.bundle/
+bower_components
+dist/
+node_modules/
+
+# Files
+*~
+.DS_Store
+.envrc
