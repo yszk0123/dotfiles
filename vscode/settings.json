@@ -59,7 +59,6 @@
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": false,
-  "git.confirmSync": false,
   "html.format.extraLiners": "",
   "html.format.indentInnerHtml": true,
   "npm.bin": "yarn",
@@ -143,5 +142,6 @@
   "eslint.enable": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.preferences.quoteStyle": "single",
-  "javascript.preferences.quoteStyle": "single"
+  "javascript.preferences.quoteStyle": "single",
+  "vim.useSystemClipboard": true
 }
