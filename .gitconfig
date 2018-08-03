@@ -78,6 +78,7 @@
 	root = ~/src
 [merge]
 	tool = fugitive
+	ff = false
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 [push]
@@ -92,4 +93,5 @@
 [rebase]
 	autosquash = true
 [pull]
+	ff = only
 	ff = only
