@@ -1,5 +1,6 @@
 # Folders
 .bundle/
+.vs/
 bower_components
 dist/
 node_modules/
