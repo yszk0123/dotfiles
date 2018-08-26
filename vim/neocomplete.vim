@@ -41,7 +41,6 @@ if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-let g:neocomplete#keyword_patterns['coffee'] = '\h\w*\|[\$@]\w*'
 if !exists('g:neocomplete#sources')
   let g:neocomplete#sources = {}
 endif
@@ -87,8 +86,6 @@ inoremap <expr> <BS> neocomplete#smart_close_popup()."\<C-h>"
 if !exists('g:neocomplete#same_filetypes')
   let g:neocomplete#same_filetypes = {}
 endif
-let g:neocomplete#same_filetypes.javascript = 'coffee'
-let g:neocomplete#same_filetypes.coffee = 'javascript'
 
 " Enable omni completion.
 au FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -103,7 +100,6 @@ au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-" let g:neocomplete#sources#omni#input_patterns.coffee = '[^.[:digit:] *\t]\.'
 
 " Four perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim

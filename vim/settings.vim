@@ -30,7 +30,7 @@ if g:my_local_mode
 endif
 
 " Cのプリプロセッサ行("#"で始まる行)にもインデントを適用する
-" (coffeescriptなどでは"#"をコメント開始に使うため)
+" (一部の言語では"#"をコメント開始に使うため)
 " set cinkeys=0{,0},0),:,0#,!^F,o,O,e
 " set cinkeys-=0#
 " set indentkeys-=0#

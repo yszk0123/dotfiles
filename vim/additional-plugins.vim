@@ -33,7 +33,7 @@ let g:indent_guides_space_guides=1
 
 "hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
 "hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
-"au FileType coffee,ruby,javascript,python IndentGuidesEnable
+"au FileType ruby,javascript,python IndentGuidesEnable
 "nmap <silent><Leader>ig <Plug>IndentGuidesToggle
 
 au VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
