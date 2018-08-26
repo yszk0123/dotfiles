@@ -6,7 +6,6 @@
 [commit]
 	verbose = true
 [core]
-	excludesfile = ~/.gitignore
 	editor = vim
 [color]
 	ui = auto

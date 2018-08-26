@@ -1,14 +1,13 @@
 #!/bin/bash
+: "${XDG_CONFIG_HOME:=$HOME/.config}"
 
 # Basic
 for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .rspec .config/karabiner; do
   ln -sni ~/dotfiles/$target ~/$target
 done
 
-# dotfiles (global)
-for target in gitignore; do
-  ln -sni ~/dotfiles/$target ~/.$target
-done
+# Git
+ln -sni ~/dotfiles/gitignore "$XDG_CONFIG_HOME/git/ignore"
 
 # fish
 for target in config.fish alias.fish env.fish fishfile; do
@@ -21,7 +20,6 @@ for target in settings.json keybindings.json; do
 done
 
 # nvim
-: "${XDG_CONFIG_HOME:=~/.config}"
 mkdir -p "$XDG_CONFIG_HOME/nvim"
 ln -sni ~/dotfiles/.vimrc "$XDG_CONFIG_HOME/nvim/init.vim"
 
