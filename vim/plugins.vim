@@ -20,7 +20,6 @@ let g:neoformat_javascript_prettier = {
 " ale {{{
 Plug 'w0rp/ale'
 let g:ale_linters = {
-  \ 'javascript': ['eslint', 'flow'],
   \ 'python': ['flake8'],
   \ }
 " }}}
