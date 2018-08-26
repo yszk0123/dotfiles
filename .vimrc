@@ -41,7 +41,6 @@ let s:libs = split(
   \ 'define-prefix color ' .
   \ 'unite neomru ' .
   \ 'commands filetype plugins keymaps settings abbreviations', ' ')
-" \ 'neocomplete neosnippet neosnippet-snippets ' .
 " \ 'latex ' .
 for lib in s:libs
   execute 'runtime vim/' . lib . '.vim'
