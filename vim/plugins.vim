@@ -1,3 +1,4 @@
+" vim {{{
 Plug 'artnez/vim-wipeout'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
@@ -6,11 +7,22 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
+" }}}
 
-" typescript {{{
+" JavaScript {{{
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'posva/vim-vue', { 'for': 'vue' }
+" }}}
+
+" TypeScript {{{
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 " }}}
-"
+
+" Python {{{
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+" }}}
+
 " neoformat {{{
 Plug 'sbdchd/neoformat'
 let g:neoformat_enabled_javascript = ['prettier']
@@ -21,7 +33,7 @@ let g:neoformat_javascript_prettier = {
   \ }
 " }}}
 
-" ale {{{
+" ALE {{{
 Plug 'w0rp/ale'
 
 let g:ale_linters = {}
@@ -62,12 +74,6 @@ nmap #  <Plug>(incsearch-nohl-#)
 nmap g* <Plug>(incsearch-nohl-g*)
 nmap g# <Plug>(incsearch-nohl-g#)
 " }}}
-
-" " splitjoin: 一行コード <=> 複数行コードの相互変換 {{{
-" Plug 'AndrewRadev/splitjoin.vim'
-" nnoremap <Leader>j :<C-u>SplitjoinJoin<CR>
-" nnoremap <Leader>J :<C-u>SplitjoinSplit<CR>
-" " }}}
 
 " switch: 似たような表現を切り替える(true <=> false, if <=> elseif など) {{{
 Plug 'AndrewRadev/switch.vim'

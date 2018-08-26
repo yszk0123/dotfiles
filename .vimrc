@@ -39,7 +39,6 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " lib/define-prefix.vimとlib/color.vimは早めにロードしておく
 let s:libs = split(
   \ 'define-prefix color ' .
-  \ 'javascript python ' .
   \ 'unite neomru ' .
   \ 'commands filetype plugins remap settings abbreviations advanced-plugins', ' ')
 " \ 'neocomplete neosnippet neosnippet-snippets ' .
