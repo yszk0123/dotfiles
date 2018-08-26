@@ -1,4 +1,4 @@
-" vim {{{
+" Vim {{{
 Plug 'artnez/vim-wipeout'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
@@ -21,6 +21,11 @@ Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " Python {{{
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+" }}}
+
+" Ruby {{{
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 " }}}
 
 " neoformat {{{
@@ -107,10 +112,9 @@ let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
 let delimitMate_matchpairs = '(:),{:}'
 au FileType html let b:delimitMate_matchpairs = '(:),[:],{:},<:>'
-au FileType coffee let delimitMate_nesting_quotes = ['"','`']
 " }}}
 
-" git {{{
+" Git {{{
 " Plug 'tpope/vim-fugitive', { 'on': [
 "   \ 'Gcd', 'Glcd', 'Gadd', 'Gblame', 'Gcommit',
 "   \ 'Gdiff', 'Gedit', 'Glog', 'Gstatus', 'Gwrite' ] }
@@ -166,6 +170,20 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 " }}}
 
+" vim-smartword {{{
+Plug 'kana/vim-smartword'
+nmap w <Plug>(smartword-w)
+nmap b <Plug>(smartword-b)
+nmap e <Plug>(smartword-e)
+" }}}
+
+" vim-gitgutter {{{
+" Plug 'airblade/vim-gitgutter'
+" let g:gitgutter_enabled = 0
+" let g:gitgutter_realtime = 0
+" let g:gitgutter_eager = 0
+" }}}
+
 if has('mac')
   Plug 'junegunn/vim-xmark', { 'do': 'make' }
 end
@@ -176,4 +194,24 @@ endif
 
 if executable('rg')
   Plug 'jremmen/vim-ripgrep', { 'on': ['Rg', 'RgRoot'] }
+endif
+
+if has('nvim')
+  Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+  let g:flow#autoclose = 1
+  let g:flow#enable = 0
+
+  " deoplete {{{
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'for': 'javascript' }
+
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_smart_case = 1
+  let g:deoplete#file#enable_buffer_path = 1
+
+  let g:deoplete#omni#input_patterns = {}
+  let g:deoplete#omni#input_patterns.javascript = '[^. *\t]\.\w*'
+
+  let g:deoplete#omni#functions = {}
+  let g:deoplete#omni#functions.javascript = 'flowcomplete#Complete'
+  " }}}
 endif
