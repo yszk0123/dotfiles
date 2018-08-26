@@ -9,19 +9,27 @@ Plug 'vim-scripts/gitignore'
 
 " neoformat {{{
 Plug 'sbdchd/neoformat'
-let g:neoformat_enabled_javascript = ['prettier', 'eslint']
+let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_javascript_prettier = {
   \ 'exe': 'prettier',
-  \ 'args': ['--stdin', '--single-quote', '--trailing-comma all'],
+  \ 'args': ['--stdin', '--single-quote'],
   \ 'stdin': 1,
   \ }
 " }}}
 
 " ale {{{
 Plug 'w0rp/ale'
-let g:ale_linters = {
-  \ 'python': ['flake8'],
-  \ }
+
+let g:ale_linters = {}
+let g:ale_linters['python'] = ['flake8']
+let g:ale_linters['javascript'] = []
+let g:ale_linters['typescript'] = ['tslint', 'tsserver']
+
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote'
+let g:ale_javascript_prettier_use_local_config = 1
 " }}}
 
 " clever-f {{{
