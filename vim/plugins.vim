@@ -7,6 +7,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
 
+" typescript {{{
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+" }}}
+"
 " neoformat {{{
 Plug 'sbdchd/neoformat'
 let g:neoformat_enabled_javascript = ['prettier']
