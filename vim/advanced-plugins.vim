@@ -15,44 +15,8 @@ if has('nvim')
 
   let g:deoplete#omni#functions = {}
   let g:deoplete#omni#functions.javascript = 'flowcomplete#Complete'
-  " 'tern#Complete'
-  " }}}
-
-  " YouCompleteMe {{{
-  " Plug 'Valloric/YouCompleteMe'
-  " set omnifunc='flowcomplete#Complete'
   " }}}
 endif
-
-
-" Plug 'matthewtodd/vim-twilight'
-" Plug 'moll/vim-node'
-
-" Perlスタイルの正規表現
-" Plug 'othree/eregex.vim'
-
-" acp (vim-autocomplpop, AutoComplPop) {{{
-" Plug 'D:/common/lib/vim-autocomplpop'
-" let g:acp_behaviorKeywordIgnores = ['D:', 'C:', '\\', '/', '.', ':']
-" au WinEnter *[util]* AcpLock
-" au WinLeave *[util]* AcpUnlock
-" }}}
-
-" supertab {{{
-" Plug 'ervandew/supertab'
-" }}}
-
-" tagbar {{{
-" Plug 'majutsushi/tagbar'
-" nnoremap <Leader>t :<C-u>TagbarToggle<CR>
-" }}}
-
-" vim-rooter: change working directory to project root {{{
-" Plug 'airblade/vim-rooter'
-" map <silent> <Leader>C <Plug>RooterChangeToRootDirectory
-" let g:rooter_manual_only = 1
-" let g:rooter_patterns = ['.git/', 'node_modules/', 'package.json']
-"}}}
 
 " vim-textobj-* {{{
 " cf.
@@ -94,10 +58,4 @@ nmap e <Plug>(smartword-e)
 " let g:gitgutter_enabled = 0
 " let g:gitgutter_realtime = 0
 " let g:gitgutter_eager = 0
-" }}}
-
-" YankRing {{{
-" Plug 'vim-scripts/YankRing.vim'
-" nnoremap <Leader>y :<C-u>YRShow<CR>
-" let g:yankring_max_history = 10
 " }}}
