@@ -40,7 +40,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 let s:libs = split(
   \ 'define-prefix color ' .
   \ 'unite neomru ' .
-  \ 'commands filetype plugins remap settings abbreviations advanced-plugins', ' ')
+  \ 'commands filetype plugins keymaps settings abbreviations advanced-plugins', ' ')
 " \ 'neocomplete neosnippet neosnippet-snippets ' .
 " \ 'latex ruby ' .
 for lib in s:libs
