@@ -116,5 +116,8 @@
   "workbench.editor.labelFormat": "short",
   "workbench.editor.showTabs": true,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.startupEditor": "newUntitledFile"
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.renderWhitespace": "boundary"
 }
