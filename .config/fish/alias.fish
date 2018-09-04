@@ -71,7 +71,7 @@ if status --is-interactive
 
   # Editor
   abbr --add v     'env LANG=ja_JP.UTF-8 vim'
-  abbr --add vi    'env LANG=ja_JP.UTF-8 vim ADDITIONAL_VIM_PLUGINS=1'
+  abbr --add vi    'env LANG=ja_JP.UTF-8 vim'
 
   # docker
   abbr --add dc    'docker-compose'
@@ -79,5 +79,5 @@ if status --is-interactive
   abbr --add dr    'docker run -it --rm'
 
   # dokku
-  balias dokku 'bash $HOME/src/github.com/dokku/dokku/contrib/dokku_client.sh'
+  # balias dokku 'bash $HOME/src/github.com/dokku/dokku/contrib/dokku_client.sh'
 end

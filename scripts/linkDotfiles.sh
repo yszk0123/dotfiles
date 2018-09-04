@@ -10,9 +10,11 @@ done
 ln -sni ~/dotfiles/gitignore "$XDG_CONFIG_HOME/git/ignore"
 
 # fish
+mkdir -p ~/dotfiles/.config/fish/functions
 for target in config.fish alias.fish env.fish fishfile; do
   ln -sni ~/dotfiles/.config/fish/$target ~/.config/fish/$target
 done
+ln -sni ~/dotfiles/.config/fish/functions/* ~/.config/fish/functions/
 
 # VS Code
 for target in settings.json keybindings.json; do
