@@ -78,6 +78,6 @@ if status --is-interactive
   abbr --add de    'docker exec -it -e COLUMNS=200 -e LINES=50'
   abbr --add dr    'docker run -it --rm'
 
-  # dokku
-  # balias dokku 'bash $HOME/src/github.com/dokku/dokku/contrib/dokku_client.sh'
+  # fzf
+  abbr --add fzf 'fzf --height 40% --reverse'
 end

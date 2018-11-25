@@ -31,3 +31,10 @@ set fish_user_paths /usr/local/opt/python/libexec/bin $fish_user_paths
 
 # pkgconfig
 set PKG_CONFIG_PATH /usr/local/lib/pkgconfig $PKG_CONFIG_PATH
+
+# deno
+set fish_user_paths $HOME/.deno/bin $fish_user_paths
+
+# fzf
+set FZF_DEFAULT_COMMAND 'rg --files --hidden --glob "!.git/*"'
+set FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
