@@ -26,4 +26,19 @@ export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 # Fuzzy finder
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Plugins {{{
+source "${HOME}/.zgen/zgen.zsh"
+
+if ! zgen saved; then
+    zgen oh-my-zsh
+
+    zgen oh-my-zsh plugins/git
+
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load "zsh-users/zsh-completions"
+
+    zgen save
+fi
+# }}}
+
 # vim:set ft=zsh:

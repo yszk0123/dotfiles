@@ -22,7 +22,7 @@ export PATH="$PATH:$GOPATH/bin"
 # }}}
 
 # Ruby {{{
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+# export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 # }}}
 
 # Python {{{
