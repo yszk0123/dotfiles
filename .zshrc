@@ -12,19 +12,8 @@ select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
-# Lib
-# Disabled: python ruby
-for name in common complete docker fzf history keybinding lv os prompt settings utils vcs zaw alias clipboard; do
-  source "$HOME/dotfiles/zsh/$name.zsh"
-done
-
-source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
 # Workaround for GUI app which doesn't get /etc/paths
 export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
-
-# Fuzzy finder
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins {{{
 source "${HOME}/.zgen/zgen.zsh"
@@ -41,5 +30,13 @@ if ! zgen saved; then
     zgen save
 fi
 # }}}
+
+# Lib
+# Disabled: python ruby
+for name in common complete docker fzf history keybinding lv os prompt settings utils zaw alias clipboard vcs; do
+  source "$HOME/dotfiles/zsh/$name.zsh"
+done
+
+source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # vim:set ft=zsh:
