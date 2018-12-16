@@ -20,6 +20,7 @@ alias pu='pushd'
 alias po='popd'
 alias findi='find . \( -path ./.git -o -path \*/node_modules -o -path ./.tmp -o -path ./tmp \) -prune -o -type d -print'
 alias treei='tree -I ".git|node_modules|bower_components|.tmp|tmp|vendor"'
+alias f='fzf --height 40% --reverse'
 # Format (pretty print) {{{
 alias grepf='grep --color=always'
 alias agf='ag --group --color'
@@ -74,6 +75,26 @@ fi
 
 # dokku {{{
 alias dokku='bash $HOME/src/github.com/dokku/dokku/contrib/dokku_client.sh'
+# }}}
+
+# {{{
+# cf. https://github.com/necojackarc/dotfiles/commit/dacaf426f834bb9ae47e25d3af2b514a0115f87b
+
+# cd to a repo listed with ghq using fzf
+function cdr {
+  local dir="$(ghq list -p | fzf)"
+  if [ ! -z "$dir" ] ; then
+    cd "$dir"
+  fi
+}
+
+# git checkout a branch using fzf
+function gcob {
+  local branch="$( git branch | sed s/\*/\ /g | awk '{ print $1 }' | fzf)"
+  if [ ! -z "$branch" ] ; then
+    git checkout "$branch"
+  fi
+}
 # }}}
 
 # vim:set ft=zsh:

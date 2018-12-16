@@ -14,7 +14,7 @@ zstyle ':zle:*' word-style unspecified
 
 # Lib
 # Disabled: python
-for name in alias clipboard common complete docker fzf history keybinding lv os prompt ruby settings utils vcs zaw; do
+for name in common complete docker fzf history keybinding lv os prompt ruby settings utils vcs zaw alias clipboard; do
   source "$HOME/dotfiles/zsh/$name.zsh"
 done
 
