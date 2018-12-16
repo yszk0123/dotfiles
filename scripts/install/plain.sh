@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 if ! is_exists "nodebrew"; then
-  read -p "Do you wish to install nodebrew? [YyNn]" yn
+  read -r -p "Do you wish to install nodebrew? [YyNn]" yn
   case $yn in
     [Yy]* )
       curl -L git.io/nodebrew | perl - setup
@@ -10,7 +10,7 @@ if ! is_exists "nodebrew"; then
 fi
 
 if ! is_exists "fzf"; then
-  read -p "Do you wish to install fzf? [YyNn]" yn
+  read -r -p "Do you wish to install fzf? [YyNn]" yn
   case $yn in
     [Yy]* )
       git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -20,7 +20,7 @@ if ! is_exists "fzf"; then
 fi
 
 if [ ! -s "$HOME/.vim/autoload/plug.vim" ]; then
-  read -p "Do you wish to install plug.vim? [YyNn]" yn
+  read -r -p "Do you wish to install plug.vim? [YyNn]" yn
   case $yn in
     [Yy]* )
       curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -29,7 +29,7 @@ if [ ! -s "$HOME/.vim/autoload/plug.vim" ]; then
 fi
 
 if ! is_exists "with"; then
-  read -p "Do you wish to install plug.vim? [YyNn]" yn
+  read -r -p "Do you wish to install plug.vim? [YyNn]" yn
   case $yn in
     [Yy]* )
       curl -sLo- https://cdn.rawgit.com/mchav/with/master/install | bash

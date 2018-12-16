@@ -3,7 +3,9 @@
 BREW_LIST="$(brew list)"
 
 function is_installed() {
-  local result=$(echo "$BREW_LIST" | grep "^$1$")
+  local result
+  result=$(echo "$BREW_LIST" | grep "^$1$")
+
   if [ -z "$result" ]; then
     return 1;
   else
@@ -12,7 +14,7 @@ function is_installed() {
 }
 
 if ! is_exists "brew"; then
-  read -p "Do you wish to install brew? [YyNn]" yn
+  read -r -p "Do you wish to install brew? [YyNn]" yn
   case $yn in
     [Yy]* )
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -21,9 +23,9 @@ if ! is_exists "brew"; then
 fi
 
 for target in tree rename the_silver_searcher hub peco tig; do
-  [ is_installed $target ] && continue
+  is_installed $target && continue
 
-  read -p "Do you wish to install $target? [YyNn]" yn
+  read -r -p "Do you wish to install $target? [YyNn]" yn
   case $yn in
     [Yy]* )
       brew install "$target"
@@ -32,7 +34,7 @@ for target in tree rename the_silver_searcher hub peco tig; do
 done
 
 if ! is_exists "yarn"; then
-  read -p "Do you wish to install yarn? [YyNn]" yn
+  read -r -p "Do you wish to install yarn? [YyNn]" yn
   case $yn in
     [Yy]* )
       brew install yarn --without-node
@@ -42,7 +44,7 @@ fi
 
 # cf. https://github.com/neovim/homebrew-neovim/blob/master/README.md
 if ! is_exists "nvim"; then
-  read -p "Do you wish to install nvim? [YyNn]" yn
+  read -r -p "Do you wish to install nvim? [YyNn]" yn
   case $yn in
     [Yy]* )
       brew tap neovim/neovim
@@ -50,7 +52,7 @@ if ! is_exists "nvim"; then
       ;;
   esac
 else
-  read -p "Do you wish to update nvim? [YyNn]" yn
+  read -r -p "Do you wish to update nvim? [YyNn]" yn
   case $yn in
     [Yy]* )
       brew update

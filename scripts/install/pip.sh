@@ -15,9 +15,9 @@ function is_installed() {
 
 # cf. [p-e-w/maybe: :rabbit2: See what a program does before deciding whether you really want it to happen.](https://github.com/p-e-w/maybe)
 for target in maybe; do
-  [ is_installed $target ] && continue
+   is_installed $target  && continue
 
-  read -p "Do you wish to install $target? [YyNn]" yn
+  read -r -p "Do you wish to install $target? [YyNn]" yn
   case $yn in
     [Yy]* )
       $CURRENT_PIP install "$target"
