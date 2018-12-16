@@ -56,7 +56,7 @@
       - { name: tmux }
       - { name: tree }
       - { name: vim }
-      - { name: fish }
+      - { name: zsh }
 
       # pixta
       # - { name: imagemagick }

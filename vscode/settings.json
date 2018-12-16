@@ -114,7 +114,7 @@
   "sync.syncExtensions": true,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 10,
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "tslint.enable": true,
   "tslint.packageManager": "yarn",
   "typescript.preferences.quoteStyle": "single",
