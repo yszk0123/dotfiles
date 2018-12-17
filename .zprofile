@@ -45,7 +45,7 @@ export PATH="$HOME/dotfiles/node_modules/.bin:$PATH"
 # }}}
 
 # neovim {{{
-export XDG_CONFIG_HOME="~/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Install neovim with pip3 (python 3.5.x)
 export PATH="$PATH:/usr/local/lib/python3.5/site-packages"
