@@ -1,15 +1,13 @@
 {
   "[typescript]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "source.organizeImports": false
+    }
   },
   "[typescriptreact]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "source.organizeImports": false
+    }
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
