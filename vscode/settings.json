@@ -129,6 +129,5 @@
   "workbench.editor.labelFormat": "short",
   "workbench.editor.showTabs": true,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.tree.horizontalScrolling": true
+  "workbench.startupEditor": "newUntitledFile"
 }
