@@ -115,6 +115,8 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 10,
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "terminal.integrated.shellArgs.osx": ["-l"],
+  "terminal.integrated.shellArgs.linux": ["-l"],
   "tslint.enable": true,
   "tslint.packageManager": "yarn",
   "typescript.preferences.quoteStyle": "single",
