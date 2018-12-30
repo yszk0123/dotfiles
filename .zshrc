@@ -16,38 +16,41 @@ zstyle ':zle:*' word-style unspecified
 export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 
 # Plugins {{{
-export ZGEN_AUTOLOAD_COMPINIT=0
+ZGEN_AUTOLOAD_COMPINIT=0
+ZGEN_DIR="$ZDOTDIR/.zgen"
+source "$ZGEN_DIR/zgen.zsh"
 
 # Load zgen only if a user types a zgen command
 # ref: https://github.com/tarjoilija/zgen/issues/92
-zgen () {
-  if [[ ! -s "$ZDOTDIR/.zgen/zgen.zsh" ]]; then
-    git clone --recursive https://github.com/tarjoilija/zgen.git ${ZDOTDIR:-${HOME}}/.zgen
-  fi
-  source "$ZDOTDIR/.zgen/zgen.zsh"
-  zgen "$@"
-}
+# zgen () {
+#   if [[ ! -s "$ZDOTDIR/.zgen/zgen.zsh" ]]; then
+#     git clone --recursive https://github.com/tarjoilija/zgen.git "$ZDOTDIR/.zgen"
+#   fi
+#   source "$ZDOTDIR/.zgen/zgen.zsh"
+#   zgen "$@"
+# }
 
-# if ! zgen saved; then
-if [[ ! -s "$HOME/.zgen/init.zsh" ]]; then
-    zgen oh-my-zsh
+if ! zgen saved; then
+  zgen oh-my-zsh
 
-    zgen oh-my-zsh plugins/command-not-found
-    zgen oh-my-zsh plugins/fzf
-    zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/gitignore
-    zgen oh-my-zsh plugins/tmux
-    zgen oh-my-zsh plugins/yarn
+  # Maybe slow...
+  # zgen oh-my-zsh plugins/command-not-found
 
-    zgen load zsh-users/zsh-syntax-highlighting
+  zgen oh-my-zsh plugins/fzf
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/gitignore
+  zgen oh-my-zsh plugins/tmux
+  zgen oh-my-zsh plugins/yarn
 
-    zgen save
+  zgen load zsh-users/zsh-syntax-highlighting
+
+  zgen save
 fi
 # }}}
 
 # Lib
 # Disabled: python ruby
-for name in common complete docker fzf history keybinding lv os prompt settings utils zaw alias clipboard vcs; do
+for name in common complete docker fzf history keybinding lv os prompt settings utils alias clipboard vcs; do
   source "$HOME/dotfiles/zsh/$name.zsh"
 done
 
