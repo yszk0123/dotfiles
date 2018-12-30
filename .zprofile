@@ -44,6 +44,10 @@ export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/dotfiles/node_modules/.bin:$PATH"
 # }}}
 
+# Flutter {{{
+export PATH="$HOME/flutter/bin:$PATH"
+# }}}
+
 # neovim {{{
 export XDG_CONFIG_HOME="$HOME/.config"
 
