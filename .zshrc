@@ -16,9 +16,20 @@ zstyle ':zle:*' word-style unspecified
 export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 
 # Plugins {{{
-source "${HOME}/.zgen/zgen.zsh"
+export ZGEN_AUTOLOAD_COMPINIT=0
 
-if ! zgen saved; then
+# Load zgen only if a user types a zgen command
+# ref: https://github.com/tarjoilija/zgen/issues/92
+zgen () {
+  if [[ ! -s "$ZDOTDIR/.zgen/zgen.zsh" ]]; then
+    git clone --recursive https://github.com/tarjoilija/zgen.git ${ZDOTDIR:-${HOME}}/.zgen
+  fi
+  source "$ZDOTDIR/.zgen/zgen.zsh"
+  zgen "$@"
+}
+
+# if ! zgen saved; then
+if [[ ! -s "$HOME/.zgen/init.zsh" ]]; then
     zgen oh-my-zsh
 
     zgen oh-my-zsh plugins/command-not-found
@@ -29,7 +40,6 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/yarn
 
     zgen load zsh-users/zsh-syntax-highlighting
-    zgen load "zsh-users/zsh-completions"
 
     zgen save
 fi
