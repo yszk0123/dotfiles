@@ -6,12 +6,12 @@
   },
   {
     "key": "cmd+[BracketLeft]",
-    "command": "sortLines.sortLines",
+    "command": "editor.action.sortLinesAscending",
     "when": "editorTextFocus"
   },
   {
     "key": "shift+cmd+[BracketLeft]",
-    "command": "sortLines.sortLinesReverse",
+    "command": "editor.action.sortLinesDescending",
     "when": "editorTextFocus"
   },
   // EditorGroup
