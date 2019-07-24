@@ -1,5 +1,4 @@
 #!/bin/sh
-# require: gitlab.com/yszk0123/devtools
-# require: brew install browser
+# require: https://www.npmjs.com/package/diff2html-cli
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
-devtools-render-diff origin/$BRANCH | browser
+git diff origin/$BRANCH | diff2html -i stdin
