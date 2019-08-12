@@ -96,3 +96,5 @@
 	ff = only
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[net]
+	git-fetch-with-cli = true
