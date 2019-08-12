@@ -4,6 +4,16 @@
     "key": "cmd+k enter",
     "command": "editor.action.rename"
   },
+  {
+    "key": "cmd+[BracketLeft]",
+    "command": "sortLines.sortLines",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+[BracketLeft]",
+    "command": "sortLines.sortLinesReverse",
+    "when": "editorTextFocus"
+  },
   // EditorGroup
   {
     "key": "ctrl+cmd+e",
