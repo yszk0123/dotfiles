@@ -58,5 +58,5 @@
   {
     "key": "ctrl+cmd+k",
     "command": "workbench.action.terminal.resizePaneUp"
-  },
+  }
 ]
