@@ -37,7 +37,8 @@ if ! zgen saved; then
   # zgen oh-my-zsh plugins/command-not-found
 
   zgen oh-my-zsh plugins/fzf
-  zgen oh-my-zsh plugins/git
+  # Dangerous!!!
+  # zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/gitignore
   zgen oh-my-zsh plugins/tmux
   zgen oh-my-zsh plugins/yarn
