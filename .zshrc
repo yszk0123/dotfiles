@@ -17,7 +17,7 @@ export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 
 # Plugins {{{
 ZGEN_AUTOLOAD_COMPINIT=0
-ZGEN_DIR="$ZDOTDIR/.zgen"
+ZGEN_DIR="$HOME/.zgen"
 source "$ZGEN_DIR/zgen.zsh"
 
 # Load zgen only if a user types a zgen command
