@@ -51,7 +51,7 @@ fi
 
 # Lib
 # Disabled: python ruby
-for name in common complete docker fzf history keybinding lv os prompt settings utils alias clipboard vcs; do
+for name in common complete docker fzf history keybinding lv os settings utils alias clipboard vcs; do
   source "$HOME/dotfiles/zsh/$name.zsh"
 done
 
@@ -60,5 +60,7 @@ if [ -f $(brew --prefix)/etc/brew-wrap ]; then
 fi
 
 source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+eval "$(starship init zsh)"
 
 # vim:set ft=zsh:

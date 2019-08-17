@@ -91,6 +91,7 @@ brew rename
 brew ripgrep
 brew shellcheck
 brew sqlite
+brew starship
 brew tag
 brew the_silver_searcher
 brew tig
