@@ -55,6 +55,10 @@ for name in common complete docker fzf history keybinding lv os prompt settings 
   source "$HOME/dotfiles/zsh/$name.zsh"
 done
 
+if [ -f $(brew --prefix)/etc/brew-wrap ]; then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+
 source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # vim:set ft=zsh:
