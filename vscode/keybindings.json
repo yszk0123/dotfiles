@@ -6,12 +6,12 @@
   },
   {
     "key": "cmd+[BracketLeft]",
-    "command": "sortLines.sortLines",
+    "command": "editor.action.sortLinesAscending",
     "when": "editorTextFocus"
   },
   {
     "key": "shift+cmd+[BracketLeft]",
-    "command": "sortLines.sortLinesReverse",
+    "command": "editor.action.sortLinesDescending",
     "when": "editorTextFocus"
   },
   // EditorGroup
@@ -68,5 +68,15 @@
   {
     "key": "ctrl+cmd+k",
     "command": "workbench.action.terminal.resizePaneUp"
+  },
+  {
+    "key": "ctrl+shift+cmd+left",
+    "command": "-editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+cmd+left",
+    "command": "-editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
   }
 ]

@@ -43,23 +43,36 @@
   ],
   "json.schemas": [
     {
-      "fileMatch": ["package.json"],
+      "fileMatch": [
+        "package.json"
+      ],
       "url": "http://json.schemastore.org/package"
     },
     {
-      "fileMatch": ["babelrc.json", ".babelrc"],
+      "fileMatch": [
+        "babelrc.json",
+        ".babelrc"
+      ],
       "url": "http://json.schemastore.org/babelrc"
     },
     {
-      "fileMatch": [".eslintrc", "eslint.json", "eslint.js"],
+      "fileMatch": [
+        ".eslintrc",
+        "eslint.json",
+        "eslint.js"
+      ],
       "url": "http://json.schemastore.org/eslintrc"
     },
     {
-      "fileMatch": [".stylelintrc"],
+      "fileMatch": [
+        ".stylelintrc"
+      ],
       "url": "http://json.schemastore.org/stylelint"
     },
     {
-      "fileMatch": ["manifest.json"],
+      "fileMatch": [
+        "manifest.json"
+      ],
       "url": "http://json.schemastore.org/chrome-manifest"
     }
   ],
@@ -78,7 +91,10 @@
   "editor.formatOnSave": true,
   "editor.renderIndentGuides": true,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80, 100],
+  "editor.rulers": [
+    80,
+    100
+  ],
   "editor.suggest.localityBonus": true,
   "editor.tabSize": 2,
   "eslint.enable": false,
@@ -89,7 +105,9 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
-  "gitlens.codeLens.scopes": ["document"],
+  "gitlens.codeLens.scopes": [
+    "document"
+  ],
   "gitlens.historyExplorer.enabled": true,
   "html.format.extraLiners": "",
   "html.format.indentInnerHtml": true,
@@ -98,8 +116,13 @@
   "jest.autoEnable": false,
   "npm.bin": "yarn",
   "npm.enableScriptExplorer": true,
-  "npm.includeDirectories": ["frontend"],
-  "prettier.disableLanguages": ["vue", "markdown"],
+  "npm.includeDirectories": [
+    "frontend"
+  ],
+  "prettier.disableLanguages": [
+    "vue",
+    "markdown"
+  ],
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": false,
   "python.pythonPath": "python3",
@@ -122,8 +145,12 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 10,
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-  "terminal.integrated.shellArgs.osx": ["-l"],
-  "terminal.integrated.shellArgs.linux": ["-l"],
+  "terminal.integrated.shellArgs.osx": [
+    "-l"
+  ],
+  "terminal.integrated.shellArgs.linux": [
+    "-l"
+  ],
   "tslint.enable": true,
   "tslint.packageManager": "yarn",
   "typescript.preferences.quoteStyle": "single",
