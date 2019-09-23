@@ -166,5 +166,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "editor.minimap.enabled": false,
-  "editor.minimap.renderCharacters": false
+  "editor.minimap.renderCharacters": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
