@@ -127,6 +127,7 @@
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.labelFormat": "short",
   "workbench.editor.showTabs": false,
+  "workbench.editor.limit.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "plantuml.java": "/usr/bin/java",
@@ -145,5 +146,7 @@
   "todo-tree.highlights.enabled": true,
   "typescript.implementationsCodeLens.enabled": false,
   "typescript.referencesCodeLens.enabled": false,
-  "javascript.referencesCodeLens.enabled": false
+  "javascript.referencesCodeLens.enabled": false,
+  "timeline.showView": true,
+  "todo-tree.tree.showScanModeButton": false,
 }
