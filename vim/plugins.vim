@@ -1,4 +1,3 @@
-" Vim {{{
 Plug 'artnez/vim-wipeout'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
@@ -7,6 +6,12 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
+
+" Languages {{{
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 " }}}
 
 " fzf {{{
@@ -30,18 +35,6 @@ nnoremap <silent> [fzf]m :<C-u>History<CR>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
-" }}}
-
-" JavaScript {{{
-Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
-" }}}
-
-" TypeScript {{{
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-" }}}
-
-" Python {{{
-Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 " }}}
 
 " neoformat {{{
@@ -100,11 +93,6 @@ nmap g* <Plug>(incsearch-nohl-g*)
 nmap g# <Plug>(incsearch-nohl-g#)
 " }}}
 
-" switch: 似たような表現を切り替える(true <=> false, if <=> elseif など) {{{
-Plug 'AndrewRadev/switch.vim'
-nnoremap <bar> :<C-u>Switch<CR>
-" }}}
-
 " selection {{{
 Plug 'tpope/vim-surround'
 xmap s <Plug>VSurround
@@ -143,17 +131,19 @@ nnoremap <Leader>c :<C-u>Gcd<CR>
 nnoremap <Leader>l :<C-u>Glcd<CR>
 " }}}
 
-" Colorscheme {{{
-Plug 'NLKNguyen/papercolor-theme'
-" }}}
-
-" vim-markdown {{{
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-" }}}
-
 " vim-smartword {{{
 Plug 'kana/vim-smartword'
 nmap w <Plug>(smartword-w)
 nmap b <Plug>(smartword-b)
 nmap e <Plug>(smartword-e)
+" }}}
+
+" switch.vim {{{
+" 似たような表現を切り替える(true <=> false, if <=> elseif など)
+Plug 'AndrewRadev/switch.vim'
+nnoremap <bar> :<C-u>Switch<CR>
+" }}}
+
+" Colorscheme {{{
+Plug 'NLKNguyen/papercolor-theme'
 " }}}
