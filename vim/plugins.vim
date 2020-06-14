@@ -143,10 +143,6 @@ nnoremap <Leader>vF :<C-u>VimFilerCurrentDir<CR>
 " }}}
 
 " Colorscheme {{{
-" Plug 'wimstefan/Lightning'
-" Plug 'reedes/vim-colors-pencil'
-" Plug 'w0ng/vim-hybrid'
-" Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'NLKNguyen/papercolor-theme'
 " }}}
 

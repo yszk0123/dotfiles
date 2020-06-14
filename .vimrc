@@ -50,8 +50,6 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
-" colorscheme hybrid
-" colorscheme hybrid_reverse
 colorscheme PaperColor
 set background=dark
 " }}}
