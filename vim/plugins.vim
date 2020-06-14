@@ -9,8 +9,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
 " }}}
 
-Plug '/usr/local/opt/fzf'
+" fzf {{{
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+" }}}
 
 " JavaScript {{{
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
