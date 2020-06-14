@@ -16,7 +16,6 @@ Plug 'junegunn/fzf.vim'
 
 " JavaScript {{{
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
-Plug 'posva/vim-vue', { 'for': 'vue' }
 " }}}
 
 " TypeScript {{{
