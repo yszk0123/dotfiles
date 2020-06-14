@@ -19,7 +19,6 @@ nnoremap <silent> <Leader><Leader> :noh<CR>
 " Mode {{{
 " Toggle readonly mode
 command! -bang -range ToggleReadOnly call <SID>toggleReadOnly()
-noremap <silent> <Leader>r :<C-u>ToggleReadOnly<CR>
 function! s:toggleReadOnly()
   if &readonly || !&modifiable
     execute 'set noreadonly'
