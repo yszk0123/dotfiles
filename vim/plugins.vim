@@ -161,7 +161,3 @@ nmap e <Plug>(smartword-e)
 if has('mac')
   Plug 'junegunn/vim-xmark', { 'do': 'make' }
 end
-
-if executable('ag')
-  Plug 'rking/ag.vim', { 'on': ['Ag', 'AgFile', 'AgBuffer', 'AgAdd', 'AgHelp', 'AgFromSearch'] }
-endif

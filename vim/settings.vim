@@ -114,9 +114,3 @@ if has("wildmenu")
     set wildmenu
     set wildmode=longest,list
 endif
-
-" grep設定
-if executable('ag')
-  " file_rec設定
-  set grepprg=ag\ --nocolor\ --nogroup\ --hidden\ --ignore\ .hg\ --ignore\ .svn\ --ignore\ .git\ --ignore\ bower_components\ --ignore\ node_modules
-endif
