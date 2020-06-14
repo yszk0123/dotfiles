@@ -69,10 +69,6 @@ if is_exists "hub"; then
   alias git=hub
 fi
 
-# dokku {{{
-alias dokku='bash $HOME/src/github.com/dokku/dokku/contrib/dokku_client.sh'
-# }}}
-
 # {{{
 # cf. https://github.com/necojackarc/dotfiles/commit/dacaf426f834bb9ae47e25d3af2b514a0115f87b
 
