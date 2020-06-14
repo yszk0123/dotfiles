@@ -47,8 +47,8 @@ let mapleader = "\<Space>"
 nnoremap <Leader> <Nop>
 vnoremap <Leader> <Nop>
 
-nnoremap [util] <Nop>
-nmap s [util]
+nnoremap [fzf] <Nop>
+nmap s [fzf]
 " }}}
 " }}}
 
