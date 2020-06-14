@@ -33,8 +33,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-
 " color/keyprefixの設定が確実に反映されるように先に設定 {{{
 " Color {{{
 " Terminal

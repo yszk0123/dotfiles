@@ -143,13 +143,6 @@ nnoremap <Leader>c :<C-u>Gcd<CR>
 nnoremap <Leader>l :<C-u>Glcd<CR>
 " }}}
 
-" VimFiler {{{
-Plug 'Shougo/vimfiler', { 'on': ['VimFilerBufferDir', 'VimFilerCurrentDir'] }
-let g:vimfiler_safe_mode_by_default = 0
-nnoremap <Leader>vf :<C-u>VimFilerBufferDir<CR>
-nnoremap <Leader>vF :<C-u>VimFilerCurrentDir<CR>
-" }}}
-
 " Colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
 " }}}
