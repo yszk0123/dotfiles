@@ -18,7 +18,6 @@ brew docker-machine
 brew erlang
 brew exa
 brew fd
-brew fish
 brew fontconfig
 brew fswatch
 brew fzf
@@ -70,7 +69,6 @@ brew node
 brew numpy
 brew oniguruma
 brew openexr
-brew openssl
 brew openssl@1.1
 brew pcre
 brew pcre2
@@ -80,7 +78,6 @@ brew pwgen
 brew pyenv
 brew pyenv-virtualenv
 brew python
-brew python@2
 brew rbenv
 brew readline
 brew reattach-to-user-namespace
@@ -119,8 +116,7 @@ tap homebrew/versions
 
 tap homebrew/cask
 cask bettertouchtool
-cask google-japanese-ime
-cask minikube
+cask kindle
 cask vagrant
 
 tap heroku/brew
@@ -130,8 +126,13 @@ brew heroku-node
 tap rcmdnk/file
 brew brew-file
 
+# Other Homebrew packages
+brew openssl
+brew python@2
+
 # Other Cask applications
-cask kindle
+cask google-japanese-ime
+cask minikube
 cask virtualbox
 
 # App Store applications
