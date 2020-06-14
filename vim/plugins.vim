@@ -201,23 +201,3 @@ endif
 if executable('rg')
   Plug 'jremmen/vim-ripgrep', { 'on': ['Rg', 'RgRoot'] }
 endif
-
-if has('nvim')
-  Plug 'flowtype/vim-flow', { 'for': 'javascript' }
-  let g:flow#autoclose = 1
-  let g:flow#enable = 0
-
-  " deoplete {{{
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'for': 'javascript' }
-
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#enable_smart_case = 1
-  let g:deoplete#file#enable_buffer_path = 1
-
-  let g:deoplete#omni#input_patterns = {}
-  let g:deoplete#omni#input_patterns.javascript = '[^. *\t]\.\w*'
-
-  let g:deoplete#omni#functions = {}
-  let g:deoplete#omni#functions.javascript = 'flowcomplete#Complete'
-  " }}}
-endif

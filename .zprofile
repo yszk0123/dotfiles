@@ -50,9 +50,6 @@ export PATH="$HOME/flutter/bin:$PATH"
 
 # neovim {{{
 export XDG_CONFIG_HOME="$HOME/.config"
-
-# Install neovim with pip3 (python 3.5.x)
-export PATH="$PATH:/usr/local/lib/python3.5/site-packages"
 # }}}
 
 # Rust {{{

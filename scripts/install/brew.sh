@@ -45,22 +45,3 @@ if ! is_exists "yarn"; then
       ;;
   esac
 fi
-
-# cf. https://github.com/neovim/homebrew-neovim/blob/master/README.md
-if ! is_exists "nvim"; then
-  read -r -p "Do you wish to install nvim? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      brew tap neovim/neovim
-      brew install --HEAD neovim
-      ;;
-  esac
-else
-  read -r -p "Do you wish to update nvim? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      brew update
-      brew upgrade neovim
-      ;;
-  esac
-fi

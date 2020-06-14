@@ -21,7 +21,4 @@ for target in settings.json keybindings.json; do
   ln -sni "$HOME/dotfiles/vscode/$target" "$HOME/Library/Application Support/Code/User/$target"
 done
 
-mkdir -p "$XDG_CONFIG_HOME/nvim"
-ln -sni ~/dotfiles/.vimrc "$XDG_CONFIG_HOME/nvim/init.vim"
-
 ln -sni "$DOTFILES_DIR/brewfile" "$XDG_CONFIG_HOME/brewfile"

@@ -4,18 +4,6 @@
 
 Install [MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)
 
-## Neovim
-
-```sh
-brew install neovim
-mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
-ln -s ~/.vim $XDG_CONFIG_HOME/nvim
-ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
-```
-
-To use deoplete.vim
-`$ sudo pip3 install neovim`
-
 # Ruby
 
 ## Gem
