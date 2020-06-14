@@ -38,7 +38,6 @@ alias dcu='docker-compose up'
 # }}}
 
 # vim {{{
-alias nv='nvim'
 alias vi='env LANG=ja_JP.UTF-8 vim '
 alias v='env LANG=ja_JP.UTF-8 vim '
 # }}}
@@ -49,14 +48,10 @@ alias cp='cp -i'
 alias mv='mv -i'
 # }}}
 
-#alias mkdir='mkdir -p'
-
 # Wrap tmux to avoid issues with environment loading
 alias tmux='direnv exec / tmux'
 
 # Global aliases {{{
-alias -g G0='| grep'
-alias -g L0='| less'
 alias -g P='| perl -nle'
 alias -g S='| sed'
 # Format (pretty print)
