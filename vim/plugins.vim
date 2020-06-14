@@ -5,7 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
-
 call plug#begin('~/.vim/plugged')
 " }}}
 
@@ -18,6 +17,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
+Plug 'tpope/vim-fugitive'
 " }}}
 
 " Languages {{{
@@ -30,21 +30,6 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 " fzf {{{
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-nnoremap <silent> [fzf]R :<C-u>GFiles?<CR>
-nnoremap <silent> [fzf]r :<C-u>GFiles<CR>
-nnoremap <silent> [fzf]f :<C-u>Files<CR>
-nnoremap <silent> [fzf]g :<C-u>Rg<Space>
-nnoremap <silent> [fzf]b :<C-u>Buffers<CR>
-nnoremap <silent> [fzf]l :<C-u>Lines<CR>
-nnoremap <silent> [fzf]L :<C-u>BLines<CR>
-nnoremap <silent> [fzf]w :<C-u>Windows<CR>
-nnoremap <silent> [fzf]h :<C-u>History<CR>
-nnoremap <silent> [fzf]c :<C-u>Commits<CR>
-nnoremap <silent> [fzf]C :<C-u>BCommits<CR>
-nnoremap <silent> [fzf]m :<C-u>History<CR>
-
-" Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
@@ -66,13 +51,14 @@ Plug 'w0rp/ale'
 let g:ale_linters = {}
 let g:ale_linters['python'] = ['flake8']
 let g:ale_linters['javascript'] = []
-" let g:ale_linters['typescript'] = ['tslint', 'tsserver']
 let g:ale_linters['typescript'] = ['tsserver']
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['typescript'] = ['prettier']
+
 let g:ale_fix_on_save = 1
+
 let g:ale_javascript_prettier_options = '--single-quote'
 let g:ale_typescript_prettier_options = '--single-quote'
 let g:ale_javascript_prettier_use_local_config = 1
@@ -132,12 +118,6 @@ let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
 let delimitMate_matchpairs = '(:),{:}'
 au FileType html let b:delimitMate_matchpairs = '(:),[:],{:},<:>'
-" }}}
-
-" Git {{{
-Plug 'tpope/vim-fugitive'
-nnoremap <Leader>c :<C-u>Gcd<CR>
-nnoremap <Leader>l :<C-u>Glcd<CR>
 " }}}
 
 " vim-smartword {{{

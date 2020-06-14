@@ -2,7 +2,6 @@
 map q: :q
 
 inoremap <C-c> <Esc>
-nnoremap <silent> <Leader><Leader> :noh<CR>
 
 " Copy & paste {{{
 nnoremap Y y$
@@ -90,4 +89,38 @@ function s:smartTab()
   endif
 endfunction
 inoremap <silent> <tab> <c-r>=<SID>smartTab()<cr>
+" }}}
+
+" Folding {{{
+" Switch folding methods
+" nnoremap <Leader>fi :<C-u>setlocal foldmethod=indent<CR>
+" nnoremap <Leader>fm :<C-u>setlocal foldmethod=marker<CR>
+" nnoremap <Leader>fs :<C-u>setlocal foldmethod=syntax<CR>
+" }}}
+
+" Leader {{{
+let mapleader = "s"
+nnoremap <Leader> <Nop>
+vnoremap <Leader> <Nop>
+
+" common
+nnoremap <silent> <Leader><Space> :noh<CR>
+
+" vim-fugitive
+nnoremap <Leader>gc :<C-u>Gcd<CR>
+nnoremap <Leader>gl :<C-u>Glcd<CR>
+
+" fzf
+nnoremap <Leader>f :<C-u>Files<CR>
+nnoremap <Leader>r :<C-u>Rg<Space>
+nnoremap <Leader>b :<C-u>Buffers<CR>
+nnoremap <Leader>l :<C-u>Lines<CR>
+nnoremap <Leader>L :<C-u>BLines<CR>
+nnoremap <Leader>w :<C-u>Windows<CR>
+nnoremap <Leader>h :<C-u>History<CR>
+nnoremap <Leader>m :<C-u>Marks<CR>
+nnoremap <Leader>c :<C-u>Commits<CR>
+nnoremap <Leader>C :<C-u>BCommits<CR>
+nnoremap <Leader>gf :<C-u>GFiles<CR>
+nnoremap <Leader>gF :<C-u>GFiles?<CR>
 " }}}

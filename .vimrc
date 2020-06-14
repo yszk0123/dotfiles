@@ -29,17 +29,6 @@ syntax off
 set t_Co=256
 " }}}
 
-" Prefix for keymaps {{{
-let mapleader = "\<Space>"
-
-nnoremap <Leader> <Nop>
-vnoremap <Leader> <Nop>
-
-nnoremap [fzf] <Nop>
-nmap s [fzf]
-" }}}
-" }}}
-
 runtime vim/filetype.vim
 runtime vim/plugins.vim
 runtime vim/keymaps.vim
