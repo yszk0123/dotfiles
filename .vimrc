@@ -70,7 +70,7 @@ au BufNewFile,BufRead *.vue setlocal filetype=vue
 " }}}
 
 let s:libs = split(
-  \ 'plugins keymaps settings abbreviations', ' ')
+  \ 'plugins keymaps settings', ' ')
 for lib in s:libs
   execute 'runtime vim/' . lib . '.vim'
 endfor
