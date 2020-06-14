@@ -148,7 +148,6 @@ Plug 'NLKNguyen/papercolor-theme'
 " }}}
 
 " vim-markdown {{{
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 " }}}
 
