@@ -35,10 +35,24 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
-" キープレフィックス・色関係の設定が確実に反映されるように
-" lib/define-prefix.vimとlib/color.vimは早めにロードしておく
+" color/keyprefixの設定が確実に反映されるように先に設定 {{{
+" Color {{{
+" Terminal
+set t_Co=256
+" }}}
+
+" Prefix for keymaps {{{
+let mapleader = "\<Space>"
+
+nnoremap <Leader> <Nop>
+vnoremap <Leader> <Nop>
+
+nnoremap [util] <Nop>
+nmap s [util]
+" }}}
+" }}}
+
 let s:libs = split(
-  \ 'define-prefix color ' .
   \ 'commands filetype plugins keymaps settings abbreviations fzf', ' ')
 for lib in s:libs
   execute 'runtime vim/' . lib . '.vim'
