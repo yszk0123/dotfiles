@@ -1,4 +1,9 @@
-source ~/dotfiles/scripts/common/utils.sh
+source "$HOME/dotfiles/scripts/common/utils.sh"
+
+function source_zsh_script() {
+  local name="$1"
+  source "$HOME/dotfiles/zsh/$name.zsh"
+}
 
 # Language
 ## 日本語ファイル名を表示可能にする
@@ -20,16 +25,6 @@ ZGEN_AUTOLOAD_COMPINIT=0
 ZGEN_DIR="$ZDOTDIR/.zgen"
 source "$ZGEN_DIR/zgen.zsh"
 
-# Load zgen only if a user types a zgen command
-# ref: https://github.com/tarjoilija/zgen/issues/92
-# zgen () {
-#   if [[ ! -s "$ZDOTDIR/.zgen/zgen.zsh" ]]; then
-#     git clone --recursive https://github.com/tarjoilija/zgen.git "$ZDOTDIR/.zgen"
-#   fi
-#   source "$ZDOTDIR/.zgen/zgen.zsh"
-#   zgen "$@"
-# }
-
 if ! zgen saved; then
   zgen oh-my-zsh
 
@@ -50,13 +45,20 @@ fi
 # }}}
 
 # Lib
-# Disabled: python
-for name in common complete fzf history keybinding os settings utils alias git; do
-  source "$HOME/dotfiles/zsh/$name.zsh"
-done
+source_zsh_script common
+source_zsh_script complete
+source_zsh_script fzf
+source_zsh_script history
+source_zsh_script keybinding
+source_zsh_script os
+source_zsh_script settings
+source_zsh_script utils
+source_zsh_script alias
+source_zsh_script git
+# source_zsh_script python
 
-if [ -f $(brew --prefix)/etc/brew-wrap ]; then
-  source $(brew --prefix)/etc/brew-wrap
+if [ -f "$(brew --prefix)/etc/brew-wrap" ]; then
+  source "$(brew --prefix)/etc/brew-wrap"
 fi
 
 source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
