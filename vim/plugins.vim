@@ -135,19 +135,6 @@ nnoremap <Leader>gs :<C-u>Gstatus<CR>
 nnoremap <Leader>gw :<C-u>Gwrite<Space>
 " }}}
 
-" UltiSnips {{{
-Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets'
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-" let g:UltiSnipsExpandTrigger = "<c-i>"
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsListSnippets = "<c-tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:UltiSnipsSnippetDirectories = [$HOME . '/dotfiles/UltiSnips']
-" }}}
-
 " VimFiler {{{
 Plug 'Shougo/vimfiler', { 'on': ['VimFilerBufferDir', 'VimFilerCurrentDir'] }
 let g:vimfiler_safe_mode_by_default = 0

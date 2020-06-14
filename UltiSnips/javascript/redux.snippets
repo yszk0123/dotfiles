@@ -1,8 +1,0 @@
-priority -50
-
-snippet selector
-export const select${1:__Component__} = createSelector(
-  (state) => state.${1/^[A-Z]/\l$0/},
-  (${1/^[A-Z]/\l$0/}) => ${0:${1/^[A-Z]/\l$0/}}
-)
-endsnippet
