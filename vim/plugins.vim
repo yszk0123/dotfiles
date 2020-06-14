@@ -142,11 +142,6 @@ nnoremap <Leader>vf :<C-u>VimFilerBufferDir<CR>
 nnoremap <Leader>vF :<C-u>VimFilerCurrentDir<CR>
 " }}}
 
-" nerdtree {{{
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-nnoremap <Leader>h :<C-u>NERDTreeToggle<CR>
-" }}}
-
 " Colorscheme {{{
 " Plug 'wimstefan/Lightning'
 " Plug 'reedes/vim-colors-pencil'
