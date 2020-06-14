@@ -84,4 +84,16 @@ function gcob {
 }
 # }}}
 
+# git with preview {{{
+# https://qiita.com/kompiro/items/a09c0b44e7c741724c80
+alias ghqp='ghq look `ghq list |fzf --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*"`'
+
+function gcobp() {
+  local branch="$( git branch | sed s/\*/\ /g | awk '{ print $1 }' |  fzf --preview "git show --color=always {}")"
+  if [ ! -z "$branch" ] ; then
+    git checkout "$branch"
+  fi
+}
+# }}}
+
 # vim:set ft=zsh:
