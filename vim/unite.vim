@@ -3,21 +3,11 @@
 "    title:VimのUniteプラグインでファイル、バッファ、ブックマーク管理 | karakaram-blog
 "    url: http://www.karakaram.com/unite
 
-" Plug 'Shougo/unite-outline'
-" Plug 'Shougo/unite-session'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/neoinclude.vim'
-Plug 'tsukkee/unite-tag'
 
 " data_directory
 let g:unite_data_directory = $HOME . '/vimfiles/.unite'
-
-" if has('win32') || has('mac')
-" elseif  has('macunix')
-"   let g:unite_data_directory = '/Volumes/RamDisk/.unite'
-" else
-"   let g:unite_data_directory = '/mnt/ramdisk/.unite'
-" endif
 
 "unite general settings {{{
 "インサートモードで開始
@@ -26,14 +16,9 @@ let g:unite_enable_short_source_names = 1
 " 大文字小文字を区別しない
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
-"画面分割の設定(右側or下側)
-" let g:unite_split_rule = 'botright'
-"
 let g:unite_cursor_line_time = '0.15'
 let g:unite_update_time = 780
 "}}}
-
-" call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 let s:ignores = [''] + map([
   \ '.hg', '.svn', '.git', '.bzr',
@@ -81,24 +66,6 @@ nnoremap <silent> [util]R :<C-u>UniteResume files<CR>
 nnoremap <silent> [util]e :<C-u>Unite -buffer-name=files file_rec/async<CR>
 "}}}
 
-" " TODO: ショートカット用ソースを作成 {{{
-" let g:my_shortcut = {
-"       \ }
-" map(g:my_shortcut, '{
-"       \   "word": v:key,
-"       \   "source": "shortcut",
-"       \   "kind": "",
-"       \ }')
-" let s:unite_source = {
-"       \ 'name': 'shortcut'
-"       \ }
-" function! s:unite_source.gather_candidates(args, context)
-"   return
-" endfunction
-" call unite#define_source(s:unite_source)
-" unlet s:unite_source
-" "}}}
-
 " キーマッピング {{{
 
 autocmd BufEnter *
@@ -114,14 +81,6 @@ function! s:getbufdir()
   return expand('%:p:h:gs?[ :\\]?\\\\\\\0?')
 endfunction
 
-" 履歴アイテムのリンク切れ確認の切り替え
-" TODO: 旧コード(neobundle 5.1)からneomru用に書き換え
-" function! s:toggleUniteMruValidate()
-"   let g:unite_source_mru_do_validate = !g:unite_source_mru_do_validate
-"   echo 'toggled. current state is ' . g:unite_source_mru_do_validate
-" endfunction
-" nnoremap [util]t :<C-u>call <SID>toggleUniteMruValidate()<CR>
-
 "現在開いているファイルのディレクトリ下のファイル一覧。
 "開いていない場合はカレントディレクトリ
 nnoremap <silent> [util]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
@@ -135,13 +94,6 @@ nnoremap <silent> [util]t :<C-u>Unite tag<CR>
 "タブページ一覧
 nnoremap <silent> [util]T :<C-u>Unite tab<CR>
 
-"ブックマーク一覧
-nnoremap <silent> [util]c :<C-u>Unite bookmark<CR>
-"ブックマーク一覧(選択モードでスタート)
-nnoremap <silent> [util]C :<C-u>Unite -no-start-insert bookmark<CR>
-"ブックマークに追加
-nnoremap <silent> [util]a :<C-u>UniteBookmarkAdd<CR>
-
 " grep検索
 nnoremap <silent> [util]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 " grep検索(ファイル名のみ)
@@ -153,43 +105,6 @@ nnoremap <silent> [util]+ :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R>
 nnoremap <silent> [util]u :<C-u>UniteResume search-buffer<CR>
 " 行検索
 nnoremap <silent> [util]l :<C-u>Unite line -buffer-name=search-buffer<CR>
-
-"プロジェクト
-nnoremap <silent> [util]p :<C-u>Unite -buffer-name=project file_rec
-  \ -no-quit -vertical -winwidth=26 -wrap -long-source-names<CR>
-nnoremap <silent> [util]P :<C-u>Unite -buffer-name=project file_rec
-  \ -no-quit -vertical -winwidth=26 -wrap -long-source-names -resume<CR>
-" nnoremap <silent> [util]F :<C-u>Unite -buffer-name=files file<CR>
-
-" 色々
-" nnoremap <silent> [util]a :<C-u>UniteWithCurrentDir
-"         \ -buffer-name=files buffer bookmark file<CR>
-" 色々ジャンプ 
-" nnoremap <silent> [util]j :<C-u>Unite
-"         \ -buffer-name=files -no-split
-"         \ jump_point file_point buffer_tab
-"         \ file_rec:! file file/new<CR>
-
-"ソース一覧
-nnoremap <silent> [unite-ex]so :<C-u>Unite source<CR>
-"ショートカット一覧
-nnoremap <silent> [unite-ex]sh :<C-u>Unite shortcut<CR>
-"レジスタ一覧
-nnoremap <silent> [unite-ex]re :<C-u>Unite -buffer-name=register register<CR>
-"マッピング一覧
-nnoremap <silent> [unite-ex]ma :<C-u>Unite mapping<CR>
-"メッセージ一覧
-nnoremap <silent> [unite-ex]me :<C-u>Unite output:message<CR>
-" "セッション一覧
-" nnoremap <silent> [unite-ex]se :<C-u>Unite session<CR>
-
-"見出し一覧
-" nnoremap <silent> [util]o :<C-u>Unite outline<CR>
-"見出し一覧(分割表示)
-" nnoremap <silent> [util]vo :<C-u>Unite -vertical -winwidth=40 outline<CR>
-"おまけ(カレントディレクトリ内のファイル一覧(分割表示))
-" nnoremap <silent> [util]vf :<C-u>vsplit<CR><C-w><C-w>:e %:h<CR>
-" }}}
 
 "uniteを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()
