@@ -39,8 +39,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " lib/define-prefix.vimとlib/color.vimは早めにロードしておく
 let s:libs = split(
   \ 'define-prefix color ' .
-  \ 'unite neomru ' .
-  \ 'commands filetype plugins keymaps settings abbreviations', ' ')
+  \ 'commands filetype plugins keymaps settings abbreviations fzf', ' ')
 for lib in s:libs
   execute 'runtime vim/' . lib . '.vim'
 endfor
