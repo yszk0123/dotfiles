@@ -35,6 +35,7 @@ brew graphicsmagick
 brew graphviz
 brew httpie
 brew hub
+brew icu4c
 brew imagemagick
 brew ios-deploy
 brew isl
