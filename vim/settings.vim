@@ -1,12 +1,5 @@
-"set noswapfile
-"ref
-"  知らないと損するvim知識30選 - Vim is running out
-"  http://d.hatena.ne.jp/vimtaku/20121117/1353138802
-"let g:plugin_migemo_disable = 1
-
 set ignorecase
 set smartcase
-" set browsedir=buffer
 
 if g:my_local_mode
   " バックアップの設定
@@ -36,9 +29,6 @@ set autoindent
 set backspace=indent,eol,start
 set colorcolumn=80,100
 set expandtab
-" 折りたたみを手動操作, 開いた状態で編集開始
-" set foldmethod=manual
-" set foldlevelstart=99
 " 日本語の行の連結時には空白を入力しない。
 set formatoptions+=mM
 " 自動整形を避ける
@@ -59,11 +49,7 @@ set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
-" タイトル設定
 set title
-" 自動改行を行わない
-" set textwidth=0
-" set winheight=6
 
 " Session {{{
 set sessionoptions-=buffers

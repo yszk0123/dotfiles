@@ -14,7 +14,6 @@ endif
 " 無: 仕事用など, 有: 自分用のPC
 let g:my_local_mode = !empty(glob($HOME . '/dotfiles/my_local_mode*'))
 
-"filetype off
 if has('vim_starting')
   if &compatible
     set nocompatible

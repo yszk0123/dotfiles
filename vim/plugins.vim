@@ -126,7 +126,6 @@ map M  <Plug>(operator-sort)
 "}}}
 
 " 囲み系補完 {{{
-" Plug 'kana/vim-smartinput'
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
 let delimitMate_expand_space = 1
@@ -136,9 +135,6 @@ au FileType html let b:delimitMate_matchpairs = '(:),[:],{:},<:>'
 " }}}
 
 " Git {{{
-" Plug 'tpope/vim-fugitive', { 'on': [
-"   \ 'Gcd', 'Glcd', 'Gadd', 'Gblame', 'Gcommit',
-"   \ 'Gdiff', 'Gedit', 'Glog', 'Gstatus', 'Gwrite' ] }
 Plug 'tpope/vim-fugitive'
 nnoremap <Leader>c :<C-u>Gcd<CR>
 nnoremap <Leader>l :<C-u>Glcd<CR>
