@@ -123,15 +123,6 @@ au FileType html let b:delimitMate_matchpairs = '(:),[:],{:},<:>'
 Plug 'tpope/vim-fugitive'
 nnoremap <Leader>c :<C-u>Gcd<CR>
 nnoremap <Leader>l :<C-u>Glcd<CR>
-nnoremap <Leader>ga :<C-u>Gadd<Space>
-nnoremap <Leader>gb :<C-u>Gblame<Space>
-nnoremap <Leader>gC :<C-u>Gcommit<Space>
-nnoremap <Leader>gA :<C-u>Gcommit --amend --reuse-message=HEAD<Space>
-nnoremap <Leader>gd :<C-u>Gdiff<Space>
-nnoremap <Leader>ge :<C-u>Gedit<Space>
-nnoremap <Leader>gL :<C-u>Glog<Space>
-nnoremap <Leader>gs :<C-u>Gstatus<CR>
-nnoremap <Leader>gw :<C-u>Gwrite<Space>
 " }}}
 
 " VimFiler {{{
