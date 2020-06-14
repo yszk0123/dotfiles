@@ -51,7 +51,7 @@ fi
 
 # Lib
 # Disabled: python
-for name in common complete docker fzf history keybinding os settings utils alias vcs; do
+for name in common complete docker fzf history keybinding os settings utils alias git; do
   source "$HOME/dotfiles/zsh/$name.zsh"
 done
 
