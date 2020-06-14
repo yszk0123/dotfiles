@@ -62,12 +62,6 @@ nnoremap <Leader>fm :<C-u>setlocal foldmethod=marker<CR>
 nnoremap <Leader>fs :<C-u>setlocal foldmethod=syntax<CR>
 " }}}
 
-" Date {{{
-" Insert the current date
-nnoremap <F6> <Esc>i<C-R>=strftime("%Y-%m-%dT%H:%M")<CR><Esc>
-inoremap <F6> <C-R>=strftime("%Y-%m-%dT%H:%M")<CR>
-" }}}
-
 " Cursor manipulation {{{
 " 表示行単位のカーソル移動
 " Ctrl+*のタイプはnyaosやtcshのキーバインドになるべく合わせている
@@ -90,24 +84,6 @@ nnoremap <C-e> <end>
 
 " Go to older position in change list
 nnoremap g: g;
-
-" inoremap <C-B> <Left>
-" inoremap <C-F> <Right>
-" inoremap <C-J> <Down>
-" inoremap <C-K> <Up>
-" inoremap <C-A> <Home>
-" inoremap <C-E> <End>
-" inoremap <C-D> <Esc>
-
-" nnoremap <C-Space> <PageDown>
-" nnoremap <C-Enter> <PageUp>
-
-" [[などをセクション移動の代わりにカッコの移動に使う
-" nnoremap [[ ?{<CR>
-" nnoremap ][ /}<CR>
-" nnoremap ]] /{<CR>
-" nnoremap [] ?}<CR>
-"}}}
 
 " バッファ, タブページ, ウィンドウの操作 {{{
 nnoremap <Leader>bb :b#<CR>
@@ -133,10 +109,6 @@ noremap gf :sp <cfile><CR>
 nnoremap ZZ <Nop>
 "最後の編集位置へ移動(zzは画面中央にスクロール移動)
 " map gb `.zz
-"ヤンクした文字をカーソル位置の前に挿入
-" nnoremap gy "0P
-" nnoremap <C-g> g;
-" nnoremap g; g,
 "カーソルキーで行末／行頭の移動可能に設定。
 set whichwrap=b,s,[,],<,>
 "l を <Right>に置き換えて、折りたたみを l で開くことができるようにする。
@@ -155,21 +127,6 @@ endif
 " Resize/move/split windows
 nnoremap + <C-w>+
 nnoremap - <C-w>-
-nnoremap [util]H <C-w>H
-nnoremap [util]J <C-w>J
-nnoremap [util]K <C-w>K
-nnoremap [util]L <C-w>L
-nnoremap [util]= <C-w>=
-nnoremap [util]s :<C-u>split
-nnoremap [util]v :<C-u>vsplit
-
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-" CAUTION: a register 'z' is used
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-" }}}
 
 " 各種ショートカット {{{
 " 新しいタブを開く
@@ -180,28 +137,7 @@ nnoremap <Leader>N :<C-u>tabnew<bar>tabmove<CR>
 nnoremap <Leader>C :<C-u>cd %:h<CR>
 " 編集中のファイルのあるディレクトリをカレントディレクトリに設定
 nnoremap <Leader>L :<C-u>lcd %:h<CR>
-" 編集中のファイル名を表示 (:fileの方が便利)
-" nnoremap <Leader>f :<C-u>echo expand('%:p')<CR>
-" nnoremap <Leader>e :<C-u>edit<Space>
-" nnoremap <Leader>p :<C-u>pedit<Space>
-" preview windowでテンプレートファイルを開く
-" nnoremap <Leader>t :<C-u>pedit D:/common/templates/
 "}}}
-
-" 80桁を超えた部分をハイライト {{{
-" cf. [【Vim】80桁教信者の憂鬱 その２（ホットキーでトグル、他） | blog.remora.cx](http://blog.remora.cx/2013/06/source-in-80-columns-2.html)
-" その１ {{{
-" noremap <Plug>(ToggleColorColumn)
-"             \ :<c-u>let &colorcolumn = len(&colorcolumn) > 0 ? '' :
-"             \   join(range(81, 999), ',')<CR>
-" nmap <Leader>; <Plug>(ToggleColorColumn)
-" let &colorcolumn = join(range(81, 999), ',')
-" }}}
-
-" その２ {{{
-" call matchadd("Error", '.\%>81v')
-" }}}
-" }}}
 
 " Map tab to execute omini complete {{{
 " cf. [tabでomni補完するための.vimrcの設定 « StudioT::DevLog](http://studiot.jp/blog/?p=184)
