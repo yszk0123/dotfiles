@@ -50,7 +50,7 @@ fi
 # }}}
 
 # Lib
-# Disabled: python ruby
+# Disabled: python
 for name in common complete docker fzf history keybinding os settings utils alias vcs; do
   source "$HOME/dotfiles/zsh/$name.zsh"
 done

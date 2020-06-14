@@ -24,10 +24,4 @@ done
 mkdir -p "$XDG_CONFIG_HOME/nvim"
 ln -sni ~/dotfiles/.vimrc "$XDG_CONFIG_HOME/nvim/init.vim"
 
-if [ -f "$DOTFILES_DIR/my_local_mode" ]; then
-  for target in .gemrc .gvimrc .irbrc; do
-    ln -sni ~/dotfiles/$target ~/$target
-  done
-fi
-
 ln -sni "$DOTFILES_DIR/brewfile" "$XDG_CONFIG_HOME/brewfile"
