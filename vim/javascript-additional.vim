@@ -1,5 +1,3 @@
-Plug 'fleischie/vim-styled-components', { 'for': 'fleischie/vim-styled-components' }
-
 " basic plugin {{{
 " vim-javascript {{{
 " Plug 'taichouchou2/vim-javascript'
