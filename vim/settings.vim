@@ -1,30 +1,5 @@
 set ignorecase
 set smartcase
-
-if has('mac')
-  " バックアップの設定
-  " node.jsのfs.watch()などで正しくイベントを受け取れるようにするには
-  " backupcopyオプションを適切に設定する必要がある
-  " backupcopyをauto/yesにした場合, バックアップの際にファイルはリネームされる
-  " fs.watch()ではこれを"ファイルが削除された"ものとみなしてしまう
-  " backupcopyをnoにした場合,この問題は起こらないが, バックアップの度にファイル
-  " コピーが発生する
-  set nobackup
-  set nowritebackup
-  set swapfile
-  set noundofile
-  set backupdir=~/vimfiles/tmp
-  set directory=~/vimfiles/tmp
-  set viminfo+=n~/vimfiles/viminfo.txt
-endif
-
-" Cのプリプロセッサ行("#"で始まる行)にもインデントを適用する
-" (一部の言語では"#"をコメント開始に使うため)
-" set cinkeys=0{,0},0),:,0#,!^F,o,O,e
-" set cinkeys-=0#
-" set indentkeys-=0#
-" set smartindent
-
 set autoindent
 set backspace=indent,eol,start
 set colorcolumn=80,100
@@ -50,15 +25,12 @@ set splitbelow
 set splitright
 set tabstop=2
 set title
+set clipboard=unnamed
 
-" Session {{{
+" Session
 set sessionoptions-=buffers
 set sessionoptions-=help
 set sessionoptions-=options
-" }}}
-
-" Clipboard
-set clipboard=unnamed
 
 " Better performance
 set nocursorline
@@ -70,6 +42,23 @@ autocmd InsertEnter,InsertLeave * set cursorline!
 " Disable beeping
 set visualbell
 set t_vb=
+
+if has('mac')
+  " バックアップの設定
+  " node.jsのfs.watch()などで正しくイベントを受け取れるようにするには
+  " backupcopyオプションを適切に設定する必要がある
+  " backupcopyをauto/yesにした場合, バックアップの際にファイルはリネームされる
+  " fs.watch()ではこれを"ファイルが削除された"ものとみなしてしまう
+  " backupcopyをnoにした場合,この問題は起こらないが, バックアップの度にファイル
+  " コピーが発生する
+  set nobackup
+  set nowritebackup
+  set swapfile
+  set noundofile
+  set backupdir=~/vimfiles/tmp
+  set directory=~/vimfiles/tmp
+  set viminfo+=n~/vimfiles/viminfo.txt
+endif
 
 " Cursor settings. This makes terminal vim sooo much nicer!
 " Tmux will only forward escape sequences to the terminal if surrounded by a DCS
