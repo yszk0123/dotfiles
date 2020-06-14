@@ -37,11 +37,3 @@ pyenv install <version>
 pyenv global <version>
 pyenv rehash
 ```
-
-# Tex
-
-## For Mac
-Install [MacTeX](https://www.tug.org/mactex/)
-
-## For Vim
-Install [vim-latex](https://github.com/vim-latex/vim-latex) for Vim
