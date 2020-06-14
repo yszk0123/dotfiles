@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for target in "github.com/motemen/ghq" "github.com/typester/gh-open"; do
+for target in "github.com/typester/gh-open"; do
   TARGET_POSTFIX="${target##*/}"
   is_exists $TARGET_POSTFIX && continue
 

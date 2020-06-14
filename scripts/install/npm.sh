@@ -13,24 +13,21 @@ function is_installed() {
   fi
 }
 
+function confirm_then_yarn_add() {
+  local target="$1"
+  is_installed "$target" && return
+
+  if confirm_with_message "Do you wish to install $target?"; then
+    yarn global add "$target"
+  fi
+}
+
 if ! is_exists "node"; then
-  read -r -p "Do you wish to install node (via nodebrew)? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      nodebrew install-binary v8.9.4
-      nodebrew use v8.9.4
-      ;;
-  esac
+  if confirm_with_message "Do you wish to install node (via nodebrew)?"; then
+    nodebrew install-binary v8.9.4
+    nodebrew use v8.9.4
+  fi
 fi
 
 # cf. https://github.com/stevemao/diff-so-fancy
-for target in diff-so-fancy; do
-  is_installed $target && continue
-
-  read -r -p "Do you wish to install $target? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      npm install -g "$target"
-      ;;
-  esac
-done
+confirm_then_yarn_add diff-so-fancy

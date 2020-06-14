@@ -13,35 +13,27 @@ function is_installed() {
   fi
 }
 
+function confirm_then_brew_install() {
+  local target="$1"
+  is_installed "$target" && return
+
+  if confirm_with_message "Do you wish to install $target?"; then
+    brew install "$target"
+  fi
+}
+
 if ! is_exists "brew"; then
-  read -r -p "Do you wish to install brew? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-      ;;
-  esac
+  if confirm_with_message "Do you wish to install brew?"; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
 fi
 
 if ! is_exists "brew-file"; then
   brew install rcmdnk/file/brew-file
 fi
 
-for target in tree rename ripgrep hub tig; do
-  is_installed $target && continue
-
-  read -r -p "Do you wish to install $target? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      brew install "$target"
-      ;;
-  esac
-done
-
-if ! is_exists "yarn"; then
-  read -r -p "Do you wish to install yarn? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      brew install yarn --without-node
-      ;;
-  esac
-fi
+confirm_then_brew_install tree
+confirm_then_brew_install rename
+confirm_then_brew_install ripgrep
+confirm_then_brew_install hub
+confirm_then_brew_install tig
