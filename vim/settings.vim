@@ -1,7 +1,7 @@
 set ignorecase
 set smartcase
 
-if g:my_local_mode
+if has('mac')
   " バックアップの設定
   " node.jsのfs.watch()などで正しくイベントを受け取れるようにするには
   " backupcopyオプションを適切に設定する必要がある

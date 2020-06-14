@@ -9,11 +9,6 @@ if has('gui_running') && !has('unix')
   scriptencoding cp932
 endif
 
-" my_local_mode~というファイルの存在有無により
-" 自分用のPC限定の設定を行うかどうかを決める
-" 無: 仕事用など, 有: 自分用のPC
-let g:my_local_mode = !empty(glob($HOME . '/dotfiles/my_local_mode*'))
-
 if has('vim_starting')
   if &compatible
     set nocompatible
