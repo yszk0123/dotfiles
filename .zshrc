@@ -51,7 +51,7 @@ fi
 
 # Lib
 # Disabled: python ruby
-for name in common complete docker fzf history keybinding lv os settings utils alias clipboard vcs; do
+for name in common complete docker fzf history keybinding lv os settings utils alias vcs; do
   source "$HOME/dotfiles/zsh/$name.zsh"
 done
 
