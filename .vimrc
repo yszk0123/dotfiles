@@ -45,11 +45,7 @@ runtime vim/filetype.vim
 runtime vim/plugins.vim
 runtime vim/keymaps.vim
 runtime vim/settings.vim
-
-" Commands {{{
-" Rename
-command! -nargs=1 -complete=file Rename f <args>|write|call delete(expand('#'))
-" }}}
+runtime vim/commands.vim
 
 " syntax and colorscheme {{{
 filetype plugin indent on
