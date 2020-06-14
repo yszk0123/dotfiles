@@ -126,7 +126,7 @@
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.labelFormat": "short",
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": true,
   "workbench.editor.limit.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
@@ -149,4 +149,10 @@
   "javascript.referencesCodeLens.enabled": false,
   "timeline.showView": true,
   "todo-tree.tree.showScanModeButton": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
