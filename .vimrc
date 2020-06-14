@@ -69,11 +69,9 @@ au BufNewFile,BufRead Dockerfile.* setlocal filetype=dockerfile
 au BufNewFile,BufRead *.vue setlocal filetype=vue
 " }}}
 
-let s:libs = split(
-  \ 'plugins keymaps settings', ' ')
-for lib in s:libs
-  execute 'runtime vim/' . lib . '.vim'
-endfor
+runtime vim/plugins.vim
+runtime vim/keymaps.vim
+runtime vim/settings.vim
 
 " Commands {{{
 " Rename
