@@ -1,4 +1,9 @@
-source ~/dotfiles/scripts/common/utils.sh
+source "$HOME/dotfiles/scripts/common/utils.sh"
+
+function source_zsh_script() {
+  local name="$1"
+  source "$HOME/dotfiles/zsh/$name.zsh"
+}
 
 # Language
 ## 日本語ファイル名を表示可能にする
@@ -20,16 +25,6 @@ ZGEN_AUTOLOAD_COMPINIT=0
 ZGEN_DIR="$HOME/.zgen"
 source "$ZGEN_DIR/zgen.zsh"
 
-# Load zgen only if a user types a zgen command
-# ref: https://github.com/tarjoilija/zgen/issues/92
-# zgen () {
-#   if [[ ! -s "$ZDOTDIR/.zgen/zgen.zsh" ]]; then
-#     git clone --recursive https://github.com/tarjoilija/zgen.git "$ZDOTDIR/.zgen"
-#   fi
-#   source "$ZDOTDIR/.zgen/zgen.zsh"
-#   zgen "$@"
-# }
-
 if ! zgen saved; then
   zgen oh-my-zsh
 
@@ -50,10 +45,21 @@ fi
 # }}}
 
 # Lib
-# Disabled: python ruby
-for name in common complete docker fzf history keybinding lv os prompt settings utils alias clipboard vcs; do
-  source "$HOME/dotfiles/zsh/$name.zsh"
-done
+source_zsh_script common
+source_zsh_script complete
+source_zsh_script fzf
+source_zsh_script history
+source_zsh_script keybinding
+source_zsh_script os
+source_zsh_script settings
+source_zsh_script utils
+source_zsh_script alias
+source_zsh_script git
+# source_zsh_script python
+
+if [ -f "$(brew --prefix)/etc/brew-wrap" ]; then
+  source "$(brew --prefix)/etc/brew-wrap"
+fi
 
 source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
@@ -62,5 +68,7 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+eval "$(starship init zsh)"
 
 # vim:set ft=zsh:

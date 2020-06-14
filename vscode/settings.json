@@ -1,6 +1,14 @@
 {
   "[yaml]": {
     "editor.formatOnSave": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.wordWrap": "off"
@@ -98,7 +106,9 @@
   "jest.autoEnable": false,
   "npm.bin": "yarn",
   "npm.enableScriptExplorer": true,
-
+  "npm.includeDirectories": [
+    "frontend"
+  ],
   "prettier.disableLanguages": [
     "vue",
     "markdown"
@@ -117,6 +127,7 @@
   "terminal.integrated.shellArgs.linux": [
     "-l"
   ],
+  "tslint.enable": false,
   "tslint.packageManager": "yarn",
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -131,18 +142,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "plantuml.java": "/usr/bin/java",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "todo-tree.highlights.enabled": true,
   "typescript.implementationsCodeLens.enabled": false,
   "typescript.referencesCodeLens.enabled": false,
@@ -155,4 +154,12 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "todo-tree.highlights.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "todo-tree.tree.showScanModeButton": false
 }

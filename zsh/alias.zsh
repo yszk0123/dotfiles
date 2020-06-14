@@ -18,12 +18,13 @@ alias ll='ls -l'
 alias lla='ls -lA'
 alias pu='pushd'
 alias po='popd'
-alias findi='find . \( -path ./.git -o -path \*/node_modules -o -path ./.tmp -o -path ./tmp \) -prune -o -type d -print'
+alias findf='find . \( -path ./.git -o -path \*/node_modules -o -path ./.tmp -o -path ./tmp \) -prune -o -type f -print'
+alias findd='find . \( -path ./.git -o -path \*/node_modules -o -path ./.tmp -o -path ./tmp \) -prune -o -type d -print'
 alias treei='tree -I ".git|node_modules|bower_components|.tmp|tmp|vendor"'
 alias f='fzf --height 40% --reverse'
 # Format (pretty print) {{{
 alias grepf='grep --color=always'
-alias agf='ag --group --color'
+alias rgf='rg --color'
 # }}}
 # }}}
 
@@ -36,14 +37,8 @@ alias dcr='docker-compose run --rm'
 alias dcu='docker-compose up'
 # }}}
 
-# ghq & peco {{{
-alias ghqp='cd $(ghq list -p | peco)'
-alias ghqp-open='gh-open $(ghq list -p | peco)'
-# }}}
-
 # vim {{{
-alias nv='nvim'
-alias vi='env LANG=ja_JP.UTF-8 vim ADDITIONAL_VIM_PLUGINS=1 '
+alias vi='env LANG=ja_JP.UTF-8 vim '
 alias v='env LANG=ja_JP.UTF-8 vim '
 # }}}
 
@@ -53,14 +48,10 @@ alias cp='cp -i'
 alias mv='mv -i'
 # }}}
 
-#alias mkdir='mkdir -p'
-
 # Wrap tmux to avoid issues with environment loading
 alias tmux='direnv exec / tmux'
 
 # Global aliases {{{
-alias -g G0='| grep'
-alias -g L0='| less'
 alias -g P='| perl -nle'
 alias -g S='| sed'
 # Format (pretty print)
@@ -72,10 +63,6 @@ alias -g D="| diff-so-fancy | less --tabs=1,5 -R"
 if is_exists "hub"; then
   alias git=hub
 fi
-
-# dokku {{{
-alias dokku='bash $HOME/src/github.com/dokku/dokku/contrib/dokku_client.sh'
-# }}}
 
 # {{{
 # cf. https://github.com/necojackarc/dotfiles/commit/dacaf426f834bb9ae47e25d3af2b514a0115f87b
@@ -91,6 +78,18 @@ function cdr {
 # git checkout a branch using fzf
 function gcob {
   local branch="$( git branch | sed s/\*/\ /g | awk '{ print $1 }' | fzf)"
+  if [ ! -z "$branch" ] ; then
+    git checkout "$branch"
+  fi
+}
+# }}}
+
+# git with preview {{{
+# https://qiita.com/kompiro/items/a09c0b44e7c741724c80
+alias ghqp='ghq look `ghq list |fzf --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*"`'
+
+function gcobp() {
+  local branch="$( git branch | sed s/\*/\ /g | awk '{ print $1 }' |  fzf --preview "git show --color=always {}")"
   if [ ! -z "$branch" ] ; then
     git checkout "$branch"
   fi

@@ -13,14 +13,14 @@ function is_installed() {
   fi
 }
 
-# cf. [p-e-w/maybe: :rabbit2: See what a program does before deciding whether you really want it to happen.](https://github.com/p-e-w/maybe)
-for target in maybe; do
-   is_installed $target  && continue
+function confirm_then_pip_install() {
+  local target="$1"
+  is_installed "$target" && return
 
-  read -r -p "Do you wish to install $target? [YyNn]" yn
-  case $yn in
-    [Yy]* )
-      $CURRENT_PIP install "$target"
-      ;;
-  esac
-done
+  if confirm_with_message "Do you wish to install $target?"; then
+    $CURRENT_PIP install "$target"
+  fi
+}
+
+# cf. [p-e-w/maybe: :rabbit2: See what a program does before deciding whether you really want it to happen.](https://github.com/p-e-w/maybe)
+confirm_then_pip_install maybe

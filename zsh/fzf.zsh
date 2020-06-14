@@ -1,7 +1,7 @@
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Setting ag as the default source for fzf
+# Setting rg as the default source for fzf
 export FZF_DEFAULT_COMMAND='rg --files'
 
 # To apply the command to CTRL-T as well

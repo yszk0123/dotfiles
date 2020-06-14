@@ -1,0 +1,144 @@
+
+# tap repositories and their packages
+
+tap homebrew/core
+brew autoconf
+brew automake
+brew awscli
+brew bat
+brew browser
+brew cmake
+brew colordiff
+brew coreutils
+brew dep
+brew direnv
+brew docker
+brew docker-compose
+brew docker-machine
+brew erlang
+brew exa
+brew fd
+brew fontconfig
+brew fswatch
+brew fzf
+brew gcc
+brew gd
+brew gdbm
+brew gettext
+brew ghq
+brew git
+brew git-extras
+brew git-flow
+brew go
+brew gradle
+brew graphicsmagick
+brew graphviz
+brew httpie
+brew hub
+brew icu4c
+brew imagemagick
+brew ios-deploy
+brew isl
+brew jemalloc
+brew jpeg
+brew jq
+brew kubernetes-cli
+brew libevent
+brew libgphoto2 --universal
+brew libidn2
+brew libimobiledevice
+brew libmpc
+brew libplist
+brew libpng
+brew libtasn1
+brew libtermkey
+brew libtiff
+brew libtool --universal
+brew libunistring
+brew libusb
+brew libusb-compat --universal
+brew libuv
+brew libvterm
+brew libxml2
+brew libyaml
+brew libzip
+brew makedepend
+brew mas
+brew mkcert
+brew mysql
+brew node
+brew numpy
+brew oniguruma
+brew openexr
+brew openssl@1.1
+brew pcre
+brew pcre2
+brew pkg-config
+brew postgresql
+brew pwgen
+brew pyenv
+brew pyenv-virtualenv
+brew python
+brew rbenv
+brew readline
+brew reattach-to-user-namespace
+brew redis
+brew rename
+brew ripgrep
+brew shellcheck
+brew sqlite
+brew starship
+brew tag
+brew tig
+brew tmux
+brew tokei
+brew tree
+brew unar
+brew vim
+brew watch
+brew watchman
+brew webp
+brew wget
+brew yarn
+brew zsh
+brew zsh-autosuggestions
+brew zsh-completions
+brew zsh-syntax-highlighting
+
+tap homebrew/bundle
+
+tap homebrew/cask-versions
+
+tap homebrew/python
+
+tap homebrew/services
+
+tap homebrew/versions
+
+tap homebrew/cask
+cask bettertouchtool
+cask kindle
+cask vagrant
+
+tap heroku/brew
+brew heroku
+brew heroku-node
+
+tap rcmdnk/file
+brew brew-file
+
+# Other Homebrew packages
+brew openssl
+brew python@2
+
+# Other Cask applications
+cask google-japanese-ime
+cask minikube
+cask virtualbox
+
+# App Store applications
+appstore 414568915 Key Codes (2.1)
+appstore 425424353 The Unarchiver (4.1.0)
+appstore 957734279 TogglDesktop (7.4.484)
+appstore 414298354 ToyViewer (5.6.0)
+appstore 497799835 Xcode (10.3)

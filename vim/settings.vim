@@ -1,48 +1,9 @@
-"set noswapfile
-"ref
-"  知らないと損するvim知識30選 - Vim is running out
-"  http://d.hatena.ne.jp/vimtaku/20121117/1353138802
-"let g:plugin_migemo_disable = 1
-
 set ignorecase
 set smartcase
-" set browsedir=buffer
-
-if g:my_local_mode
-  " バックアップの設定
-  " node.jsのfs.watch()などで正しくイベントを受け取れるようにするには
-  " backupcopyオプションを適切に設定する必要がある
-  " backupcopyをauto/yesにした場合, バックアップの際にファイルはリネームされる
-  " fs.watch()ではこれを"ファイルが削除された"ものとみなしてしまう
-  " backupcopyをnoにした場合,この問題は起こらないが, バックアップの度にファイル
-  " コピーが発生する
-  set nobackup
-  set nowritebackup
-  set swapfile
-  set noundofile
-  set backupdir=~/vimfiles/tmp
-  set directory=~/vimfiles/tmp
-  if has('nvim')
-    set viminfo+=n~/vimfiles/nviminfo.txt
-  else
-    set viminfo+=n~/vimfiles/viminfo.txt
-  end
-endif
-
-" Cのプリプロセッサ行("#"で始まる行)にもインデントを適用する
-" (一部の言語では"#"をコメント開始に使うため)
-" set cinkeys=0{,0},0),:,0#,!^F,o,O,e
-" set cinkeys-=0#
-" set indentkeys-=0#
-" set smartindent
-
 set autoindent
 set backspace=indent,eol,start
 set colorcolumn=80,100
 set expandtab
-" 折りたたみを手動操作, 開いた状態で編集開始
-" set foldmethod=manual
-" set foldlevelstart=99
 " 日本語の行の連結時には空白を入力しない。
 set formatoptions+=mM
 " 自動整形を避ける
@@ -63,20 +24,13 @@ set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
-" タイトル設定
 set title
-" 自動改行を行わない
-" set textwidth=0
-" set winheight=6
+set clipboard=unnamed
 
-" Session {{{
+" Session
 set sessionoptions-=buffers
 set sessionoptions-=help
 set sessionoptions-=options
-" }}}
-
-" Clipboard
-set clipboard=unnamed
 
 " Better performance
 set nocursorline
@@ -88,6 +42,23 @@ autocmd InsertEnter,InsertLeave * set cursorline!
 " Disable beeping
 set visualbell
 set t_vb=
+
+if has('mac')
+  " バックアップの設定
+  " node.jsのfs.watch()などで正しくイベントを受け取れるようにするには
+  " backupcopyオプションを適切に設定する必要がある
+  " backupcopyをauto/yesにした場合, バックアップの際にファイルはリネームされる
+  " fs.watch()ではこれを"ファイルが削除された"ものとみなしてしまう
+  " backupcopyをnoにした場合,この問題は起こらないが, バックアップの度にファイル
+  " コピーが発生する
+  set nobackup
+  set nowritebackup
+  set swapfile
+  set noundofile
+  set backupdir=~/vimfiles/tmp
+  set directory=~/vimfiles/tmp
+  set viminfo+=n~/vimfiles/viminfo.txt
+endif
 
 " Cursor settings. This makes terminal vim sooo much nicer!
 " Tmux will only forward escape sequences to the terminal if surrounded by a DCS
@@ -117,10 +88,4 @@ if has("wildmenu")
     set wildignore+=*~,*.swp,*.tmp
     set wildmenu
     set wildmode=longest,list
-endif
-
-" grep設定
-if executable('ag')
-  " file_rec設定
-  set grepprg=ag\ --nocolor\ --nogroup\ --hidden\ --ignore\ .hg\ --ignore\ .svn\ --ignore\ .git\ --ignore\ bower_components\ --ignore\ node_modules
 endif

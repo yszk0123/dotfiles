@@ -7,6 +7,7 @@
 .atom/packages/
 .atom/storage/
 .bundle/cache/
+.git/
 node_modules/
 tmp/
 
@@ -20,8 +21,8 @@ tmp/
 *~
 .DS_Store
 .envrc
-my_local_mode*
 
 .tags*
 tags
 !tags/
+.memento-cache/
