@@ -27,11 +27,6 @@ Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 " }}}
 
-" Ruby {{{
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'tpope/vim-bundler', { 'for': 'ruby' }
-" }}}
-
 " neoformat {{{
 Plug 'sbdchd/neoformat'
 let g:neoformat_enabled_javascript = ['prettier']
@@ -183,13 +178,6 @@ Plug 'kana/vim-smartword'
 nmap w <Plug>(smartword-w)
 nmap b <Plug>(smartword-b)
 nmap e <Plug>(smartword-e)
-" }}}
-
-" vim-gitgutter {{{
-" Plug 'airblade/vim-gitgutter'
-" let g:gitgutter_enabled = 0
-" let g:gitgutter_realtime = 0
-" let g:gitgutter_eager = 0
 " }}}
 
 if has('mac')

@@ -13,7 +13,7 @@ ln -sni ~/dotfiles/.zshrc "$ZDOTDIR/.zshrc"
 ln -sni ~/dotfiles/gitignore "$XDG_CONFIG_HOME/git/ignore"
 
 # dotfiles
-for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .rspec .config/karabiner; do
+for target in .bundle .git-template .ansible.cfg .ctags .remarkrc .gitconfig .peco .tigrc .tmux.conf .vimrc .config/karabiner; do
   ln -sni ~/dotfiles/$target ~/$target
 done
 

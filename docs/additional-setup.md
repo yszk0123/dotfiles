@@ -4,15 +4,6 @@
 
 Install [MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)
 
-# Ruby
-
-## Gem
-
-```sh
-gem update --system
-gem install bundler
-```
-
 # ctags
 
 cf. [claytron/dotfiles](https://github.com/claytron/dotfiles/blob/master/.ctags)
