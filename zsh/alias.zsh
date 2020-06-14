@@ -24,7 +24,7 @@ alias treei='tree -I ".git|node_modules|bower_components|.tmp|tmp|vendor"'
 alias f='fzf --height 40% --reverse'
 # Format (pretty print) {{{
 alias grepf='grep --color=always'
-alias agf='ag --group --color'
+alias rgf='rg --color'
 # }}}
 # }}}
 

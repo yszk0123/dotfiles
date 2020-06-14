@@ -91,7 +91,6 @@ brew shellcheck
 brew sqlite
 brew starship
 brew tag
-brew the_silver_searcher
 brew tig
 brew tmux
 brew tokei
