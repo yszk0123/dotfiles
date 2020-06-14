@@ -1,3 +1,15 @@
+" Setup {{{
+" Automatic installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+" }}}
+
+" Common {{{
 Plug 'artnez/vim-wipeout'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
@@ -6,6 +18,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/gitignore'
+" }}}
 
 " Languages {{{
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
@@ -147,3 +160,5 @@ nnoremap <bar> :<C-u>Switch<CR>
 " Colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
 " }}}
+
+call plug#end()

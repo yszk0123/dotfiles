@@ -24,15 +24,6 @@ endif
 filetype off
 syntax off
 
-" Automatic installation
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-
 " color/keyprefixの設定が確実に反映されるように先に設定 {{{
 " Color {{{
 " Terminal
@@ -75,8 +66,6 @@ runtime vim/settings.vim
 " Rename
 command! -nargs=1 -complete=file Rename f <args>|write|call delete(expand('#'))
 " }}}
-
-call plug#end()
 
 " syntax and colorscheme {{{
 filetype plugin indent on
