@@ -1,4 +1,4 @@
-﻿" ==============================================================================
+" ==============================================================================
 " Vim 設定ファイル
 " ==============================================================================
 
@@ -53,7 +53,7 @@ nmap s [fzf]
 " }}}
 
 let s:libs = split(
-  \ 'commands filetype plugins keymaps settings abbreviations fzf', ' ')
+  \ 'commands filetype plugins keymaps settings abbreviations', ' ')
 for lib in s:libs
   execute 'runtime vim/' . lib . '.vim'
 endfor
