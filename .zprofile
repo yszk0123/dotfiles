@@ -59,4 +59,11 @@ export PATH="$PATH:/usr/local/lib/python3.5/site-packages"
 export PATH="$HOME/.cargo/bin:$PATH"
 # }}}
 
+# Deno {{{
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+# }}}
+
 # vim:set ft=zsh:
+
+export PATH="$HOME/.poetry/bin:$PATH"

@@ -1,14 +1,8 @@
 {
   "[typescript]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
@@ -97,7 +91,7 @@
   ],
   "editor.suggest.localityBonus": true,
   "editor.tabSize": 2,
-  "eslint.enable": false,
+  "eslint.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.workingDirectories": [],
   "explorer.confirmDelete": false,
@@ -151,14 +145,14 @@
   "terminal.integrated.shellArgs.linux": [
     "-l"
   ],
-  "tslint.enable": true,
+  "tslint.enable": false,
   "tslint.packageManager": "yarn",
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.useSystemClipboard": true,
   "window.nativeTabs": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.labelFormat": "short",
@@ -169,5 +163,8 @@
   "editor.minimap.renderCharacters": false,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "todo-tree.highlights.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "todo-tree.tree.showScanModeButton": false
 }
