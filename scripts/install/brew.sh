@@ -26,7 +26,7 @@ if ! is_exists "brew-file"; then
   brew install rcmdnk/file/brew-file
 fi
 
-for target in tree rename the_silver_searcher hub peco tig; do
+for target in tree rename the_silver_searcher hub tig; do
   is_installed $target && continue
 
   read -r -p "Do you wish to install $target? [YyNn]" yn

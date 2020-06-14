@@ -37,11 +37,6 @@ alias dcr='docker-compose run --rm'
 alias dcu='docker-compose up'
 # }}}
 
-# ghq & peco {{{
-alias ghqp='cd $(ghq list -p | peco)'
-alias ghqp-open='gh-open $(ghq list -p | peco)'
-# }}}
-
 # vim {{{
 alias nv='nvim'
 alias vi='env LANG=ja_JP.UTF-8 vim '
