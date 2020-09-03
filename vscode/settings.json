@@ -1,6 +1,7 @@
 {
   "[yaml]": {
     "editor.formatOnSave": false,
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -161,5 +162,8 @@
   },
   "todo-tree.highlights.enabled": true,
   "typescript.implementationsCodeLens.enabled": true,
-  "todo-tree.tree.showScanModeButton": false
+  "todo-tree.tree.showScanModeButton": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
