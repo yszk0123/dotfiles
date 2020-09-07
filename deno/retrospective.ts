@@ -4,11 +4,10 @@
  */
 const input = (await read()) ?? '';
 const lines = split(input)
-  .map(trim)
-  .filter(isTodo)
+  .map(trimEnd)
+  .filter(isHeadingOrTodo)
   .filter(not(isEmpty))
   .map(normalizeMarkdownItem)
-  .sort(compareText);
 const output = lines.join('\n');
 write(output);
 
@@ -29,8 +28,8 @@ function isEmpty(text: string): boolean {
   return text === '';
 }
 
-function isTodo(text: string): boolean {
-  return /- \[.\]/.test(text);
+function isHeadingOrTodo(text: string): boolean {
+  return /^## |- \[.\]/.test(text);
 }
 
 function compareText(a: string, b: string): number {
@@ -41,8 +40,8 @@ function split(text: string): string[] {
   return text.split(/\r?\n/);
 }
 
-function trim(text: string): string {
-  return text.trim();
+function trimEnd(text: string): string {
+  return text.trimEnd();
 }
 
 function not<T>(f: (v: T) => boolean): (v: T) => boolean {
