@@ -98,7 +98,7 @@ function not<T>(f: (v: T) => boolean): (v: T) => boolean {
 }
 
 function isPublic(text: string): boolean {
-  return text.includes('* ') || text.includes(' *');
+  return text.endsWith(' *');
 }
 
 function simplifyMarkdownLink(text: string): string {
