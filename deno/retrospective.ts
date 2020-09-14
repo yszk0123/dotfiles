@@ -48,7 +48,7 @@ function not<T>(f: (v: T) => boolean): (v: T) => boolean {
   return (v: T) => !f(v);
 }
 
-function isPrivate(text: string): boolean {
+function isPublic(text: string): boolean {
   return text.includes('* ') || text.includes(' *');
 }
 

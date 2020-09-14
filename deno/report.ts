@@ -6,7 +6,7 @@ const input = (await read()) ?? '';
 const lines = split(input)
   .map(trim)
   .filter(isTodo)
-  .filter(not(isPrivate))
+  .filter(isPublic)
   .filter(not(isEmpty))
   .map(normalizeMarkdownItem)
   // .map(simplifyMarkdownLink)
@@ -97,7 +97,7 @@ function not<T>(f: (v: T) => boolean): (v: T) => boolean {
   return (v: T) => !f(v);
 }
 
-function isPrivate(text: string): boolean {
+function isPublic(text: string): boolean {
   return text.includes('* ') || text.includes(' *');
 }
 
