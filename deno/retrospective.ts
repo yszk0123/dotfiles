@@ -7,6 +7,7 @@ const lines = split(input)
   .map(trimEnd)
   .filter(isHeadingOrTodo)
   .filter(not(isEmpty))
+  .map(removePublicSymbol)
   .map(normalizeMarkdownItem)
 const output = lines.join('\n');
 write(output);
@@ -50,6 +51,10 @@ function not<T>(f: (v: T) => boolean): (v: T) => boolean {
 
 function isPublic(text: string): boolean {
   return text.endsWith(' *');
+}
+
+function removePublicSymbol(text: string): string {
+  return text.replace(/ \*$/, '');
 }
 
 function normalizeMarkdownItem(text: string): string {

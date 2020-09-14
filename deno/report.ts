@@ -8,6 +8,7 @@ const lines = split(input)
   .filter(isTodo)
   .filter(isPublic)
   .filter(not(isEmpty))
+  .map(removePublicSymbol)
   .map(normalizeMarkdownItem)
   // .map(simplifyMarkdownLink)
   .map(extractTitleFromMarkdownLink)
@@ -99,6 +100,10 @@ function not<T>(f: (v: T) => boolean): (v: T) => boolean {
 
 function isPublic(text: string): boolean {
   return text.endsWith(' *');
+}
+
+function removePublicSymbol(text: string): string {
+  return text.replace(/ \*$/, '');
 }
 
 function simplifyMarkdownLink(text: string): string {
