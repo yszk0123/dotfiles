@@ -7,8 +7,10 @@ const lines = split(input)
   .map(trim)
   .filter(isTodo)
   .filter(isPublic)
+  .filter(isWork)
   .filter(not(isEmpty))
   .map(removePublicSymbol)
+  .map(removeWorkSymbol)
   .map(normalizeMarkdownItem)
   // .map(simplifyMarkdownLink)
   .map(extractTitleFromMarkdownLink)
@@ -104,6 +106,14 @@ function isPublic(text: string): boolean {
 
 function removePublicSymbol(text: string): string {
   return text.replace(/ \*$/, '');
+}
+
+function isWork(text: string): boolean {
+  return text.includes('💼');
+}
+
+function removeWorkSymbol(text: string): string {
+  return text.replace(/💼\s*/g, '');
 }
 
 function simplifyMarkdownLink(text: string): string {
