@@ -1,0 +1,4 @@
+#!/bin/bash -e
+clip="$(pbpaste)"
+toggl="$(deno run --allow-env --allow-net deno/toggl.ts)"
+echo -e "$clip\n$toggl" | deno run deno/report.ts | pbcopy

@@ -15,18 +15,18 @@ const timeEntries = await fetchTogglTimeEntries();
 const input = timeEntries
   .filter((entry) => entry.tags?.includes('public'))
   .flatMap(({ start, description }) =>
-    start ? `${getHHMM(new Date(start))}~ ${description}` : []
+    start ? `- [ ] 💼 ${getHHMM(new Date(start))}~ ${description} *` : []
   );
 
 const lines = input
   .map(trim)
   .filter(not(isEmpty))
-  .map(removePublicSymbol)
-  .map(removeWorkSymbol)
-  .map(normalizeMarkdownItem)
+  // .map(removePublicSymbol)
+  // .map(removeWorkSymbol)
+  // .map(normalizeMarkdownItem)
   // .map(simplifyMarkdownLink)
-  .map(extractTitleFromMarkdownLink)
-  .map(simplifyURL)
+  // .map(extractTitleFromMarkdownLink)
+  // .map(simplifyURL)
   .sort(compareText);
 const output = lines.join('\n');
 write(output);
