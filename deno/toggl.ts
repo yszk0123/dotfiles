@@ -2,16 +2,23 @@
  * @example
  * $ deno run --allow-env --allow-net deno/toggl.ts | pbcopy
  */
-import { fromUint8Array } from 'https://denopkg.com/chiefbiiko/base64/mod.ts';
+import { TogglAPIClient } from './api/ToggleAPIClient.ts';
 
 const API_KEY = Deno.env.get('TOGGL_TRACK_API_KEY');
 const API_ENDPOINT = 'https://api.track.toggl.com/api/v8';
+const CLIENT_ID_1 = Deno.env.get('TOGGL_TRACK_CLIENT_ID_1');
+const CLIENT_ID_2 = Deno.env.get('TOGGL_TRACK_CLIENT_ID_2');
+const WORKSPACE_ID = Deno.env.get('TOGGL_TRACK_WORKSPACE');
 
-if (!API_KEY) {
-  throw new Error('API_KEY required');
+const CLIENT_ID = Deno.args[0] === '2' ? CLIENT_ID_2 : CLIENT_ID_1;
+
+if (!API_KEY || !CLIENT_ID_1 || !CLIENT_ID_2 || !WORKSPACE_ID) {
+  throw new Error('Required: API_KEY, CLIENT_ID_1, CLIENT_ID_2, WORKSPACE_ID');
 }
 
-const timeEntries = await fetchTogglTimeEntries();
+const client = new TogglAPIClient({ apiKey: API_KEY, endpoint: API_ENDPOINT });
+
+const timeEntries = await client.fetchDailyTimeEntries(new Date());
 const input = timeEntries
   .filter((entry) => entry.tags?.includes('public'))
   .flatMap(({ start, description }) =>
@@ -91,53 +98,6 @@ function simplifyURLInner(text: string): string {
     return simplifiedText;
   }
   return [schema, '', domain, ...rest.slice(0, 2)].join('/');
-}
-
-type TogglTimeEntry = {
-  id: number;
-  wid: number;
-  pid: number;
-  start?: string;
-  stop?: string;
-  duration?: number;
-  description?: string;
-  tags?: string[];
-  at?: string;
-};
-
-async function fetchTogglTimeEntries(): Promise<TogglTimeEntry[]> {
-  // curl -v -u 1971800d4d82861d8f2c1651fea4d212:api_token \
-  // -X GET "https://api.track.toggl.com/api/v8/time_entries?start_date=2013-03-10T15%3A42%3A46%2B02%3A00&end_date=2013-03-12T15%3A42%3A46%2B02%3A00"
-  const date = new Date();
-  const startDate = startOfDate(date).toISOString();
-  const endDate = endOfDate(date).toISOString();
-
-  const url = `${API_ENDPOINT}/time_entries?start_date=${encodeURIComponent(
-    startDate
-  )}&end_date=${encodeURIComponent(endDate)}`;
-  const encoded = fromUint8Array(
-    new TextEncoder().encode(`${API_KEY}:api_token`)
-  );
-  const headers = new Headers({ Authorization: `Basic ${encoded}` });
-  const data = await fetch(url, { headers });
-  if (data.status !== 200) {
-    throw new Error(`Failed to fetch data: ${data.statusText}`);
-  }
-
-  return data.json();
-}
-
-function startOfDate(date: Date): Date {
-  const y = date.getFullYear();
-  const m = date.getMonth();
-  const d = date.getDate();
-  return new Date(y, m, d);
-}
-
-function endOfDate(date: Date): Date {
-  const result = startOfDate(new Date(date));
-  result.setDate(result.getDate() + 1);
-  return result;
 }
 
 function getHHMM(date: Date): string {
