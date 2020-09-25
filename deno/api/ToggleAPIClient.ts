@@ -10,7 +10,7 @@ import {
   TogglTimeEntryPostRaw,
   deserializeTogglTimeEntryPost,
   serializeTogglTimeEntryPost,
-} from './model/ToggleTimeEntry.ts';
+} from '../model/ToggleTimeEntry.ts';
 
 const API_KEY = Deno.env.get('TOGGL_TRACK_API_KEY');
 const API_ENDPOINT = 'https://api.track.toggl.com/api/v8';
