@@ -6,12 +6,11 @@ import { TogglAPIClient } from '../api/ToggleAPIClient.ts';
 import { APIConfig } from '../api/APIUtils.ts';
 
 export class TogglFetchDailyTimeEntriesUsecase {
-  constructor(private config: APIConfig) {}
+  constructor(private client: TogglAPIClient) {}
 
   async run(): Promise<void> {
-    const client = new TogglAPIClient(this.config);
 
-    const timeEntries = await client.fetchDailyTimeEntries(new Date());
+    const timeEntries = await this.client.fetchDailyTimeEntries(new Date());
     const input = [
       ...timeEntries
         .filter((entry) => entry.tags?.includes('public'))
