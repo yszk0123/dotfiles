@@ -5,9 +5,9 @@
 const input = (await read()) ?? '';
 const lines = split(input)
   .map(trim)
-  .filter(isTodo)
-  .filter(isPublic)
-  .filter(isWork)
+  // .filter(isTodo)
+  // .filter(isPublic)
+  // .filter(isWork)
   .filter(not(isEmpty))
   .map(removePublicSymbol)
   .map(removeWorkSymbol)
@@ -54,10 +54,13 @@ function groupByTag(lines: string[]): string[] {
       return;
     }
 
-    const match = /^(- \[.\])\s+(\S+):\s+(.*)$/.exec(line);
+    const match = /^(?<pre>-(?: \[.\])?)\s+(?:(?<tag1>[^:]+):\s)?\s*(?<post>.*?)\s*(?:<(?<tag2>[^>]+)>)?$/.exec(
+      line
+    );
     if (match) {
-      const [_all, pre, tag, post] = match;
+      const { pre, tag1, tag2, post } = match.groups || {};
       const newLine = `${pre} ${post}`;
+      const tag = tag1 || tag2;
       if (tag === 'その他') {
         other.push(newLine);
       } else {
