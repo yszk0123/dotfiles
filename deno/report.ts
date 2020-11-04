@@ -3,20 +3,29 @@
  * $ pbpaste | deno run deno/report.ts | pbcopy
  */
 const input = (await read()) ?? '';
-const lines = split(input)
-  .map(trim)
+const tasks = split(input)
+  // .map(trim)
   // .filter(isTodo)
   // .filter(isPublic)
   // .filter(isWork)
   .filter(not(isEmpty))
-  .map(removePublicSymbol)
-  .map(removeWorkSymbol)
-  .map(normalizeMarkdownItem)
+  .filter(not(isHidden))
+  .filter(isTask)
+  // .map(removePublicSymbol)
+  // .map(removeWorkSymbol)
+  // .map(normalizeMarkdownItem)
   // .map(simplifyMarkdownLink)
-  .map(extractTitleFromMarkdownLink)
-  .map(simplifyURL)
-  .sort(compareText);
-const output = groupByTag(lines).join('\n');
+  // .map(extractTitleFromMarkdownLink)
+  // .map(simplifyURL)
+  .map(parseTask);
+const output = tasks
+  .map(({ text, done, indent }) =>
+    indent === 0
+      ? `\n## ${text}`
+      : `${indentText(indent - 1)}- [${done ? 'x' : ' '}] ${text}`
+  )
+  .join('\n')
+  .trim();
 write(output);
 
 async function read(): Promise<string | null> {
@@ -32,63 +41,20 @@ async function write(text: string): Promise<void> {
   await Deno.stdout.write(buf);
 }
 
+function indentText(indent: number): string {
+  return [...Array.from({ length: indent + 1 })].join('  ');
+}
+
 function isEmpty(text: string): boolean {
   return text === '';
 }
 
+function isHidden(text: string): boolean {
+  return text.includes('Hidden');
+}
+
 function isTodo(text: string): boolean {
   return /- \[.\]/.test(text);
-}
-
-function groupByTag(lines: string[]): string[] {
-  const schedule: string[] = [];
-  const other: string[] = [];
-  const groups: Record<string, string[]> = {};
-  lines.forEach((line) => {
-    const date = /^(-(?: \[.\])?)\s+(\d{2}:\d{2}~?(?:\d{2}:\d{2})?)\s+(.*)$/.exec(
-      line
-    );
-    if (date) {
-      const [_all, _pre, time, post] = date;
-      schedule.push(`${time} ${post}`);
-      return;
-    }
-
-    const match = /^(?<pre>-(?: \[.\])?)\s+(?:(?<tag1>[^:]+):\s)?\s*(?<post>.*?)\s*(?:<(?<tag2>[^>]+)>)?$/.exec(
-      line
-    );
-    if (match) {
-      const { pre, tag1, tag2, post } = match.groups || {};
-      const newLine = `${pre} ${post}`;
-      const tag = tag1 || tag2;
-      if (tag === 'その他') {
-        other.push(newLine);
-      } else {
-        const group = groups[tag] || [];
-        group.push(newLine);
-        groups[tag] = group;
-      }
-    } else {
-      other.push(line);
-    }
-  });
-
-  schedule.sort(compareText);
-  const tasks: string[] = [];
-  Object.entries(groups).forEach(([tag, lines]) => {
-    tasks.push(`## ${tag}`);
-    tasks.push(...lines);
-  });
-  return [
-    ...tasks,
-    ...(other.length ? ['## その他', ...other] : []),
-    '',
-    ...schedule,
-  ];
-}
-
-function compareText(a: string, b: string): number {
-  return a.localeCompare(b);
 }
 
 function split(text: string): string[] {
@@ -105,6 +71,10 @@ function not<T>(f: (v: T) => boolean): (v: T) => boolean {
 
 function isPublic(text: string): boolean {
   return text.endsWith(' *');
+}
+
+function isTask(text: string): boolean {
+  return /^\s*- /.test(text);
 }
 
 function removePublicSymbol(text: string): string {
@@ -154,4 +124,21 @@ function simplifyURLInner(text: string): string {
     return simplifiedText;
   }
   return [schema, '', domain, ...rest.slice(0, 2)].join('/');
+}
+
+type Task = {
+  text: string;
+  done: boolean;
+  indent: number;
+};
+
+function parseTask(input: string): Task {
+  const text = input
+    .replace(/^\s*/g, '')
+    .replace(/^-\s+/, '')
+    .replace(/@[-_a-zA-Z0-9]+\([^)]+\)/g, '')
+    .trim();
+  const done = input.includes('@done');
+  const indent = input.match(/\t/g)?.length ?? 0;
+  return { text, done, indent };
 }
