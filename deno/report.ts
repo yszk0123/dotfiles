@@ -20,9 +20,9 @@ const tasks = split(input)
   .map(parseTask);
 const output = tasks
   .map(({ text, done, indent }) =>
-    indent === 0
+    indent === 1000
       ? `\n## ${text}`
-      : `${indentText(indent - 1)}- [${done ? 'x' : ' '}] ${text}`
+      : `${indentText(indent)}- [${done ? 'x' : ' '}] ${text}`
   )
   .join('\n')
   .trim();
@@ -137,6 +137,7 @@ function parseTask(input: string): Task {
     .replace(/^\s*/g, '')
     .replace(/^-\s+/, '')
     .replace(/@[-_a-zA-Z0-9]+\([^)]+\)/g, '')
+    .replace(/@flagged\b/g, '')
     .trim();
   const done = input.includes('@done');
   const indent = input.match(/\t/g)?.length ?? 0;
