@@ -9,21 +9,34 @@ const tasks = split(input)
   // .filter(isPublic)
   // .filter(isWork)
   .filter(not(isEmpty))
-  .filter(not(isHidden))
-  .filter(isTask)
+  .filter(isWork)
   // .map(removePublicSymbol)
   // .map(removeWorkSymbol)
   // .map(normalizeMarkdownItem)
   // .map(simplifyMarkdownLink)
   // .map(extractTitleFromMarkdownLink)
   // .map(simplifyURL)
-  .map(parseTask);
-const output = tasks
-  .map(({ text, done, indent }) =>
-    indent === 1000
-      ? `\n## ${text}`
-      : `${indentText(indent)}- [${done ? 'x' : ' '}] ${text}`
-  )
+  .map(parseTask)
+  .filter(isNotNull)
+  .map(getProjectTask)
+  .filter(isNotNull)
+  .filter(hasText)
+  .filter(isVisible)
+  .sort(compareTask);
+const output = groupByProject(tasks)
+  .map(({ project, tasks }) => {
+    return [
+      `## ${project}`,
+      tasks
+        .map(
+          (task) =>
+            `- [${task.done ? 'x' : ' '}] ${
+              task.subProject ? task.subProject + ': ' : ''
+            }${task.text}`
+        )
+        .join('\n'),
+    ].join('\n');
+  })
   .join('\n')
   .trim();
 write(output);
@@ -49,12 +62,33 @@ function isEmpty(text: string): boolean {
   return text === '';
 }
 
-function isHidden(text: string): boolean {
-  return text.includes('Hidden');
+function compareTask(a: ProjectTask, b: ProjectTask): number {
+  const project = a.project.localeCompare(b.project);
+  if (project) return project;
+  const done = a.done !== b.done;
+  if (done) return b.done ? 1 : -1;
+  const sub = a.subProject.localeCompare(b.subProject);
+  if (sub) return sub;
+  return a.text.localeCompare(b.text);
 }
 
-function isTodo(text: string): boolean {
-  return /- \[.\]/.test(text);
+function isWork(text: string): boolean {
+  return text.includes('/work/');
+}
+
+function isNotNull<T>(v: T | null): v is T {
+  return v !== null;
+}
+
+function isVisible(task: ProjectTask): boolean {
+  return (
+    !task.subProject.includes('評価') &&
+    (task.taskLevel === null || !task.taskLevel.includes('/chore'))
+  );
+}
+
+function hasText(task: ProjectTask): boolean {
+  return !!task.text;
 }
 
 function split(text: string): string[] {
@@ -67,26 +101,6 @@ function trim(text: string): string {
 
 function not<T>(f: (v: T) => boolean): (v: T) => boolean {
   return (v: T) => !f(v);
-}
-
-function isPublic(text: string): boolean {
-  return text.endsWith(' *');
-}
-
-function isTask(text: string): boolean {
-  return /^\s*- /.test(text);
-}
-
-function removePublicSymbol(text: string): string {
-  return text.replace(/ \*$/, '');
-}
-
-function isWork(text: string): boolean {
-  return text.includes('💼');
-}
-
-function removeWorkSymbol(text: string): string {
-  return text.replace(/💼\s*/g, '');
 }
 
 function simplifyMarkdownLink(text: string): string {
@@ -129,17 +143,62 @@ function simplifyURLInner(text: string): string {
 type Task = {
   text: string;
   done: boolean;
+  tags: string[];
   indent: number;
 };
 
-function parseTask(input: string): Task {
-  const text = input
-    .replace(/^\s*/g, '')
-    .replace(/^-\s+/, '')
-    .replace(/@[-_a-zA-Z0-9]+\([^)]+\)/g, '')
-    .replace(/@flagged\b/g, '')
-    .trim();
-  const done = input.includes('@done');
-  const indent = input.match(/\t/g)?.length ?? 0;
-  return { text, done, indent };
+function parseTask(input: string): Task | null {
+  const match = /- {{\[\[(TODO|DONE)]]}}\s+(.*?)\s*(\[\[.*]])$/g.exec(
+    input.trim()
+  );
+  if (!match) {
+    return null;
+  }
+  const [_, status = 'TODO', text = '', tagsString = ''] = match;
+  const tags =
+    tagsString.match(/(\[\[(.*?)]])/g)?.map((v) => v.replace(/[\[\]]/g, '')) ??
+    [];
+  const done = status === 'DONE';
+  const indent = input.match(/  /g)?.length ?? 0;
+  return { text: extractTitleFromMarkdownLink(text), done, tags, indent };
+}
+
+type ProjectTask = {
+  text: string;
+  done: boolean;
+  project: string;
+  subProject: string;
+  taskLevel: string | null;
+};
+
+function getProjectTask(task: Task): ProjectTask | null {
+  const tag = task.tags.find((tag) => tag.includes('/project/'));
+  if (!tag) {
+    return null;
+  }
+
+  const path = tag.split('/').pop() ?? '';
+  const [project, ...subProjectPath] = path.split('.');
+  const taskLevel = task.tags.find((tag) => tag.startsWith('task/')) ?? null;
+
+  return {
+    text: task.text,
+    done: task.done,
+    project,
+    taskLevel,
+    subProject: subProjectPath.join('/'),
+  };
+}
+
+function groupByProject(
+  tasks: ProjectTask[]
+): { project: string; tasks: ProjectTask[] }[] {
+  const result: Record<string, ProjectTask[]> = {};
+  tasks.forEach((task) => {
+    const tasks = result[task.project] || [];
+    tasks.push(task);
+    result[task.project] = tasks;
+  });
+
+  return Object.entries(result).map(([project, tasks]) => ({ project, tasks }));
 }
