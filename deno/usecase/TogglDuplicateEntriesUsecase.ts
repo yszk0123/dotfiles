@@ -1,22 +1,16 @@
-/**
- * @example
- * $ deno run --allow-env --allow-net deno/toggl.ts | pbcopy
- */
 import { TogglAPIClient } from '../api/ToggleAPIClient.ts';
 import { addDate } from '../api/DateUtils.ts';
 import { APIConfig } from '../api/APIUtils.ts';
 
-export class ToggleDuplicateEntriesUsecase {
-  constructor(private config: APIConfig) {}
+export class TogglDuplicateEntriesUsecase {
+  constructor(private client: TogglAPIClient) {}
 
   async run(startDelta: number, endDelta: number): Promise<void> {
-    const client = new TogglAPIClient(this.config);
-
     const startDate = addDate(new Date(), startDelta);
     const endDate = addDate(startDate, endDelta - startDelta);
     console.log('DUPLICATE', startDate, 'to', endDate);
 
-    const timeEntries = await client.fetchDailyTimeEntries(startDate);
+    const timeEntries = await this.client.fetchDailyTimeEntries(startDate);
     const duplicatedTimeEntries = timeEntries
       .filter((entry) => entry.tags?.includes('public'))
       .filter(rr('start'))
@@ -33,7 +27,9 @@ export class ToggleDuplicateEntriesUsecase {
     console.log('Duplicating');
     console.log(duplicatedTimeEntries);
     await Promise.all(
-      duplicatedTimeEntries.map(async (entry) => client.createTimeEntry(entry))
+      duplicatedTimeEntries.map(async (entry) =>
+        this.client.createTimeEntry(entry)
+      )
     );
     console.log('Duplicated');
   }
