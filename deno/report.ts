@@ -171,7 +171,7 @@ function getProjectTask(task: Task): ProjectTask | null {
     done: task.done,
     project,
     taskLevel,
-    subProject: subProjectPath.join('/'),
+    subProject: subProjectPath.join('.'),
   };
 }
 
