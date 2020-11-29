@@ -4,15 +4,8 @@
  */
 const input = (await read()) ?? '';
 const tasks = split(input)
-  // .map(trim)
-  // .filter(isTodo)
-  // .filter(isPublic)
-  // .filter(isWork)
   .filter(not(isEmpty))
   .filter(isWork)
-  // .map(removePublicSymbol)
-  // .map(removeWorkSymbol)
-  // .map(normalizeMarkdownItem)
   // .map(simplifyMarkdownLink)
   // .map(extractTitleFromMarkdownLink)
   // .map(simplifyURL)
@@ -95,10 +88,6 @@ function split(text: string): string[] {
   return text.split(/\r?\n/);
 }
 
-function trim(text: string): string {
-  return text.trim();
-}
-
 function not<T>(f: (v: T) => boolean): (v: T) => boolean {
   return (v: T) => !f(v);
 }
@@ -116,10 +105,6 @@ function simplifyURL(text: string): string {
     /(^|\s)(https?:\/\/[^\s]+)/g,
     (_, prefix, url) => `${prefix}${simplifyURLInner(url)}`
   );
-}
-
-function normalizeMarkdownItem(text: string): string {
-  return text.replace(/(- \[.\])\s+/, '$1 ');
 }
 
 function simplifyURLInner(text: string): string {
