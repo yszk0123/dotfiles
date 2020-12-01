@@ -17,20 +17,37 @@ const tasks = split(input)
   .filter(isVisible)
   .sort(compareTask);
 const output = groupByProject(tasks)
-  .map(({ project, tasks }) => {
+  .map(({ project, subProjects }) => {
     return [
       `## ${project}`,
-      tasks
-        .map(
-          (task) =>
-            `- [${task.done ? 'x' : ' '}] ${
-              task.subProject ? task.subProject + ': ' : ''
-            }${task.text}`
+      subProjects
+        .map(({ subProject, tasks }) =>
+          [
+            `- ${subProject || 'その他'}`,
+            tasks
+              .map((task) => `  - [${task.done ? 'x' : ' '}] ${task.text}`)
+              .join('\n'),
+          ]
+            .filter(Boolean)
+            .join('\n')
         )
         .join('\n'),
     ].join('\n');
   })
-  .join('\n')
+  // .map(({ project, tasks }) => {
+  //   return [
+  //     `## ${project}`,
+  //     tasks
+  //       .map(
+  //         (task) =>
+  //           `- [${task.done ? 'x' : ' '}] ${
+  //             task.subProject ? task.subProject + ': ' : ''
+  //           }${task.text}`
+  //       )
+  //       .join('\n'),
+  //   ].join('\n');
+  // })
+  .join('\n\n')
   .trim();
 write(output);
 
@@ -177,13 +194,39 @@ function getProjectTask(task: Task): ProjectTask | null {
 
 function groupByProject(
   tasks: ProjectTask[]
-): { project: string; tasks: ProjectTask[] }[] {
-  const result: Record<string, ProjectTask[]> = {};
-  tasks.forEach((task) => {
-    const tasks = result[task.project] || [];
-    tasks.push(task);
-    result[task.project] = tasks;
+): {
+  project: string;
+  subProjects: { subProject: string; tasks: ProjectTask[] }[];
+  tasks: ProjectTask[];
+}[] {
+  return groupBy(
+    tasks,
+    (task) => task.project,
+    (task) => task
+  ).map(([project, tasks]) => {
+    const subProjects = groupBy(
+      tasks,
+      (task) => task.subProject,
+      (task) => task
+    ).map(([subProject, tasks]) => ({ subProject, tasks }));
+    return { project, subProjects, tasks };
+  });
+}
+
+function groupBy<T, S>(
+  items: T[],
+  getKey: (item: T) => string,
+  getValue: (item: T) => S
+): [string, S[]][] {
+  const result: Record<string, S[]> = {};
+
+  items.forEach((item) => {
+    const key = getKey(item);
+    const value = getValue(item);
+    const items = result[key] || [];
+    items.push(value);
+    result[key] = items;
   });
 
-  return Object.entries(result).map(([project, tasks]) => ({ project, tasks }));
+  return Object.entries(result);
 }
