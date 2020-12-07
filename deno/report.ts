@@ -83,7 +83,7 @@ function compareTask(a: ProjectTask, b: ProjectTask): number {
 }
 
 function isWork(text: string): boolean {
-  return text.includes('/work/');
+  return text.includes('/work]');
 }
 
 function isNotNull<T>(v: T | null): v is T {
@@ -158,8 +158,10 @@ function parseTask(input: string): Task | null {
   }
   const [_, status = 'TODO', text = '', tagsString = ''] = match;
   const tags =
-    tagsString.match(/(\[\[(.*?)]])/g)?.map((v) => v.replace(/[\[\]]/g, '')) ??
-    [];
+    tagsString
+      .replace(/\[\[\[\[([^\]]*)\]\]/g, '[[$1/')
+      .match(/(\[\[(.*?)]])/g)
+      ?.map((v) => v.replace(/[\[\]]/g, '')) ?? [];
   const done = status === 'DONE';
   const indent = input.match(/  /g)?.length ?? 0;
   return { text: extractTitleFromMarkdownLink(text), done, tags, indent };
@@ -208,9 +210,24 @@ function groupByProject(
       tasks,
       (task) => task.subProject,
       (task) => task
-    ).map(([subProject, tasks]) => ({ subProject, tasks }));
+    )
+      .map(([subProject, tasks]) => [
+        subProject,
+        unique(tasks, (task) => task.text),
+      ] as const)
+      .map(([subProject, tasks]) => ({ subProject, tasks }));
     return { project, subProjects, tasks };
   });
+}
+
+function unique<T>(items: T[], getKey: (item: T) => string): T[] {
+  return [...items]
+    .sort((a, b) => getKey(a).localeCompare(getKey(b)))
+    .reduce((acc, item) => {
+      const lastKey = acc.length > 0 ? getKey(acc[acc.length - 1]) : '';
+      const key = getKey(item);
+      return key === lastKey ? acc : [...acc, item];
+    }, [] as T[]);
 }
 
 function groupBy<T, S>(
