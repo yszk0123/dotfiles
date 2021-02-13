@@ -29,6 +29,7 @@ brew ghq
 brew git
 brew git-extras
 brew git-flow
+brew git-lfs
 brew go
 brew gradle
 brew graphicsmagick
@@ -36,7 +37,6 @@ brew graphviz
 brew httpie
 brew hub
 brew icu4c
-brew imagemagick
 brew ios-deploy
 brew isl
 brew jemalloc
@@ -78,7 +78,6 @@ brew postgresql
 brew pwgen
 brew pyenv
 brew pyenv-virtualenv
-brew python
 brew rbenv
 brew readline
 brew reattach-to-user-namespace
@@ -129,6 +128,7 @@ brew brew-file
 
 # Other Homebrew packages
 brew openssl
+brew python
 brew python@2
 
 # Other Cask applications
