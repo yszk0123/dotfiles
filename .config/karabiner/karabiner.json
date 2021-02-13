@@ -677,6 +677,14 @@
                     "to": {
                         "key_code": "japanese_kana"
                     }
+                },
+                {
+                    "from": {
+                        "key_code": "japanese_pc_katakana"
+                    },
+                    "to": {
+                        "key_code": "japanese_kana"
+                    }
                 }
             ],
             "virtual_hid_keyboard": {
