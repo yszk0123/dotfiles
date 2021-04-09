@@ -22,11 +22,10 @@ setopt hist_ignore_all_dups
 ## ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
 
-bindkey -v
 #bindkey -r '^]'
 #bindkey "" history-incremental-search-backward
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
-bindkey '^R' history-incremental-pattern-search-backward
+# bindkey '^R' history-incremental-pattern-search-backward
 
 # 履歴の検索
 # cf. [zshの設定メモ - Webtech Walker](http://webtech-walker.com/archive/2008/12/15101251.html)
