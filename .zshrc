@@ -38,6 +38,8 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/tmux
   zgen oh-my-zsh plugins/yarn
 
+  zgen load zsh-users/zsh-completions
+  zgen load zsh-users/zsh-history-substring-search
   zgen load zsh-users/zsh-syntax-highlighting
 
   zgen save
