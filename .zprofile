@@ -38,7 +38,6 @@ export PATH="$HOME/flutter/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Deno
 export DENO_INSTALL="$HOME/.deno"
