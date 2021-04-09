@@ -672,7 +672,7 @@
                 },
                 {
                     "from": {
-                        "key_code": "japanese_pc_katakana"
+                        "key_code": "right_command"
                     },
                     "to": {
                         "key_code": "japanese_kana"
@@ -680,7 +680,7 @@
                 },
                 {
                     "from": {
-                        "key_code": "right_command"
+                        "key_code": "japanese_pc_katakana"
                     },
                     "to": {
                         "key_code": "japanese_kana"
