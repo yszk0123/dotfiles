@@ -70,9 +70,6 @@ function link_config() {
   link_config_to_home .vimrc
   link_config_to_home .config/karabiner
   link_config_to_home .config/brewfile
-
-  ln -sni "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-  ln -sni "$DOTFILES_DIR/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 }
 
 function link_config_to_home() {
