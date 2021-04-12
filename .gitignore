@@ -1,11 +1,4 @@
 # Folders
-.atom/.apm/
-.atom/.node-gyp/
-.atom/blob-store/
-.atom/compile-cache/
-.atom/gist-it.token
-.atom/packages/
-.atom/storage/
 .bundle/cache/
 .config/karabiner/automatic_backups/
 .git/
