@@ -28,7 +28,4 @@ link_dotfiles_to_home .vimrc
 link_dotfiles_to_home .config/karabiner
 link_dotfiles_to_home .config/brewfile
 
-ln -sni "$HOME/dotfiles/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-ln -sni "$HOME/dotfiles/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-
 ln -sni "$DOTFILES_DIR/brewfile" "$XDG_CONFIG_HOME/brewfile"
