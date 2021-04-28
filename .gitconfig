@@ -3,6 +3,7 @@
 	email = y0suzuki0123@gmail.com
 [init]
 	templatedir = ~/.git-template
+	defaultBranch = main
 [commit]
 	verbose = true
 [core]
