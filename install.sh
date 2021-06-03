@@ -60,7 +60,7 @@ function link_config() {
   ln -sni "$DOTFILES_DIR/gitignore" "$XDG_CONFIG_HOME/git/ignore"
 
   # espanso
-  ln -sni "$HOME/Dropbox/espanso" "$HOME/Library/Preferences/espanso"
+  ln -sni "$DOTFILES_DIR/espanso" "$HOME/Library/Preferences/espanso"
 
   # dotfiles
   mkdir -p "$XDG_CONFIG_HOME"
