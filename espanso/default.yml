@@ -7,6 +7,8 @@
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
+  - trigger: ":sta"
+    replace: "⭐️ "
   - trigger: ":wor"
     replace: "💼 "
   - trigger: ":hom"
@@ -19,6 +21,10 @@ matches:
     replace: "🌅 "
   - trigger: ":noon"
     replace: "🏙 "
+  - trigger: ":eve"
+    replace: "🌇 "
+  - trigger: ":nig"
+    replace: "🌠 "
   - trigger: ":weekend"
     replace: "🏝 "
   - trigger: ":cof"
