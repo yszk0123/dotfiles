@@ -45,24 +45,28 @@ let g:neoformat_javascript_prettier = {
   \ }
 " }}}
 
+" coc.nvim {{{
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" }}}
+
 " ALE {{{
-Plug 'w0rp/ale'
-
-let g:ale_linters = {}
-let g:ale_linters['python'] = ['flake8']
-let g:ale_linters['javascript'] = []
-let g:ale_linters['typescript'] = ['tsserver']
-
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fixers['typescript'] = ['prettier']
-
-let g:ale_fix_on_save = 1
-
-let g:ale_javascript_prettier_options = '--single-quote'
-let g:ale_typescript_prettier_options = '--single-quote'
-let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_typescript_prettier_use_local_config = 1
+" Plug 'w0rp/ale'
+" 
+" let g:ale_linters = {}
+" let g:ale_linters['python'] = ['flake8']
+" let g:ale_linters['javascript'] = []
+" let g:ale_linters['typescript'] = ['tsserver']
+" 
+" let g:ale_fixers = {}
+" let g:ale_fixers['javascript'] = ['prettier']
+" let g:ale_fixers['typescript'] = ['prettier']
+" 
+" let g:ale_fix_on_save = 1
+" 
+" let g:ale_javascript_prettier_options = '--single-quote'
+" let g:ale_typescript_prettier_options = '--single-quote'
+" let g:ale_javascript_prettier_use_local_config = 1
+" let g:ale_typescript_prettier_use_local_config = 1
 " }}}
 
 " clever-f {{{
