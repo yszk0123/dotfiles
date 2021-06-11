@@ -116,7 +116,6 @@ map M  <Plug>(operator-sort)
 "}}}
 
 " 囲み系補完 {{{
-Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
 let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
