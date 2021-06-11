@@ -18,6 +18,7 @@ runtime vim/plugins.vim
 runtime vim/keymaps.vim
 runtime vim/settings.vim
 runtime vim/commands.vim
+runtime vim/coc.vim
 
 filetype plugin indent on
 syntax on
