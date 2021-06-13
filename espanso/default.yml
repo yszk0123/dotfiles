@@ -29,6 +29,8 @@ matches:
     replace: "🏝 "
   - trigger: ":cof"
     replace: "☕️ "
+  - trigger: ":sho"
+    replace: "🛍 "
 
   # Dates
   - trigger: ":date"
