@@ -84,6 +84,10 @@ function install_vim() {
   mkdir -p "$HOME/vimfiles/tmp"
 }
 
+function configure_apple() {
+  defaults write -g ApplePressAndHoldEnabled -bool true
+}
+
 # ------------------------------------------------------------------------------
 # Run
 # ------------------------------------------------------------------------------
@@ -96,3 +100,4 @@ install_tpm
 install_zaw
 install_zgen
 install_vim
+configure_apple
