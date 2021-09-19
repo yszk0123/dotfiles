@@ -13,6 +13,8 @@
 	ui = auto
 [diff]
 	renames = true
+	algorithm = histogram
+	colorMoved = dimmed-zebra
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
