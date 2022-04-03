@@ -67,3 +67,4 @@ function tmux_automatically_attach_session()
 }
 
 alias tmuxa=tmux_automatically_attach_session
+. "$HOME/.cargo/env"
