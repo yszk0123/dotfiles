@@ -78,6 +78,7 @@
 
 	# cf. http://megakemp.com/2016/08/25/git-undo/ (translation: http://postd.cc/git-undo/)
 	undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
+	push-f = push --force-with-lease
 [ghq]
 	root = ~/src
 [merge]
