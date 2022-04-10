@@ -2,7 +2,6 @@
 	name = Yuji Suzuki
 	email = y0suzuki0123@gmail.com
 [init]
-	templatedir = ~/.git-template
 	defaultBranch = main
 [commit]
 	verbose = true
@@ -99,6 +98,6 @@
 	autosquash = true
 [pull]
 	ff = only
-	ff = only
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+[net]
+	# https://github.com/cargo-generate/cargo-generate/issues/168#issuecomment-730847204
+	git-fetch-with-cli = true
