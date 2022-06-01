@@ -15,6 +15,7 @@ tmp/
 *~
 .DS_Store
 .envrc
+.nvmrc
 
 .tags*
 tags
