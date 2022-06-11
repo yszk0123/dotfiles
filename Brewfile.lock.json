@@ -917,12 +917,6 @@
           "full_name": "discord"
         }
       },
-      "divvy": {
-        "version": "1.5.1",
-        "options": {
-          "full_name": "divvy"
-        }
-      },
       "docker": {
         "version": "3.3.0,62916",
         "options": {
