@@ -929,12 +929,6 @@
           "full_name": "firefox"
         }
       },
-      "forticlient": {
-        "version": "6.4.3.1325",
-        "options": {
-          "full_name": "forticlient"
-        }
-      },
       "google-chrome": {
         "version": "89.0.4389.114",
         "options": {

@@ -51,3 +51,6 @@ export NVM_DIR="$HOME/.config/nvm"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 source "${HOME}/.zgen/zgen.zsh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

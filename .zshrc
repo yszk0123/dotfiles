@@ -21,9 +21,9 @@ zstyle ':zle:*' word-style unspecified
 export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 
 # Plugins {{{
-ZGEN_AUTOLOAD_COMPINIT=0
-ZGEN_DIR="$ZDOTDIR/.zgen"
-source "$ZGEN_DIR/zgen.zsh"
+# ZGEN_AUTOLOAD_COMPINIT=0
+# ZGEN_DIR="$ZDOTDIR/.zgen"
+# source "$ZGEN_DIR/zgen.zsh"
 
 if ! zgen saved; then
   zgen oh-my-zsh
