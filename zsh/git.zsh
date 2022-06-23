@@ -36,8 +36,9 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gsts='git stash show'
 
+alias gcp='git cherry-pick'
+
 alias gm='git merge'
-alias gpic='git cherry-pick'
 alias gpul='git pull origin '
 alias gpus='git push -u origin '
 alias gpusforce='git push --force-with-lease -u origin '
