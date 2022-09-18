@@ -25,6 +25,8 @@ alias f='fzf --height 40% --reverse'
 # Format (pretty print) {{{
 alias grepf='grep --color=always'
 alias rgf='rg --color'
+alias ung='gron --ungron'
+alias ungron='gron --ungron'
 # }}}
 # }}}
 
