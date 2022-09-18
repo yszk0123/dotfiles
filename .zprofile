@@ -19,9 +19,9 @@ export GOPATH="$HOME"
 export PATH="$PATH:$GOPATH/bin"
 
 # Python
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# export PATH="$HOME/.pyenv/bin:$PATH"
+# export PATH="$HOME/.poetry/bin:$PATH"
+# export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # nodebrew
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
