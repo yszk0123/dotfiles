@@ -72,6 +72,8 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
+source_if_exists "$(brew --prefix asdf)/libexec/asdf.sh"
+
 eval "$(starship init zsh)"
 
 # vim:set ft=zsh:
