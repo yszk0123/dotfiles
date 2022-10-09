@@ -1,5 +1,7 @@
 source "$HOME/dotfiles/scripts/common/utils.sh"
 
+: "${ZDOTDIR:=~/.zsh}"
+
 function source_zsh_script() {
   local name="$1"
   source "$HOME/dotfiles/zsh/$name.zsh"
@@ -20,33 +22,6 @@ zstyle ':zle:*' word-style unspecified
 # Workaround for GUI app which doesn't get /etc/paths
 export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 
-# Plugins {{{
-: "${ZDOTDIR:=~/.zsh}"
-ZGEN_AUTOLOAD_COMPINIT=0
-ZGEN_DIR="$ZDOTDIR/.zgen"
-source "$ZGEN_DIR/zgen.zsh"
-
-if ! zgen saved; then
-  zgen oh-my-zsh
-
-  # Maybe slow...
-  # zgen oh-my-zsh plugins/command-not-found
-
-  zgen oh-my-zsh plugins/fzf
-  # Dangerous!!!
-  # zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/gitignore
-  zgen oh-my-zsh plugins/tmux
-  zgen oh-my-zsh plugins/yarn
-
-  zgen load zsh-users/zsh-syntax-highlighting
-  zgen load chitoku-k/fzf-zsh-completions
-  zgen load yuki-ycino/fzf-preview.zsh
-
-  zgen save
-fi
-# }}}
-
 # Lib
 source_zsh_script common
 source_zsh_script complete
@@ -65,32 +40,28 @@ if [ -f "$(brew --prefix)/etc/brew-wrap" ]; then
 fi
 
 source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
-# The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 source_if_exists "$(brew --prefix asdf)/libexec/asdf.sh"
 
 eval "$(starship init zsh)"
 
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/Users/yszk0123/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/yszk0123/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/Users/yszk0123/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/yszk0123/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
+# 
+# export PATH="/Users/yszk0123/miniconda3/bin:$PATH"
+
 # vim:set ft=zsh:
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/yszk0123/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/yszk0123/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/yszk0123/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/yszk0123/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export PATH="/Users/yszk0123/miniconda3/bin:$PATH"
