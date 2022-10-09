@@ -27,5 +27,6 @@ link_dotfiles_to_home .tmux.conf
 link_dotfiles_to_home .vimrc
 link_dotfiles_to_home .config/karabiner
 link_dotfiles_to_home .config/brewfile
+link_dotfiles_to_home .config/starship.toml
 
 ln -sni "$DOTFILES_DIR/brewfile" "$XDG_CONFIG_HOME/brewfile"
