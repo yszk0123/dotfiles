@@ -47,7 +47,7 @@ alias v='env LANG=ja_JP.UTF-8 vim '
 
 # 上書き確認 {{{
 alias rm='rm -i'
-alias cp='cp -i'
+# alias cp='cp -i'
 alias mv='mv -i'
 # }}}
 
