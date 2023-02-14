@@ -21,3 +21,4 @@ tmp/
 tags
 !tags/
 .memento-cache/
+.tool-versions
