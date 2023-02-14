@@ -27,6 +27,7 @@ alias grepf='grep --color=always'
 alias rgf='rg --color'
 alias ung='gron --ungron'
 alias ungron='gron --ungron'
+alias hb='hub browse'
 # }}}
 # }}}
 
