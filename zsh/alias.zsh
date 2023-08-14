@@ -27,7 +27,6 @@ alias grepf='grep --color=always'
 alias rgf='rg --color'
 alias ung='gron --ungron'
 alias ungron='gron --ungron'
-alias hb='hub browse'
 # }}}
 # }}}
 
@@ -62,10 +61,6 @@ alias -g G='| grep --color=always'
 alias -g L="| less --tabs=1,5 -R"
 alias -g D="| diff-so-fancy | less --tabs=1,5 -R"
 # }}}
-
-if is_exists "hub"; then
-  alias git=hub
-fi
 
 # {{{
 # cf. https://github.com/necojackarc/dotfiles/commit/dacaf426f834bb9ae47e25d3af2b514a0115f87b
