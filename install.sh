@@ -38,12 +38,6 @@ function install_zaw() {
   fi
 }
 
-function install_zgen() {
-  if ! is_exists "zgen"; then
-    git clone https://github.com/tarjoilija/zgen.git "$ZDOTDIR/.zgen"
-  fi
-}
-
 function update_mac_settings() {
   # Boost key repeat
   defaults write NSGlobalDomain InitialKeyRepeat -int 10
@@ -95,6 +89,5 @@ update_mac_settings
 link_config
 install_tpm
 install_zaw
-install_zgen
 install_vim
 configure_apple

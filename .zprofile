@@ -45,6 +45,3 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # sheldon
 eval "$(sheldon source)"
-
-# [ -s "${HOME}/.zgen/zgen.sh" ] && source "${HOME}/.zgen/zgen.zsh"
-# [ -s "${HOME}/.zsh/.zgen/zgen.sh" ] && source "${HOME}/.zsh/.zgen/zgen.zsh"
