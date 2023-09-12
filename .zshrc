@@ -61,7 +61,14 @@ eval "$(starship init zsh)"
 # fi
 # unset __conda_setup
 # # <<< conda initialize <<<
-# 
+#
 # export PATH="/Users/yszk0123/miniconda3/bin:$PATH"
 
 # vim:set ft=zsh:
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
