@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 source "$HOME/dotfiles/scripts/common/utils.sh"
 
 : "${ZDOTDIR:=~/.zsh}"
@@ -25,33 +32,34 @@ export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 # Lib
 source_zsh_script common
 source_zsh_script complete
-source_zsh_script fzf
 source_zsh_script history
 source_zsh_script keybinding
 source_zsh_script os
 source_zsh_script settings
-source_zsh_script utils
 source_zsh_script alias
 source_zsh_script git
+# source_zsh_script fzf
+# source_zsh_script vim
 # source_zsh_script python
 
 if [ -f "$(brew --prefix)/etc/brew-wrap" ]; then
   source "$(brew --prefix)/etc/brew-wrap"
 fi
 
-source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+# source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+# if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+# if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 source_if_exists "$(brew --prefix asdf)/libexec/asdf.sh"
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
-# vim:set ft=zsh:
-
-# bun completions
+# Bun
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
+[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
+
+# vim:set ft=zsh:

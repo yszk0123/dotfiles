@@ -10,11 +10,38 @@
 #
 # See the documentation for more https://github.com/rossmacarthur/sheldon#readme
 
+# ref: https://github.com/buccimoni/dotfiles/blob/9aecc4b1d4f1bf995a90f27afdeaa9b05aa6fe9a/.config/sheldon/plugins.toml
+
 shell = "zsh"
 
 [plugins]
 
-# For example:
-#
-# [plugins.base16]
-# github = "chriskempson/base16-shell"
+[plugins.zsh-defer]
+github = 'romkatv/zsh-defer'
+apply = ['source']
+
+[plugins.powerlevel10k]
+github = 'romkatv/powerlevel10k'
+apply = ['source']
+
+[plugins.zsh-syntax-highlighting]
+github = 'zsh-users/zsh-syntax-highlighting'
+apply = ['defer']
+
+[plugins.enhancd]
+github = 'b4b4r07/enhancd'
+apply = ['defer']
+
+[plugins.fzf]
+github = 'junegunn/fzf'
+apply = ['fzf-install', 'fzf-source']
+
+# [plugins.zsh-autocomplete]
+# github = 'marlonrichert/zsh-autocomplete'
+# apply = ['defer']
+
+[templates]
+PATH = 'export PATH="$PATH:{{ dir }}"'
+defer = "{{ hooks | get: \"pre\" | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks | get: \"post\" | nl }}"
+fzf-install = "{{ dir }}/install --bin > /dev/null \n[[ ! $PATH == *{{ dir }}* ]] && export PATH=\"$PATH:{{ dir }}/bin\"\n"
+fzf-source = "{% for file in files %}source \"{{ file }}\"\n{% endfor %}"

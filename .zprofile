@@ -46,5 +46,8 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 [ -s "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-[ -s "${HOME}/.zgen/zgen.sh" ] && source "${HOME}/.zgen/zgen.zsh"
-[ -s "${HOME}/.zsh/.zgen/zgen.sh" ] && source "${HOME}/.zsh/.zgen/zgen.zsh"
+# sheldon
+eval "$(sheldon source)"
+
+# [ -s "${HOME}/.zgen/zgen.sh" ] && source "${HOME}/.zgen/zgen.zsh"
+# [ -s "${HOME}/.zsh/.zgen/zgen.sh" ] && source "${HOME}/.zsh/.zgen/zgen.zsh"
