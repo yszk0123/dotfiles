@@ -14,9 +14,6 @@ ln -sni ~/dotfiles/.zprofile ~/.zprofile
 ln -sni ~/dotfiles/.zprofile "$ZDOTDIR/.zprofile"
 ln -sni ~/dotfiles/.zshrc "$ZDOTDIR/.zshrc"
 
-# Git
-ln -sni ~/dotfiles/gitignore "$XDG_CONFIG_HOME/git/ignore"
-
 # dotfiles
 link_dotfiles_to_home .bundle
 link_dotfiles_to_home .git-template
@@ -25,8 +22,6 @@ link_dotfiles_to_home .gitconfig
 link_dotfiles_to_home .tigrc
 link_dotfiles_to_home .tmux.conf
 link_dotfiles_to_home .vimrc
-link_dotfiles_to_home .config/karabiner
-link_dotfiles_to_home .config/brewfile
-link_dotfiles_to_home .config/starship.toml
+link_dotfiles_to_home .config
 
 ln -sni "$DOTFILES_DIR/brewfile" "$XDG_CONFIG_HOME/brewfile"

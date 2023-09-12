@@ -1,6 +1,7 @@
 # Folders
 .bundle/cache/
 .config/karabiner/automatic_backups/
+.config/yarn/global/
 .git/
 node_modules/
 tmp/
