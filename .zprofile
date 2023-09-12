@@ -29,9 +29,6 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 # pkgconfig
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 
-# Let npm packages maintain as dotfiles and expose as well as global packages
-export PATH="$HOME/dotfiles/node_modules/.bin:$PATH"
-
 # Flutter
 export PATH="$HOME/flutter/bin:$PATH"
 
