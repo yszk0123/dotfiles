@@ -1,9 +1,0 @@
-#!/bin/bash -e
-# Check @flow annotation comment in each js file
-
-list=$(find src -type f | grep '\.js$' | xargs grep '@flow' -L)
-
-if [ ! -z "$list" ]; then
-  echo "$list"
-  exit 1
-fi

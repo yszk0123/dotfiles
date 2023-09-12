@@ -1,8 +1,0 @@
-#!/bin/bash -e
-# Note: set gitlab private token to GITLAB_PRIVATE_TOKEN (environment variable)
-PROJECT_NAME="$1"
-[[ -z "$PROJECT_NAME" ]] && cat <<EOS >&2 && exit 1
-$0 [PROJECT_NAME]
-EOS
-
-curl -v -X POST -H "PRIVATE-TOKEN: $GITLAB_PRIVATE_TOKEN" -d name="$PROJECT_NAME" "https://gitlab.com/api/v3/projects"
