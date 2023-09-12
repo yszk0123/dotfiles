@@ -52,8 +52,6 @@ fi
 
 source_if_exists "$(brew --prefix asdf)/libexec/asdf.sh"
 
-# eval "$(starship init zsh)"
-
 # Bun
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
