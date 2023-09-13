@@ -45,3 +45,9 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # sheldon
 eval "$(sheldon source)"
+
+# Rancher
+export PATH="$HOME/.rd/bin:$PATH"
+
+# pipx
+export PATH="$PATH:$HOME/.local/bin"
