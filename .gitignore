@@ -2,6 +2,7 @@
 .bundle/cache/
 .config/karabiner/automatic_backups/
 .config/yarn/global/
+.config/gcloud/
 .git/
 node_modules/
 tmp/
