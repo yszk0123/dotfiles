@@ -9,6 +9,8 @@ node_modules/
 
 # Files
 *~
+.env
+.env.local
 .DS_Store
 .envrc
 .nvmrc
