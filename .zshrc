@@ -72,3 +72,14 @@ export PATH="$PATH:$HOME/.local/bin"
 # export PATH="$PATH:$(npm prefix --location=global)/bin"
 
 # vim:set ft=zsh:
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
