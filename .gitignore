@@ -1,6 +1,8 @@
 # Folders
 .bundle/cache/
 .config/karabiner/automatic_backups/
+.config/iterm2/
+.config/coc/extensions/
 .config/yarn/global/
 .config/gcloud/
 .git/
