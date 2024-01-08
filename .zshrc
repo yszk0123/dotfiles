@@ -40,6 +40,7 @@ source_zsh_script os
 source_zsh_script settings
 source_zsh_script alias
 source_zsh_script git
+source_zsh_script mise
 # source_zsh_script fzf
 # source_zsh_script vim
 # source_zsh_script python
