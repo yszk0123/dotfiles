@@ -1,4 +1,3 @@
-brew "asdf"
 brew "awscli"
 brew "bat"
 brew "cmake"
