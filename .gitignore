@@ -5,6 +5,7 @@
 .config/coc/extensions/
 .config/yarn/global/
 .config/gcloud/
+.config/raycast/extensions/
 .git/
 node_modules/
 tmp/
