@@ -95,6 +95,8 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [rebase]
 	autosquash = true
+	autostash = true
+	abbreviateCommands = true
 [pull]
 	ff = only
 [net]
