@@ -78,4 +78,8 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+eval "$($HOME/.local/bin/mise activate zsh)"
 # vim:set ft=zsh:
+
+# bun completions
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
