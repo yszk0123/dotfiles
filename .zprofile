@@ -46,9 +46,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.rd/bin:$PATH"
 
 # Python
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# export PATH="$HOME/.poetry/bin:$PATH"
-# export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # pipx
 export PATH="$PATH:$HOME/.local/bin"

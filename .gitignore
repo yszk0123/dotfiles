@@ -6,6 +6,7 @@
 .config/yarn/global/
 .config/gcloud/
 .config/raycast/extensions/
+.config/.wrangler/
 .git/
 node_modules/
 tmp/

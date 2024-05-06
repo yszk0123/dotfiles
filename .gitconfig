@@ -104,3 +104,5 @@
 	git-fetch-with-cli = true
 [credential]
 	helper = store
+[rerere]
+	enabled = true
