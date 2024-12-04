@@ -6,6 +6,7 @@ alias g=git
 alias ga='git add'
 alias gau='git add -u'
 alias ge='git exec '
+alias gaab='git add -u && git absorb --base $(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@")'
 
 alias gb='git branch'
 
