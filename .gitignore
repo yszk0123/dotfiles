@@ -28,3 +28,5 @@ tags
 !tags/
 .memento-cache/
 .tool-versions
+
+*.dat
