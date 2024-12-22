@@ -7,6 +7,7 @@
 .config/gcloud/
 .config/raycast/extensions/
 .config/.wrangler/
+.config/
 .git/
 node_modules/
 tmp/

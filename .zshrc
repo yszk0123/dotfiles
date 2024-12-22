@@ -70,16 +70,8 @@ export PATH="$PATH:$HOME/.local/bin"
 # npm
 # export PATH="$PATH:$(npm prefix --location=global)/bin"
 
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-eval "$($HOME/.local/bin/mise activate zsh)"
+#eval "$($HOME/.local/bin/mise activate zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
 # vim:set ft=zsh:
 
 # bun completions
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"

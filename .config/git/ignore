@@ -17,5 +17,6 @@ tmp/
 .nvmrc
 .tool-versions
 .mise.toml
+.mise.local.toml
 
 save.sh
