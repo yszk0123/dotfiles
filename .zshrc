@@ -70,8 +70,12 @@ export PATH="$PATH:$HOME/.local/bin"
 # npm
 # export PATH="$PATH:$(npm prefix --location=global)/bin"
 
-#eval "$($HOME/.local/bin/mise activate zsh)"
-eval "$(/opt/homebrew/bin/mise activate zsh)"
+if is_exists "/opt/homebrew/bin/mise"; then
+  eval "$(/opt/homebrew/bin/mise activate zsh)"
+fi
+if is_exists "$HOME/.local/bin/mise"; then
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
 # vim:set ft=zsh:
 
 # bun completions
