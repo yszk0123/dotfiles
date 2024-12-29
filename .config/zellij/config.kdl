@@ -5,6 +5,14 @@
 keybinds clear-defaults=true {
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl b" { SwitchToMode "normal"; }
+        bind "s" { NewPane "down"; SwitchToMode "normal"; }
+        bind "l" { NewPane "right"; SwitchToMode "normal"; }
+
+        bind "left" { MoveFocusOrTab "left"; }
+        bind "down" { MoveFocus "down"; }
+        bind "up" { MoveFocus "up"; }
+        bind "right" { MoveFocusOrTab "right"; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
@@ -78,7 +86,7 @@ keybinds clear-defaults=true {
         bind "up" { MovePane "up"; }
         bind "right" { MovePane "right"; }
         bind "h" { MovePane "left"; }
-        bind "Ctrl h" { SwitchToMode "normal"; }
+        bind "Ctrl m" { SwitchToMode "normal"; }
         bind "j" { MovePane "down"; }
         bind "k" { MovePane "up"; }
         bind "l" { MovePane "right"; }
@@ -137,13 +145,19 @@ keybinds clear-defaults=true {
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Ctrl g" { SwitchToMode "locked"; }
+        bind "Ctrl b" { SwitchToMode "locked"; }
         bind "Alt i" { MoveTab "left"; }
-        bind "Alt n" { NewPane; }
+        bind "Alt m" { NewPane; }
+        bind "Alt n" { NewPane "down"; }
         bind "Alt o" { MoveTab "right"; }
         bind "Ctrl q" { Quit; }
+        // bind "Ctrl h" { MoveFocusOrTab "left"; }
+        bind "Ctrl j" { MoveFocus "down"; }
+        bind "Ctrl k" { MoveFocus "up"; }
+        bind "Ctrl l" { MoveFocusOrTab "right"; }
     }
     shared_except "locked" "move" {
-        bind "Ctrl h" { SwitchToMode "move"; }
+        // bind "Ctrl h" { SwitchToMode "move"; }
     }
     shared_except "locked" "session" {
         bind "Ctrl o" { SwitchToMode "session"; }
