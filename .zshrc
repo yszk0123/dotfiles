@@ -55,6 +55,9 @@ source_zsh_script mise
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# sheldon
+eval "$(sheldon source)"
+
 # Powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
@@ -77,5 +80,4 @@ if is_exists "$HOME/.local/bin/mise"; then
   eval "$($HOME/.local/bin/mise activate zsh)"
 fi
 # vim:set ft=zsh:
-
 # bun completions

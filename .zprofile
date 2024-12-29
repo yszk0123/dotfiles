@@ -9,9 +9,6 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 export ZDOTDIR="$HOME/.zsh"
 fpath=($fpath "$ZDOTDIR/zsh/Functions/Chpwd" "$ZDOTDIR/zsh/Functions/Zle")
 
-# sheldon
-eval "$(sheldon source)"
-
 # Brew
 [ -s "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -52,3 +49,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
+
+# sheldon
+eval "$(sheldon source)"
+
