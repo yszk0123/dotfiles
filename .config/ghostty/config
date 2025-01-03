@@ -1,0 +1,28 @@
+theme = "GitHub Dark"
+macos-titlebar-style = tabs
+window-inherit-working-directory = true
+unfocused-split-opacity = 0.825
+
+keybind = ctrl+cmd+h=goto_split:left
+keybind = ctrl+cmd+j=goto_split:bottom
+keybind = ctrl+cmd+k=goto_split:top
+keybind = ctrl+cmd+l=goto_split:right
+keybind = ctrl+shift+h=new_split:left
+keybind = ctrl+shift+j=new_split:down
+keybind = ctrl+shift+k=new_split:up
+keybind = ctrl+shift+l=new_split:right
+keybind = ctrl+alt+h=resize_split:left,30
+keybind = ctrl+alt+j=resize_split:down,30
+keybind = ctrl+alt+k=resize_split:up,30
+keybind = ctrl+alt+l=resize_split:right,30
+
+cursor-opacity = 0.7
+#cursor-style = block
+#cursor-style-blink = false
+
+# Quick Terminal
+quick-terminal-position = "top"
+quick-terminal-screen = "main"
+quick-terminal-animation-duration = 0.3
+keybind = "global:cmd+shift+0=toggle_quick_terminal"
+
