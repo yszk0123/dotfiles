@@ -31,3 +31,4 @@ tags
 .tool-versions
 
 *.dat
+uv.lock
