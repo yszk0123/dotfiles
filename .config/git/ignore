@@ -19,4 +19,11 @@ tmp/
 .mise.toml
 .mise.local.toml
 
+a.json
+b.json
+c.json
+a.txt
+b.txt
+c.txt
+
 save.sh
