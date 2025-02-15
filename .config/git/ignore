@@ -18,6 +18,7 @@ tmp/
 .tool-versions
 .mise.toml
 .mise.local.toml
+mise.local.toml
 
 a.json
 b.json
