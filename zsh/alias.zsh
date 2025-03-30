@@ -30,6 +30,10 @@ alias ungron='gron --ungron'
 # }}}
 # }}}
 
+# pnpm {{{
+alias pf="pnpm run --filter"
+# }}}
+
 # docker {{{
 alias d='docker'
 alias de='docker exec'
