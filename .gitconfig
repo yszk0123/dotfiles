@@ -103,6 +103,6 @@
 	# https://github.com/cargo-generate/cargo-generate/issues/168#issuecomment-730847204
 	git-fetch-with-cli = true
 [credential]
-	helper = store
+	helper = osxkeychain
 [rerere]
 	enabled = true
