@@ -1,11 +1,31 @@
+# Theme
 theme = "GitHub Dark"
+
+# Font
+# font-family = "Hack Nerd Font Mono Regular"
+font-family = "PlemolJP Console NF Text"
+font-feature = -dlig
+font-style-bold = false
+font-style-italic = false
+font-style-bold-italic = false
+
+# Cursor
+cursor-opacity = 0.7
+#cursor-style = block
+#cursor-style-blink = false
+
+# Quick Terminal
+quick-terminal-position = "top"
+quick-terminal-screen = "main"
+quick-terminal-animation-duration = 0.3
+keybind = "global:cmd+shift+0=toggle_quick_terminal"
+
+# Window
 macos-titlebar-style = tabs
 window-inherit-working-directory = true
 unfocused-split-opacity = 0.825
 
-# font-family = "Hack Nerd Font Mono Regular"
-font-family = "PlemolJP Regular"
-
+# Split
 keybind = ctrl+cmd+h=goto_split:left
 keybind = ctrl+cmd+j=goto_split:bottom
 keybind = ctrl+cmd+k=goto_split:top
@@ -18,14 +38,3 @@ keybind = ctrl+alt+h=resize_split:left,30
 keybind = ctrl+alt+j=resize_split:down,30
 keybind = ctrl+alt+k=resize_split:up,30
 keybind = ctrl+alt+l=resize_split:right,30
-
-cursor-opacity = 0.7
-#cursor-style = block
-#cursor-style-blink = false
-
-# Quick Terminal
-quick-terminal-position = "top"
-quick-terminal-screen = "main"
-quick-terminal-animation-duration = 0.3
-keybind = "global:cmd+shift+0=toggle_quick_terminal"
-
