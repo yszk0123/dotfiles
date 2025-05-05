@@ -3,6 +3,9 @@ macos-titlebar-style = tabs
 window-inherit-working-directory = true
 unfocused-split-opacity = 0.825
 
+# font-family = "Hack Nerd Font Mono Regular"
+font-family = "PlemolJP Regular"
+
 keybind = ctrl+cmd+h=goto_split:left
 keybind = ctrl+cmd+j=goto_split:bottom
 keybind = ctrl+cmd+k=goto_split:top
