@@ -5,6 +5,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/loca
 export PATH="$HOME/dotfiles/bin:$PATH"
 ##export MANPATH="/usr/local/man:$MANPATH"
 
+export PATH="$HOME/.bin:$PATH"
+
 # zsh
 export ZDOTDIR="$HOME/.zsh"
 fpath=($fpath "$ZDOTDIR/zsh/Functions/Chpwd" "$ZDOTDIR/zsh/Functions/Zle")
