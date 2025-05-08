@@ -29,4 +29,8 @@ c.txt
 
 save.sh
 
+prof/
+
 .cursorignore
+.github/copilot-instructions.md
+.cursor/
