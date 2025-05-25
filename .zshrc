@@ -81,11 +81,3 @@ if is_exists "$HOME/.local/bin/mise"; then
 fi
 # vim:set ft=zsh:
 # bun completions
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

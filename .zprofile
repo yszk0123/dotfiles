@@ -42,9 +42,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Rancher
-export PATH="$HOME/.rd/bin:$PATH"
-
 # Python
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
@@ -56,3 +53,5 @@ export PATH="$PATH:$HOME/.local/bin"
 # sheldon
 eval "$(sheldon source)"
 
+# npm
+export PATH="$HOME/.npm-global/bin:$PATH"
