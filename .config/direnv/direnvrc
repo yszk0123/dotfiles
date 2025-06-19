@@ -1,0 +1,41 @@
+# Global direnv configuration
+# Load mise automatically for projects using .tool-versions files
+
+# Use mise for runtime management
+use_mise() {
+  source_env_if_exists .envrc.local
+  mise exec -- "$@"
+}
+
+# Load mise environment if .tool-versions exists
+if [[ -f .tool-versions ]]; then
+  eval "$(mise activate bash)"
+fi
+
+# Python environment helpers
+layout_python() {
+  local python=${1:-python3}
+  [[ $# -gt 0 ]] && shift
+  unset PYTHONHOME
+  if [[ -n $python ]]; then
+    local python_version
+    python_version=$($python -V | cut -d' ' -f2 | cut -d. -f1-2)
+    local python_path
+    python_path=$(command -v "$python")
+    load_prefix "$($python -c "import sys; print(sys.exec_prefix)")"
+    if [[ -z $VIRTUAL_ENV ]]; then
+      VIRTUAL_ENV=$($python -c "import sys; print(sys.exec_prefix)" 2>/dev/null)
+      export VIRTUAL_ENV
+    fi
+    PATH_add "$($python -m site --user-base)/bin"
+    export PYTHONPATH="$VIRTUAL_ENV/lib/python$python_version/site-packages:$PYTHONPATH"
+  fi
+}
+
+# Node.js environment helpers
+layout_node() {
+  NODE_VERSION=${1:-$(cat .nvmrc 2>/dev/null || cat .node-version 2>/dev/null || echo "node")}
+  if has mise; then
+    mise use node@"$NODE_VERSION"
+  fi
+}

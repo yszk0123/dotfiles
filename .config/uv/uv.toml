@@ -1,0 +1,36 @@
+# UV configuration for Python package management
+# See: https://docs.astral.sh/uv/configuration/files/
+
+[tool.uv]
+# Package index configuration
+index-url = "https://pypi.org/simple"
+extra-index-url = []
+
+# Cache configuration
+cache-dir = "~/.cache/uv"
+no-cache = false
+
+# Installation preferences
+compile-bytecode = true
+no-build-isolation = false
+no-deps = false
+
+# Resolution preferences
+resolution = "highest"
+prerelease = "disallow"
+
+# Python discovery
+python-preference = "managed"
+python-downloads = "automatic"
+
+# Virtual environment configuration
+[tool.uv.pip]
+break-system-packages = false
+user = false
+
+# Global settings for project creation
+[tool.uv.workspace]
+members = []
+
+# Default dependencies for new projects
+[tool.uv.sources]
