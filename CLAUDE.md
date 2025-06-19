@@ -10,17 +10,20 @@ This is a personal dotfiles repository for macOS that manages development enviro
 
 ### Setup and Maintenance
 - **Initial setup**: `sh ~/dotfiles/scripts/install.sh` (requires `ZDOTDIR` environment variable)
-- **Interactive update**: `sh ~/dotfiles/update.sh` (recommended for regular maintenance)
+- **Interactive update**: `sh ~/dotfiles/update.sh` (comprehensive update with verification)
 - **Link dotfiles**: `sh ~/dotfiles/scripts/linkDotfiles.sh`
 - **Update macOS settings**: `sh ~/dotfiles/scripts/updateMacSettings.sh`
+- **System verification**: `sh ~/dotfiles/scripts/verify.sh`
 
 ### Package Management
 - **Install/update Homebrew packages**: `brew bundle` (uses `Brewfile`)
-- **Update mise-managed runtimes**: `mise install` or `mise upgrade`
+- **Update mise-managed runtimes**: `mise upgrade` (Node.js v22, Python 3.13)
+- **Update zsh plugins**: `sheldon update`
 
 ### Shell Configuration
 - **Change default shell to zsh**: `chsh -s <path/to/zsh>`
 - **Reload zsh configuration**: `source ~/.zshrc` (configuration files are in `/zsh/`)
+- **Prompt**: Starship (configured in `.config/starship.toml`)
 
 ## Architecture and Structure
 
@@ -32,18 +35,21 @@ This is a personal dotfiles repository for macOS that manages development enviro
 
 ### Package and Runtime Management
 - **Homebrew** - Primary package manager (managed via `Brewfile`)
-- **mise** - Runtime version manager for Node.js (v20), Python, and other tools
+- **mise** - Runtime version manager for Node.js (v22), Python (3.13), and other tools
   - Configuration: `.config/mise/config.toml`
   - Python version management enabled via `idiomatic_version_file_enable_tools`
 - **sheldon** - Zsh plugin manager (config: `.config/sheldon/plugins.toml`)
 - **uv** - Python package manager (config: `.config/uv/uv.toml`)
 
 ### Development Environment
-- **Multiple Python versions**: 3.9, 3.10, 3.11 (managed via Homebrew and mise)
-- **Node.js**: Version 20 (managed via mise)
+- **Python**: Version 3.13 (managed via mise)
+- **Node.js**: Version 22 LTS (managed via mise)
 - **Git integration**: Extensive aliases and configuration in `zsh/git.zsh` and `.config/git/`
 - **Terminal enhancement**: starship prompt, fzf, ripgrep, bat, eza
-- **Editor support**: Vim/Neovim with CoC, VS Code extensions via Brewfile
+- **Editor support**: 
+  - Neovim with lazy.nvim, built-in LSP, and modern plugins
+  - VS Code with comprehensive extensions via Brewfile
+  - Legacy Vim support for compatibility
 
 ### Key Environment Variables
 - **`ZDOTDIR`** - Required for installation scripts
