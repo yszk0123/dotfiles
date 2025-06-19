@@ -31,6 +31,7 @@ save.sh
 
 prof/
 
-.cursorignore
-.github/copilot-instructions.md
 .cursor/
+.cursorignore
+**/.claude/settings.local.json
+.github/copilot-instructions.md
