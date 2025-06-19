@@ -1,11 +1,5 @@
-# Powerlevel10k
-#
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Starship prompt initialization (installed via Homebrew)
+# Note: starship is used instead of powerlevel10k for consistency
 
 source "$HOME/dotfiles/scripts/common/utils.sh"
 
@@ -41,37 +35,33 @@ source_zsh_script settings
 source_zsh_script alias
 source_zsh_script git
 source_zsh_script mise
-# source_zsh_script fzf
-# source_zsh_script vim
-# source_zsh_script python
+# Additional modules available:
+# source_zsh_script fzf    # Enable if using fzf integration
+source_zsh_script vim  
+# source_zsh_script python # Enable if using pyenv (mise handles Python now)
 
-# Autosuggestions
-# source_if_exists "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
-# if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-# if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+# Legacy configurations (managed by sheldon now):
+# - zsh-autosuggestions: managed via sheldon plugins
+# - google-cloud-sdk: install manually if needed
 
 # Bun
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# sheldon
+# sheldon (zsh plugin manager)
 eval "$(sheldon source)"
 
-# Powerlevel10k
-# To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
-[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
+# starship prompt (modern cross-shell prompt)
+eval "$(starship init zsh)"
 
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
 
-# Brew
-# if [ -f "$(brew --prefix)/etc/brew-wrap" ]; then
-#   source "$(brew --prefix)/etc/brew-wrap"
-# fi
-
-# npm
-# export PATH="$PATH:$(npm prefix --location=global)/bin"
+# Package manager configurations:
+# - Homebrew: managed via Brewfile
+# - npm: global packages installed as needed
+# - mise: handles Node.js and Python versions
 
 if is_exists "/opt/homebrew/bin/mise"; then
   eval "$(/opt/homebrew/bin/mise activate zsh)"
