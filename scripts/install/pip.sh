@@ -1,26 +1,25 @@
 #!/bin/bash
 
-INSTALLED_PIP_PACKAGES="$(pip list)"
-CURRENT_PIP=pip3
-# CURRENT_PIP=pip
+# Python packages should be managed with uv or pipx for better isolation
+# Global pip installs are discouraged in favor of virtual environments
 
-function is_installed() {
-  local result=$(echo "$INSTALLED_PIP_PACKAGES" | grep "^$1$")
-  if [ -z "$result" ]; then
-    return 1;
-  else
-    return 0;
-  fi
-}
+if ! command -v uv &> /dev/null; then
+    echo "Installing uv for Python package management..."
+    if confirm_with_message "Install uv via pipx?"; then
+        pipx install uv
+    fi
+fi
 
-function confirm_then_pip_install() {
-  local target="$1"
-  is_installed "$target" && return
+if ! command -v pipx &> /dev/null; then
+    echo "pipx not found. Install it via Homebrew: brew install pipx"
+    exit 1
+fi
 
-  if confirm_with_message "Do you wish to install $target?"; then
-    $CURRENT_PIP install "$target"
-  fi
-}
-
-# cf. [p-e-w/maybe: :rabbit2: See what a program does before deciding whether you really want it to happen.](https://github.com/p-e-w/maybe)
-confirm_then_pip_install maybe
+# Essential Python tools installed via pipx for global access
+if confirm_with_message "Install essential Python tools via pipx?"; then
+    pipx install black
+    pipx install flake8
+    pipx install mypy
+    pipx install pytest
+    pipx install poetry
+fi

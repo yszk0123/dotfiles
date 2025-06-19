@@ -1,18 +1,4 @@
-if is_exists 'pyenv'; then
-  function load_python() {
-    unset -f pyenv
-    unset -f pip
-    unset -f pip3
-    unset -f nvim
-
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-  }
-
-  pyenv() { load_python; pyenv "$@"; }
-  pip() { load_python; pip "$@"; }
-  pip3() { load_python; pip3 "$@"; }
-  nvim() { load_python; nvim "$@"; }
-fi
+# Python is now managed by mise (see .config/mise/config.toml)
+# For Python package management, use uv or pipx instead of pip global installs
 
 # vim:set ft=zsh:
