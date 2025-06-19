@@ -127,6 +127,6 @@ error_symbol = "[❯](bold red)"
 
 [time]
 disabled = false
-format = '🕙[\[ $time \]]($style) '
+format = '($style) '
 time_format = "%T"
 utc_time_offset = "local"
