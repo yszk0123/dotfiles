@@ -35,3 +35,15 @@ prof/
 .cursorignore
 **/.claude/settings.local.json
 .github/copilot-instructions.md
+
+# Package lock files (prefer fresh installs)
+Brewfile.lock.json
+package-lock.json
+yarn.lock
+
+# Update notifier files
+**/configstore/update-notifier-*
+
+# Temporary backup files
+*~
+*.tmp
