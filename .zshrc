@@ -26,19 +26,30 @@ zstyle ':zle:*' word-style unspecified
 export PATH="$PATH:$(cat /etc/paths | xargs | tr " " :)"
 
 # Lib
+# Load performance optimizations first
+source_zsh_script performance
+
+# Core modules
 source_zsh_script common
-source_zsh_script complete
-source_zsh_script history
-source_zsh_script keybinding
-source_zsh_script os
 source_zsh_script settings
+source_zsh_script history
+
+# Interactive modules (defer loading when possible)
+source_zsh_script complete
+source_zsh_script keybinding
 source_zsh_script alias
+
+# Development tools
 source_zsh_script git
 source_zsh_script mise
-# Additional modules available:
+source_zsh_script vim
+
+# OS-specific optimizations
+source_zsh_script os
+
+# Optional modules (enable as needed):
 # source_zsh_script fzf    # Enable if using fzf integration
-source_zsh_script vim  
-# source_zsh_script python # Enable if using pyenv (mise handles Python now)
+# source_zsh_script python # Deprecated - Python managed by mise
 
 # Legacy configurations (managed by sheldon now):
 # - zsh-autosuggestions: managed via sheldon plugins
@@ -48,6 +59,11 @@ source_zsh_script vim
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# direnv integration
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
 
 # sheldon (zsh plugin manager)
 eval "$(sheldon source)"
