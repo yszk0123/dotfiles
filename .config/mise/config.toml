@@ -1,5 +1,6 @@
 [tools]
-node = "20"
+node = "22"  # LTS version
+python = "3.13"
 
 [settings]
 #idiomatic_version_file_enable_tools = ["python"]
