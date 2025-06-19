@@ -6,7 +6,7 @@
 [commit]
 	verbose = true
 [core]
-	editor = vim
+	editor = nvim
 	quotepath = false
 	autocrlf = false
 [color]

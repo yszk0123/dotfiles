@@ -27,8 +27,7 @@ export PATH="$PATH:$GOPATH/bin"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-# nodebrew
-export PATH="$HOME/.nodebrew/current/bin:$PATH"
+# Node.js is managed by mise (see .config/mise/config.toml)
 
 # pkgconfig
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
@@ -42,16 +41,11 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Python
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# Python is managed by mise (see .config/mise/config.toml)
+# Poetry is installed via pipx or Homebrew
 
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
 
-# sheldon
-eval "$(sheldon source)"
-
-# npm
-export PATH="$HOME/.npm-global/bin:$PATH"
+# sheldon is loaded in .zshrc
+# npm global packages are discouraged, use npx or project-local installs
