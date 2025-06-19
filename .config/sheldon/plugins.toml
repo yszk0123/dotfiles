@@ -41,6 +41,10 @@ apply = ['defer']
 github = 'b4b4r07/enhancd'
 apply = ['defer']
 
+[plugins.zsh-autopair]
+github = 'hlissner/zsh-autopair'
+apply = ['defer']
+
 [plugins.fzf]
 github = 'junegunn/fzf'
 apply = ['fzf-install', 'fzf-source']
