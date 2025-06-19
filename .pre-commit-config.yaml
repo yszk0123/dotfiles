@@ -1,0 +1,45 @@
+# Pre-commit configuration for dotfiles
+# Install with: pre-commit install
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+      - id: detect-private-key
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.10.0
+    hooks:
+      - id: shellcheck
+        args: [-e, SC1091, -e, SC2148]  # Ignore source errors and shebang warnings
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.5
+    hooks:
+      - id: remove-tabs
+        exclude: '\.(go|makefile|gitmodules)$'
+        exclude_types: [makefile]
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: 'uv\.lock$'
+
+  - repo: local
+    hooks:
+      - id: check-dotfiles-links
+        name: Check dotfiles symlinks
+        entry: scripts/verify.sh
+        language: script
+        pass_filenames: false
+        always_run: true
