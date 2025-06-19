@@ -24,4 +24,9 @@ link_dotfiles_to_home .tmux.conf
 link_dotfiles_to_home .vimrc
 link_dotfiles_to_home .config
 
+# neovim config
+mkdir -p "$XDG_CONFIG_HOME/nvim"
+ln -sf "$DOTFILES_DIR/init.vim" "$XDG_CONFIG_HOME/nvim/init.vim"
+ln -sf "$DOTFILES_DIR/vim" "$XDG_CONFIG_HOME/nvim/vim"
+
 ln -sni "$DOTFILES_DIR/brewfile" "$XDG_CONFIG_HOME/brewfile"
