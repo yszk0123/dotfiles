@@ -72,10 +72,8 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" Get quiet messages (require 7.4 patch 314)
-if has("patch-7.4.314")
-  set shortmess+=c
-endif
+" Get quiet messages (available in modern Vim)
+set shortmess+=c
 
 " Wildmenu
 " cf.
