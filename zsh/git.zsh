@@ -16,9 +16,9 @@ alias gcar='git commit --amend --reuse-message=HEAD'
 
 alias gco='git checkout'
 
-alias gd='git diff --color'
-alias gds='git diff --stat --color'
-alias gdst='git diff --staged --color'
+alias gd='git diff'
+alias gds='git diff --stat'
+alias gdst='git diff --staged'
 
 alias gf='git fetch origin'
 
