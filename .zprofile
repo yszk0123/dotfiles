@@ -28,6 +28,7 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Node.js is managed by mise (see .config/mise/config.toml)
+export PATH="$PATH:$HOME/.npm-global/bin"
 
 # pkgconfig
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
