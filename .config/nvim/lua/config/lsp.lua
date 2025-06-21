@@ -10,10 +10,10 @@ mason.setup()
 mason_lspconfig.setup({
   ensure_installed = {
     "lua_ls",
-    "pyright",
-    "tsserver",
-    "gopls",
-    "rust_analyzer",
+    -- "pyright",
+    "ts_ls",
+    -- "gopls",
+    -- "rust_analyzer",
   },
 })
 
