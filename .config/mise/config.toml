@@ -1,6 +1,20 @@
+# mise configuration for runtime version management
+# https://mise.jdx.dev/configuration.html
+
 [tools]
+# Node.js - LTS version for stability
 node = "22"
+# Python - Latest stable version
 python = "3.13"
 
 [settings]
-#idiomatic_version_file_enable_tools = ["python"]
+# Enable legacy version files (.node-version, .python-version, etc.)
+legacy_version_file = true
+# Always keep downloads to avoid re-downloading
+always_keep_download = true
+# Enable idiomatic version file support for Python tools
+idiomatic_version_file_enable_tools = ["python"]
+
+[env]
+# Environment variables for development
+NODE_ENV = "development"

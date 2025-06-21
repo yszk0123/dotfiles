@@ -1,6 +1,6 @@
 # Personal Dotfiles for macOS
 
-[![Test Dotfiles](https://github.com/USERNAME/dotfiles/workflows/Test%20Dotfiles/badge.svg)](https://github.com/USERNAME/dotfiles/actions)
+A comprehensive dotfiles repository for macOS development environment setup.
 
 A modern, well-structured dotfiles repository for macOS development environment setup using Homebrew, mise, and modern shell tools.
 
@@ -31,7 +31,7 @@ A modern, well-structured dotfiles repository for macOS development environment 
 
 ```bash
 # Clone the repository
-git clone https://github.com/USERNAME/dotfiles.git ~/dotfiles
+git clone <your-repo-url> ~/dotfiles
 cd ~/dotfiles
 
 # Run the comprehensive update script
@@ -57,11 +57,11 @@ sh ~/dotfiles/scripts/verify.sh
 ## 🛠️ What's Included
 
 ### Development Tools
-- **Editors**: Neovim (modern config), VS Code (30+ extensions)
+- **Editors**: Neovim (modern config), VS Code (comprehensive extensions)
 - **Shell**: zsh with Starship prompt, optimized startup time
 - **Version Control**: Git with extensive aliases and configuration
 - **Runtimes**: Node.js v22, Python 3.13 (managed by mise)
-- **Package Managers**: Homebrew, mise, sheldon, pipx, uv
+- **Package Managers**: Homebrew, mise, sheldon, uv
 
 ### Terminal Enhancement
 - **Prompt**: Starship (fast, customizable)
@@ -70,28 +70,29 @@ sh ~/dotfiles/scripts/verify.sh
 - **Shell Plugins**: Auto-suggestions, syntax highlighting, completions
 
 ### Security & Quality
-- **Pre-commit Hooks**: Shellcheck, secret detection, YAML/TOML validation
-- **Git Security**: git-secrets integration, comprehensive .gitignore
-- **CI/CD**: GitHub Actions for testing and validation
+- **Git Security**: Comprehensive .gitignore with security patterns
+- **Key Management**: Karabiner Elements for keyboard customization
+- **Application Launchers**: Raycast with custom extensions
 
 ## 📁 Repository Structure
 
 ```
 dotfiles/
 ├── .config/              # XDG Base Directory compliant configs
-│   ├── git/             # Git configuration
+│   ├── karabiner/       # Keyboard mapping configuration
 │   ├── mise/            # Runtime version management  
 │   ├── sheldon/         # Zsh plugin management
 │   ├── starship.toml    # Prompt configuration
-│   ├── direnv/          # Directory-based environment
-│   └── uv/              # Python package manager
-├── .github/             # GitHub Actions workflows
+│   ├── raycast/         # Raycast extensions
+│   └── nvim/            # Modern Neovim configuration
 ├── scripts/             # Installation and maintenance scripts
-├── vim/                 # Legacy Vim configuration (fallback)
-├── nvim/                # Modern Neovim configuration
+│   ├── common/          # Shared utilities
+│   └── install/         # Individual tool installers
 ├── zsh/                 # Modular zsh configuration
 ├── bin/                 # Custom utility scripts
-└── Brewfile             # Homebrew packages and VS Code extensions
+├── Brewfile             # Homebrew packages and VS Code extensions
+├── pyproject.toml       # Python project configuration
+└── uv.lock              # Python dependency lock file
 ```
 
 ## 🔧 Configuration
@@ -175,7 +176,7 @@ pre-commit run --all-files
 
 - [Detailed Setup Guide](CLAUDE.md) - Comprehensive documentation
 - [Shell Configuration](zsh/) - Modular zsh setup explanation
-- [Neovim Setup](nvim/) - Modern Neovim configuration details
+- [Custom Scripts](bin/) - Utility scripts and tools
 
 ## 🤝 Contributing
 

@@ -55,21 +55,27 @@ source_zsh_script os
 # - zsh-autosuggestions: managed via sheldon plugins
 # - google-cloud-sdk: install manually if needed
 
-# Bun
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# Bun (defer loading)
+if [ -d "$HOME/.bun" ]; then
+  [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+fi
 
 # direnv integration
 if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
-# sheldon (zsh plugin manager)
-eval "$(sheldon source)"
+# sheldon (zsh plugin manager) - defer loading
+if command -v sheldon >/dev/null 2>&1; then
+  eval "$(sheldon source)"
+fi
 
-# starship prompt (modern cross-shell prompt)
-eval "$(starship init zsh)"
+# starship prompt (modern cross-shell prompt) - defer loading  
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
 
 # pipx
 export PATH="$PATH:$HOME/.local/bin"

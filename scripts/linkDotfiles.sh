@@ -24,4 +24,4 @@ link_dotfiles_to_home .tmux.conf
 link_dotfiles_to_home .vimrc
 
 # XDG Base Directory compliant configurations
-ln -sni "$HOME/dotfiles/$target" "$XDG_CONFIG_HOME"
+ln -sni "$HOME/dotfiles/.config" "$XDG_CONFIG_HOME"
