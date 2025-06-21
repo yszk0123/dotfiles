@@ -37,34 +37,6 @@ end
 -- Completion capabilities
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
--- Setup servers
-mason_lspconfig.setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-  end,
-
-  -- Custom server configurations
-  ["lua_ls"] = function()
-    lspconfig.lua_ls.setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" },
-          },
-          workspace = {
-            library = vim.api.nvim_get_runtime_file("", true),
-          },
-        },
-      },
-    })
-  end,
-})
-
 -- Setup completion
 cmp.setup({
   snippet = {
