@@ -1,12 +1,5 @@
 #!/bin/bash
 
-if ! is_exists "fzf"; then
-  if "Do you wish to install fzf?"; then
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-  fi
-fi
-
 if ! is_exists "uv"; then
   if "Do you wish to install uv?"; then
     # https://github.com/astral-sh/uv
