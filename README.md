@@ -1,7 +1,5 @@
 # Personal Dotfiles for macOS
 
-A comprehensive dotfiles repository for macOS development environment setup.
-
 A modern, well-structured dotfiles repository for macOS development environment setup using Homebrew, mise, and modern shell tools.
 
 ## ✨ Features
@@ -10,8 +8,7 @@ A modern, well-structured dotfiles repository for macOS development environment 
 - **🛡️ Security First**: Pre-commit hooks, secret detection, comprehensive gitignore
 - **⚡ Performance Optimized**: Lazy loading, efficient shell startup
 - **📦 Package Management**: Homebrew + mise + sheldon for different tool categories
-- **🔧 XDG Compliant**: Following modern configuration standards
-- **🧪 CI/CD Ready**: GitHub Actions, automated testing, dependency updates
+- **🔧 Modular Design**: Clean separation of concerns with individual configuration modules
 
 ## 🚀 Quick Start
 
@@ -41,16 +38,19 @@ sh ~/dotfiles/update.sh
 ### Manual Installation Steps
 
 ```bash
-# 1. Install packages
+# 1. Install Homebrew (if not already installed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2. Install packages
 brew bundle
 
-# 2. Link configuration files
+# 3. Link configuration files
 sh ~/dotfiles/scripts/linkDotfiles.sh
 
-# 3. Update macOS settings
+# 4. Update macOS settings
 sh ~/dotfiles/scripts/updateMacSettings.sh
 
-# 4. Verify installation
+# 5. Verify installation
 sh ~/dotfiles/scripts/verify.sh
 ```
 
@@ -72,7 +72,6 @@ sh ~/dotfiles/scripts/verify.sh
 ### Security & Quality
 - **Git Security**: Comprehensive .gitignore with security patterns
 - **Key Management**: Karabiner Elements for keyboard customization
-- **Application Launchers**: Raycast with custom extensions
 
 ## 📁 Repository Structure
 
@@ -83,8 +82,10 @@ dotfiles/
 │   ├── mise/            # Runtime version management
 │   ├── sheldon/         # Zsh plugin management
 │   ├── starship.toml    # Prompt configuration
-│   ├── raycast/         # Raycast extensions
-│   └── nvim/            # Modern Neovim configuration
+│   ├── nvim/            # Modern Neovim configuration
+│   ├── git/             # Git configuration
+│   ├── ghostty/         # Terminal configuration
+│   └── uv/              # Python package manager config
 ├── scripts/             # Installation and maintenance scripts
 │   ├── common/          # Shared utilities
 │   └── install/         # Individual tool installers
@@ -92,7 +93,8 @@ dotfiles/
 ├── bin/                 # Custom utility scripts
 ├── Brewfile             # Homebrew packages and VS Code extensions
 ├── pyproject.toml       # Python project configuration
-└── uv.lock              # Python dependency lock file
+├── uv.lock              # Python dependency lock file
+└── CLAUDE.md            # Detailed setup documentation
 ```
 
 ## 🔧 Configuration
@@ -162,14 +164,14 @@ time zsh -i -c exit
 ## 🧪 Testing
 
 ```bash
-# Run all tests
-.github/workflows/test.yml
-
-# Test shell scripts
+# Test shell scripts with shellcheck
 find . -name "*.sh" -exec shellcheck {} +
 
-# Validate configurations
+# Validate configurations with pre-commit
 pre-commit run --all-files
+
+# Manual verification
+sh ~/dotfiles/scripts/verify.sh
 ```
 
 ## 📚 Documentation
