@@ -3,7 +3,7 @@
 
 [tools]
 # Node.js - LTS version for stability
-node = "22"
+node = "23.10.0"
 # Python - Latest stable version
 python = "3.13"
 
