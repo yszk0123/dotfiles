@@ -30,7 +30,7 @@ fi
 # System updates
 if confirm_with_message "Execute install scripts?"; then
   echo_color "Running installation scripts..." "32"
-  for name in zsh tmux plain brew go npm pip; do
+  for name in zsh tmux plain brew nvim go npm pip; do
     echo_color "Installing $name commands ..." "32"
     source "$HOME/dotfiles/scripts/install/$name.sh"
   done
