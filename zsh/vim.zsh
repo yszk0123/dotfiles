@@ -1,15 +1,10 @@
-# Set default editor
+# Set default editor to Neovim
 if command -v nvim >/dev/null 2>&1; then
   export EDITOR=nvim
   export VISUAL=nvim
   alias vim=nvim
   alias vi=nvim
   alias v=nvim
-elif command -v vim >/dev/null 2>&1; then
-  export EDITOR=vim
-  export VISUAL=vim
-  alias vi=vim
-  alias v=vim
 fi
 
 ## Ctrl-ZでVimとシェルをトグル

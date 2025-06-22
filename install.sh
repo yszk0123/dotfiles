@@ -61,7 +61,6 @@ function link_config() {
   link_config_to_home .gitconfig
   link_config_to_home .tigrc
   link_config_to_home .tmux.conf
-  link_config_to_home .vimrc
 }
 
 function link_config_to_home() {
@@ -69,9 +68,6 @@ function link_config_to_home() {
   ln -sni "$DOTFILES_DIR/$target" "$HOME/$target"
 }
 
-function install_vim() {
-  mkdir -p "$HOME/vimfiles/tmp"
-}
 
 function configure_apple() {
   defaults write -g ApplePressAndHoldEnabled -bool true
@@ -87,5 +83,4 @@ update_mac_settings
 link_config
 install_tpm
 install_zaw
-install_vim
 configure_apple
