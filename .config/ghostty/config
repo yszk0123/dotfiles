@@ -39,3 +39,4 @@ keybind = ctrl+alt+j=resize_split:down,30
 keybind = ctrl+alt+k=resize_split:up,30
 keybind = ctrl+alt+l=resize_split:right,30
 keybind = shift+enter=text:\n
+split-divider-color = "#444444"
