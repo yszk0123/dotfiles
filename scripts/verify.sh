@@ -7,7 +7,7 @@ echo_color "=== System Verification ===" "34"
 check_command() {
   local cmd="$1"
   local name="${2:-$cmd}"
-  
+
   if command -v "$cmd" >/dev/null 2>&1; then
     echo_color "✓ $name: $(command -v "$cmd")" "32"
     return 0
@@ -57,7 +57,7 @@ echo_color "\n--- Configuration Files ---" "33"
 check_file() {
   local file="$1"
   local name="${2:-$file}"
-  
+
   if [[ -f "$file" ]] || [[ -L "$file" ]]; then
     echo_color "✓ $name" "32"
     return 0
@@ -69,7 +69,7 @@ check_file() {
 
 check_file "$HOME/.zshrc" "Zsh config"
 check_file "$HOME/.config/nvim/init.vim" "Neovim init.vim"
-check_file "$HOME/.config/nvim/init.lua" "Neovim init.lua"
+check_file "$HOME/.config/nvim/lua/init.lua" "Neovim init.lua"
 check_file "$HOME/.config/starship.toml" "Starship config"
 check_file "$HOME/.config/mise/config.toml" "Mise config"
 check_file "$HOME/.config/sheldon/plugins.toml" "Sheldon config"
