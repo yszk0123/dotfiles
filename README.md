@@ -44,7 +44,7 @@ sh ~/dotfiles/update.sh
 # 1. Install packages
 brew bundle
 
-# 2. Link configuration files  
+# 2. Link configuration files
 sh ~/dotfiles/scripts/linkDotfiles.sh
 
 # 3. Update macOS settings
@@ -78,9 +78,9 @@ sh ~/dotfiles/scripts/verify.sh
 
 ```
 dotfiles/
-├── .config/              # XDG Base Directory compliant configs
+├── .config/             # XDG Base Directory compliant configs
 │   ├── karabiner/       # Keyboard mapping configuration
-│   ├── mise/            # Runtime version management  
+│   ├── mise/            # Runtime version management
 │   ├── sheldon/         # Zsh plugin management
 │   ├── starship.toml    # Prompt configuration
 │   ├── raycast/         # Raycast extensions
@@ -112,7 +112,7 @@ Install and configure Nerd Font for full icon support:
 ```bash
 # Font is included in Brewfile, but manual setup needed:
 # 1. Open Terminal app preferences
-# 2. Select font: "Hack Nerd Font" 
+# 2. Select font: "Hack Nerd Font"
 # 3. Restart terminal
 ```
 
@@ -193,6 +193,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - [Homebrew](https://brew.sh/) - Package management
-- [mise](https://mise.jdx.dev/) - Runtime management  
+- [mise](https://mise.jdx.dev/) - Runtime management
 - [Starship](https://starship.rs/) - Cross-shell prompt
 - [sheldon](https://sheldon.cli.rs/) - Zsh plugin manager
