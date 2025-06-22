@@ -62,8 +62,6 @@ function link_config() {
   link_config_to_home .tigrc
   link_config_to_home .tmux.conf
   link_config_to_home .vimrc
-  link_config_to_home .config/karabiner
-  link_config_to_home .config/brewfile
 }
 
 function link_config_to_home() {

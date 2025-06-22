@@ -20,11 +20,6 @@ shell = "zsh"
 github = 'romkatv/zsh-defer'
 apply = ['source']
 
-# Use starship instead of powerlevel10k (installed via Homebrew)
-# [plugins.powerlevel10k]
-# github = 'romkatv/powerlevel10k'
-# apply = ['source']
-
 [plugins.zsh-syntax-highlighting]
 github = 'zsh-users/zsh-syntax-highlighting'
 apply = ['defer']

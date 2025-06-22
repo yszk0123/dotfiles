@@ -9,8 +9,7 @@ This is a personal dotfiles repository for macOS that manages development enviro
 ## Common Commands
 
 ### Setup and Maintenance
-- **Initial setup**: `sh ~/dotfiles/scripts/install.sh` (requires `ZDOTDIR` environment variable)
-- **Interactive update**: `sh ~/dotfiles/update.sh` (comprehensive update with verification)
+- **Initial/update**: `sh ~/dotfiles/update.sh` (comprehensive update with verification)
 - **Link dotfiles**: `sh ~/dotfiles/scripts/linkDotfiles.sh`
 - **Update macOS settings**: `sh ~/dotfiles/scripts/updateMacSettings.sh`
 - **System verification**: `sh ~/dotfiles/scripts/verify.sh`
@@ -46,7 +45,7 @@ This is a personal dotfiles repository for macOS that manages development enviro
 - **Node.js**: Version 22 LTS (managed via mise)
 - **Git integration**: Extensive aliases and configuration in `zsh/git.zsh` and `.config/git/`
 - **Terminal enhancement**: starship prompt, fzf, ripgrep, bat, eza
-- **Editor support**: 
+- **Editor support**:
   - Neovim with lazy.nvim, built-in LSP, and modern plugins
   - VS Code with comprehensive extensions via Brewfile
   - Legacy Vim support for compatibility

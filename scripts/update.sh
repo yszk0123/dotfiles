@@ -1,7 +1,12 @@
-#!/bin/bash
+#!/bin/bash -ue
 source "$HOME/dotfiles/scripts/common/utils.sh"
 
 echo_color "=== Dotfiles Update Script ===" "34"
+
+if [ -z "$ZDOTDIR" ]; then
+  echo_color "Define ZDOTDIR!" "31"
+  exit 1
+fi
 
 # Update package managers
 if confirm_with_message "Update Homebrew packages?"; then
@@ -25,7 +30,10 @@ fi
 # System updates
 if confirm_with_message "Execute install scripts?"; then
   echo_color "Running installation scripts..." "32"
-  source "$HOME/dotfiles/scripts/install.sh"
+  for name in zsh tmux plain brew go npm pip; do
+    echo_color "Installing $name commands ..." "32"
+    source "$HOME/dotfiles/scripts/install/$name.sh"
+  done
 fi
 
 if confirm_with_message "Update dotfile links?"; then

@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if ! is_exists "nodebrew"; then
-  if "Do you wish to install nodebrew?"; then
-    curl -L git.io/nodebrew | perl - setup
-  fi
-fi
-
 if ! is_exists "fzf"; then
   if "Do you wish to install fzf?"; then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
