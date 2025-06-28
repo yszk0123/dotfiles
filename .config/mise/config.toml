@@ -3,7 +3,7 @@
 
 [tools]
 # Node.js - LTS version for stability
-node = "23.10.0"
+node = "24"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:diff-so-fancy" = "latest"
 # Python - Latest stable version
