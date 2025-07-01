@@ -10,9 +10,12 @@ function link_dotfiles_to_home() {
 # $ZDOTDIRが.zprofile中で指定される場合は、$HOME/.zprofileが読み込まれる（はず）
 # 念のため両方に用意しておく
 : "${ZDOTDIR:=~/.zsh}"
+mkdir -p $ZDOTDIR
 ln -sni ~/dotfiles/.zprofile ~/.zprofile
 ln -sni ~/dotfiles/.zprofile "$ZDOTDIR/.zprofile"
 ln -sni ~/dotfiles/.zshrc "$ZDOTDIR/.zshrc"
+ln -sni ~/dotfiles/.zprofile "$HOME/.zprofile"
+ln -sni ~/dotfiles/.zshrc "$HOME/.zshrc"
 
 # dotfiles
 link_dotfiles_to_home .bundle
