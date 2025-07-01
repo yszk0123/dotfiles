@@ -97,5 +97,29 @@
       "Write(.env*)",
       "mcp__supabase__execute_sql"
     ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claudeがあなたの入力を待っています\" with title \"Claude Code\" sound name \"Glass\"'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"コマンドの実行確認が必要です\" with title \"Claude Code - 確認待ち\" sound name \"Ping\"'"
+          }
+        ]
+      }
+    ]
   }
 }
