@@ -1,4 +1,6 @@
 {
+  "defaultMode": "plan",
+  "model": "sonnet",
   "permissions": {
     "allow": [
       "Agent",

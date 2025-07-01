@@ -4,6 +4,7 @@
 [tools]
 # Node.js - LTS version for stability
 node = "23.10.0"
+"npm:@anthropic-ai/claude-code" = "latest"
 # Python - Latest stable version
 python = "3.13"
 
