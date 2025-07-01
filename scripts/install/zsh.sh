@@ -1,42 +1,24 @@
-#!/bin/bash
+#!/bin/bash -ue
+source "$HOME/dotfiles/scripts/common/utils.sh"
 
-if [ ! -s "$ZDOTDIR/zsh-git-prompt/zshrc.sh" ]; then
-  if "Do you wish to install zsh-git-prompt?"; then
-    pushd "$ZDOTDIR" || exit
-    git clone https://github.com/olivierverdier/zsh-git-prompt.git
-    popd || exit
-  fi
+echo_color "=== Zsh Setup ===" "34"
+
+# Note: Zsh plugins are now managed by sheldon (see ~/.config/sheldon/plugins.toml)
+# This script is kept for compatibility but most functionality has been moved to sheldon
+
+echo_color "Zsh plugins are managed by sheldon." "32"
+echo_color "Configuration: ~/.config/sheldon/plugins.toml" "32"
+
+# Check if sheldon is available
+if ! command -v sheldon >/dev/null 2>&1; then
+  echo_color "Warning: sheldon not found. Install it with: brew install sheldon" "33"
+  exit 1
 fi
 
-if [ ! -s "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
-  if "Do you wish to install zsh-autosuggestions?"; then
-    pushd "$ZDOTDIR" || exit
-    git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-    popd || exit
-  fi
+# Install/update sheldon plugins
+if confirm_with_message "Install/update sheldon plugins?"; then
+  echo_color "Installing/updating sheldon plugins..." "32"
+  sheldon lock
 fi
 
-if [ ! -s "$ZDOTDIR/zaw/zaw.zsh" ]; then
-  if "Do you wish to install zaw?"; then
-    pushd "$ZDOTDIR" || exit
-    git clone https://github.com/zsh-users/zaw.git
-    popd || exit
-  fi
-fi
-
-# if [ ! -s "$ZDOTDIR/zaw/zaw.zsh" ]; then
-  if "Do you wish to install zsh plugins?"; then
-    pushd "$ZDOTDIR" || exit
-    git clone --depth 1 https://github.com/zsh-users/zsh.git
-    popd || exit
-  fi
-# fi
-
-# if [ ! -s "$ZDOTDIR/completion/_docker-compose" ]; then
-  if "Do you wish to install completion for docker-compose?"; then
-    pushd "$ZDOTDIR" || exit
-    mkdir -p completion/_docker-compose
-    curl -L "https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose" > ~/.zsh/completion/_docker-compose
-    popd || exit
-  fi
-# fi
+echo_color "Zsh setup complete!" "32"

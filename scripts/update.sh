@@ -24,7 +24,7 @@ fi
 
 if confirm_with_message "Update sheldon plugins?"; then
   echo_color "Updating sheldon plugins..." "32"
-  sheldon update
+  sheldon lock
 fi
 
 # System updates

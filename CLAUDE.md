@@ -16,8 +16,8 @@ This is a personal dotfiles repository for macOS that manages development enviro
 
 ### Package Management
 - **Install/update Homebrew packages**: `brew bundle` (uses `Brewfile`)
-- **Update mise-managed runtimes**: `mise upgrade` (Node.js v22, Python 3.13)
-- **Update zsh plugins**: `sheldon update`
+- **Update mise-managed runtimes**: `mise upgrade` (Node.js v24, Python 3.13)
+- **Update zsh plugins**: `sheldon lock`
 
 ### Shell Configuration
 - **Change default shell to zsh**: `chsh -s <path/to/zsh>`
@@ -42,7 +42,7 @@ This is a personal dotfiles repository for macOS that manages development enviro
 
 ### Development Environment
 - **Python**: Version 3.13 (managed via mise)
-- **Node.js**: Version 22 LTS (managed via mise)
+- **Node.js**: Version 24 LTS (managed via mise)
 - **Git integration**: Extensive aliases and configuration in `zsh/git.zsh` and `.config/git/`
 - **Terminal enhancement**: starship prompt, fzf, ripgrep, bat, eza
 - **Editor support**:

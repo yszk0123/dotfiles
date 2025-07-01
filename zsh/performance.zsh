@@ -94,11 +94,65 @@ export HISTFILE=~/.zsh_history
 # Defer loading of non-essential modules
 autoload -Uz add-zsh-hook
 
-# Create a startup benchmark function
+# Create a startup benchmark function with automated testing
 zsh_startup_benchmark() {
   echo "Zsh startup benchmark:"
-  echo "Run 'time zsh -i -c exit' to measure startup time"
-  echo "Target: <200ms for optimal performance"
+  echo "===================="
+  
+  # Run multiple benchmarks and calculate average
+  local total_time=0
+  local runs=5
+  local temp_file=$(mktemp)
+  
+  echo "Running $runs benchmark tests..."
+  
+  for i in $(seq 1 $runs); do
+    local start_time=$(python3 -c "import time; print(time.time())")
+    zsh -i -c 'exit' 2>/dev/null
+    local end_time=$(python3 -c "import time; print(time.time())")
+    local duration=$(python3 -c "print(f'{($end_time - $start_time) * 1000:.1f}')")
+    
+    echo "Run $i: ${duration}ms"
+    total_time=$(python3 -c "print($total_time + $duration)")
+  done
+  
+  local avg_time=$(python3 -c "print(f'{$total_time / $runs:.1f}')")
+  
+  echo "===================="
+  echo "Average startup time: ${avg_time}ms"
+  
+  if (( $(python3 -c "print(1 if $avg_time < 200 else 0)") )); then
+    echo "✅ Performance: Excellent (< 200ms)"
+  elif (( $(python3 -c "print(1 if $avg_time < 500 else 0)") )); then
+    echo "⚡ Performance: Good (< 500ms)"
+  elif (( $(python3 -c "print(1 if $avg_time < 1000 else 0)") )); then
+    echo "⚠️  Performance: Fair (< 1000ms)"
+  else
+    echo "🐌 Performance: Needs optimization (> 1000ms)"
+  fi
+  
+  echo ""
+  echo "Performance tips:"
+  echo "- Use lazy loading for heavy commands"
+  echo "- Minimize plugin count"
+  echo "- Check completion cache freshness"
+  echo "- Profile with: zsh -xvs"
+  
+  rm -f "$temp_file"
 }
+
+# Automatic performance monitoring on shell startup (optional)
+# Uncomment to enable automatic benchmarking
+# if [[ -z "$ZSH_STARTUP_BENCHMARK_DONE" ]]; then
+#   export ZSH_STARTUP_BENCHMARK_DONE=1
+#   # Only benchmark occasionally to avoid slowing down regular usage
+#   if (( RANDOM % 50 == 0 )); then
+#     echo "🔄 Running automatic startup benchmark..."
+#     zsh_startup_benchmark
+#   fi
+# fi
+
+# Create alias for easy access
+alias zsh-bench='zsh_startup_benchmark'
 
 # vim:set ft=zsh:
