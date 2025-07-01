@@ -101,7 +101,7 @@
   "hooks": {
     "Stop": [
       {
-        "matcher": "Notification",
+        "matcher": "",
         "hooks": [
           {
             "type": "command",
@@ -110,9 +110,9 @@
         ]
       }
     ],
-    "PreToolUse": [
+    "Notification": [
       {
-        "matcher": "Bash",
+        "matcher": "",
         "hooks": [
           {
             "type": "command",
