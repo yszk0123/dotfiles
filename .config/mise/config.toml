@@ -2,11 +2,13 @@
 # https://mise.jdx.dev/configuration.html
 
 [tools]
-# Node.js - LTS version for stability
-node = "24"
+"cargo:similarity-ts" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
+"npm:@biomejs/biome" = "latest"
+"npm:ccmanager" = "latest"
 "npm:diff-so-fancy" = "latest"
-# Python - Latest stable version
+"npm:vibe-rules" = "latest"
+node = "24"
 python = "3.13"
 
 [settings]
