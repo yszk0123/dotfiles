@@ -101,7 +101,7 @@
   "hooks": {
     "Stop": [
       {
-        "matcher": "",
+        "matcher": "Notification",
         "hooks": [
           {
             "type": "command",
