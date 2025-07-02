@@ -99,13 +99,24 @@
     ]
   },
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/dotfiles/claude/hooks/check-command-safety.sh"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "osascript -e 'display notification \"Claudeがあなたの入力を待っています\" with title \"Claude Code\" sound name \"Glass\"'"
+            "command": "~/dotfiles/claude/hooks/notify-command-stop.sh"
           }
         ]
       }
