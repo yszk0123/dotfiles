@@ -9,7 +9,6 @@
 "npm:diff-so-fancy" = "latest"
 "npm:vibe-rules" = "latest"
 node = "24"
-python = "3.13"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
