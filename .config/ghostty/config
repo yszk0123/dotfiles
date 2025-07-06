@@ -23,8 +23,6 @@ keybind = "global:cmd+shift+0=toggle_quick_terminal"
 # Window
 macos-titlebar-style = tabs
 window-inherit-working-directory = true
-tab-inherit-working-directory = true
-split-inherit-working-directory = true
 unfocused-split-opacity = 0.825
 
 # Split
