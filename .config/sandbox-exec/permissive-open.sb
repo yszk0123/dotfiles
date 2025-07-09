@@ -1,0 +1,39 @@
+;; See: https://zenn.dev/todesking/articles/claude-code-with-sandbox-exec
+(version 1)
+
+(allow default)
+
+(deny file-write*)
+(allow file-write*
+    ;; (param "NAME") には、起動時に -D NAME=VALUE として渡した値が反映される
+
+    (subpath (param "TARGET_DIR"))
+
+    ;; Claude Code
+    (subpath (string-append (param "HOME_DIR") "/.claude"))
+    (literal (string-append (param "HOME_DIR") "/.claude.json"))
+    (literal (string-append (param "HOME_DIR") "/.claude.json.lock"))
+    (literal (string-append (param "HOME_DIR") "/.claude.json.backup"))
+    (subpath (string-append (param "HOME_DIR") "/.config/claude"))
+
+    ;; Session information
+    (subpath (string-append (param "HOME_DIR") "/Library/Keychains"))
+
+    ;; Temporary directories and files
+    (subpath "/tmp")
+    (subpath "/var/folders")
+    (subpath "/private/tmp")
+    (subpath "/private/var/folders")
+
+    (subpath (string-append (param "HOME_DIR") "/.cache"))
+    (subpath (string-append (param "HOME_DIR") "/.npm"))
+
+    ;; /dev
+    (literal "/dev/stdout")
+    (literal "/dev/stderr")
+    (literal "/dev/null")
+    (literal "/dev/dtracehelper")
+    ;; /dev/ttys000 のようなパターンも許可したいためこのように書いています
+    ;; regexとglobを混同しているように見えますが、なんか本当にこう書く必要があるらしく……
+    (regex #"^/dev/tty*")
+)
