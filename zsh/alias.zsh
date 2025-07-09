@@ -38,6 +38,10 @@ alias dcr='docker-compose run --rm'
 alias dcu='docker-compose up'
 # }}}
 
+# {{{
+alias claude-sandbox='sandbox-exec -f "$HOME/dotfiles/.config/sandbox-exec/permissive-open.sb" -D TARGET_DIR="$(pwd)" -D HOME_DIR="$HOME" claude'
+# }}}
+
 # vim aliases handled by zsh/vim.zsh
 
 # 上書き確認 {{{
