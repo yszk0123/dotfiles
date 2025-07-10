@@ -1,6 +1,4 @@
 {
-  "defaultMode": "plan",
-  "model": "sonnet",
   "permissions": {
     "allow": [
       "Agent",
@@ -98,6 +96,7 @@
       "mcp__supabase__execute_sql"
     ]
   },
+  "model": "sonnet",
   "hooks": {
     "PreToolUse": [
       {
@@ -132,5 +131,6 @@
         ]
       }
     ]
-  }
+  },
+  "defaultMode": "plan"
 }
