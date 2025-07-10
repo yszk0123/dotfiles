@@ -15,6 +15,7 @@
     (literal (string-append (param "HOME_DIR") "/.claude.json.lock"))
     (literal (string-append (param "HOME_DIR") "/.claude.json.backup"))
     (subpath (string-append (param "HOME_DIR") "/.config/claude"))
+    (subpath (string-append (param "HOME_DIR") "/dotfiles/.config/claude"))
 
     ;; Session information
     (subpath (string-append (param "HOME_DIR") "/Library/Keychains"))
@@ -27,6 +28,8 @@
 
     (subpath (string-append (param "HOME_DIR") "/.cache"))
     (subpath (string-append (param "HOME_DIR") "/.npm"))
+
+    (literal "/bin/ps")
 
     ;; /dev
     (literal "/dev/stdout")
