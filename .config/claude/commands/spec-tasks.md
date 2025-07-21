@@ -12,7 +12,7 @@ Generate detailed implementation tasks for feature: **$ARGUMENTS**
 **CRITICAL**: Tasks can only be generated after both requirements and design are approved.
 
 ### Approval Status Check
-- Spec metadata: @.kiro/specs/$ARGUMENTS/spec.json
+- Spec metadata: @docs/specs/$ARGUMENTS/spec.json
 
 **STOP HERE** if spec.json shows:
 ```json
@@ -61,15 +61,15 @@ Generate detailed implementation tasks for feature: **$ARGUMENTS**
 ## Context Analysis
 
 ### Complete Spec Context (APPROVED)
-- Requirements: @.kiro/specs/$ARGUMENTS/requirements.md
-- Design: @.kiro/specs/$ARGUMENTS/design.md
-- Current tasks: @.kiro/specs/$ARGUMENTS/tasks.md
-- Spec metadata: @.kiro/specs/$ARGUMENTS/spec.json
+- Requirements: @docs/specs/$ARGUMENTS/requirements.md
+- Design: @docs/specs/$ARGUMENTS/design.md
+- Current tasks: @docs/specs/$ARGUMENTS/tasks.md
+- Spec metadata: @docs/specs/$ARGUMENTS/spec.json
 
 ### Steering Context
-- Architecture patterns: @.kiro/steering/structure.md
-- Development practices: @.kiro/steering/tech.md
-- Product constraints: @.kiro/steering/product.md
+- Architecture patterns: @docs/steering/structure.md
+- Development practices: @docs/steering/tech.md
+- Product constraints: @docs/steering/product.md
 
 ## Task: Generate Implementation Plan
 
@@ -78,7 +78,7 @@ Generate detailed implementation tasks for feature: **$ARGUMENTS**
 Create comprehensive implementation plan in the language specified in spec.json:
 
 ### 1. Tasks Document Structure
-Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARGUMENTS/spec.json` for "language" field):
+Create tasks.md in the language specified in spec.json (check `@docs/specs/$ARGUMENTS/spec.json` for "language" field):
 
 ```markdown
 # Implementation Plan
@@ -195,7 +195,7 @@ Update spec.json with:
   "phase": "tasks-generated",
   "progress": {
     "requirements": 100,
-    "design": 100, 
+    "design": 100,
     "tasks": 100
   },
   "approvals": {
@@ -238,7 +238,7 @@ After generating tasks.md, inform the user:
 - [ ] Testing tasks are included
 
 ### To Approve:
-After reviewing, update `.kiro/specs/$ARGUMENTS/spec.json`:
+After reviewing, update `docs/specs/$ARGUMENTS/spec.json`:
 ```json
 {
   "approvals": {

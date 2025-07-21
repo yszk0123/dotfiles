@@ -10,21 +10,21 @@ Generate comprehensive requirements for feature: **$ARGUMENTS**
 ## Context Validation
 
 ### Steering Context
-- Architecture context: @.kiro/steering/structure.md
-- Technical constraints: @.kiro/steering/tech.md
-- Product context: @.kiro/steering/product.md
+- Architecture context: @docs/steering/structure.md
+- Technical constraints: @docs/steering/tech.md
+- Product context: @docs/steering/product.md
 
 ### Existing Spec Context
-- Current spec directory: !`ls -la .kiro/specs/$ARGUMENTS/`
-- Current requirements: @.kiro/specs/$ARGUMENTS/requirements.md
-- Spec metadata: @.kiro/specs/$ARGUMENTS/spec.json
+- Current spec directory: !`ls -la docs/specs/$ARGUMENTS/`
+- Current requirements: @docs/specs/$ARGUMENTS/requirements.md
+- Spec metadata: @docs/specs/$ARGUMENTS/spec.json
 
 ## Task: Generate Detailed Requirements
 
 Create comprehensive requirements document in the language specified in spec.json:
 
 ### 1. Requirements Structure
-Generate requirements.md in the language specified in spec.json (check `@.kiro/specs/$ARGUMENTS/spec.json` for "language" field):
+Generate requirements.md in the language specified in spec.json (check `@docs/specs/$ARGUMENTS/spec.json` for "language" field):
 
 ```markdown
 # Requirements Specification
@@ -109,7 +109,7 @@ After generating requirements.md, inform the user:
 - [ ] Requirements align with project goals
 
 ### To Approve:
-After reviewing, update `.kiro/specs/$ARGUMENTS/spec.json`:
+After reviewing, update `docs/specs/$ARGUMENTS/spec.json`:
 ```json
 {
   "approvals": {

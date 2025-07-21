@@ -12,7 +12,7 @@ Create comprehensive technical design for feature: **$ARGUMENTS**
 **CRITICAL**: Design can only be generated after requirements are approved.
 
 ### Approval Status Check
-- Spec metadata: @.kiro/specs/$ARGUMENTS/spec.json
+- Spec metadata: @docs/specs/$ARGUMENTS/spec.json
 
 **STOP HERE** if spec.json shows:
 ```json
@@ -47,14 +47,14 @@ Create comprehensive technical design for feature: **$ARGUMENTS**
 ## Context Analysis
 
 ### Steering Context
-- Current architecture: @.kiro/steering/structure.md
-- Technology stack: @.kiro/steering/tech.md
-- Product constraints: @.kiro/steering/product.md
+- Current architecture: @docs/steering/structure.md
+- Technology stack: @docs/steering/tech.md
+- Product constraints: @docs/steering/product.md
 
 ### Requirements Context (APPROVED)
-- Feature requirements: @.kiro/specs/$ARGUMENTS/requirements.md
-- Current design: @.kiro/specs/$ARGUMENTS/design.md
-- Spec metadata: @.kiro/specs/$ARGUMENTS/spec.json
+- Feature requirements: @docs/specs/$ARGUMENTS/requirements.md
+- Current design: @docs/specs/$ARGUMENTS/design.md
+- Spec metadata: @docs/specs/$ARGUMENTS/spec.json
 
 ## Task: Create Technical Design
 
@@ -63,7 +63,7 @@ Create comprehensive technical design for feature: **$ARGUMENTS**
 Generate comprehensive design document in the language specified in spec.json:
 
 ### 1. Design Document Structure
-Create design.md in the language specified in spec.json (check `@.kiro/specs/$ARGUMENTS/spec.json` for "language" field):
+Create design.md in the language specified in spec.json (check `@docs/specs/$ARGUMENTS/spec.json` for "language" field):
 
 ```markdown
 # Technical Design
@@ -196,7 +196,7 @@ After generating design.md, inform the user:
 - [ ] Security and performance considerations are addressed
 
 ### To Approve:
-After reviewing, update `.kiro/specs/$ARGUMENTS/spec.json`:
+After reviewing, update `docs/specs/$ARGUMENTS/spec.json`:
 ```json
 {
   "approvals": {

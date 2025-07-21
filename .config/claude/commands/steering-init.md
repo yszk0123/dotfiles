@@ -5,7 +5,7 @@ allowed-tools: Bash, Read, Write, Edit, MultiEdit, Glob, Grep, LS
 
 # Kiro Steering Initialization
 
-Create foundational steering documents in `.kiro/steering/` to establish consistent project standards and conventions that will guide AI interactions throughout spec-driven development.
+Create foundational steering documents in `docs/steering/` to establish consistent project standards and conventions that will guide AI interactions throughout spec-driven development.
 
 ## Project Analysis
 
@@ -59,7 +59,7 @@ This ensures generated code fits seamlessly into the existing codebase.
 
 ## Instructions
 
-1. **Create `.kiro/steering/` directory** if it doesn't exist
+1. **Create `docs/steering/` directory** if it doesn't exist
 2. **Analyze the codebase thoroughly** to understand current patterns and architecture
 3. **Generate comprehensive but focused documents** - each file should be readable in 2-3 minutes
 4. **Use clear markdown formatting** with proper headers and sections

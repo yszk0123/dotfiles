@@ -12,12 +12,12 @@ Initialize a new specification based on the provided project description:
 ## Steering Context Validation
 
 ### Check Steering Documents
-- Structure context: @.kiro/steering/structure.md
-- Technical constraints: @.kiro/steering/tech.md  
-- Product context: @.kiro/steering/product.md
+- Structure context: @docs/steering/structure.md
+- Technical constraints: @docs/steering/tech.md
+- Product context: @docs/steering/product.md
 
 ### Verify Steering Exists
-- Steering files: !`ls -la .kiro/steering/`
+- Steering files: !`ls -la docs/steering/`
 
 **FLEXIBILITY**: For new features or empty projects, steering documents are recommended but not required. If steering documents are missing or empty, you may proceed directly to spec generation phase.
 
@@ -37,9 +37,9 @@ From the provided description ($ARGUMENTS), extract:
 Based on the analysis, create a concise, descriptive feature name that captures the essence of the project.
 
 ### 3. Create Spec Directory
-Create `.kiro/specs/{generated-feature-name}/` directory with template files:
+Create `docs/specs/{generated-feature-name}/` directory with template files:
 - `requirements.md` - Empty template for user stories
-- `design.md` - Empty template for technical design  
+- `design.md` - Empty template for technical design
 - `tasks.md` - Empty template for implementation tasks
 - `spec.json` - Metadata and approval tracking
 
@@ -115,7 +115,7 @@ $ARGUMENTS
 <!-- Implementation tasks will be generated after design approval -->
 
 ---
-**STATUS**: Waiting for design approval  
+**STATUS**: Waiting for design approval
 **NEXT STEP**: Complete and approve design first
 ```
 

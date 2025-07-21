@@ -5,13 +5,13 @@ allowed-tools: Bash, Read, Write, Edit, MultiEdit, Glob, Grep, LS
 
 # Kiro Steering Update
 
-Update existing steering documents in `.kiro/steering/` to reflect recent project changes and maintain accurate project knowledge for ongoing spec-driven development.
+Update existing steering documents in `docs/steering/` to reflect recent project changes and maintain accurate project knowledge for ongoing spec-driven development.
 
 ## Change Analysis
 
 ### Recent Git Activity
 - Recent commits: !`git log --oneline -10`
-- Last steering update: !`git log -1 --oneline -- .kiro/steering/`
+- Last steering update: !`git log -1 --oneline -- docs/steering/`
 - Current working tree: !`git status --porcelain`
 
 ### Dependency Changes
@@ -37,10 +37,10 @@ Use native tools to analyze:
 ## Current Steering Documents
 
 ### Load Existing Steering Context
-- Product overview: @.kiro/steering/product.md
-- Technology stack: @.kiro/steering/tech.md
-- Project structure: @.kiro/steering/structure.md
-- Custom steering: Use **Glob** pattern `.kiro/steering/*.md` to find additional files
+- Product overview: @docs/steering/product.md
+- Technology stack: @docs/steering/tech.md
+- Project structure: @docs/steering/structure.md
+- Custom steering: Use **Glob** pattern `docs/steering/*.md` to find additional files
 
 ## Task: Update Steering Documents
 
