@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "dotfiles",
+  "version": "0.0.0",
+  "description": "A modern, well-structured dotfiles repository for macOS development environment setup using Homebrew, mise, and modern shell tools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yszk0123/dotfiles.git"
+  },
+  "keywords": [],
+  "author": "yszk0123",
+  "license": "",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yszk0123/dotfiles/issues"
+  },
+  "homepage": "https://github.com/yszk0123/dotfiles#readme",
+  "devDependencies": {
+    "@textlint-ja/textlint-rule-preset-ai-writing": "^1.5.0",
+    "textlint": "^15.2.0"
+  }
+}
