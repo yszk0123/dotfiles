@@ -93,7 +93,10 @@
       "Read(id_rsa)",
       "Write(**/secrets/**)",
       "Write(.env*)",
-      "mcp__supabase__execute_sql"
+      "mcp__supabase__execute_sql",
+      "mcp__notionMCP__move-pages",
+      "mcp__notionMCP__duplicate-page",
+      "mcp__notionMCP__update-database"
     ]
   },
   "model": "sonnet",
