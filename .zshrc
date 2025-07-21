@@ -72,7 +72,7 @@ if command -v sheldon >/dev/null 2>&1; then
   eval "$(sheldon source)"
 fi
 
-# starship prompt (modern cross-shell prompt) - defer loading  
+# starship prompt (modern cross-shell prompt) - defer loading
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
@@ -91,5 +91,10 @@ fi
 if is_exists "$HOME/.local/bin/mise"; then
   eval "$($HOME/.local/bin/mise activate zsh)"
 fi
+
+if command -v gwq >/dev/null 2>&1; then
+  source <(gwq completion zsh)
+fi
+
 # vim:set ft=zsh:
 # bun completions
