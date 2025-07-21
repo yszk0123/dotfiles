@@ -73,8 +73,16 @@ function cdr {
   fi
 }
 
+# cd to a worktree using fzf and gwq
+function cdw {
+  local dir="$(gwq list --json | jq -r '.[] | .path' | fzf)"
+  if [ ! -z "$dir" ] ; then
+    cd "$dir"
+  fi
+}
+
 # git checkout a branch using fzf
-function gcob {
+function cdb {
   local branch="$( git branch | sed s/\*/\ /g | awk '{ print $1 }' | fzf)"
   if [ ! -z "$branch" ] ; then
     git checkout "$branch"
