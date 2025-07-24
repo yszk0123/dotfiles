@@ -17,7 +17,7 @@ Initialize a new specification based on the provided project description:
 - Product context: @docs/steering/product.md
 
 ### Verify Steering Exists
-- Steering files: !`ls -la docs/steering/`
+- Steering files: `ls -la docs/steering/`
 
 **FLEXIBILITY**: For new features or empty projects, steering documents are recommended but not required. If steering documents are missing or empty, you may proceed directly to spec generation phase.
 

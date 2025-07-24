@@ -80,6 +80,13 @@ function cdw {
     cd "$dir"
   fi
 }
+function cdwg {
+  local dir="$(gwq list --global --json | jq -r '.[] | .path' | fzf)"
+  if [ ! -z "$dir" ] ; then
+    cd "$dir"
+  fi
+}
+
 
 # git checkout a branch using fzf
 function cdb {
