@@ -8,9 +8,10 @@
 "npm:ccmanager" = "latest"
 "npm:diff-so-fancy" = "latest"
 "npm:vibe-rules" = "latest"
+"npm:pnpm" = "latest"
 node = "24"
 go = "latest"
-"npm:pnpm" = "latest"
+gitui = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
