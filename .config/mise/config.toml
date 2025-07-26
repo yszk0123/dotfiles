@@ -12,6 +12,7 @@
 node = "24"
 go = "latest"
 gitui = "latest"
+"npm:yarn" = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
