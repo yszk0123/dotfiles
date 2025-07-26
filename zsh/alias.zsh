@@ -88,11 +88,11 @@ function cdwg {
 }
 
 
-# git checkout a branch using fzf
-function cdb {
+# git switch a branch using fzf
+function gsw {
   local branch="$( git branch | sed s/\*/\ /g | awk '{ print $1 }' | fzf)"
   if [ ! -z "$branch" ] ; then
-    git checkout "$branch"
+    git switch "$branch"
   fi
 }
 # }}}
