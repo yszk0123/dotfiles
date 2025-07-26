@@ -8,6 +8,7 @@
 .config/raycast/extensions/
 .config/.wrangler/
 .config/
+!.config/claude/agents/
 !.config/claude/commands/
 !.config/claude/settings.json
 .git/
