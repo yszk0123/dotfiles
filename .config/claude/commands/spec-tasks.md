@@ -12,28 +12,31 @@ Generate detailed implementation tasks for feature: **$ARGUMENTS**
 **CRITICAL**: Tasks can only be generated after both requirements and design are reviewed and approved.
 
 ### Interactive Review Process
-- Requirements document: @.kiro/specs/$ARGUMENTS/requirements.md
-- Design document: @.kiro/specs/$ARGUMENTS/design.md
-- Spec metadata: @.kiro/specs/$ARGUMENTS/spec.json
+
+- Requirements document: @docs/specs/$ARGUMENTS/requirements.md
+- Design document: @docs/specs/$ARGUMENTS/design.md
+- Spec metadata: @docs/specs/$ARGUMENTS/spec.json
 
 **Interactive Approval Process**:
+
 1. **Check if documents exist** - Verify that requirements.md and design.md have been generated
-2. **Prompt for requirements review** - Ask user: "requirements.mdをレビューしましたか？ [y/N]"
-3. **Prompt for design review** - Ask user: "design.mdをレビューしましたか？ [y/N]"
+2. **Prompt for requirements review** - Ask user: "requirements.md をレビューしましたか？ [y/N]"
+3. **Prompt for design review** - Ask user: "design.md をレビューしましたか？ [y/N]"
 4. **If both 'y' (yes)**: Automatically update spec.json to approve both phases and proceed with tasks generation
 5. **If any 'N' (no)**: Stop execution and instruct user to review respective documents first
 
 **Auto-approval update in spec.json when user confirms both reviews**:
+
 ```json
 {
   "approvals": {
     "requirements": {
       "generated": true,
-      "approved": true  // ← Automatically set to true when user confirms
+      "approved": true // ← Automatically set to true when user confirms
     },
     "design": {
       "generated": true,
-      "approved": true  // ← Automatically set to true when user confirms
+      "approved": true // ← Automatically set to true when user confirms
     }
   },
   "phase": "design-approved"
@@ -41,11 +44,12 @@ Generate detailed implementation tasks for feature: **$ARGUMENTS**
 ```
 
 **User Interaction Example**:
+
 ```
 📋 Requirements and Design review required before generating tasks.
-📄 Please review: .kiro/specs/feature-name/requirements.md
+📄 Please review: docs/specs/feature-name/requirements.md
 ❓ requirements.mdをレビューしましたか？ [y/N]: y
-📄 Please review: .kiro/specs/feature-name/design.md
+📄 Please review: docs/specs/feature-name/design.md
 ❓ design.mdをレビューしましたか？ [y/N]: y
 ✅ Requirements and Design approved automatically. Proceeding with tasks generation...
 ```
@@ -53,15 +57,17 @@ Generate detailed implementation tasks for feature: **$ARGUMENTS**
 ## Context Analysis
 
 ### Complete Spec Context (APPROVED)
-- Requirements: @.kiro/specs/$ARGUMENTS/requirements.md
-- Design: @.kiro/specs/$ARGUMENTS/design.md
-- Current tasks: @.kiro/specs/$ARGUMENTS/tasks.md
-- Spec metadata: @.kiro/specs/$ARGUMENTS/spec.json
+
+- Requirements: @docs/specs/$ARGUMENTS/requirements.md
+- Design: @docs/specs/$ARGUMENTS/design.md
+- Current tasks: @docs/specs/$ARGUMENTS/tasks.md
+- Spec metadata: @docs/specs/$ARGUMENTS/spec.json
 
 ### Steering Context
-- Architecture patterns: @.kiro/steering/structure.md
-- Development practices: @.kiro/steering/tech.md
-- Product constraints: @.kiro/steering/product.md
+
+- Architecture patterns: @docs/steering/structure.md
+- Development practices: @docs/steering/tech.md
+- Product constraints: @docs/steering/product.md
 
 ## Task: Generate Code-Generation Prompts
 
@@ -72,12 +78,14 @@ Generate detailed implementation tasks for feature: **$ARGUMENTS**
 Create implementation plan in the language specified in spec.json:
 
 ### 1. Code-Generation Tasks Structure
-Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARGUMENTS/spec.json` for "language" field):
+
+Create tasks.md in the language specified in spec.json (check `@docs/specs/$ARGUMENTS/spec.json` for "language" field):
 
 ```markdown
 # Implementation Plan
 
 - [ ] 1. Set up project structure and core interfaces
+
   - Create directory structure for models, services, repositories, and API components
   - Define interfaces that will be implemented in subsequent tasks
   - Set up testing framework for test-driven development
@@ -85,18 +93,21 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
 
 - [ ] 2. Implement data models with test-driven approach
 - [ ] 2.1 Create base model functionality
+
   - Write tests for base model behavior first
   - Implement base Entity class to pass tests
   - Include common properties and validation methods
   - _Requirements: 2.1, 2.2_
 
 - [ ] 2.2 Implement User model with validation
+
   - Write User model tests including validation edge cases
   - Create User class with email validation and password hashing
   - Test edge cases: invalid email, weak password, duplicate users
   - _Requirements: 1.2, 1.3_
 
 - [ ] 2.3 Implement primary domain model with relationships
+
   - Write tests for [Domain] model including relationships
   - Code [Domain] class with relationship handling
   - Implement business logic and validation rules
@@ -104,18 +115,21 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
 
 - [ ] 3. Create data access layer with test-driven approach
 - [ ] 3.1 Implement database connection utilities
+
   - Write tests for database connection scenarios first
   - Implement connection utilities to pass the tests
   - Add error handling and connection pooling
   - _Requirements: 3.1_
 
 - [ ] 3.2 Implement repository pattern for User data access
+
   - Write repository tests for CRUD operations first
   - Implement User repository with standard data operations
   - Test create, read, update, delete scenarios
   - _Requirements: 3.2, 3.3_
 
 - [ ] 3.3 Implement domain-specific repository
+
   - Write tests for domain repository operations
   - Code [Domain]Repository with business-specific queries
   - Include relationship loading and filtering capabilities
@@ -123,6 +137,7 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
 
 - [ ] 4. Build API layer with test-first approach
 - [ ] 4.1 Create authentication service and endpoints
+
   - Write API tests for authentication flows first
   - Build AuthService with login and registration methods
   - Implement JWT token generation and validation
@@ -130,6 +145,7 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
   - _Requirements: 4.1, 4.2_
 
 - [ ] 4.2 Implement core API endpoints
+
   - Write API tests for domain operations first
   - Code [Domain]Service with business logic
   - Create REST endpoints with validation and error handling
@@ -138,12 +154,14 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
 
 - [ ] 5. Create frontend components with integrated testing
 - [ ] 5.1 Build foundational UI components
+
   - Write component tests for UI elements first
   - Create reusable components (Button, Input, Form)
   - Test component rendering, props, and user interactions
   - _Requirements: 5.1_
 
 - [ ] 5.2 Implement authentication components
+
   - Write tests for auth component behavior first
   - Code LoginForm and RegisterForm components
   - Implement API integration for authentication
@@ -151,6 +169,7 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
   - _Requirements: 5.2, 5.3_
 
 - [ ] 5.3 Build main feature components
+
   - Write tests for domain component interactions
   - Implement [Domain]List and [Domain]Form components
   - Add API integration for data operations
@@ -159,6 +178,7 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
 
 - [ ] 6. Wire all components together and verify integration
 - [ ] 6.1 Create main application integration
+
   - Write integration tests for complete application flow
   - Implement application routing and navigation
   - Set up authentication guards for protected routes
@@ -174,6 +194,7 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
 ```
 
 **Code-Generation Prompt Format Rules**:
+
 - Hierarchical numbering: Major phases (1, 2, 3) and sub-tasks (1.1, 1.2)
 - Each task is a prompt for a code-generation LLM that will implement the step
 - Specify what to create/modify but rely on design document for implementation details
@@ -186,6 +207,7 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
 - Final task must wire everything together to prevent orphaned code
 
 ### 2. Code-Generation Quality Guidelines
+
 - **Prompt Optimization**: Each task is a clear prompt that a coding agent can execute
 - **Progressive Building**: Explicitly state which previous task outputs are used
 - **Test-First Approach**: Write tests before implementation when appropriate
@@ -196,7 +218,9 @@ Create tasks.md in the language specified in spec.json (check `@.kiro/specs/$ARG
 - **Design Document Reliance**: Tasks reference design for implementation details
 
 ### 3. Mandatory Task Categories (Coding Only)
+
 Include ONLY coding tasks for:
+
 - **Data Models**: Model classes with validation and tests
 - **Data Access**: Repository pattern implementation with tests
 - **API Services**: Backend service implementation with API tests
@@ -205,6 +229,7 @@ Include ONLY coding tasks for:
 - **End-to-End Testing**: Automated test implementation
 
 **EXCLUDED (Non-Coding Tasks):**
+
 - User acceptance testing or user feedback gathering
 - Production deployment or staging environments
 - Performance metrics gathering or analysis
@@ -212,19 +237,22 @@ Include ONLY coding tasks for:
 - Documentation creation (beyond code comments)
 
 ### 4. Granular Requirements Mapping
+
 For each task, reference specific EARS requirements from requirements.md:
+
 - Reference granular sub-requirements, not just user stories
 - Map to specific acceptance criteria (e.g., REQ-2.1.3: IF validation fails THEN...)
 - Ensure every EARS requirement is covered by implementation tasks
 - Use format: _Requirements: 2.1, 3.3, 1.2_ (refer to numbered requirements)
 
-
 ### 6. Document Generation Only
+
 Generate the tasks document content ONLY. Do not include any review or approval instructions in the actual document file.
 
 ### 7. Update Metadata
 
 Update spec.json with:
+
 ```json
 {
   "phase": "tasks-generated",
@@ -247,6 +275,7 @@ Update spec.json with:
 ```
 
 ### 8. Metadata Update
+
 Update the tracking metadata to reflect task generation completion.
 
 ---
@@ -256,6 +285,7 @@ Update the tracking metadata to reflect task generation completion.
 The following is for Claude Code conversation only - NOT for the generated document:
 
 ### Interactive Approval Process
+
 This command now implements interactive approval for the final phase:
 
 1. **Requirements & Design Review Prompts**: Automatically prompts user to confirm both documents are reviewed
@@ -264,16 +294,19 @@ This command now implements interactive approval for the final phase:
 4. **Ready for Implementation**: Tasks are generated and spec is ready for implementation phase
 
 ### Tasks Review for Implementation Phase
+
 After generating tasks.md, the implementation phase is ready to begin.
 
 **Final approval process for implementation**:
+
 ```
 📋 Tasks review completed. Ready for implementation.
-📄 Generated: .kiro/specs/feature-name/tasks.md
+📄 Generated: docs/specs/feature-name/tasks.md
 ✅ All phases approved. Implementation can now begin.
 ```
 
 ### Review Checklist (for user reference):
+
 - [ ] Tasks are properly sized (2-4 hours each)
 - [ ] All requirements are covered by tasks
 - [ ] Task dependencies are correct
