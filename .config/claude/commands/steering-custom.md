@@ -5,17 +5,17 @@ allowed-tools: Bash, Read, Write, Edit, MultiEdit, Glob, Grep, LS
 
 # Kiro Custom Steering Creation
 
-Create custom steering documents in `docs/steering/` for specialized contexts beyond the three foundational files (product.md, tech.md, structure.md).
+Create custom steering documents in `.kiro/steering/` for specialized contexts beyond the three foundational files (product.md, tech.md, structure.md).
 
 ## Current Steering Status
 
 ### Existing Steering Documents
-- Core steering files: !`ls -la docs/steering/*.md 2>/dev/null || echo "No steering directory found"`
-- Custom steering count: !`find docs/steering -name "*.md" | grep -v -E "(product|tech|structure).md" | wc -l || echo "0"`
+- Core steering files: !`ls -la .kiro/steering/*.md 2>/dev/null || echo "No steering directory found"`
+- Custom steering count: !`if [ -d ".kiro/steering" ]; then count=0; for f in .kiro/steering/*.md; do if [ -f "$f" ] && [ "$f" != ".kiro/steering/product.md" ] && [ "$f" != ".kiro/steering/tech.md" ] && [ "$f" != ".kiro/steering/structure.md" ]; then count=$((count + 1)); fi; done; echo "$count"; else echo "0"; fi`
 
 ### Project Analysis
-- Specialized areas: !`find . -type d -name "test*" -o -name "spec*" -o -name "api" -o -name "auth" -o -name "security" | grep -v node_modules | grep -v .git | head -10`
-- Config patterns: !`find . -name "*.config.*" -o -name "*rc.*" -o -name ".*rc" | grep -v node_modules | head -10`
+- Specialized areas: !`find . -path ./node_modules -prune -o -path ./.git -prune -o -type d \( -name "test*" -o -name "spec*" -o -name "api" -o -name "auth" -o -name "security" \) -print 2>/dev/null || echo "No specialized directories found"`
+- Config patterns: !`find . -path ./node_modules -prune -o \( -name "*.config.*" -o -name "*rc.*" -o -name ".*rc" \) -print 2>/dev/null || echo "No config files found"`
 
 ## Task: Create Custom Steering Document
 
@@ -74,23 +74,25 @@ You will create a new custom steering document based on user requirements. Commo
 
 ## Inclusion Mode Selection
 
-Ask the user to specify the inclusion mode for the custom steering document:
+Choose the inclusion mode based on how frequently and in what context this steering document should be referenced:
 
-### 1. Always Included (Default)
-- Loaded in every AI interaction
-- Best for: Universal standards that apply to all code
-- Example: Security policies, general code style
+### 1. Always Included (Use sparingly for custom files)
+- **When to use**: Universal standards that apply to ALL code (security policies, core conventions)
+- **Impact**: Increases context size for every interaction
+- **Example**: `security-standards.md` for critical security requirements
+- **Recommendation**: Only use for truly universal guidelines
 
-### 2. Conditional Inclusion
-- Loaded only when working with matching files
-- Specify patterns like: `"*.test.js"`, `"src/api/**/*"`, `"**/auth/*"`
-- Best for: Context-specific guidelines
-- Example: Test conventions only when editing test files
+### 2. Conditional Inclusion (Recommended for most custom files)  
+- **When to use**: Domain-specific guidelines for particular file types or directories
+- **File patterns**: `"*.test.js"`, `"src/api/**/*"`, `"**/auth/*"`, `"*.config.*"`
+- **Example**: `testing-approach.md` only loads when editing test files
+- **Benefits**: Relevant context without overwhelming general interactions
 
-### 3. Manual Inclusion
-- Only loaded when explicitly referenced with `#filename`
-- Best for: Specialized, occasionally-needed context
-- Example: Migration guides, complex architectural decisions
+### 3. Manual Inclusion (Best for specialized contexts)
+- **When to use**: Specialized knowledge needed occasionally 
+- **Usage**: Reference with `@filename.md` during specific conversations
+- **Example**: `deployment-runbook.md` for deployment-specific tasks
+- **Benefits**: Available when needed, doesn't clutter routine interactions
 
 ## Document Structure Guidelines
 
@@ -112,6 +114,19 @@ Create the custom steering document with:
    - How this relates to other steering documents
    - Dependencies or prerequisites
 
+## Security and Quality Guidelines
+
+### Security Requirements
+- **Never include sensitive data**: No API keys, passwords, database URLs, secrets
+- **Review sensitive context**: Avoid internal server names, private API endpoints
+- **Team access awareness**: All steering content is shared with team members
+
+### Content Quality Standards
+- **Single responsibility**: One steering file = one domain (don't mix API + database guidelines)
+- **Concrete examples**: Include code snippets and real project examples  
+- **Clear rationale**: Explain WHY certain approaches are preferred
+- **Maintainable size**: Target 2-3 minute read time per file
+
 ## Instructions
 
 1. **Ask the user** for:
@@ -120,7 +135,7 @@ Create the custom steering document with:
    - Inclusion mode preference
    - Specific patterns for conditional inclusion (if applicable)
 
-2. **Create the document** in `docs/steering/` with:
+2. **Create the document** in `.kiro/steering/` with:
    - Clear, focused content (2-3 minute read)
    - Practical examples
    - Consistent formatting with other steering files
@@ -136,3 +151,4 @@ Create the custom steering document with:
    - Follows markdown best practices
 
 Remember: Custom steering documents should supplement, not replace, the foundational three files. They provide specialized context for specific aspects of your project.
+ultrathink

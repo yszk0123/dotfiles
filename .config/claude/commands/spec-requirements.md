@@ -10,74 +10,102 @@ Generate comprehensive requirements for feature: **$ARGUMENTS**
 ## Context Validation
 
 ### Steering Context
-- Architecture context: @docs/steering/structure.md
-- Technical constraints: @docs/steering/tech.md
-- Product context: @docs/steering/product.md
+- Architecture context: @.kiro/steering/structure.md
+- Technical constraints: @.kiro/steering/tech.md
+- Product context: @.kiro/steering/product.md
 
 ### Existing Spec Context
-- Current spec directory: !`ls -la docs/specs/$ARGUMENTS/`
-- Current requirements: @docs/specs/$ARGUMENTS/requirements.md
-- Spec metadata: @docs/specs/$ARGUMENTS/spec.json
+- Current spec directory: !`ls -la .kiro/specs/$ARGUMENTS/`
+- Current requirements: @.kiro/specs/$ARGUMENTS/requirements.md
+- Spec metadata: @.kiro/specs/$ARGUMENTS/spec.json
 
-## Task: Generate Detailed Requirements
+## Task: Generate Initial Requirements
 
-Create comprehensive requirements document in the language specified in spec.json:
+Generate an initial set of requirements in EARS format based on the feature idea, then iterate with the user to refine them until they are complete and accurate.
 
-### 1. Requirements Structure
-Generate requirements.md in the language specified in spec.json (check `@docs/specs/$ARGUMENTS/spec.json` for "language" field):
+Don't focus on code exploration in this phase. Instead, just focus on writing requirements which will later be turned into a design.
+
+### Requirements Generation Guidelines
+1. **Focus on Core Functionality**: Start with the essential features from the user's idea
+2. **Use EARS Format**: All acceptance criteria must use proper EARS syntax
+3. **No Sequential Questions**: Generate initial version first, then iterate based on user feedback
+4. **Keep It Manageable**: Create a solid foundation that can be expanded through user review
+
+### 1. EARS Format Requirements
+
+**EARS (Easy Approach to Requirements Syntax)** is the mandatory format for acceptance criteria:
+
+**Primary EARS Patterns:**
+- **WHEN** [event/condition] **THEN** [system] **SHALL** [response]
+- **IF** [precondition/state] **THEN** [system] **SHALL** [response]
+- **WHILE** [ongoing condition] **THE SYSTEM SHALL** [continuous behavior]
+- **WHERE** [location/context] **THE SYSTEM SHALL** [contextual behavior]
+
+**Combined Patterns:**
+- **WHEN** [event] **AND** [additional condition] **THEN** [system] **SHALL** [response]
+- **IF** [condition] **AND** [additional condition] **THEN** [system] **SHALL** [response]
+
+### 2. Requirements Hierarchy and Granularity
+
+**Structure Requirements with Clear Hierarchy:**
+
+```
+# Requirements Document
+├── Introduction (feature overview)
+├── Requirements
+│   ├── Requirement 1 (Major Feature Area)
+│   │   ├── User Story (high-level need)
+│   │   └── Acceptance Criteria (detailed EARS)
+│   │       ├── Happy path scenarios
+│   │       ├── Edge cases and error conditions
+│   │       ├── User experience considerations
+│   │       └── Technical constraints
+│   ├── Requirement 2 (Next Feature Area)
+│   └── ...
+```
+
+**Granularity Guidelines:**
+- **High-level Requirements**: Major functional areas from the feature idea
+- **User Stories**: Specific user needs within each requirement area  
+- **Acceptance Criteria**: Testable conditions using EARS format
+
+### 3. Requirements Document Structure
+Generate requirements.md in the language specified in spec.json (check `@.kiro/specs/$ARGUMENTS/spec.json` for "language" field):
 
 ```markdown
-# Requirements Specification
+# Requirements Document
 
-## Overview
-[Clear overview of the feature and its purpose]
+## Introduction
+[Clear introduction summarizing the feature and its business value]
 
 ## Requirements
 
-### Requirement 1
-**User Story:** As a [user type], I want to [do something], so that I can [achieve some goal]
+### Requirement 1: [Major Feature Area]
+**User Story:** As a [role], I want [feature], so that [benefit]
 
 #### Acceptance Criteria
-1. WHEN [specific condition] THEN [specific expected outcome]
-2. WHEN [specific condition] THEN [specific expected outcome]
-3. IF [exception condition] THEN [expected error handling]
+This section should have EARS requirements
 
-### Requirement 2
-**User Story:** As a [user type], I want to [do something], so that I can [achieve some goal]
+1. WHEN [event] THEN [system] SHALL [response]
+2. IF [precondition] THEN [system] SHALL [response]
+3. WHILE [ongoing condition] THE SYSTEM SHALL [continuous behavior]
+4. WHERE [location/context] THE SYSTEM SHALL [contextual behavior]
 
-#### Acceptance Criteria
-1. WHEN [specific condition] THEN [specific expected outcome]
-2. WHEN [specific condition] THEN [specific expected outcome]
-3. IF [exception condition] THEN [expected error handling]
+### Requirement 2: [Next Major Feature Area]
+**User Story:** As a [role], I want [feature], so that [benefit]
 
-### Requirement 3
-[Additional requirements following same pattern]
+1. WHEN [event] THEN [system] SHALL [response]
+2. WHEN [event] AND [condition] THEN [system] SHALL [response]
+
+### Requirement 3: [Additional Major Areas]
+[Continue pattern for all major functional areas]
 ```
-
-### 2. Requirements Quality Guidelines
-- **User-Centric**: Write from user perspective
-- **Testable**: Each acceptance criterion should be verifiable
-- **Specific**: Use concrete conditions and outcomes
-- **Complete**: Cover all major user scenarios
-- **Contextual**: Consider existing system integration
-
-### 3. Integration Considerations
-Based on steering context, consider:
-- How this feature fits with existing architecture
-- Technical constraints that affect requirements
-- Existing user workflows that need integration
-- Performance and scalability requirements
 
 ### 4. Update Metadata
 Update spec.json with:
 ```json
 {
   "phase": "requirements-generated",
-  "progress": {
-    "requirements": 100,
-    "design": 0,
-    "tasks": 0
-  },
   "approvals": {
     "requirements": {
       "generated": true,
@@ -93,23 +121,35 @@ Generate the requirements document content ONLY. Do not include any review or ap
 
 ---
 
-## REVIEW AND APPROVAL PROCESS (Not included in document)
+## INTERACTIVE APPROVAL AVAILABLE (Not included in document)
 
 The following is for Claude Code conversation only - NOT for the generated document:
 
-### Human Review Required
-After generating requirements.md, inform the user:
+### Next Phase Uses Interactive Approval
+After generating requirements.md, the next phase (`/spec-design $ARGUMENTS`) will use interactive approval:
 
-**NEXT STEP**: Human review required before proceeding to design phase.
+**Next interaction will be**:
+```
+/spec-design feature-name
+# → "requirements.mdをレビューしましたか？ [y/N]"
+# → If 'y': Auto-approval + design generation
+# → If 'N': Stop and request review first
+```
 
-### Review Checklist:
+### Benefits of Interactive Approval
+1. **Streamlined workflow**: No manual spec.json editing required
+2. **Review enforcement**: Still requires human confirmation of review
+3. **Immediate progression**: Approved phases proceed automatically
+4. **Safety maintained**: 'N' response stops execution for proper review
+
+### Review Checklist (for user reference):
 - [ ] Requirements are clear and complete
 - [ ] User stories cover all necessary functionality
 - [ ] Acceptance criteria are testable
 - [ ] Requirements align with project goals
 
-### To Approve:
-After reviewing, update `docs/specs/$ARGUMENTS/spec.json`:
+### Traditional Manual Approval Still Available
+If needed, you can still manually approve by updating `.kiro/specs/$ARGUMENTS/spec.json`:
 ```json
 {
   "approvals": {
@@ -122,16 +162,16 @@ After reviewing, update `docs/specs/$ARGUMENTS/spec.json`:
 }
 ```
 
-**Only after approval can you proceed to `/spec-design $ARGUMENTS`**
+**Recommended**: Use the interactive approval in `/spec-design $ARGUMENTS` for better user experience.
 
 ## Instructions
 
 1. **Check spec.json for language** - Use the language specified in the metadata
-2. **Analyze existing product context** to understand user needs
-3. **Create user-focused requirements** with clear acceptance criteria
-4. **Consider technical constraints** from steering documents
-5. **Ensure requirements are testable** and specific
-6. **Update tracking metadata** upon completion
+2. **Generate initial requirements** based on the feature idea WITHOUT asking sequential questions first
+3. **Apply EARS format** - Use proper EARS syntax patterns for all acceptance criteria
+4. **Focus on core functionality** - Start with essential features and user workflows
+5. **Structure clearly** - Group related functionality into logical requirement areas
+6. **Make requirements testable** - Each acceptance criterion should be verifiable
+7. **Update tracking metadata** upon completion
 
-Generate requirements that provide clear foundation for design phase.
-ultrathink
+Generate requirements that provide a solid foundation for the design phase, focusing on the core functionality from the feature idea.

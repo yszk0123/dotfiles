@@ -12,12 +12,12 @@ Initialize a new specification based on the provided project description:
 ## Steering Context Validation
 
 ### Check Steering Documents
-- Structure context: @docs/steering/structure.md
-- Technical constraints: @docs/steering/tech.md
-- Product context: @docs/steering/product.md
+- Structure context: @.kiro/steering/structure.md
+- Technical constraints: @.kiro/steering/tech.md  
+- Product context: @.kiro/steering/product.md
 
 ### Verify Steering Exists
-- Steering files: `ls -la docs/steering/`
+- Steering files: !`[ -d .kiro/steering ] && ls -la .kiro/steering/ || echo "Steering directory not found - proceeding without steering context"`
 
 **FLEXIBILITY**: For new features or empty projects, steering documents are recommended but not required. If steering documents are missing or empty, you may proceed directly to spec generation phase.
 
@@ -37,9 +37,9 @@ From the provided description ($ARGUMENTS), extract:
 Based on the analysis, create a concise, descriptive feature name that captures the essence of the project.
 
 ### 3. Create Spec Directory
-Create `docs/specs/{generated-feature-name}/` directory with template files:
+Create `.kiro/specs/{generated-feature-name}/` directory with template files:
 - `requirements.md` - Empty template for user stories
-- `design.md` - Empty template for technical design
+- `design.md` - Empty template for technical design  
 - `tasks.md` - Empty template for implementation tasks
 - `spec.json` - Metadata and approval tracking
 
@@ -66,11 +66,6 @@ Create initial metadata with approval tracking and project description:
       "generated": false,
       "approved": false
     }
-  },
-  "progress": {
-    "requirements": 0,
-    "design": 0,
-    "tasks": 0
   },
   "ready_for_implementation": false
 }
@@ -115,7 +110,7 @@ $ARGUMENTS
 <!-- Implementation tasks will be generated after design approval -->
 
 ---
-**STATUS**: Waiting for design approval
+**STATUS**: Waiting for design approval  
 **NEXT STEP**: Complete and approve design first
 ```
 
@@ -124,16 +119,27 @@ Add the new spec to the active specifications list with the generated feature na
 
 ## Next Steps After Initialization
 
-Follow the proper spec-driven development workflow:
+Follow the proper spec-driven development workflow with **interactive approval**:
 
-**Standard workflow:**
+**Streamlined workflow with interactive approval:**
 1. **Generate requirements**: `/spec-requirements {feature-name}`
-2. **Review and approve requirements**: Update spec.json
-3. **Generate design**: `/spec-design {feature-name}` (after requirements approval)
-4. **Review and approve design**: Update spec.json
-5. **Generate tasks**: `/spec-tasks {feature-name}` (after design approval)
-6. **Review and approve tasks**: Update spec.json
-7. **Start implementation**: After all approvals are complete
+2. **Generate design with interactive approval**: `/spec-design {feature-name}`
+   - Will prompt: "requirements.mdをレビューしましたか？ [y/N]"
+   - If 'y': Auto-approves requirements and generates design
+   - If 'N': Stops for manual review
+3. **Generate tasks with interactive approval**: `/spec-tasks {feature-name}`
+   - Will prompt for both requirements and design review
+   - Auto-approves both phases when confirmed
+4. **Start implementation**: After all phases are complete
+
+**Benefits of interactive approval:**
+- ✅ **No manual spec.json editing** required
+- ✅ **Review enforcement** maintained through confirmation prompts
+- ✅ **Streamlined workflow** with immediate progression
+- ✅ **Safety preserved** with ability to stop for proper review
+
+**Traditional manual approval still available:**
+If you prefer manual control, you can still edit spec.json directly between phases.
 
 ## Instructions
 
