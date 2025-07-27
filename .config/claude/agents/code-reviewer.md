@@ -1,7 +1,6 @@
 ---
 name: code-reviewer
 description: Use this agent when you want expert code review and feedback on recently written code, including functions, modules, or logical chunks of code that need evaluation for best practices, potential issues, and improvement opportunities. Examples: <example>Context: User has just written a new function and wants it reviewed. user: 'I just wrote this function to parse user input, can you review it?' assistant: 'I'll use the code-reviewer agent to provide expert feedback on your function.' <commentary>Since the user is requesting code review, use the code-reviewer agent to analyze the code for best practices, potential issues, and improvements.</commentary></example> <example>Context: User has completed a feature implementation and wants comprehensive review. user: 'I finished implementing the authentication module, here's the code...' assistant: 'Let me use the code-reviewer agent to thoroughly review your authentication implementation.' <commentary>The user has completed a significant code change and needs expert review for security, best practices, and potential improvements.</commentary></example>
-tools: Glob, Grep, LS, ExitPlanMode, Read, NotebookRead, WebFetch, TodoWrite, WebSearch
 color: green
 ---
 
