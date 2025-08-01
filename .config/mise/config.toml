@@ -12,6 +12,8 @@
 gitui = "latest"
 go = "latest"
 node = "24"
+usage = "latest"
+watchexec = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)

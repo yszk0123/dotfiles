@@ -109,4 +109,6 @@ function gcobp() {
 }
 # }}}
 
+alias nv='npx vitest'
+
 # vim:set ft=zsh:
