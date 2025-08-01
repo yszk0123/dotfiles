@@ -40,7 +40,6 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Python is managed by mise (see .config/mise/config.toml)
 # Poetry is installed via pipx or Homebrew
