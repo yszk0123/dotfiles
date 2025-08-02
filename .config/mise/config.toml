@@ -2,7 +2,6 @@
 # https://mise.jdx.dev/configuration.html
 
 [tools]
-"cargo:similarity-ts" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@biomejs/biome" = "latest"
 "npm:ccmanager" = "latest"
