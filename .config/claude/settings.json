@@ -104,7 +104,7 @@
       "mcp__notionMCP__update-database"
     ]
   },
-  "model": "sonnet",
+  "model": "opusplan",
   "hooks": {
     "PreToolUse": [
       {
@@ -141,6 +141,6 @@
     ]
   },
   "feedbackSurveyState": {
-    "lastShownTime": 1754017108035
+    "lastShownTime": 1754031629367
   }
 }
