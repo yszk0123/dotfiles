@@ -13,6 +13,8 @@ go = "latest"
 node = "24"
 usage = "latest"
 watchexec = "latest"
+python = "3"
+tfenv = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)

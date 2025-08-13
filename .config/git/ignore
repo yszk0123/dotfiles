@@ -47,3 +47,5 @@ yarn.lock
 # Temporary backup files
 *~
 *.tmp
+
+mise.toml
