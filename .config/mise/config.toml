@@ -15,6 +15,8 @@ usage = "latest"
 watchexec = "latest"
 python = "3"
 tfenv = "latest"
+"npm:@bufbuild/buf" = "latest"
+"npm:@openai/codex" = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
