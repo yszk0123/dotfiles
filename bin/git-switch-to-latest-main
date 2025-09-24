@@ -3,9 +3,6 @@
 MAIN_BRANCH="$(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@")"
 CURRENT_BRANCH="$(git branch --contains | cut -d " " -f 2)"
 
-# Remove merged local branch
-git branch --merged | egrep -v "(^\*|^\+|main|master|dev|$MAIN_BRANCH)" | xargs git branch -d
-
 git fetch -p
 
 if [ "$CURRENT_BRANCH" = "$MAIN_BRANCH" ]; then
@@ -14,3 +11,6 @@ else
   git branch -f $MAIN_BRANCH origin/$MAIN_BRANCH
   git switch $MAIN_BRANCH
 fi
+
+# Remove merged local branch
+git branch --merged | egrep -v "(^\*|^\+|main|master|dev|$MAIN_BRANCH)" | xargs git branch -d
