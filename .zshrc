@@ -80,6 +80,12 @@ fi
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
 
+# Android Studio
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
 # Package manager configurations:
 # - Homebrew: managed via Brewfile
 # - npm: global packages installed as needed

@@ -20,6 +20,7 @@ tmp/
 .mise.local.toml
 mise.local.toml
 
+a.sh
 a.json
 b.json
 c.json

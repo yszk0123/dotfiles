@@ -4,6 +4,10 @@
 [tools]
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@biomejs/biome" = "latest"
+"npm:@bufbuild/buf" = "latest"
+"npm:@google/gemini-cli" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:bun" = "latest"
 "npm:ccmanager" = "latest"
 "npm:diff-so-fancy" = "latest"
 "npm:pnpm" = "latest"
@@ -15,8 +19,6 @@ usage = "latest"
 watchexec = "latest"
 python = "3"
 tfenv = "latest"
-"npm:@bufbuild/buf" = "latest"
-"npm:@openai/codex" = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
@@ -25,3 +27,4 @@ legacy_version_file = true
 always_keep_download = true
 # Enable idiomatic version file support for Python tools
 idiomatic_version_file_enable_tools = ["python"]
+experimental = true
