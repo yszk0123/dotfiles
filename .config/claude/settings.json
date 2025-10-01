@@ -1,9 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "statusLine": {
-    "type": "command",
-    "command": "~/dotfiles/claude/statusLine.mjs"
-  },
   "permissions": {
     "allow": [
       "Agent",
@@ -104,7 +100,6 @@
       "mcp__notionMCP__update-database"
     ]
   },
-  "model": "opusplan",
   "hooks": {
     "PreToolUse": [
       {
@@ -140,6 +135,11 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "~/dotfiles/claude/statusLine.mjs"
+  },
+  "alwaysThinkingEnabled": false,
   "feedbackSurveyState": {
     "lastShownTime": 1754031629367
   }
