@@ -135,10 +135,6 @@
       }
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "~/dotfiles/claude/statusLine.mjs"
-  },
   "alwaysThinkingEnabled": false,
   "feedbackSurveyState": {
     "lastShownTime": 1754031629367
