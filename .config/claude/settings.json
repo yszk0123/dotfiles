@@ -139,7 +139,7 @@
     "type": "command",
     "command": "~/dotfiles/claude/statusLine.mjs"
   },
-  "alwaysThinkingEnabled": false,
+  "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754031629367
   }

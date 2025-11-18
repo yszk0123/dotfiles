@@ -106,3 +106,18 @@
 	helper = osxkeychain
 [rerere]
 	enabled = true
+[gtr "ai"]
+	default = claude
+[gtr "editor"]
+	default = vscode
+[gtr "copy"]
+	include = **/CLAUDE.md
+	include = **/AGENTS.md
+	include = **/.env.local
+	include = **/.env.development
+	include = **/.envrc
+	include = **/mise.toml
+	exclude = **/mise.production.toml
+	exclude = **/.env.production
+	exclude = **/.env
+	exclude = **/secrets.*

@@ -19,6 +19,9 @@ usage = "latest"
 watchexec = "latest"
 python = "3"
 tfenv = "latest"
+"npm:ccusage" = "latest"
+"npm:@fission-ai/openspec" = "latest"
+"npm:@ast-grep/cli" = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
