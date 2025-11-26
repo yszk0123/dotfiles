@@ -73,21 +73,6 @@ function cdr {
   fi
 }
 
-# cd to a worktree using fzf and gwq
-function cdw {
-  local dir="$(gwq list --json | jq -r '.[] | .path' | fzf)"
-  if [ ! -z "$dir" ] ; then
-    cd "$dir"
-  fi
-}
-function cdwg {
-  local dir="$(gwq list --global --json | jq -r '.[] | .path' | fzf)"
-  if [ ! -z "$dir" ] ; then
-    cd "$dir"
-  fi
-}
-
-
 # git switch a branch using fzf
 function gsw {
   local branch="$( git branch | sed s/\*/\ /g | awk '{ print $1 }' | fzf)"
