@@ -104,3 +104,6 @@ fi
 
 # vim:set ft=zsh:
 # bun completions
+
+# Added by Antigravity
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
