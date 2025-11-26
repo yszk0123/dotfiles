@@ -2,6 +2,7 @@
 # cf. [その他のオプションの調べ方](http://qiita.com/uasi/items/c4288dd835a65eb9d709#1-5)
 # cd ~abc => /a/b/c
 # hash -d abc=/a/b/c
+hash -d dot=~/.local/share/chezmoi
 hash -d hub=~/src/github.com
 hash -d ssh=~/.ssh
 # }}}
