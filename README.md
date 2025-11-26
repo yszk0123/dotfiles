@@ -88,8 +88,6 @@ dotfiles/
 │   └── install/         # Individual tool installers
 ├── bin/                 # Custom utility scripts
 ├── Brewfile             # Homebrew packages and VS Code extensions
-├── pyproject.toml       # Python project configuration
-├── uv.lock              # Python dependency lock file
 └── CLAUDE.md            # Detailed setup documentation
 ```
 
@@ -120,13 +118,13 @@ Install and configure Nerd Font for full icon support:
 
 ```bash
 # Comprehensive update (recommended)
-sh ~/dotfiles/update.sh
+sh ~/scripts/update.sh
 
 # Individual components
 brew bundle                    # Update Homebrew packages
 mise upgrade                   # Update runtimes
 sheldon update                 # Update shell plugins
-sh ~/dotfiles/scripts/verify.sh # Verify configuration
+sh ~/scripts/verify.sh # Verify configuration
 ```
 
 ### Development Workflow
@@ -167,7 +165,7 @@ find . -name "*.sh" -exec shellcheck {} +
 pre-commit run --all-files
 
 # Manual verification
-sh ~/dotfiles/scripts/verify.sh
+sh ~/scripts/verify.sh
 ```
 
 ## 📚 Documentation

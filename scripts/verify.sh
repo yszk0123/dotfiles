@@ -1,5 +1,5 @@
 #!/bin/bash
-source "$HOME/dotfiles/scripts/common/utils.sh"
+source "$HOME/scripts/common/utils.sh"
 
 echo_color "=== System Verification ===" "34"
 
