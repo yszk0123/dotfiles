@@ -107,7 +107,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/dotfiles/claude/hooks/check-command-safety.sh"
+            "command": "~/config/claude/hooks/check-command-safety.sh"
           }
         ]
       }
@@ -118,7 +118,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/dotfiles/claude/hooks/notify-command-stop.sh"
+            "command": "~/config/claude/hooks/notify-command-stop.sh"
           }
         ]
       }
@@ -129,7 +129,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/dotfiles/claude/hooks/notify-command-notification.sh"
+            "command": "~/config/claude/hooks/notify-command-notification.sh"
           }
         ]
       }
@@ -137,7 +137,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "~/dotfiles/claude/statusLine.mjs"
+    "command": "~/config/claude/statusLine.mjs"
   },
   "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
