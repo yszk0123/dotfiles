@@ -27,12 +27,10 @@ A modern, well-structured dotfiles repository for macOS development environment 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone <your-repo-url> ~/dotfiles
-cd ~/dotfiles
-
+curl https://mise.run | sh
+mise use --global chezmoi@latest
 # Run the comprehensive update script
-sh ~/dotfiles/update.sh
+sh ~/scripts/update.sh
 ```
 
 ### Manual Installation Steps
@@ -44,14 +42,11 @@ sh ~/dotfiles/update.sh
 # 2. Install packages
 brew bundle
 
-# 3. Link configuration files
-sh ~/dotfiles/scripts/linkDotfiles.sh
+# 3. Update macOS settings
+sh ~/scripts/updateMacSettings.sh
 
-# 4. Update macOS settings
-sh ~/dotfiles/scripts/updateMacSettings.sh
-
-# 5. Verify installation
-sh ~/dotfiles/scripts/verify.sh
+# 4. Verify installation
+sh ~/scripts/verify.sh
 ```
 
 ## 🛠️ What's Included
@@ -86,10 +81,11 @@ dotfiles/
 │   ├── git/             # Git configuration
 │   ├── ghostty/         # Terminal configuration
 │   └── uv/              # Python package manager config
+├── config/              # Configs
+│   └── zsh/             # Modular zsh configuration
 ├── scripts/             # Installation and maintenance scripts
 │   ├── common/          # Shared utilities
 │   └── install/         # Individual tool installers
-├── zsh/                 # Modular zsh configuration
 ├── bin/                 # Custom utility scripts
 ├── Brewfile             # Homebrew packages and VS Code extensions
 ├── pyproject.toml       # Python project configuration

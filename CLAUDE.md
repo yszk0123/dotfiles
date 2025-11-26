@@ -9,10 +9,9 @@ This is a personal dotfiles repository for macOS that manages development enviro
 ## Common Commands
 
 ### Setup and Maintenance
-- **Initial/update**: `sh ~/dotfiles/update.sh` (comprehensive update with verification)
-- **Link dotfiles**: `sh ~/dotfiles/scripts/linkDotfiles.sh`
-- **Update macOS settings**: `sh ~/dotfiles/scripts/updateMacSettings.sh`
-- **System verification**: `sh ~/dotfiles/scripts/verify.sh`
+- **Initial/update**: `sh ~/scripts/update.sh` (comprehensive update with verification)
+- **Update macOS settings**: `sh ~/scripts/updateMacSettings.sh`
+- **System verification**: `sh ~/scripts/verify.sh`
 
 ### Package Management
 - **Install/update Homebrew packages**: `brew bundle` (uses `Brewfile`)
@@ -88,4 +87,4 @@ This is a personal dotfiles repository for macOS that manages development enviro
 - **Shell scripts**: Use `shellcheck` (installed via Homebrew)
 - **Pre-commit hooks**: Configured for code quality checks
 - **Documentation**: Japanese technical writing checks via textlint
-- **System verification**: Run `sh ~/dotfiles/scripts/verify.sh` to check all tools
+- **System verification**: Run `sh ~/scripts/verify.sh` to check all tools
