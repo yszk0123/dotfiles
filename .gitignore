@@ -11,6 +11,10 @@
 !.config/claude/agents/
 !.config/claude/commands/
 !.config/claude/settings.json
+dot_config/karabiner/
+dot_config/coc/
+dot_config/configstore/
+dot_config/
 .git/
 node_modules/
 tmp/
