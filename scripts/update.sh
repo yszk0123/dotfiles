@@ -36,11 +36,6 @@ if confirm_with_message "Execute install scripts?"; then
   done
 fi
 
-if confirm_with_message "Update dotfile links?"; then
-  echo_color "Updating dotfile links..." "32"
-  source "$HOME/dotfiles/scripts/linkDotfiles.sh"
-fi
-
 if confirm_with_message "Update macOS settings?"; then
   echo_color "Updating macOS settings..." "32"
   source "$HOME/dotfiles/scripts/updateMacSettings.sh"
