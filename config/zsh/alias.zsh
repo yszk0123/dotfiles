@@ -2,9 +2,18 @@
 # cf. [その他のオプションの調べ方](http://qiita.com/uasi/items/c4288dd835a65eb9d709#1-5)
 # cd ~abc => /a/b/c
 # hash -d abc=/a/b/c
-hash -d dot=~/dotfiles
 hash -d hub=~/src/github.com
 hash -d ssh=~/.ssh
+# }}}
+
+# chezmoi {{{
+alias cm='chezmoi'
+alias cmh='chezmoi help'
+alias cmd='chezmoi cd'
+alias cma='chezmoi add'
+alias cmd='chezmoi diff'
+alias cms='chezmoi status'
+alias cmap='chezmoi apply -v'
 # }}}
 
 # {{{
@@ -39,7 +48,7 @@ alias dcu='docker-compose up'
 # }}}
 
 # {{{
-alias claude-sandbox='sandbox-exec -f "$HOME/dotfiles/.config/sandbox-exec/permissive-open.sb" -D TARGET_DIR="$(pwd)" -D HOME_DIR="$HOME" claude'
+alias claude-sandbox='sandbox-exec -f "$HOME/.config/sandbox-exec/permissive-open.sb" -D TARGET_DIR="$(pwd)" -D HOME_DIR="$HOME" claude'
 # }}}
 
 # vim aliases handled by zsh/vim.zsh
@@ -72,21 +81,6 @@ function cdr {
     cd "$dir"
   fi
 }
-
-# cd to a worktree using fzf and gwq
-function cdw {
-  local dir="$(gwq list --json | jq -r '.[] | .path' | fzf)"
-  if [ ! -z "$dir" ] ; then
-    cd "$dir"
-  fi
-}
-function cdwg {
-  local dir="$(gwq list --global --json | jq -r '.[] | .path' | fzf)"
-  if [ ! -z "$dir" ] ; then
-    cd "$dir"
-  fi
-}
-
 
 # git switch a branch using fzf
 function gsw {

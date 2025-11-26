@@ -74,7 +74,7 @@ fi
 typeset -U path PATH
 path=(
   $HOME/.local/bin
-  $HOME/dotfiles/bin
+  $HOME/bin
   /opt/homebrew/bin
   /opt/homebrew/sbin
   /usr/local/bin

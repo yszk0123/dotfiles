@@ -6,5 +6,5 @@ fi
 
 for name in zsh tmux plain brew go npm pip; do
   echo_color "Installing $name commands ..." "32"
-  source "$HOME/dotfiles/scripts/install/$name.sh"
+  source "$HOME/scripts/install/$name.sh"
 done

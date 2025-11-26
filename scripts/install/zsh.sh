@@ -1,5 +1,5 @@
 #!/bin/bash -ue
-source "$HOME/dotfiles/scripts/common/utils.sh"
+source "$HOME/scripts/common/utils.sh"
 
 echo_color "=== Zsh Setup ===" "34"
 
