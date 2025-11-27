@@ -15,6 +15,7 @@ dot_config/karabiner/
 dot_config/coc/
 dot_config/configstore/
 dot_config/
+dot_zsh/
 .git/
 node_modules/
 tmp/

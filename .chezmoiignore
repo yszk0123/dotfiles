@@ -1,3 +1,6 @@
+dot_zsh/
+!dot_zsh/dot_zshrc
+
 biome.json
 package.json
 package-lock.json
