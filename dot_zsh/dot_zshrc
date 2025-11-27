@@ -1,13 +1,13 @@
 # Starship prompt initialization (installed via Homebrew)
 # Note: starship is used instead of powerlevel10k for consistency
 
-source "$HOME/dotfiles/scripts/common/utils.sh"
+source "$HOME/config/scripts/common/utils.sh"
 
 : "${ZDOTDIR:=~/.zsh}"
 
 function source_zsh_script() {
   local name="$1"
-  source "$HOME/dotfiles/zsh/$name.zsh"
+  source "$HOME/config/zsh/$name.zsh"
 }
 
 # Language
