@@ -1,3 +1,5 @@
+.config/claude/
+dot_config/claude/
 dot_zsh/
 !dot_zsh/dot_zshrc
 
