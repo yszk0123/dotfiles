@@ -18,3 +18,16 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+
+[gtr "editor"]
+	default = cursor
+
+[gtr "ai"]
+	default = claude
+
+[gtr "copy"]
+	include = .env
+	include = .env.local
+	include = mise.toml
+	include = mise.local.toml
+	include = CLAUDE.md
