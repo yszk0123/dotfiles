@@ -3,6 +3,7 @@
  * Claude Code のコンテキスト残量を常に表示する
  * https://zenn.dev/pnd/articles/claude-code-statusline
  */
+import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import readline from "node:readline";
@@ -23,6 +24,20 @@ process.stdin.on("end", async () => {
     const model = data.model?.display_name || "Unknown";
     const currentDir = path.basename(data.workspace?.current_dir || data.cwd || ".");
     const sessionId = data.session_id;
+    const workspaceDir = data.workspace?.current_dir || data.cwd || ".";
+
+    // Get Git branch
+    let gitBranch = "";
+    try {
+      gitBranch = execSync("git rev-parse --abbrev-ref HEAD", {
+        cwd: workspaceDir,
+        encoding: "utf8",
+        stdio: ["pipe", "pipe", "ignore"],
+      }).trim();
+    } catch (_error) {
+      // Not a git repository or git command failed
+      gitBranch = "";
+    }
 
     // Calculate token usage for current session
     let totalTokens = 0;
@@ -62,7 +77,8 @@ process.stdin.on("end", async () => {
     if (percentage >= 90) percentageColor = "\x1b[31m"; // Red
 
     // Build status line
-    const statusLine = `[${model}] 📁 ${currentDir} | 🪙 ${tokenDisplay} | ${percentageColor}${percentage}%\x1b[0m`;
+    const gitInfo = gitBranch ? ` | 🌿 ${gitBranch}` : "";
+    const statusLine = `[${model}] 📁 ${currentDir}${gitInfo} | 🪙 ${tokenDisplay} | ${percentageColor}${percentage}%\x1b[0m`;
 
     console.log(statusLine);
   } catch (_error) {
@@ -122,3 +138,4 @@ function formatTokenCount(tokens) {
   }
   return tokens.toString();
 }
+
