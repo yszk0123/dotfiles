@@ -1,5 +1,7 @@
 .config/claude/
+!.config/claude/*.mjs
 dot_config/claude/
+!dot_config/claude/*.mjs
 dot_zsh/
 !dot_zsh/dot_zshrc
 
