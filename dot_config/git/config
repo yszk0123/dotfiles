@@ -32,6 +32,7 @@
 	include = mise.local.toml
 	include = CLAUDE.md
 	include = .claude/*.json
+	include = .claude-local-plugins.json
 	exclude = "**/*.bak"
 	excludeDirs = "node_modules"
 	excludeDirs = ".venv"
