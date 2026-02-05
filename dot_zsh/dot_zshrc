@@ -77,6 +77,11 @@ if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
+# Ghostty shell integration (for working directory tracking in splits)
+if [[ -n "$GHOSTTY_RESOURCES_DIR" ]]; then
+  source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
+fi
+
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
 
