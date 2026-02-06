@@ -1,9 +1,13 @@
 .config/claude/
 !.config/claude/*.mjs
+!.config/claude/CLAUDE.md
 dot_config/claude/
+!dot_config/claude/CLAUDE.md
 !dot_config/claude/*.mjs
 dot_zsh/
 !dot_zsh/dot_zshrc
+
+node_modules/
 
 biome.json
 package.json
