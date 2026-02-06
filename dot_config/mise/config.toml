@@ -22,7 +22,7 @@ tfenv = "latest"
 "npm:@fission-ai/openspec" = "latest"
 "npm:@ast-grep/cli" = "latest"
 "npm:cdktf-cli" = "latest"
-chezmoi = "2.67.0"
+chezmoi = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
