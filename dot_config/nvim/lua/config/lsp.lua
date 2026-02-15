@@ -35,12 +35,10 @@ end
 -- Completion capabilities from blink.cmp
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
--- Setup LSP servers via mason-lspconfig
-mason_lspconfig.setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-  end,
-})
+-- Setup LSP servers installed by Mason
+for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
+  lspconfig[server_name].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
+end
