@@ -1,12 +1,7 @@
 -- LSP Configuration
 -- Neovim 0.11 built-in keymaps: K, grn, grr, gra, gri, gO, <C-s>
-local lspconfig = require("lspconfig")
-local mason = require("mason")
-local mason_lspconfig = require("mason-lspconfig")
-
--- Setup Mason
-mason.setup()
-mason_lspconfig.setup({
+require("mason").setup()
+require("mason-lspconfig").setup({
   ensure_installed = {
     "lua_ls",
     -- "pyright",
@@ -25,12 +20,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
--- Completion capabilities from blink.cmp
-local capabilities = require("blink.cmp").get_lsp_capabilities()
+-- Set capabilities for all servers via blink.cmp
+vim.lsp.config("*", {
+  capabilities = require("blink.cmp").get_lsp_capabilities(),
+})
 
--- Setup LSP servers installed by Mason
-for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
-  lspconfig[server_name].setup({
-    capabilities = capabilities,
-  })
-end
+-- Enable installed servers
+vim.lsp.enable(require("mason-lspconfig").get_installed_servers())
