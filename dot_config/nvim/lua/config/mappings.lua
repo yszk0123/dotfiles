@@ -1,6 +1,14 @@
--- Keymaps configuration
+-- Mappings and user commands
 local keymap = vim.keymap.set
 local opts = { silent = true }
+
+-- Rename command (Lua port of legacy vim/commands.vim :Rename)
+vim.api.nvim_create_user_command("Rename", function(o)
+  local old = vim.fn.expand("%:p")
+  vim.cmd("saveas " .. o.args)
+  vim.fn.delete(old)
+  vim.cmd("bdelete #")
+end, { nargs = 1, complete = "file" })
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -44,6 +52,10 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+
+-- Telescope file browser
+keymap("n", "<leader>fe", ":Telescope file_browser<CR>", { desc = "File browser" })
+keymap("n", "<leader>fd", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { desc = "File browser (current dir)" })
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)

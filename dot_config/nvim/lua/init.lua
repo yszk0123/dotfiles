@@ -67,9 +67,21 @@ require("lazy").setup({
   -- Fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-file-browser.nvim",
+    },
     config = function()
-      require("telescope").setup()
+      local telescope = require("telescope")
+      telescope.setup({
+        extensions = {
+          file_browser = {
+            hijack_netrw = false,
+            respect_gitignore = true,
+          },
+        },
+      })
+      telescope.load_extension("file_browser")
     end,
   },
 
@@ -143,6 +155,6 @@ require("lazy").setup({
   },
 })
 
--- Load keymaps and other configuration
-require("config.keymaps")
+-- Load mappings and other configuration
+require("config.mappings")
 require("config.options")
