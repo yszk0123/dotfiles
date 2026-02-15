@@ -1,21 +1,8 @@
 # Folders
-.bundle/cache/
-.config/karabiner/automatic_backups/
-.config/iterm2/
-.config/coc/extensions/
-.config/yarn/global/
-.config/gcloud/
-.config/raycast/extensions/
-.config/.wrangler/
-.config/
-!.config/claude/agents/
-!.config/claude/commands/
-!.config/claude/settings.json
 dot_config/karabiner/
 dot_config/coc/
 dot_config/configstore/
 dot_config/
-.git/
 node_modules/
 tmp/
 
