@@ -51,8 +51,6 @@ yarn.lock
 
 mise.toml
 .mcp.json
-.claude/
-!.claude/skills/
 
 # Serena
 .serena/

@@ -9,7 +9,6 @@
 "npm:bun" = "latest"
 "npm:ccmanager" = "latest"
 "npm:diff-so-fancy" = "latest"
-"npm:pnpm" = "latest"
 "npm:yarn" = "latest"
 gitui = "latest"
 go = "latest"
@@ -23,6 +22,7 @@ tfenv = "latest"
 "npm:@ast-grep/cli" = "latest"
 "npm:cdktf-cli" = "latest"
 chezmoi = "latest"
+"npm:pnpm" = "10.29.3"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
