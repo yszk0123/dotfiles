@@ -62,11 +62,6 @@ if [ -d "$HOME/.bun" ]; then
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
-# direnv integration
-if command -v direnv >/dev/null 2>&1; then
-  eval "$(direnv hook zsh)"
-fi
-
 # sheldon (zsh plugin manager) - defer loading
 if command -v sheldon >/dev/null 2>&1; then
   eval "$(sheldon source)"
