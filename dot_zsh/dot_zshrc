@@ -41,7 +41,6 @@ source_zsh_script alias
 
 # Development tools
 source_zsh_script git
-source_zsh_script mise
 source_zsh_script vim
 
 # OS-specific optimizations
