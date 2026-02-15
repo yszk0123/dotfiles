@@ -1,63 +1,25 @@
 # Homebrew taps
 
 # === Core Development Tools ===
-# Version control and repository management
 brew "git"
 brew "git-absorb"      # Automatically absorb fixup commits
-brew "gh"              # GitHub CLI
-brew "ghq"             # Git repository organizer
 
-# Programming languages and runtimes
-brew "go"              # Go programming language
-brew "deno"            # JavaScript/TypeScript runtime
-
-# Build tools and dependencies
-brew "cmake"           # Cross-platform build system
+# === Build Dependencies ===
 brew "protobuf"        # Protocol buffers
 
-# === Text Processing & File Operations ===
-# Enhanced file listing and searching
-brew "bat"             # Syntax highlighting cat replacement
-brew "eza"             # Modern ls replacement
-brew "ripgrep"         # Fast text search
-brew "fzf"             # Fuzzy finder
+# === Text Processing ===
 brew "rename"          # Bulk file renaming
-brew "tokei"           # Code statistics
-
-# Text processing utilities
-brew "jq"              # JSON processor
-
-# === Package Management ===
-brew "pnpm"            # Fast Node.js package manager
 
 # === Development Environment ===
-# Shell and terminal enhancements
 brew "zsh"             # Modern shell (plugins managed by sheldon)
-brew "starship"        # Cross-shell prompt
 brew "sheldon"         # Zsh plugin manager
 brew "tmux"            # Terminal multiplexer
 
-# Editors
-brew "neovim"          # Modern Vim
-
-# === Code Quality & DevOps ===
-brew "pre-commit"      # Git pre-commit hooks
-brew "shellcheck"      # Shell script linter
-
-# === Cloud & Infrastructure ===
-brew "awscli"          # AWS command line interface
-brew "kubernetes-cli"  # Kubernetes command line tool
-
-# === Network & Download Tools ===
-brew "xh"              # Modern HTTP client
-
 # === Desktop Applications ===
-# Fonts
 cask "font-hack-nerd-font"    # Programming font with icons
-
-# Input methods and system utilities
 cask "google-japanese-ime"    # Japanese input method
 cask "karabiner-elements"     # Keyboard customization
+
 # === VS Code Extensions ===
 # Essential core extensions
 vscode "ms-vscode-remote.remote-ssh"        # Remote SSH development

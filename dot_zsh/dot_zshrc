@@ -1,5 +1,5 @@
-# Starship prompt initialization (installed via Homebrew)
-# Note: starship is used instead of powerlevel10k for consistency
+# Zsh configuration
+# Starship prompt is managed by mise
 
 source "$HOME/scripts/common/utils.sh"
 
@@ -62,6 +62,14 @@ if [ -d "$HOME/.bun" ]; then
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
+# mise activate (must be before starship/sheldon for mise-managed tools)
+if is_exists "/opt/homebrew/bin/mise"; then
+  eval "$(/opt/homebrew/bin/mise activate zsh)"
+fi
+if is_exists "$HOME/.local/bin/mise"; then
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
+
 # sheldon (zsh plugin manager) - defer loading
 if command -v sheldon >/dev/null 2>&1; then
   eval "$(sheldon source)"
@@ -87,16 +95,8 @@ export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/.cargo/bin"
 
 # Package manager configurations:
-# - Homebrew: managed via Brewfile
-# - npm: global packages installed as needed
-# - mise: handles Node.js and Python versions
-
-if is_exists "/opt/homebrew/bin/mise"; then
-  eval "$(/opt/homebrew/bin/mise activate zsh)"
-fi
-if is_exists "$HOME/.local/bin/mise"; then
-  eval "$($HOME/.local/bin/mise activate zsh)"
-fi
+# - Homebrew: system packages managed via Brewfile
+# - mise: handles runtimes, CLI tools, and Node.js/Python versions
 
 if command -v gwq >/dev/null 2>&1; then
   source <(gwq completion zsh)

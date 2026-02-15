@@ -18,6 +18,36 @@ watchexec = "latest"
 python = "3"
 chezmoi = "latest"
 
+# === Homebrew から移行 ===
+# Core development tools
+deno = "latest"
+"github-cli" = "latest"
+ghq = "latest"
+
+# Text processing & file operations
+bat = "latest"
+eza = "latest"
+ripgrep = "latest"
+fzf = "latest"
+jq = "latest"
+tokei = "latest"
+
+# Development environment
+starship = "latest"
+neovim = "latest"
+
+# Code quality & DevOps
+pre-commit = "latest"
+shellcheck = "latest"
+cmake = "latest"
+
+# Cloud & infrastructure
+awscli = "latest"
+kubectl = "latest"
+
+# Network tools
+xh = "latest"
+
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
 legacy_version_file = true

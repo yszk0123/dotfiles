@@ -46,7 +46,10 @@ fi
 if command -v aws >/dev/null 2>&1; then
   aws() {
     unfunction aws
-    complete -C '/opt/homebrew/bin/aws_completer' aws
+    local completer="$(command -v aws_completer 2>/dev/null)"
+    if [[ -n "$completer" ]]; then
+      complete -C "$completer" aws
+    fi
     command aws "$@"
   }
 fi
