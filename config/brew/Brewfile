@@ -6,7 +6,6 @@ brew "git"
 brew "git-absorb"      # Automatically absorb fixup commits
 brew "gh"              # GitHub CLI
 brew "ghq"             # Git repository organizer
-brew "tig"             # Text-mode Git interface
 
 # Programming languages and runtimes
 brew "go"              # Go programming language
