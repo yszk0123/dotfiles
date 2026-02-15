@@ -21,7 +21,6 @@ chezmoi = "latest"
 # === Homebrew から移行 ===
 # Core development tools
 deno = "latest"
-"github-cli" = "latest"
 ghq = "latest"
 
 # Text processing & file operations
