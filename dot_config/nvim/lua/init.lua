@@ -1,7 +1,7 @@
 -- Modern Neovim configuration with lazy.nvim and built-in LSP
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
@@ -16,9 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Set leader key early
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
-
--- Load legacy vim settings first for compatibility
-vim.cmd('runtime vim/settings.vim')
 
 -- Setup lazy.nvim with plugins
 require("lazy").setup({
@@ -155,6 +152,20 @@ require("lazy").setup({
     "folke/which-key.nvim",
     config = function()
       require("which-key").setup()
+    end,
+  },
+
+  -- Terminal integration
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = function()
+      require("toggleterm").setup()
+      local Terminal = require("toggleterm.terminal").Terminal
+      local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+      function _LAZYGIT_TOGGLE()
+        lazygit:toggle()
+      end
     end,
   },
 })
