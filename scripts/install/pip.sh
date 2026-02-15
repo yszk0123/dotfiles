@@ -1,24 +1,16 @@
 #!/bin/bash
 
-# Python packages should be managed with uv or pipx for better isolation
+# Python tools managed via uv tool install for better isolation
 # Global pip installs are discouraged in favor of virtual environments
 
 if ! command -v uv &>/dev/null; then
-    echo "Installing uv for Python package management..."
-    if confirm_with_message "Install uv via pipx?"; then
-        pipx install uv
-    fi
-fi
-
-if ! command -v pipx &>/dev/null; then
-    echo "pipx not found. Install it via Homebrew: brew install pipx"
+    echo "uv not found. Install it first: curl -LsSf https://astral.sh/uv/install.sh | sh"
     exit 1
 fi
 
-# Essential Python tools installed via pipx for global access
-if confirm_with_message "Install essential Python tools via pipx?"; then
-    pipx install black
-    pipx install flake8
-    pipx install mypy
-    pipx install pytest
+# Essential Python tools installed via uv for global access
+if confirm_with_message "Install essential Python tools via uv?"; then
+    uv tool install ruff
+    uv tool install mypy
+    uv tool install pytest
 fi

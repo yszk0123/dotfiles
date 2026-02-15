@@ -22,18 +22,30 @@ vim.cmd('runtime vim/settings.vim')
 
 -- Setup lazy.nvim with plugins
 require("lazy").setup({
+  -- Completion
+  {
+    "saghen/blink.cmp",
+    dependencies = { "rafamadriz/friendly-snippets" },
+    version = "1.*",
+    event = "InsertEnter",
+    opts = {
+      keymap = { preset = "super-tab" },
+      appearance = { nerd_font_variant = "mono" },
+      sources = { default = { "lsp", "path", "snippets", "buffer" } },
+      completion = {
+        documentation = { auto_show = true, auto_show_delay_ms = 500 },
+      },
+    },
+    opts_extend = { "sources.default" },
+  },
+
   -- LSP Configuration
   {
     "neovim/nvim-lspconfig",
     dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
-      "hrsh7th/nvim-cmp",
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "L3MON4D3/LuaSnip",
-      "saadparwaiz1/cmp_luasnip",
+      "saghen/blink.cmp",
     },
     config = function()
       require("config.lsp")
@@ -103,14 +115,6 @@ require("lazy").setup({
         highlight = { enable = true },
         indent = { enable = true },
       })
-    end,
-  },
-
-  -- Modern commenting
-  {
-    "numToStr/Comment.nvim",
-    config = function()
-      require("Comment").setup()
     end,
   },
 

@@ -61,7 +61,7 @@ alias mv='mv -i'
 # }}}
 
 # Wrap tmux to avoid issues with environment loading
-alias tmux='direnv exec / tmux'
+alias tmux='tmux'
 
 # Global aliases {{{
 alias -g P='| perl -nle'
@@ -69,7 +69,7 @@ alias -g S='| sed'
 # Format (pretty print)
 alias -g G='| grep --color=always'
 alias -g L="| less --tabs=1,5 -R"
-alias -g D="| diff-so-fancy | less --tabs=1,5 -R"
+alias -g D="| delta"
 # }}}
 
 # {{{
