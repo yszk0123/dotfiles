@@ -29,14 +29,14 @@ eza = "latest"
 ripgrep = "latest"
 fzf = "latest"
 jq = "latest"
-tokei = "latest"
+# tokei = "latest"
 
 # Development environment
 starship = "latest"
 neovim = "latest"
 
 # Code quality & DevOps
-pre-commit = "latest"
+# pre-commit = "latest"
 shellcheck = "latest"
 cmake = "latest"
 
