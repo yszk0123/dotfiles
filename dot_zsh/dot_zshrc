@@ -41,7 +41,6 @@ source_zsh_script alias
 
 # Development tools
 source_zsh_script git
-source_zsh_script vim
 
 # OS-specific optimizations
 source_zsh_script os
@@ -78,6 +77,9 @@ if [[ -n "${__mise_bin:-}" ]]; then
   fi
   _mise_hook_chpwd
 fi
+
+# Tools depending on mise-managed binaries (nvim, etc.)
+source_zsh_script vim
 
 # sheldon (zsh plugin manager) - defer loading
 if command -v sheldon >/dev/null 2>&1; then
