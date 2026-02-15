@@ -62,11 +62,21 @@ if [ -d "$HOME/.bun" ]; then
 fi
 
 # mise activate (must be before starship/sheldon for mise-managed tools)
-if is_exists "/opt/homebrew/bin/mise"; then
-  eval "$(/opt/homebrew/bin/mise activate zsh)"
-fi
+# --no-hook-env: skip precmd hook (~460ms overhead per prompt)
+# chpwd hook: run hook-env only on directory change for env var updates
 if is_exists "$HOME/.local/bin/mise"; then
-  eval "$($HOME/.local/bin/mise activate zsh)"
+  __mise_bin="$HOME/.local/bin/mise"
+elif is_exists "/opt/homebrew/bin/mise"; then
+  __mise_bin="/opt/homebrew/bin/mise"
+fi
+if [[ -n "${__mise_bin:-}" ]]; then
+  eval "$($__mise_bin activate zsh --no-hook-env)"
+  _mise_hook_chpwd() { eval "$($__mise_bin hook-env -s zsh)"; }
+  typeset -ag chpwd_functions
+  if [[ -z "${chpwd_functions[(r)_mise_hook_chpwd]+1}" ]]; then
+    chpwd_functions=( _mise_hook_chpwd ${chpwd_functions[@]} )
+  fi
+  _mise_hook_chpwd
 fi
 
 # sheldon (zsh plugin manager) - defer loading
