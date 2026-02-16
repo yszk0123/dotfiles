@@ -3,6 +3,11 @@ dot_config/karabiner/
 dot_config/coc/
 dot_config/configstore/
 dot_config/
+dot_claude/*
+!dot_claude/agents/
+!dot_claude/commands/
+!dot_claude/settings.json
+!dot_claude/statusLine.mjs
 node_modules/
 tmp/
 

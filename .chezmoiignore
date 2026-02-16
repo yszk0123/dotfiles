@@ -1,9 +1,9 @@
-.config/claude/
-!.config/claude/*.mjs
-!.config/claude/CLAUDE.md
 dot_config/claude/
-!dot_config/claude/CLAUDE.md
-!dot_config/claude/*.mjs
+dot_claude/*
+!dot_claude/agents/
+!dot_claude/commands/
+!dot_claude/settings.json
+!dot_claude/statusLine.mjs
 dot_zsh/
 !dot_zsh/dot_zshrc
 
