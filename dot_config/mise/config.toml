@@ -17,7 +17,6 @@ usage = "latest"
 watchexec = "latest"
 python = "3"
 chezmoi = "latest"
-yarn = "v1.22.22"
 
 # === Homebrew から移行 ===
 # Core development tools
