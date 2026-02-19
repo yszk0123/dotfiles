@@ -14,23 +14,3 @@
 
 [color]
 	ui = true
-
-[gtr "editor"]
-	default = cursor
-
-[gtr "ai"]
-	default = claude
-
-[gtr "copy"]
-	include = .env
-	include = .env.local
-	include = mise.toml
-	include = mise.local.toml
-	include = CLAUDE.md
-	include = .claude/*.json
-	include = .claude-local-plugins.json
-	exclude = "**/*.bak"
-	excludeDirs = "node_modules"
-	excludeDirs = ".venv"
-	excludeDirs = "vendor"
-	excludeDirs = "tmp"

@@ -3,6 +3,7 @@
 # === Core Development Tools ===
 brew "git"
 brew "git-absorb"      # Automatically absorb fixup commits
+brew "worktrunk"       # Git worktree management
 
 # === Build Dependencies ===
 brew "protobuf"        # Protocol buffers

@@ -46,10 +46,5 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
 
-# gtr
-if [ -s "$HOME/src/github.com/coderabbitai/git-worktree-runner/bin/gtr" ]; then
-  export PATH="$PATH:$HOME/src/github.com/coderabbitai/git-worktree-runner/bin"
-fi
-
 # sheldon is loaded in .zshrc
 # npm global packages are discouraged, use npx or project-local installs

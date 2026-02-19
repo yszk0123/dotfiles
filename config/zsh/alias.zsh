@@ -83,69 +83,18 @@ function gsw {
 }
 # }}}
 
-# git worktree (gtr) {{{
-# list git worktrees
-alias gtrls='git worktree list'
+# git worktree (worktrunk) {{{
+alias wtls='wt list'
+alias wts='wt switch'
+alias wtn='wt switch --create'
+alias wtr='wt remove'
+alias wtm='wt merge'
 
-# cd to a git worktree using fzf
+# cd to a worktree using fzf (raw git worktree fallback)
 function cdw {
   local dir="$(git worktree list --porcelain | grep '^worktree ' | sed 's/^worktree //' | fzf --preview 'ls -la {}')"
   if [ -n "$dir" ]; then
     cd "$dir"
-  fi
-}
-
-# cd to a git worktree using gtr go and fzf (select by branch name)
-function gtrg {
-  local branch="$(git branch | sed 's/^[+* ]*//' | fzf --preview 'git log --oneline -10 {}')"
-  if [ -n "$branch" ]; then
-    local dir="$(git gtr go "$branch" 2>/dev/null | tail -1)"
-    if [ -n "$dir" ] && [ -d "$dir" ]; then
-      cd "$dir"
-    else
-      echo "Worktree for '$branch' not found"
-    fi
-  fi
-}
-alias gg='gtrg'
-
-# open a git worktree in editor using fzf
-function gtre {
-  local branch="$(git branch | sed 's/^[+* ]*//' | fzf --preview 'git log --oneline -10 {}')"
-  if [ -n "$branch" ]; then
-    git gtr editor "$branch"
-  fi
-}
-
-# open a git worktree with AI tool using fzf
-function gtra {
-  local branch="$(git branch | sed 's/^[+* ]*//' | fzf --preview 'git log --oneline -10 {}')"
-  if [ -n "$branch" ]; then
-    git gtr ai "$branch"
-  fi
-}
-
-# create a new worktree for a branch
-function gtrn {
-  local branch="${1:-}"
-  if [ -z "$branch" ]; then
-    branch="$(git branch | sed 's/^[+* ]*//' | fzf --preview 'git log --oneline -10 {}')"
-  fi
-  if [ -n "$branch" ]; then
-    git gtr new "$branch"
-  fi
-}
-
-# remove a git worktree using fzf
-function gtrr {
-  local dir="$(git worktree list --porcelain | grep '^worktree ' | sed 's/^worktree //' | fzf --preview 'ls -la {}')"
-  if [ -n "$dir" ]; then
-    echo "Remove worktree: $dir"
-    read -q "REPLY?Are you sure? [y/N] "
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-      git worktree remove "$dir"
-    fi
   fi
 }
 # }}}

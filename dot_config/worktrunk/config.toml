@@ -1,0 +1,6 @@
+# Worktree path: .worktrees/{branch-name}/ inside each repo
+worktree-path = "{{ repo_path }}/.worktrees/{{ branch | sanitize }}"
+
+# Copy gitignored files from primary worktree on creation
+[post-create]
+copy = "wt step copy-ignored"

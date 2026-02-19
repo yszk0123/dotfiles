@@ -1,5 +1,6 @@
 # Folders
 .bundle/
+.worktrees/
 .vs/
 bower_components
 dist/
