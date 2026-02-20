@@ -3,17 +3,12 @@
 # === Core Development Tools ===
 brew "git"
 brew "git-absorb"      # Automatically absorb fixup commits
-brew "worktrunk"       # Git worktree management
-
-# === Build Dependencies ===
-brew "protobuf"        # Protocol buffers
 
 # === Text Processing ===
 brew "rename"          # Bulk file renaming
 
 # === Development Environment ===
 brew "zsh"             # Modern shell (plugins managed by sheldon)
-brew "sheldon"         # Zsh plugin manager
 brew "tmux"            # Terminal multiplexer
 
 # === Desktop Applications ===

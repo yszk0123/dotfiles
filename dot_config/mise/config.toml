@@ -36,6 +36,9 @@ jq = "latest"
 starship = "latest"
 neovim = "latest"
 
+# Build tools
+protoc = "latest"
+
 # Code quality & DevOps
 # pre-commit = "latest"
 shellcheck = "latest"
@@ -47,6 +50,12 @@ kubectl = "latest"
 
 # Network tools
 xh = "latest"
+
+# Zsh plugin manager
+"aqua:rossmacarthur/sheldon" = "latest"
+
+# Git worktree management
+"github:max-sixty/worktrunk" = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
