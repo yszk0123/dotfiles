@@ -27,6 +27,7 @@ alias glga='git log --graph --oneline --decorate --color --all'
 alias glg='git log --graph --oneline --decorate --color'
 alias gll='git log --color'
 alias gls='git ls-files'
+alias glsr='git ls-files | rg'
 alias glsi='git ls-files --others --i --exclude --standard'
 
 alias gs='git status'
