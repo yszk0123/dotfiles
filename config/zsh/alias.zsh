@@ -50,6 +50,17 @@ alias dcu='docker-compose up'
 
 # {{{
 alias claude-sandbox='sandbox-exec -f "$HOME/.config/sandbox-exec/permissive-open.sb" -D TARGET_DIR="$(pwd)" -D HOME_DIR="$HOME" claude'
+
+# ccp: claude code with plugins
+# Usage: ccp web code-simplifier web-review
+# Requires _CCP_PLUGIN_BASE to be set in ~/.zshrc.local
+function ccp {
+  local args=(claude --model opusplan)
+  for plugin in "$@"; do
+    args+=(--plugin-dir "$_CCP_PLUGIN_BASE/$plugin")
+  done
+  "${args[@]}"
+}
 # }}}
 
 # vim aliases handled by zsh/vim.zsh
