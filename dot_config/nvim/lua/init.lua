@@ -84,8 +84,26 @@ require("lazy").setup({
       local telescope = require("telescope")
       telescope.setup({
         defaults = {
-          hidden = true,
-          file_ignore_patterns = { "^%.git/" },
+          vimgrep_arguments = {
+            "rg", "--color=never", "--no-heading", "--with-filename",
+            "--line-number", "--column", "--smart-case", "--hidden",
+            "--glob", "!.git/",
+            "--glob", "!node_modules/",
+            "--glob", "!tmp/",
+            "--glob", "!data/",
+          },
+        },
+        pickers = {
+          find_files = {
+            hidden = true,
+            find_command = {
+              "fd", "--type", "f", "--hidden",
+              "--exclude", ".git",
+              "--exclude", "node_modules",
+              "--exclude", "tmp",
+              "--exclude", "data",
+            },
+          },
         },
         extensions = {
           file_browser = {
