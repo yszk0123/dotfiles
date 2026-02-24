@@ -5,6 +5,7 @@ brew "git"
 brew "git-absorb"      # Automatically absorb fixup commits
 
 # === Text Processing ===
+brew "fd"              # Fast file finder (used by telescope.nvim)
 brew "rename"          # Bulk file renaming
 
 # === Development Environment ===
