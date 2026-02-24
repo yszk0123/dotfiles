@@ -15,6 +15,7 @@ A modern, well-structured dotfiles repository for macOS development environment 
 ### Prerequisites
 
 1. Install Xcode Command Line Tools:
+
    ```bash
    xcode-select --install
    ```
@@ -52,6 +53,7 @@ sh ~/scripts/verify.sh
 ## 🛠️ What's Included
 
 ### Development Tools
+
 - **Editors**: Neovim (modern config), VS Code (comprehensive extensions)
 - **Shell**: zsh with Starship prompt, optimized startup time
 - **Version Control**: Git with extensive aliases and configuration
@@ -59,12 +61,14 @@ sh ~/scripts/verify.sh
 - **Package Managers**: Homebrew, mise, sheldon, uv
 
 ### Terminal Enhancement
+
 - **Prompt**: Starship (fast, customizable)
 - **File Navigation**: eza, bat, fzf, ripgrep
 - **Terminal Multiplexer**: tmux with modern configuration
 - **Shell Plugins**: Auto-suggestions, syntax highlighting, completions
 
 ### Security & Quality
+
 - **Git Security**: Comprehensive .gitignore with security patterns
 - **Key Management**: Karabiner Elements for keyboard customization
 
@@ -95,11 +99,11 @@ dotfiles/
 
 ### Environment Variables
 
-| Variable | Purpose | Required |
-|----------|---------|----------|
-| `ZDOTDIR` | Zsh configuration directory | ✅ |
-| `GITLAB_PRIVATE_TOKEN` | GitLab API access | Optional |
-| `HOMEBREW_GITHUB_API_TOKEN` | Avoid GitHub rate limits | Optional |
+| Variable                    | Purpose                     | Required |
+| --------------------------- | --------------------------- | -------- |
+| `ZDOTDIR`                   | Zsh configuration directory | ✅       |
+| `GITLAB_PRIVATE_TOKEN`      | GitLab API access           | Optional |
+| `HOMEBREW_GITHUB_API_TOKEN` | Avoid GitHub rate limits    | Optional |
 
 ### Font Setup
 
@@ -148,6 +152,16 @@ time zsh -i -c exit
 2. **Shell Plugins**: Add to `.config/sheldon/plugins.toml`
 3. **Runtimes**: Configure in `.config/mise/config.toml`
 4. **VS Code Extensions**: Add to `Brewfile` under `vscode` entries
+
+### Local Overrides
+
+Machine-specific settings that should not be committed to the repository can be placed in `~/.zshrc.local`. This file is sourced at the end of `.zshrc` if it exists.
+
+```zsh
+# ~/.zshrc.local (not managed by dotfiles)
+export MY_PRIVATE_TOKEN=...
+_CCP_PLUGIN_BASE=~/path/to/plugins
+```
 
 ### Performance Tuning
 
