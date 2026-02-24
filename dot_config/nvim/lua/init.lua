@@ -83,6 +83,10 @@ require("lazy").setup({
     config = function()
       local telescope = require("telescope")
       telescope.setup({
+        defaults = {
+          hidden = true,
+          file_ignore_patterns = { "^%.git/" },
+        },
         extensions = {
           file_browser = {
             hijack_netrw = false,
