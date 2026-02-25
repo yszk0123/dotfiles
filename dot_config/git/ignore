@@ -50,7 +50,6 @@ yarn.lock
 *~
 *.tmp
 
-mise.toml
 .mcp.json
 
 # Serena
