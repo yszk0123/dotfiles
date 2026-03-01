@@ -116,6 +116,15 @@
             "command": "~/config/claude/hooks/check-command-safety.sh"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/rtk-rewrite.sh"
+          }
+        ]
       }
     ],
     "Stop": [
@@ -150,3 +159,4 @@
     "lastShownTime": 1754031629367
   }
 }
+
