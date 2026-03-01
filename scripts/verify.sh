@@ -21,7 +21,6 @@ echo_color "\n--- Essential Tools ---" "33"
 check_command "git" "Git"
 check_command "nvim" "Neovim"
 check_command "zsh" "Zsh"
-check_command "starship" "Starship"
 check_command "mise" "Mise"
 check_command "sheldon" "Sheldon"
 
@@ -70,7 +69,6 @@ check_file() {
 check_file "$HOME/.zshrc" "Zsh config"
 check_file "$HOME/.config/nvim/init.vim" "Neovim init.vim"
 check_file "$HOME/.config/nvim/lua/init.lua" "Neovim init.lua"
-check_file "$HOME/.config/starship.toml" "Starship config"
 check_file "$HOME/.config/mise/config.toml" "Mise config"
 check_file "$HOME/.config/sheldon/plugins.toml" "Sheldon config"
 

@@ -1,5 +1,5 @@
 # Zsh configuration
-# Starship prompt is managed by mise
+# Prompt: Pure (sindresorhus/pure) via sheldon
 
 source "$HOME/scripts/common/utils.sh"
 
@@ -81,15 +81,17 @@ fi
 # Tools depending on mise-managed binaries (nvim, etc.)
 source_zsh_script vim
 
+# Pure prompt configuration (must be set before sheldon loads pure.zsh)
+source_zsh_script prompt
+
 # sheldon (zsh plugin manager) - defer loading
 if command -v sheldon >/dev/null 2>&1; then
   eval "$(sheldon source)"
 fi
 
-# starship prompt (modern cross-shell prompt) - defer loading
-if command -v starship >/dev/null 2>&1; then
-  eval "$(starship init zsh)"
-fi
+# Register RPROMPT supplement after sheldon (requires add-zsh-hook)
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd _prompt_supplement_precmd
 
 # Ghostty shell integration (for working directory tracking in splits)
 if [[ -n "$GHOSTTY_RESOURCES_DIR" ]]; then

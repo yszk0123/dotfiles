@@ -12,9 +12,6 @@ echo 'eval "$($HOME/.local/bin/mise activate bash)"' >> ~/.bashrc
 # Install sheldon for zsh plugin management
 curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/rossmacarthur/sheldon/main/install.sh | sh
 
-# Install starship prompt
-curl -sS https://starship.rs/install.sh | sh -s -- -y
-
 # Install essential development tools
 sudo apt-get update
 sudo apt-get install -y \

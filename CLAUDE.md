@@ -9,30 +9,35 @@ This is a personal dotfiles repository for macOS that manages development enviro
 ## Common Commands
 
 ### Setup and Maintenance
+
 - **Initial/update**: `sh ~/scripts/update.sh` (comprehensive update with verification)
 - **Update macOS settings**: `sh ~/scripts/updateMacSettings.sh`
 - **System verification**: `sh ~/scripts/verify.sh`
 
 ### Package Management
+
 - **Install/update Homebrew packages**: `brew bundle` (uses `Brewfile`)
 - **Update mise-managed runtimes**: `mise upgrade` (Node.js v24, Python 3.13)
 - **Update zsh plugins**: `sheldon lock`
 - **Update Python packages**: `uv sync` (managed via `pyproject.toml`)
 
 ### Development Commands
+
 - **Shell script linting**: `shellcheck scripts/*.sh scripts/**/*.sh`
 - **Pre-commit hooks**: `pre-commit install` (initial setup), `pre-commit run --all-files` (run all checks)
 - **Documentation linting**: `pnpm textlint docs/**/*.md` (Japanese technical writing checks)
 - **Shell startup performance**: `time zsh -i -c exit`
 
 ### Shell Configuration
+
 - **Change default shell to zsh**: `chsh -s <path/to/zsh>`
 - **Reload zsh configuration**: `source ~/.zshrc` (configuration files are in `zsh/`)
-- **Prompt**: Starship (configured in `.config/starship.toml`)
+- **Prompt**: Pure (sindresorhus/pure, loaded via sheldon, configured in `config/zsh/prompt.zsh`)
 
 ## Architecture and Structure
 
 ### Configuration Organization
+
 - **`.config/`** - XDG-compliant configuration files for modern tools (git, mise, ghostty, karabiner, etc.)
 - **`zsh/`** - Modular zsh configuration split by function (aliases, completion, history, keybindings, git integration)
 - **`scripts/`** - Installation and maintenance automation with individual tool installers in `scripts/install/`
@@ -41,6 +46,7 @@ This is a personal dotfiles repository for macOS that manages development enviro
 - **`docs/`** - Documentation and planning files
 
 ### Package and Runtime Management
+
 - **Homebrew** - Primary package manager (managed via `Brewfile`)
 - **mise** - Runtime version manager for Node.js (v24), Python (3.13), and other tools
   - Configuration: `.config/mise/config.toml`
@@ -50,19 +56,21 @@ This is a personal dotfiles repository for macOS that manages development enviro
 - **pnpm** - Node.js package manager for project dependencies
 
 ### Development Environment
+
 - **Python**: Version 3.13 (managed via mise)
   - Dependencies: markitdown (pyproject.toml)
   - Testing: pytest (installed via pipx)
-- **Node.js**: Version 24 LTS (managed via mise)  
+- **Node.js**: Version 24 LTS (managed via mise)
   - DevDependencies: textlint with Japanese writing presets
 - **Git integration**: Extensive aliases and configuration in `zsh/git.zsh` and `.config/git/`
-- **Terminal enhancement**: starship prompt, fzf, ripgrep, bat, eza
+- **Terminal enhancement**: Pure prompt, fzf, ripgrep, bat, eza
 - **Editor support**:
   - Neovim with lazy.nvim, built-in LSP, and modern plugins
   - VS Code with comprehensive extensions via Brewfile
   - Legacy Vim support for compatibility
 
 ### Claude Code Integration
+
 - **Command hooks** in `claude/hooks/`:
   - `ai-principles-reminder.sh` - AI ethics reminders
   - `check-command-safety.sh` - Command safety validation
@@ -70,6 +78,7 @@ This is a personal dotfiles repository for macOS that manages development enviro
   - `notify-command-stop.sh` - Stop notifications
 
 ### Key Environment Variables
+
 - **`ZDOTDIR`** - Required for installation scripts (set to `$HOME/.zsh`)
 - **`GITLAB_PRIVATE_TOKEN`** - For GitLab API access
 - **`HOMEBREW_GITHUB_API_TOKEN`** - To avoid GitHub API rate limits

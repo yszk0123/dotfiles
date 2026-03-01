@@ -32,7 +32,6 @@ jq = "latest"
 # tokei = "latest"
 
 # Development environment
-starship = "latest"
 neovim = "latest"
 
 # Build tools
