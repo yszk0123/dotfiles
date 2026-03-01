@@ -130,3 +130,8 @@ if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)
 if command -v turso >/dev/null 2>&1; then
   export PATH="$PATH:$HOME/.turso"
 fi
+
+## jj
+autoload -U compinit
+compinit
+source <(jj util completion zsh)

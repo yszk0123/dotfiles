@@ -55,6 +55,7 @@ xh = "latest"
 
 # Git worktree management
 "github:max-sixty/worktrunk" = "latest"
+"aqua:jj-vcs/jj" = "latest"
 
 [settings]
 # Enable legacy version files (.node-version, .python-version, etc.)
