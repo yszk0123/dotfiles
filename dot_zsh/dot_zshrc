@@ -132,6 +132,8 @@ if command -v turso >/dev/null 2>&1; then
 fi
 
 ## jj
-autoload -U compinit
-compinit
-source <(jj util completion zsh)
+if command -v jj >/dev/null 2>&1; then
+  autoload -U compinit
+  compinit
+  source <(jj util completion zsh)
+fi
