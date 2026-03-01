@@ -125,3 +125,8 @@ if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)
 
 # Local overrides (not managed by dotfiles)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# Turso
+if command -v turso >/dev/null 2>&1; then
+  export PATH="$PATH:$HOME/.turso"
+fi
