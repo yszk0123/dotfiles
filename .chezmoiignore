@@ -2,6 +2,7 @@ dot_config/claude/
 dot_claude/*
 !dot_claude/agents/
 !dot_claude/commands/
+!dot_claude/hooks/
 !dot_claude/settings.json
 !dot_claude/statusLine.mjs
 dot_zsh/
