@@ -49,6 +49,9 @@ alias lg='lazygit'
 alias greb='git rebase'
 alias grebi='git rebase -i'
 alias gres='git reset'
+
+alias gg='git grep'
+alias gge='git grep -E'
 # }}}
 
 # vim:set ft=zsh:
