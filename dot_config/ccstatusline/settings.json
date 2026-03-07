@@ -12,6 +12,14 @@
         "type": "separator"
       },
       {
+        "id": "ac0f9573-791a-4246-9630-406396ea8890",
+        "type": "output-style"
+      },
+      {
+        "id": "4a2396bc-a2b7-45c1-aeac-ad8a27ba9660",
+        "type": "separator"
+      },
+      {
         "id": "3",
         "type": "context-length",
         "color": "brightBlack"
@@ -46,25 +54,41 @@
         "type": "separator"
       },
       {
-        "id": "2b8863fa-be12-4906-a251-eaeb0ed711e3",
-        "type": "reset-timer"
+        "id": "5e16b5d5-6a93-459e-ab93-42dcf410b6e0",
+        "type": "session-cost",
+        "color": "brightWhite"
       },
       {
         "id": "581c530f-6f6a-4ad0-b2f0-11fa54ee6ec2",
         "type": "separator"
       },
       {
-        "id": "5e16b5d5-6a93-459e-ab93-42dcf410b6e0",
-        "type": "session-cost",
-        "color": "brightWhite"
+        "id": "d32acae0-ede0-4b33-8492-4adbfea3f8fe",
+        "type": "session-usage"
+      },
+      {
+        "id": "3e563de4-23a1-452d-93fb-7153ee966bb2",
+        "type": "separator"
+      },
+      {
+        "id": "2b8863fa-be12-4906-a251-eaeb0ed711e3",
+        "type": "reset-timer"
+      },
+      {
+        "id": "38cb5b49-1599-4c3d-a62f-cefb11e49858",
+        "type": "separator"
+      },
+      {
+        "id": "63d12a42-c9e5-4605-80d2-a5b450866a81",
+        "type": "weekly-usage"
       },
       {
         "id": "9d128051-d21f-412e-8c7b-710af2c7f49f",
         "type": "separator"
       },
       {
-        "id": "47d03b1a-7bdc-4e1e-944d-5df10aa18e7a",
-        "type": "session-clock"
+        "id": "a0902811-424c-4931-b985-0b85025ecf84",
+        "type": "weekly-reset-timer"
       }
     ],
     []
