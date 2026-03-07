@@ -125,6 +125,16 @@
             "command": "~/.claude/hooks/rtk-rewrite.sh"
           }
         ]
+      },
+      {
+        "_tag": "ccstatusline-managed",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ccstatusline --hook"
+          }
+        ],
+        "matcher": "Skill"
       }
     ],
     "Stop": [
@@ -148,15 +158,26 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "_tag": "ccstatusline-managed",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ccstatusline --hook"
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
     "type": "command",
-    "command": "~/config/claude/statusLine.mjs"
+    "command": "ccstatusline",
+    "padding": 0
   },
   "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754031629367
   }
 }
-

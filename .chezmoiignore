@@ -1,4 +1,6 @@
-dot_config/claude/
+dot_config/*
+!dot_config/ccstatusline/
+
 dot_claude/*
 !dot_claude/agents/
 !dot_claude/commands/
