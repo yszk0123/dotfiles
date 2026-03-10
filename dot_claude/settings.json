@@ -109,7 +109,6 @@
       "mcp__notionMCP__update-database"
     ]
   },
-  "model": "opusplan",
   "hooks": {
     "PreToolUse": [
       {
@@ -140,14 +139,13 @@
         ]
       },
       {
-        "_tag": "ccstatusline-managed",
+        "matcher": "Skill",
         "hooks": [
           {
             "type": "command",
             "command": "ccstatusline --hook"
           }
-        ],
-        "matcher": "Skill"
+        ]
       }
     ],
     "Stop": [
@@ -182,7 +180,6 @@
         ]
       },
       {
-        "_tag": "ccstatusline-managed",
         "hooks": [
           {
             "type": "command",
