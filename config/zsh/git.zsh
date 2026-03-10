@@ -14,8 +14,8 @@ alias gca='git commit --amend'
 alias gcar='git commit --amend --reuse-message=HEAD'
 
 # cf. https://zenn.dev/hfm/articles/commit-message-generated-by-ai
-alias gcai='COMMITMSG=$(claude --no-session-persistence --print "Generate ONLY a one-line Git commit message in English using imperative mood. The message should summarize what was changed and why, based strictly on the contents of \`git diff --cached\`.") git commit -m "$COMMITMSG" -e'
-alias gcaii='COMMITMSG=$(claude --no-session-persistence --print "Generate ONLY a one-line Git commit message in English using imperative mood. The message should summarize what was changed and why, based strictly on the contents of \`git diff --cached\`. DO NOT add an explanation or a body. Output ONLY the commit summary line.") git commit -m "$COMMITMSG" -e'
+alias gcai='(COMMITMSG=$(git diff --cached | claude --no-session-persistence --print "Generate ONLY a one-line Git commit message in English using imperative mood. The message should summarize what was changed and why, based on the diff provided via stdin.") && git commit -m "$COMMITMSG" -e)'
+alias gcaii='(COMMITMSG=$(git diff --cached | claude --no-session-persistence --print "Generate ONLY a one-line Git commit message in English using imperative mood. The message should summarize what was changed and why. DO NOT add an explanation or a body. Output ONLY the commit summary line.") && git commit -m "$COMMITMSG" -e)'
 
 alias gco='git checkout'
 
