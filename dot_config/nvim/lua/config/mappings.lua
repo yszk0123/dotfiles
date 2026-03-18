@@ -44,7 +44,7 @@ keymap("v", "p", '"_dP', { silent = true, desc = "Paste without overwriting regi
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { silent = true, desc = "Clear search highlights" })
 
 -- File explorer
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { silent = true, desc = "Toggle file explorer" })
+keymap("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<CR>", { silent = true, desc = "Toggle file explorer (focus current file)" })
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { silent = true, desc = "Find files" })
