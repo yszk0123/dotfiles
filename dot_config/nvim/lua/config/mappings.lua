@@ -58,6 +58,7 @@ keymap("n", "<leader>fd", ":Telescope file_browser path=%:p:h select_buffer=true
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { silent = true, desc = "Open lazygit" })
+keymap({ "n", "v" }, "<leader>gl", function() require("gitlinker").link() end, { silent = true, desc = "Copy git permalink" })
 
 -- Terminal
 keymap("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { silent = true, desc = "Float terminal" })

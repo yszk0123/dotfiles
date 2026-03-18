@@ -137,6 +137,14 @@ require("lazy").setup({
     end,
   },
 
+  -- Git permalink
+  {
+    "linrongbin16/gitlinker.nvim",
+    config = function()
+      require("gitlinker").setup()
+    end,
+  },
+
   -- Syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
