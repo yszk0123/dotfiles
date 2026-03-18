@@ -95,7 +95,7 @@ add-zsh-hook precmd _prompt_supplement_precmd
 
 # Ghostty shell integration (for working directory tracking in splits)
 if [[ -n "$GHOSTTY_RESOURCES_DIR" ]]; then
-  source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
+  source "${GHOSTTY_RESOURCES_DIR}/../shell-integration/ghostty-integration.zsh"
 fi
 
 # pipx
