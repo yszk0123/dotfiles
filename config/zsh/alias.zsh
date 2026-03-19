@@ -51,11 +51,23 @@ alias dcu='docker-compose up'
 # {{{
 # ccp: claude code with plugins
 # Usage: ccp web code-simplifier web-review
-# Requires _CCP_PLUGIN_BASE to be set in ~/.zshrc.local
+# Requires _CCP_PLUGIN_BASES to be set in ~/.zshrc.local
+# Example: _CCP_PLUGIN_BASES=(~/plugins/personal ~/plugins/work)
 function ccp {
   local args=(claude --model opusplan)
   for plugin in "$@"; do
-    args+=(--plugin-dir "$_CCP_PLUGIN_BASE/$plugin")
+    local found=0
+    for base in "${_CCP_PLUGIN_BASES[@]}"; do
+      if [[ -d "$base/$plugin" ]]; then
+        args+=(--plugin-dir "$base/$plugin")
+        found=1
+        break
+      fi
+    done
+    if (( !found )); then
+      echo "ccp: plugin '$plugin' not found in any base directory" >&2
+      return 1
+    fi
   done
   "${args[@]}"
 }
