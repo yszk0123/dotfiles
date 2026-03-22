@@ -73,6 +73,11 @@ function ccp {
 }
 # }}}
 
+# {{{
+# cco: claude code with opus model
+alias cco='claude --model opus'
+# }}}
+
 # vim aliases handled by zsh/vim.zsh
 
 # 上書き確認 {{{
