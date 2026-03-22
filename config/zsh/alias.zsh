@@ -49,12 +49,13 @@ alias dcu='docker-compose up'
 # }}}
 
 # {{{
-# ccp: claude code with plugins
+# ccp / cco: claude code with plugins
 # Usage: ccp web code-simplifier web-review
 # Requires _CCP_PLUGIN_BASES to be set in ~/.zshrc.local
 # Example: _CCP_PLUGIN_BASES=(~/plugins/personal ~/plugins/work)
-function ccp {
-  local args=(claude --model opusplan)
+function _claude_with_plugins {
+  local model="$1"; shift
+  local args=(claude --model "$model")
   for plugin in "$@"; do
     local found=0
     for base in "${_CCP_PLUGIN_BASES[@]}"; do
@@ -65,17 +66,14 @@ function ccp {
       fi
     done
     if (( !found )); then
-      echo "ccp: plugin '$plugin' not found in any base directory" >&2
+      echo "${model}: plugin '$plugin' not found in any base directory" >&2
       return 1
     fi
   done
   "${args[@]}"
 }
-# }}}
-
-# {{{
-# cco: claude code with opus model
-alias cco='claude --model opus'
+function ccp { _claude_with_plugins opusplan "$@"; }
+function cco { _claude_with_plugins opus "$@"; }
 # }}}
 
 # vim aliases handled by zsh/vim.zsh
