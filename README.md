@@ -163,6 +163,20 @@ export MY_PRIVATE_TOKEN=...
 _CCP_PLUGIN_BASE=~/path/to/plugins
 ```
 
+### Machine-Specific Configuration (chezmoi)
+
+Some configuration files use chezmoi templates to vary settings per machine. Set `machine_type` in `~/.config/chezmoi/chezmoi.toml`:
+
+```toml
+[data]
+  machine_type = "private"   # or "work"
+```
+
+| `machine_type`    | Behavior                     |
+| ----------------- | ---------------------------- |
+| `"private"`       | Claude Code plugins enabled  |
+| `"work"` / 未設定 | Claude Code plugins disabled |
+
 ### Performance Tuning
 
 - Shell startup optimizations in `zsh/performance.zsh`

@@ -195,7 +195,9 @@
     "padding": 0
   },
   "enabledPlugins": {
+{{- if eq .machine_type "private" }}
     "feature-dev@claude-plugins-official": true
+{{- end }}
   },
   "extraKnownMarketplaces": {
     "claude-code-plugins": {
