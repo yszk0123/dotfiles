@@ -10,7 +10,6 @@ brew "rename"          # Bulk file renaming
 
 # === Development Environment ===
 brew "zsh"             # Modern shell (plugins managed by sheldon)
-brew "tmux"            # Terminal multiplexer
 
 # === Desktop Applications ===
 cask "font-hack-nerd-font"    # Programming font with icons
@@ -19,15 +18,8 @@ cask "karabiner-elements"     # Keyboard customization
 
 # === VS Code Extensions ===
 # Essential core extensions
-vscode "ms-vscode-remote.remote-ssh"        # Remote SSH development
-vscode "ms-vscode-remote.remote-containers" # Dev containers support
 vscode "ms-vscode.vscode-json"              # JSON language support
 vscode "EditorConfig.EditorConfig"          # Consistent coding styles
-
-# Language support - Python
-vscode "ms-python.python"                   # Python language support
-vscode "charliermarsh.ruff"                 # Python linter & formatter (replaces black + flake8)
-vscode "ms-python.vscode-pylance"           # Advanced Python language server
 
 # Language support - Other languages
 vscode "golang.go"                          # Go language support
@@ -39,13 +31,7 @@ vscode "esbenp.prettier-vscode"             # Code formatter
 vscode "dbaeumer.vscode-eslint"             # JavaScript/TypeScript linter
 
 # Git and version control
-vscode "eamodio.gitlens"                    # Enhanced Git capabilities
 vscode "github.vscode-github-actions"       # GitHub Actions support
-vscode "GitHub.copilot-chat"                # AI chat interface
-
-# Documentation and writing
-vscode "yzhang.markdown-all-in-one"         # Markdown editing
-vscode "DavidAnson.vscode-markdownlint"     # Markdown linter
 
 # Shell and system tools
 vscode "foxundermoon.shell-format"          # Shell script formatter
@@ -54,8 +40,3 @@ vscode "ms-vscode.makefile-tools"           # Makefile support
 # Themes and UI enhancements
 vscode "GitHub.github-vscode-theme"         # GitHub color theme
 vscode "PKief.material-icon-theme"          # Material design icons
-
-# Development and collaboration tools
-vscode "ms-vsliveshare.vsliveshare"         # Live collaboration
-vscode "humao.rest-client"                  # HTTP client
-vscode "ms-azuretools.vscode-docker"        # Docker integration

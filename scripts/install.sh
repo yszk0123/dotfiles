@@ -4,7 +4,7 @@ if [ -z "$ZDOTDIR" ]; then
   exit 1
 fi
 
-for name in zsh tmux plain brew go npm pip; do
+for name in zsh tmux plain brew go pip; do
   echo_color "Installing $name commands ..." "32"
   source "$HOME/scripts/install/$name.sh"
 done
