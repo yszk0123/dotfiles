@@ -1,5 +1,4 @@
 {
-    "global": { "show_in_menu_bar": false },
     "profiles": [
         {
             "complex_modifications": {
@@ -437,7 +436,8 @@
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 4,
-                "keyboard_type": ""
+                "keyboard_type": "",
+                "keyboard_type_v2": "jis"
             }
         }
     ]
