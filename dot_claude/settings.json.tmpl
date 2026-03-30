@@ -78,6 +78,12 @@
       "Write"
     ],
     "deny": [
+      "Write(**/secrets/**)",
+      "Write(.env*)",
+      "mcp__supabase__execute_sql",
+      "mcp__notionMCP__move-pages",
+      "mcp__notionMCP__duplicate-page",
+      "mcp__notionMCP__update-database",
       "Bash(curl *)",
       "Bash(git checkout *)",
       "Bash(git rebase *)",
@@ -101,12 +107,23 @@
       "Read(.env.*)",
       "Read(id_ed25519)",
       "Read(id_rsa)",
-      "Write(**/secrets/**)",
-      "Write(.env*)",
-      "mcp__supabase__execute_sql",
-      "mcp__notionMCP__move-pages",
-      "mcp__notionMCP__duplicate-page",
-      "mcp__notionMCP__update-database"
+      "Read(*.cfg)",
+      "Read(*.env)",
+      "Read(*.env.*)",
+      "Read(*.envrc)",
+      "Read(*.cache)",
+      "Read(*.csr)",
+      "Read(*.crt)",
+      "Read(*.pfx)",
+      "Read(*.cert)",
+      "Read(*.key)",
+      "Read(*.log)",
+      "Read(*.tmp)",
+      "Read(*.properties)",
+      "Read(*secret*)",
+      "Read(^(?!.*\\.(ts|tsx|css)$).*password.*)",
+      "Read(*credential*)",
+      "Read(htpasswd)"
     ]
   },
   "hooks": {
