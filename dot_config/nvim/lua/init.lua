@@ -74,6 +74,9 @@ require("lazy").setup({
           enable = true,
           update_root = false,
         },
+        filters = {
+          custom = { "node_modules", "vendor" },
+        },
       })
     end,
   },
@@ -94,6 +97,7 @@ require("lazy").setup({
             "--line-number", "--column", "--smart-case", "--hidden",
             "--glob", "!.git/",
             "--glob", "!node_modules/",
+            "--glob", "!vendor/",
             "--glob", "!assets/",
             "--glob", "!tmp/",
             "--glob", "!data/",
@@ -101,7 +105,7 @@ require("lazy").setup({
             "--glob", "!build/",
             "--glob", "!output/",
           },
-          file_ignore_patterns = { "^%.git/", "node_modules/", "tmp/", "data/", "dist/", "build/", "output/" },
+          file_ignore_patterns = { "^%.git/", "node_modules/", "vendor/", "tmp/", "data/", "dist/", "build/", "output/" },
         },
         pickers = {
           find_files = {
@@ -109,6 +113,7 @@ require("lazy").setup({
               "fd", "--type", "f", "--hidden",
               "--exclude", ".git",
               "--exclude", "node_modules",
+              "--exclude", "vendor",
               "--exclude", "assets",
               "--exclude", "tmp",
               "--exclude", "data",
