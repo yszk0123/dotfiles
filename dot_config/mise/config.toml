@@ -17,6 +17,7 @@ usage = "latest"
 watchexec = "latest"
 python = "3"
 chezmoi = "latest"
+gcloud = "latest"
 
 # === Homebrew から移行 ===
 # Core development tools
