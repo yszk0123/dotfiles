@@ -62,6 +62,8 @@ yazi = "26.1.22"
 yq = "4.52.5"
 
 [settings]
+# Always pin exact versions when using `mise use`
+pin = true
 # Lock resolved versions in mise.lock file
 lockfile = true
 # Enable legacy version files (.node-version, .python-version, etc.)
