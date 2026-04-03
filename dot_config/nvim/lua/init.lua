@@ -157,8 +157,16 @@ require("lazy").setup({
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = { "lua", "python", "javascript", "typescript", "go", "rust" },
-        highlight = { enable = true },
+        auto_install = true,
+        -- Disable nvim-treesitter highlight module (incompatible with Neovim 0.12)
+        highlight = { enable = false },
         indent = { enable = true },
+      })
+      -- Use Neovim's built-in treesitter highlighting directly
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function(args)
+          pcall(vim.treesitter.start, args.buf)
+        end,
       })
     end,
   },
