@@ -61,6 +61,7 @@ xh = "0.25.3"
 yazi = "26.1.22"
 yq = "4.52.5"
 "npm:difit" = "4.0.2"
+"github:k1LoW/mo" = "0.23.3"
 
 [settings]
 # Always pin exact versions when using `mise use`
