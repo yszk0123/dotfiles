@@ -162,6 +162,10 @@ require("lazy").setup({
         highlight = { enable = false },
         indent = { enable = true },
       })
+      -- Neovim 0.12 bug: markdown code fence injection causes 'range' nil error.
+      -- Disable injection queries for markdown to prevent the crash while keeping
+      -- markdown treesitter highlighting functional.
+      vim.treesitter.query.set("markdown", "injections", "")
       -- Use Neovim's built-in treesitter highlighting directly
       vim.api.nvim_create_autocmd("FileType", {
         callback = function(args)
