@@ -234,3 +234,5 @@ require("lazy").setup({
 -- Load mappings and other configuration
 require("config.mappings")
 require("config.options")
+
+require('vim._core.ui2').enable({})
