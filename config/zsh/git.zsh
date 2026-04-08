@@ -23,6 +23,10 @@ alias gd='git diff'
 alias gds='git diff --stat'
 alias gdst='git diff --staged'
 
+alias gdc='git diff --color-words'
+alias gdsc='git diff --stat --color-words'
+alias gdstc='git diff --staged --color-words'
+
 alias gf='git fetch origin'
 
 alias gl='git log --pretty=format:"%C(yellow)%h %Cblue%ad %Creset%s" --date=short --all'
