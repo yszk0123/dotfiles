@@ -36,6 +36,7 @@ prof/
 .cursor/
 .cursorignore
 **/.claude/settings.local.json
+.claude/worktrees/
 .github/copilot-instructions.md
 
 # Package lock files (prefer fresh installs)
