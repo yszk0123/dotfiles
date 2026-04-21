@@ -1,5 +1,9 @@
 # Theme
 theme = "GitHub Dark"
+minimum-contrast = 1.1
+foreground = #e6edf3
+palette = 7=#d0d7de
+palette = 8=#8b949e
 
 # Font
 # font-family = "Hack Nerd Font Mono Regular"
