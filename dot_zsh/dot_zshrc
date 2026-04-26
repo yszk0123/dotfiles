@@ -140,6 +140,20 @@ if command -v jj >/dev/null 2>&1; then
   source <(jj util completion zsh)
 fi
 
+# cmux + worktree + devcontainer 一発起動
+cwt() {
+  local branch="$1"
+  local repo_root="$(git rev-parse --show-toplevel)"
+  local wt_path="${repo_root}/../$(basename "$repo_root")-${branch}"
+
+  git worktree add -b "$branch" "$wt_path" || git worktree add "$wt_path" "$branch"
+
+  local ws
+  ws=$(cmux new-workspace 2>&1 | awk '{print $2}')
+  cmux send --workspace "$ws" "cd '$wt_path' && devcontainer up --workspace-folder . && devcontainer exec --workspace-folder . zsh"
+  cmux send-key --workspace "$ws" Enter
+}
+
 # gcloud
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/work/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/work/google-cloud-sdk/path.zsh.inc"; fi

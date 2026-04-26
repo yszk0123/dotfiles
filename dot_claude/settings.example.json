@@ -157,26 +157,10 @@
       }
     ],
     "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/config/claude/hooks/notify-command-stop.sh"
-          }
-        ]
-      }
+      { "hooks": [{ "type": "command", "command": "printf '\\e]777;notify;Claude;done\\a'" }] }
     ],
     "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/config/claude/hooks/notify-command-notification.sh"
-          }
-        ]
-      }
+      { "hooks": [{ "type": "command", "command": "printf '\\e]777;notify;Claude;waiting\\a'" }] }
     ],
     "UserPromptSubmit": [
       {
