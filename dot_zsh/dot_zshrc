@@ -160,3 +160,6 @@ if [ -f "$HOME/work/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/work/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/work/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/work/google-cloud-sdk/completion.zsh.inc"; fi
+
+# devcontainer
+export PATH="$HOME/.devcontainers/bin:$PATH"
