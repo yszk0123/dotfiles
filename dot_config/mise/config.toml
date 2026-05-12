@@ -2,9 +2,7 @@
 # https://mise.jdx.dev/configuration.html
 
 [tools]
-"npm:@biomejs/biome" = "2.4.10"
 "npm:@bufbuild/buf" = "1.66.1"
-"npm:@google/gemini-cli" = "0.35.3"
 "npm:@openai/codex" = "0.130.0"
 "npm:bun" = "1.3.11"
 "npm:@ast-grep/cli" = "0.42.0"
@@ -54,14 +52,14 @@ xh = "0.25.3"
 "aqua:rossmacarthur/sheldon" = "0.8.5"
 
 # Git worktree management
-"github:max-sixty/worktrunk" = "0.33.0"
+"github:max-sixty/worktrunk" = "0.49.0"
 "aqua:jj-vcs/jj" = "0.39.0"
-"npm:ccstatusline" = "2.2.2"
-"npm:@playwright/cli" = "0.1.1"
+"npm:ccstatusline" = "2.2.15"
+"npm:@playwright/cli" = "0.1.13"
 yazi = "26.1.22"
 yq = "4.52.5"
-"npm:difit" = "4.0.2"
-"github:k1LoW/mo" = "0.23.3"
+"npm:difit" = "4.0.7"
+"github:k1LoW/mo" = "1.5.4"
 
 [settings]
 # Always pin exact versions when using `mise use`
