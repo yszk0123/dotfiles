@@ -65,6 +65,6 @@
   "portsAttributes": {},
   
   "containerEnv": {
-    "ZDOTDIR": "/home/vscode/.zsh"
+    "ZDOTDIR": "/home/vscode/.config/zsh"
   }
 }

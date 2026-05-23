@@ -66,7 +66,8 @@ check_file() {
   fi
 }
 
-check_file "$HOME/.zshrc" "Zsh config"
+check_file "$HOME/.zshenv" "Zsh env"
+check_file "$HOME/.config/zsh/.zshrc" "Zsh config"
 check_file "$HOME/.config/nvim/init.vim" "Neovim init.vim"
 check_file "$HOME/.config/nvim/lua/init.lua" "Neovim init.lua"
 check_file "$HOME/.config/mise/config.toml" "Mise config"

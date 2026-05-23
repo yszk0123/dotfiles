@@ -31,19 +31,21 @@ This is a personal dotfiles repository for macOS that manages development enviro
 ### Shell Configuration
 
 - **Change default shell to zsh**: `chsh -s <path/to/zsh>`
-- **Reload zsh configuration**: `source ~/.zshrc` (configuration files are in `zsh/`)
-- **Prompt**: Pure (sindresorhus/pure, loaded via sheldon, configured in `config/zsh/prompt.zsh`)
+- **Reload zsh configuration**: `source $ZDOTDIR/.zshrc` (modules live in `dot_config/zsh/`, applied to `~/.config/zsh/`)
+- **Prompt**: Pure (sindresorhus/pure, loaded via sheldon, configured in `dot_config/zsh/prompt.zsh`)
 
 ## Architecture and Structure
 
 ### Configuration Organization
 
-- **`.config/`** - XDG-compliant configuration files for modern tools (git, mise, ghostty, karabiner, etc.)
-- **`zsh/`** - Modular zsh configuration split by function (aliases, completion, history, keybindings, git integration)
-- **`scripts/`** - Installation and maintenance automation with individual tool installers in `scripts/install/`
-- **`vim/`** - Vim/Neovim configuration modules
-- **`claude/hooks/`** - Claude Code hooks for command safety and notifications
-- **`docs/`** - Documentation and planning files
+chezmoi source uses `dot_` prefix for dotfiles. Layout:
+
+- **`dot_config/`** (→ `~/.config/`) - XDG configs. `dot_config/zsh/` holds modular zsh setup (`.zshrc` + per-feature `*.zsh` modules) and `.zprofile`. Other subdirs (git, mise, ghostty, nvim, sheldon, etc.) are gated per-dir via `.chezmoiignore` allowlist.
+- **`config/`** (→ `~/config/`) - Non-XDG configs: `config/brew/Brewfile` (used by `scripts/update.sh`) and `config/claude/hooks/` (referenced by `~/.claude/settings.json`).
+- **`dot_claude/`** (→ `~/.claude/`) - Claude Code agents, hooks, settings template, status line.
+- **`dot_zshenv`** (→ `~/.zshenv`) - Sets `ZDOTDIR=~/.config/zsh` so all zsh shells (login or not) pick up the modular config.
+- **`scripts/`** - Installation and maintenance automation with individual tool installers in `scripts/install/`.
+- **`docs/`** - Documentation and planning files.
 
 ### Package and Runtime Management
 
@@ -62,7 +64,7 @@ This is a personal dotfiles repository for macOS that manages development enviro
   - Testing: pytest (installed via pipx)
 - **Node.js**: Version 24 LTS (managed via mise)
   - DevDependencies: textlint with Japanese writing presets
-- **Git integration**: Extensive aliases and configuration in `zsh/git.zsh` and `.config/git/`
+- **Git integration**: Extensive aliases and configuration in `dot_config/zsh/git.zsh` and `dot_config/git/`
 - **Terminal enhancement**: Pure prompt, fzf, ripgrep, bat, eza
 - **Editor support**:
   - Neovim with lazy.nvim, built-in LSP, and modern plugins
@@ -79,7 +81,7 @@ This is a personal dotfiles repository for macOS that manages development enviro
 
 ### Key Environment Variables
 
-- **`ZDOTDIR`** - Required for installation scripts (set to `$HOME/.zsh`)
+- **`ZDOTDIR`** - Set to `$HOME/.config/zsh` via `~/.zshenv`
 - **`GITLAB_PRIVATE_TOKEN`** - For GitLab API access
 - **`HOMEBREW_GITHUB_API_TOKEN`** - To avoid GitHub API rate limits
 
@@ -89,7 +91,7 @@ This is a personal dotfiles repository for macOS that manages development enviro
 - Installation scripts are organized by tool category in `scripts/install/`
 - Configuration files follow XDG Base Directory specification where possible
 - Dotfiles are symlinked rather than copied, allowing direct editing in the repository
-- Shell performance optimizations in `zsh/performance.zsh` for fast startup times
+- Shell performance optimizations in `dot_config/zsh/performance.zsh` for fast startup times
 
 ## Testing and Quality Assurance
 

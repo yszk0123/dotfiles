@@ -3,11 +3,11 @@
 
 source "$HOME/scripts/common/utils.sh"
 
-: "${ZDOTDIR:=~/.zsh}"
+: "${ZDOTDIR:=~/.config/zsh}"
 
 function source_zsh_script() {
   local name="$1"
-  source "$HOME/config/zsh/$name.zsh"
+  source "$ZDOTDIR/$name.zsh"
 }
 
 # Language

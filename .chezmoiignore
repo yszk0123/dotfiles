@@ -1,5 +1,6 @@
 dot_config/*
 !dot_config/ccstatusline/
+!dot_config/zsh/
 
 dot_claude/*
 !dot_claude/agents/
@@ -7,8 +8,6 @@ dot_claude/*
 !dot_claude/hooks/
 !dot_claude/settings.json
 !dot_claude/statusLine.mjs
-dot_zsh/
-!dot_zsh/dot_zshrc
 
 node_modules/
 
