@@ -3,10 +3,10 @@
 
 [tools]
 "npm:@bufbuild/buf" = "1.66.1"
-"npm:@openai/codex" = "0.133.0"
-"npm:bun" = "1.3.11"
-"npm:@ast-grep/cli" = "0.42.0"
-"npm:pnpm" = "10.33.3"
+"npm:@openai/codex" = "0.136.0"
+"npm:bun" = "1.3.14"
+"npm:@ast-grep/cli" = "0.43.0"
+"npm:pnpm" = "11.5.1"
 delta = "0.19.2"
 lazygit = "0.60.0"
 go = "1.26.1"
@@ -14,13 +14,13 @@ node = "24.11.1"
 usage = "3.2.0"
 watchexec = "2.5.1"
 python = "3.14.3"
-chezmoi = "2.70.0"
+chezmoi = "2.70.4"
 gcloud = "566.0.0"
 
 # === Homebrew から移行 ===
 # Core development tools
 deno = "2.7.9"
-ghq = "1.9.4"
+ghq = "1.10.1"
 
 # Text processing & file operations
 bat = "0.26.1"
@@ -31,7 +31,7 @@ jq = "1.8.1"
 # tokei = "latest"
 
 # Development environment
-neovim = "0.12.0"
+neovim = "0.12.2"
 
 # Build tools
 protoc = "34.1"
@@ -52,14 +52,14 @@ xh = "0.25.3"
 "aqua:rossmacarthur/sheldon" = "0.8.5"
 
 # Git worktree management
-"github:max-sixty/worktrunk" = "0.49.0"
+"github:max-sixty/worktrunk" = "0.56.0"
 "aqua:jj-vcs/jj" = "0.39.0"
 "npm:ccstatusline" = "2.2.15"
 "npm:@playwright/cli" = "0.1.13"
 yazi = "26.1.22"
 yq = "4.52.5"
 "npm:difit" = "4.0.7"
-"github:k1LoW/mo" = "1.5.4"
+"github:k1LoW/mo" = "1.5.5"
 
 [settings]
 # Always pin exact versions when using `mise use`
