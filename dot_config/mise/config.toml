@@ -26,6 +26,7 @@ ghq = "1.10.1"
 bat = "0.26.1"
 eza = "0.23.4"
 ripgrep = "15.1.0"
+fd = "10.4.2"          # Fast file finder (used by telescope.nvim)
 fzf = "0.70.0"
 jq = "1.8.1"
 # tokei = "latest"
@@ -60,6 +61,18 @@ yazi = "26.1.22"
 yq = "4.52.5"
 "npm:difit" = "4.0.7"
 "github:k1LoW/mo" = "1.5.5"
+
+# === Homebrew formula から移行 (machine-global system packages) ===
+# https://mise.jdx.dev/system-packages/brew.html
+# mise 内蔵の Homebrew bottle installer で homebrew/core formula を導入する。
+# shim を持たず、バージョン pin もしない (formula 名で variant を指定)。
+# `mise system install` でインストール、`mise system upgrade` で更新。
+# 注意: cask (GUI アプリ・フォント) と vscode 拡張は非対応のため Brewfile に残す。
+[system.packages]
+"brew:git" = "latest"
+"brew:git-absorb" = "latest"   # Automatically absorb fixup commits
+"brew:rename" = "latest"       # Bulk file renaming
+"brew:zsh" = "latest"          # Modern shell (plugins managed by sheldon)
 
 [settings]
 # Always pin exact versions when using `mise use`

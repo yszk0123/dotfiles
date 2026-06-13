@@ -1,15 +1,9 @@
 # Homebrew taps
 
-# === Core Development Tools ===
-brew "git"
-brew "git-absorb"      # Automatically absorb fixup commits
-
-# === Text Processing ===
-brew "fd"              # Fast file finder (used by telescope.nvim)
-brew "rename"          # Bulk file renaming
-
-# === Development Environment ===
-brew "zsh"             # Modern shell (plugins managed by sheldon)
+# NOTE: CLI formula は mise に移行済み。
+#   - dev ツール (fd など) は ~/.config/mise/config.toml の [tools]
+#   - system/シェル系 (git, git-absorb, rename, zsh) は同ファイルの [system.packages] (brew:)
+# mise の brew system package は cask / vscode 拡張に非対応のため、以下のみ Brewfile で管理する。
 
 # === Desktop Applications ===
 cask "font-hack-nerd-font"    # Programming font with icons

@@ -20,6 +20,9 @@ if confirm_with_message "Update mise-managed tools?"; then
   echo_color "Updating mise tools..." "32"
   mise upgrade
   mise prune
+  # System packages ([system.packages] / brew:): install missing, then upgrade installed
+  mise system install --yes
+  mise system upgrade
 fi
 
 if confirm_with_message "Update sheldon plugins?"; then
