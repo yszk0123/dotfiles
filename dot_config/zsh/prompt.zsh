@@ -8,6 +8,9 @@ zstyle ':prompt:pure:prompt:success' color green
 zstyle ':prompt:pure:prompt:error' color red
 
 # RPROMPT supplement - language versions cached per directory, time always shown
+# 確定済みの行から RPROMPT を消し、コピペに時刻やバージョンが混入しないようにする
+setopt TRANSIENT_RPROMPT
+
 typeset -g _prompt_cached_dir=""
 typeset -g _prompt_cached_langs=""
 
