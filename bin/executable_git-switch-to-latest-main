@@ -20,6 +20,18 @@ detect_main_branch() {
   return 1
 }
 
+# 指定ブランチをチェックアウトしている worktree のパスを返す。なければ非ゼロで返す。
+worktree_path_of() {
+  local target="$1" path="" line
+  while IFS= read -r line; do
+    case "$line" in
+      "worktree "*) path="${line#worktree }" ;;
+      "branch refs/heads/$target") printf '%s\n' "$path"; return 0 ;;
+    esac
+  done < <(git worktree list --porcelain)
+  return 1
+}
+
 git fetch -p
 
 MAIN_BRANCH="$(detect_main_branch)"
@@ -28,8 +40,19 @@ CURRENT_BRANCH="$(git branch --show-current)" # detached HEAD のとき空
 if [ "$CURRENT_BRANCH" = "$MAIN_BRANCH" ]; then
   git pull --ff-only origin "$MAIN_BRANCH"
 else
-  git branch -f "$MAIN_BRANCH" "origin/$MAIN_BRANCH"
-  git switch "$MAIN_BRANCH" # 未コミットの変更と衝突すれば git 側が拒否 (作業を守る)
+  # main が別 worktree に占有されていると force update も switch も git に拒否されるため、
+  # その worktree 側を fast-forward して「最新 main」を達成し、現在の worktree は維持する。
+  main_worktree="$(worktree_path_of "$MAIN_BRANCH" || true)"
+  if [ -n "$main_worktree" ]; then
+    if git -C "$main_worktree" merge --ff-only "origin/$MAIN_BRANCH"; then
+      echo "main を $main_worktree で最新へ更新しました (現在の worktree は維持)"
+    else
+      echo "warning: $main_worktree の $MAIN_BRANCH を fast-forward できませんでした (未統合のコミットや作業ツリーの変更がある可能性)" >&2
+    fi
+  else
+    git branch -f "$MAIN_BRANCH" "origin/$MAIN_BRANCH"
+    git switch "$MAIN_BRANCH" # 未コミットの変更と衝突すれば git 側が拒否 (作業を守る)
+  fi
 fi
 
 # デフォルトブランチへマージ済みのローカルブランチを削除する。保護名は完全一致で判定。
