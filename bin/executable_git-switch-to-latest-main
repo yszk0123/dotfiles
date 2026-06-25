@@ -1,16 +1,43 @@
 #!/bin/bash -eu
 
-MAIN_BRANCH="$(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@")"
-CURRENT_BRANCH="$(git branch --contains | cut -d " " -f 2)"
+# origin のデフォルトブランチ名を解決する。origin/HEAD 未設定なら補完し、最後に main/master へフォールバック。
+detect_main_branch() {
+  local ref
+  if ref="$(git symbolic-ref --quiet refs/remotes/origin/HEAD)"; then
+    echo "${ref#refs/remotes/origin/}"; return
+  fi
+  if git remote set-head origin --auto >/dev/null 2>&1 \
+    && ref="$(git symbolic-ref --quiet refs/remotes/origin/HEAD)"; then
+    echo "${ref#refs/remotes/origin/}"; return
+  fi
+  local b
+  for b in main master; do
+    if git show-ref --verify --quiet "refs/remotes/origin/$b"; then
+      echo "$b"; return
+    fi
+  done
+  echo "error: origin のデフォルトブランチを特定できません" >&2
+  return 1
+}
 
 git fetch -p
 
+MAIN_BRANCH="$(detect_main_branch)"
+CURRENT_BRANCH="$(git branch --show-current)" # detached HEAD のとき空
+
 if [ "$CURRENT_BRANCH" = "$MAIN_BRANCH" ]; then
-  git pull origin $MAIN_BRANCH
+  git pull --ff-only origin "$MAIN_BRANCH"
 else
-  git branch -f $MAIN_BRANCH origin/$MAIN_BRANCH
-  git switch $MAIN_BRANCH
+  git branch -f "$MAIN_BRANCH" "origin/$MAIN_BRANCH"
+  git switch "$MAIN_BRANCH" # 未コミットの変更と衝突すれば git 側が拒否 (作業を守る)
 fi
 
-# Remove merged local branch
-git branch --merged | egrep -v "(^\*|^\+|main|master|dev|$MAIN_BRANCH)" | xargs git branch -d
+# デフォルトブランチへマージ済みのローカルブランチを削除する。保護名は完全一致で判定。
+protected="$MAIN_BRANCH|main|master|dev|develop"
+merged="$(git branch --merged \
+  | grep -vE '^[*+]' \
+  | sed 's/^[[:space:]]*//' \
+  | grep -vxE "$protected" || true)"
+if [ -n "$merged" ]; then
+  echo "$merged" | xargs git branch -d
+fi
