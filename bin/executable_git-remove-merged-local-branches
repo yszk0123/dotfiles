@@ -1,3 +1,11 @@
-#!/bin/bash -e
+#!/bin/bash -eu
 
-git branch --merged | egrep -v "(^\+|^\*|^main|^master|^dev)" | xargs git branch -d
+# 現在ブランチへマージ済みのローカルブランチを削除する。保護名は完全一致で判定。
+protected="main|master|dev|develop"
+merged="$(git branch --merged \
+  | grep -vE '^[*+]' \
+  | sed 's/^[[:space:]]*//' \
+  | grep -vxE "$protected" || true)"
+if [ -n "$merged" ]; then
+  echo "$merged" | xargs git branch -d
+fi
